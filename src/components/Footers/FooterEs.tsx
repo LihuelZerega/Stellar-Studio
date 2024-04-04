@@ -1,58 +1,36 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import StellarStudioLogo from "@/images/StellarStudioLogo.png";
 
 function FooterEs() {
   return (
     <div>
-      <section className="py-10 bg-white sm:pt-16 lg:pt-24">
+      <section className="py-10 sm:pt-16 lg:pt-24 border-t border-gray-200">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-y-12 gap-x-8 xl:gap-x-12">
             <div className="col-span-2 md:col-span-4 xl:pr-8">
-              <img
-                className="w-auto h-9"
-                src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg"
-                alt=""
-              />
-
-              <p className="text-base leading-relaxed text-gray-600 mt-7">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
+              <Image className="w-auto h-9" src={StellarStudioLogo} alt="" />
+              <p className="text-base leading-relaxed text-gray-200 mt-7">
+                Proveemos un servicio de desarrollo de desarrollo web de alta
+                calidad con la mision de impulsar su crecimiento y presencia en
+                linea. Mejoramos constantemente la tecnologia de las mismas y
+                garantizamos que su sitio web cumpla con sus expectativas.
               </p>
-
-              <a
-                href="#"
-                title=""
-                className="inline-flex items-center justify-center px-6 py-4 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700 mt-7"
-              >
-                <svg
-                  className="w-6 h-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                  />
-                </svg>
-                Start Live Chat
-              </a>
             </div>
 
             <div className="lg:col-span-2">
-              <p className="text-base font-semibold text-gray-900">Company</p>
+              <p className="text-base font-semibold text-[#a482fb]">Inicio</p>
 
               <ul className="mt-6 space-y-5">
                 <li>
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    About{" "}
+                    Proceso de trabajo{" "}
                   </a>
                 </li>
 
@@ -60,10 +38,10 @@ function FooterEs() {
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    Features{" "}
+                    Caracteristicas{" "}
                   </a>
                 </li>
 
@@ -71,10 +49,10 @@ function FooterEs() {
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    Works{" "}
+                    Testimonios{" "}
                   </a>
                 </li>
 
@@ -82,27 +60,29 @@ function FooterEs() {
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    Career{" "}
+                    Preguntas frecuentes{" "}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div className="lg:col-span-2">
-              <p className="text-base font-semibold text-gray-900">Help</p>
+              <p className="text-base font-semibold text-[#a482fb]">
+                Servicios
+              </p>
 
               <ul className="mt-6 space-y-4">
                 <li>
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    Customer Support{" "}
+                    One Page{" "}
                   </a>
                 </li>
 
@@ -110,10 +90,10 @@ function FooterEs() {
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    Delivery Details{" "}
+                    Landing Page{" "}
                   </a>
                 </li>
 
@@ -121,10 +101,10 @@ function FooterEs() {
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    Terms & Conditions{" "}
+                    E-commerce{" "}
                   </a>
                 </li>
 
@@ -132,77 +112,29 @@ function FooterEs() {
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    Privacy Policy{" "}
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="lg:col-span-2">
-              <p className="text-base font-semibold text-gray-900">Resources</p>
-
-              <ul className="mt-6 space-y-5">
-                <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
-                  >
-                    {" "}
-                    Free eBooks{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
-                  >
-                    {" "}
-                    Development Tutorial{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
-                  >
-                    {" "}
-                    How to - Blog{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
-                  >
-                    {" "}
-                    YouTube Playlist{" "}
+                    Personalizado{" "}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div className="lg:col-span-2">
-              <p className="text-base font-semibold text-gray-900">Extra Links</p>
+              <p className="text-base font-semibold text-[#a482fb]">
+                Sobre Nosotros
+              </p>
 
               <ul className="mt-6 space-y-5">
                 <li>
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    Customer Support{" "}
+                    ¿Quienes somos?{" "}
                   </a>
                 </li>
 
@@ -210,10 +142,10 @@ function FooterEs() {
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    Delivery Details{" "}
+                    Misión, Visión y Valores{" "}
                   </a>
                 </li>
 
@@ -221,10 +153,10 @@ function FooterEs() {
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    Terms & Conditions{" "}
+                    Equipo{" "}
                   </a>
                 </li>
 
@@ -232,10 +164,62 @@ function FooterEs() {
                   <a
                     href="#"
                     title=""
-                    className="flex text-sm text-gray-800 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
-                    Privacy Policy{" "}
+                    Historia{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="lg:col-span-2">
+              <p className="text-base font-semibold text-[#a482fb]">
+                Links Extra
+              </p>
+
+              <ul className="mt-6 space-y-5">
+                <li>
+                  <a
+                    href="/whatsapp"
+                    title=""
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                  >
+                    {" "}
+                    Atencion al cliente{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/articulos/detalles-de-la-entrega"
+                    title=""
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                  >
+                    {" "}
+                    Detalles de la entrega{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/articulos/terminos-y-condiciones"
+                    title=""
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                  >
+                    {" "}
+                    Términos y condiciones{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/articulos/politica-de-privacidad"
+                    title=""
+                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
+                  >
+                    {" "}
+                    Política de privacidad{" "}
                   </a>
                 </li>
               </ul>
@@ -245,8 +229,8 @@ function FooterEs() {
           <hr className="mt-16 mb-10 border-gray-200" />
 
           <div className="sm:flex sm:items-center sm:justify-between">
-            <p className="text-sm text-gray-600">
-              © Copyright 2021, All Rights Reserved by Postcraft
+            <p className="text-sm text-gray-200">
+              © Copyright 2024, All Rights Reserved by Stellar Studio
             </p>
 
             <ul className="flex items-center mt-5 space-x-3 md:order-3 sm:mt-0">
@@ -254,7 +238,7 @@ function FooterEs() {
                 <a
                   href="#"
                   title=""
-                  className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
+                  className="flex items-center justify-center text-gray-100 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
                 >
                   <svg
                     className="w-4 h-4"
@@ -271,7 +255,7 @@ function FooterEs() {
                 <a
                   href="#"
                   title=""
-                  className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
+                  className="flex items-center justify-center text-gray-100 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
                 >
                   <svg
                     className="w-4 h-4"
@@ -288,7 +272,7 @@ function FooterEs() {
                 <a
                   href="#"
                   title=""
-                  className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
+                  className="flex items-center justify-center text-gray-100 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
                 >
                   <svg
                     className="w-4 h-4"
@@ -307,7 +291,7 @@ function FooterEs() {
                 <a
                   href="#"
                   title=""
-                  className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
+                  className="flex items-center justify-center text-gray-100 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
                 >
                   <svg
                     className="w-4 h-4"

@@ -6,22 +6,22 @@ function TestimonialEs() {
       <section className="py-10 sm:py-16 lg:py-24">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-5xl">
-              Trusted by <span className="text-blue-600">30k+</span> world class
-              companies & design teams
+            <h2 className="text-3xl font-bold leading-tight text-[#a482fb] sm:text-4xl lg:text-5xl">
+              Con la confianza de <span className="text-white">+200</span> empresas y equipos de diseño
             </h2>
           </div>
 
           <div className="grid max-w-xl grid-cols-1 mx-auto mt-8 text-center lg:max-w-full sm:mt-12 lg:mt-20 lg:grid-cols-3 gap-x-6 xl:gap-x-12 gap-y-6">
-            <div className="overflow-hidden bg-white rounded-md shadow">
+            {/* Testimonio 1 */}
+            <div className="overflow-hidden bg-transparent border-3 border-[#a482fb] rounded-2xl">
               <div className="px-8 py-12">
                 <div className="relative w-24 h-24 mx-auto">
                   <img
                     className="relative object-cover w-24 h-24 mx-auto rounded-full"
-                    src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/1/avatar-1.jpg"
+                    src="https://imgs.search.brave.com/-_PdKf9QDIJVS1PeZagtSLvSj6n6WAl6OSxH9WsG3As/rs:fit:32:32:1/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzMyNWY3NGRm/NGJjMDYzY2NjZTQ1/MjIyY2I3NDU1NjYz/YTg4OGI4OGZlMjY4/YjZkNWZlYmJjMzBl/ODZlOTM3Ni93d3cu/YnJpZ2h0aWZ5Lm9y/Zy8"
                     alt=""
                   />
-                  <div className="absolute top-0 right-0 flex items-center justify-center bg-blue-600 rounded-full w-7 h-7">
+                  <div className="absolute top-0 right-0 flex items-center justify-center bg-[#a482fb] rounded-full w-7 h-7">
                     <svg
                       className="w-4 h-4 text-white"
                       xmlns="http://www.w3.org/2000/svg"
@@ -33,30 +33,29 @@ function TestimonialEs() {
                   </div>
                 </div>
                 <blockquote className="mt-7">
-                  <p className="text-lg text-black">
-                    “Amet minim mollit non deserunt ullam co est sit aliqua
-                    dolor do amet sint. Velit officia consequat duis enim velit
-                    mollit. Exercitation veniam consequat”
+                  <p className="text-lg text-white">
+                    "¡Estoy impresionado con el trabajo realizado por este equipo! Su enfoque profesional y atención a los detalles son excepcionales. Recomiendo encarecidamente sus servicios."
                   </p>
                 </blockquote>
-                <p className="text-base font-semibold tex-tblack mt-9">
-                  Jenny Wilson
+                <p className="text-base font-semibold text-[#a482fb] mt-9">
+                  Alejandro Gómez
                 </p>
-                <p className="mt-1 text-base text-gray-600">
-                  Project Manager at Microsoft
+                <p className="mt-1 text-base text-gray-300">
+                  CEO en Brightify Labs
                 </p>
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-md shadow">
+            {/* Testimonio 2 */}
+            <div className="overflow-hidden bg-transparent border-3 border-[#a482fb] rounded-2xl">
               <div className="px-8 py-12">
                 <div className="relative w-24 h-24 mx-auto">
                   <img
                     className="relative object-cover w-24 h-24 mx-auto rounded-full"
-                    src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/1/avatar-2.jpg"
+                    src="https://media.licdn.com/dms/image/C560BAQFcl6cCId4weQ/company-logo_200_200/0/1630617659369/innova_tech_solutions_logo?e=1720051200&v=beta&t=xlt1ANEZAlJyrUig-WAR0YN5MY4QIzLPBNNJ2Tzh4Kw"
                     alt=""
                   />
-                  <div className="absolute top-0 right-0 flex items-center justify-center bg-blue-600 rounded-full w-7 h-7">
+                  <div className="absolute top-0 right-0 flex items-center justify-center bg-[#a482fb] rounded-full w-7 h-7">
                     <svg
                       className="w-4 h-4 text-white"
                       xmlns="http://www.w3.org/2000/svg"
@@ -68,28 +67,29 @@ function TestimonialEs() {
                   </div>
                 </div>
                 <blockquote className="mt-7">
-                  <p className="text-lg text-black">
-                    “Amet minim mollit non deserunt ullam co est sit aliqua
-                    dolor do amet sint. Velit officia consequat duis enim velit
-                    mollit. Exercitation veniam consequat”
+                  <p className="text-lg text-white">
+                    "El equipo de esta empresa superó mis expectativas. Su profesionalismo y dedicación hicieron que el proceso fuera muy fluido. Estoy encantado con los resultados."
                   </p>
                 </blockquote>
-                <p className="text-base font-semibold tex-tblack mt-9">
-                  Robert Fox
+                <p className="text-base font-semibold text-[#a482fb] mt-9">
+                  Laura Martínez
                 </p>
-                <p className="mt-1 text-base text-gray-600">Founder at Brain.co</p>
+                <p className="mt-1 text-base text-gray-300">
+                  Director de Marketing en Innovatech Solutions
+                </p>
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-md shadow">
+            {/* Testimonio 3 */}
+            <div className="overflow-hidden bg-transparent border-3 border-[#a482fb] rounded-2xl">
               <div className="px-8 py-12">
                 <div className="relative w-24 h-24 mx-auto">
                   <img
                     className="relative object-cover w-24 h-24 mx-auto rounded-full"
-                    src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/1/avatar-3.jpg"
+                    src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712176379/Stellar%20Studio/nezuslogo_hlmsvj.png"
                     alt=""
                   />
-                  <div className="absolute top-0 right-0 flex items-center justify-center bg-blue-600 rounded-full w-7 h-7">
+                  <div className="absolute top-0 right-0 flex items-center justify-center bg-[#a482fb] rounded-full w-7 h-7">
                     <svg
                       className="w-4 h-4 text-white"
                       xmlns="http://www.w3.org/2000/svg"
@@ -101,17 +101,15 @@ function TestimonialEs() {
                   </div>
                 </div>
                 <blockquote className="mt-7">
-                  <p className="text-lg text-black">
-                    “Amet minim mollit non deserunt ullam co est sit aliqua
-                    dolor do amet sint. Velit officia consequat duis enim velit
-                    mollit. Exercitation veniam consequat”
+                  <p className="text-lg text-white">
+                    "¡Increíble trabajo! Su atención al detalle y su enfoque centrado en el cliente hicieron que trabajar con ellos fuera un placer. Estoy muy satisfecho con los resultados."
                   </p>
                 </blockquote>
-                <p className="text-base font-semibold tex-tblack mt-9">
-                  Kristin Watson
+                <p className="text-base font-semibold text-[#a482fb] mt-9">
+                  Carlos Pérez
                 </p>
-                <p className="mt-1 text-base text-gray-600">
-                  UX Designer at Google
+                <p className="mt-1 text-base text-gray-300">
+                  Propietario de Nexus Marketing
                 </p>
               </div>
             </div>

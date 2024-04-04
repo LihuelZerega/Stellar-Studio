@@ -9,9 +9,10 @@ import StellarStudioLogo from "@/images/StellarStudioLogo.png";
 import StellarStudioLogoNegative from "@/images/StellarStudioLogoNegative.png";
 
 const navigation = [
-  { name: "Precios", href: "#" },
+  { name: "Servicios", href: "#" },
   { name: "Caracteristicas", href: "#" },
   { name: "Sobre Nosotros", href: "#" },
+  { name: "Contactanos", href: "#" },
 ];
 
 export default function HeroSectionEs() {
@@ -116,15 +117,16 @@ export default function HeroSectionEs() {
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#a482fb] to-[#a482fb] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 88.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
             }}
           />
         </div>
+        
         <div className="mx-auto max-w-2xl 2xl:max-w-4xl py-48 2xl:py-56">
           <motion.div
-            initial={{ opacity: 0, y: -20 }} // Estado inicial de la animación
-            animate={{ opacity: 1, y: 0 }} // Estado final de la animación
-            transition={{ duration: 0.6, delay: 0.3 }} // Duración y retraso de la animación
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="text-center"
           >
             <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl 2xl:text-7xl">
@@ -158,6 +160,7 @@ export default function HeroSectionEs() {
             </div>
           </motion.div>
         </div>
+
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           aria-hidden="true"
