@@ -8,17 +8,12 @@ import {
   ModalContent,
   ModalHeader,
   ModalBody,
-  ModalFooter,
-  Button,
   useDisclosure,
-  RadioGroup,
-  Radio,
 } from "@nextui-org/react";
 
 function PricesCradsEs() {
   const [showMoreFeatures, setShowMoreFeatures] = useState(false);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [modalPlacement, setModalPlacement] = React.useState("auto");
 
   return (
     <div>
@@ -26,8 +21,12 @@ function PricesCradsEs() {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 text-left lg:max-w-full lg:grid-cols-3">
             {/* Card 1 */}
-
-            <div className="overflow-hidden bg-transparent border-2 border-gray-200 rounded-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="overflow-hidden bg-transparent border-2 border-gray-200 rounded-2xl"
+            >
               <div className="p-8 xl:px-12">
                 <h1 className="text-xl font-semibold text-[#a482fb]">
                   One Page
@@ -586,10 +585,15 @@ function PricesCradsEs() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Card 2 */}
-            <div className="overflow-hidden bg-transparent border-2 border-[#a482fb] rounded-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="overflow-hidden bg-transparent border-2 border-[#a482fb] rounded-2xl"
+            >
               <div className="p-8 xl:px-12">
                 <div className="flex flex-row items-center justify-between">
                   <h1 className="text-xl font-semibold text-[#a482fb]">
@@ -1181,10 +1185,15 @@ function PricesCradsEs() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Card 3 */}
-            <div className="overflow-hidden bg-transparent border-2 border-gray-200 rounded-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="overflow-hidden bg-transparent border-2 border-gray-200 rounded-2xl"
+            >
               <div className="p-8 xl:px-12">
                 <h1 className="text-xl font-semibold text-[#a482fb]">
                   E-Commerce
@@ -1716,7 +1725,7 @@ function PricesCradsEs() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="text-center my-6">

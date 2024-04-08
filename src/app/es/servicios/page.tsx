@@ -2,7 +2,7 @@
 import React from "react";
 import HeroSectionEs from "@/components/ServicesComponents/HeroSections/HeroSectionEs";
 import PricesCradsEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/PricesCradsEs";
-import FeaturesEs from "@/components/ServicesComponents/Features/FeaturesEs";
+import FeaturesEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/Features/FeaturesEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 
 function Page() {

@@ -1,5 +1,11 @@
+"use client";
 import React from "react";
 import NavBarEs from "@/components/NavBars/NavBarEs";
+import HeroSectionEmailCorporative from "@/components/ServicesComponents/EmailCorporativeComponents/Es/HeroSectionEmailCorporative";
+import StepsEmailCorporative from "@/components/ServicesComponents/EmailCorporativeComponents/Es/StepsEmailCorporative";
+import PricesCardsEs from "@/components/ServicesComponents/EmailCorporativeComponents/Es/PricesCradsEs";
+import Features from "@/components/ServicesComponents/EmailCorporativeComponents/Es/Features";
+import FaqEs from "@/components/ServicesComponents/EmailCorporativeComponents/Es/FaqEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 
 function page() {
@@ -12,6 +18,11 @@ function page() {
       }}
     >
       <NavBarEs />
+      <HeroSectionEmailCorporative />
+      <StepsEmailCorporative />
+      <PricesCardsEs />
+      <Features />
+      <FaqEs />
       <FooterEs />
     </div>
   );

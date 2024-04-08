@@ -1,5 +1,11 @@
+"use client";
 import React from "react";
 import NavBarEs from "@/components/NavBars/NavBarEs";
+import HeroSectionDomain from "@/components/ServicesComponents/DomainComponents/Es/HeroSectionDomain";
+import PopularDomains from "@/components/ServicesComponents/DomainComponents/Es/PopularDomains";
+import Tips from "@/components/ServicesComponents/DomainComponents/Es/Tips";
+import Features from "@/components/ServicesComponents/DomainComponents/Es/Features";
+import FaqEs from "@/components/ServicesComponents/DomainComponents/Es/FaqEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 
 function page() {
@@ -12,6 +18,13 @@ function page() {
       }}
     >
       <NavBarEs />
+      <HeroSectionDomain />
+      <div className="lg:px-24 2xl:px-56">
+        <PopularDomains />
+        <Tips />
+      </div>
+      <Features />
+      <FaqEs />
       <FooterEs />
     </div>
   );

@@ -1,9 +1,12 @@
 "use client";
 import React from "react";
 import NavBarEs from "@/components/NavBars/NavBarEs";
-import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 import HeroSectionWebPagesEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/HeroSectionWebPagesEs";
 import PricesCradsEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/PricesCradsEs";
+import ChatBotIAEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/Features/ChatBotIAEs";
+import FeaturesEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/Features/FeaturesEs";
+import FaqEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/FaqEs";
+import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 
 function page() {
   return (
@@ -17,6 +20,9 @@ function page() {
       <NavBarEs />
       <HeroSectionWebPagesEs />
       <PricesCradsEs />
+      <ChatBotIAEs />
+      <FeaturesEs />
+      <FaqEs />
       <FooterEs />
     </div>
   );
