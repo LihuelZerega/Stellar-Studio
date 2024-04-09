@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import NavBarEs from "@/components/NavBars/NavBarEs";
 import HeroSectionEs from "@/components/LandingPageComponents/HeroSections/HeroSectionEs";
 import BenefitsEs from "@/components/LandingPageComponents/Benefits/BenefitsEs";
@@ -11,6 +11,14 @@ import StatsEs from "@/components/LandingPageComponents/Stats/StatsEs";
 import ChoosePlanEs from "@/components/LandingPageComponents/ChoosePlans/ChoosePlanEs";
 
 function Page() {
+  const changePageTitle = () => {
+    document.title = "Stellar Studio | ¡La mejor opción para hacer crecer tu empresa en internet!";
+  };
+
+  useEffect(() => {
+    changePageTitle();
+  }, []);
+  
   return (
     <div
       className="bg-cover bg-center bg-[#272526]"

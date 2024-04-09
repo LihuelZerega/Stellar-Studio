@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import NavBarEs from "@/components/NavBars/NavBarEs";
 import HeroSectionWebPagesEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/HeroSectionWebPagesEs";
 import PricesCradsEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/PricesCradsEs";
@@ -9,6 +9,14 @@ import FaqEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWeb
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 
 function page() {
+  const changePageTitle = () => {
+    document.title = "Stellar Studio | Creá tu sitio web";
+  };
+
+  useEffect(() => {
+    changePageTitle();
+  }, []);
+  
   return (
     <div
       className="bg-cover bg-center bg-[#272526]"

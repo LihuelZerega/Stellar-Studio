@@ -58,24 +58,25 @@ function Features() {
         </div>
       </div>
 
-      <section className="glass-container bg-opacity-5 backdrop-filter backdrop-blur-lg bg-[#a482fb] p-6  my-10 sm:my-16 lg:my-24 mx-auto py-10 sm:py-16 lg:py-24 relative isolate overflow-hidden px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24">
+      <section className="glass-container bg-opacity-5 backdrop-filter backdrop-blur-lg bg-[#a482fb] p-6 my-10 sm:my-16 lg:my-24 mx-auto py-10 sm:py-16 lg:py-24 relative isolate overflow-hidden px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24">
         <div className="flex flex-col items-center justify-center px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="flex flex-col items-center justify-center text-center">
-            <h2 className="text-3xl font-bold leading-tight text-white sm:text-2xl lg:text-4xl mb-4">
-              Da el siguiente paso hacia la profesionalidad con un correo
-              electrónico propio
+            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl mb-4">
+              ¡Descubre nuestros planes ahora y lleva tu proyecto digital al
+              siguiente nivel!
             </h2>
             <div className="max-w-lg my-4 text-gray-200">
               <p className="text-base font-medium">
-                Descubre nuestros planes y elige el que mejor se adapte a tus
-                necesidades para dar confianza y profesionalismo en tus
-                clientes.
+                Explora nuestros planes de dominio y asegura tu presencia en
+                línea de manera rápida y sencilla. Desde nombres de dominio
+                estándar hasta extensiones especializadas, tenemos la solución
+                perfecta para ti
               </p>
             </div>
           </div>
 
           <div className="my-6">
-            <Link href="#">
+            <Link href="#domains">
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}

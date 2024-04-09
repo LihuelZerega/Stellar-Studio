@@ -59,21 +59,21 @@ const informacion = [
     name: "Precios",
     description:
       "Consulta nuestros planes y modelos que mejor se adapten a tus necesidades.",
-    href: "#",
+    href: "/es/informacion#precios",
     icon: MdAttachMoney,
   },
   {
     name: "Opiniones",
     description:
       "Lee las opiniones y experiencias para conocer más sobre nuestro servicio y calidad.",
-    href: "#",
+    href: "/es/informacion#opiniones",
     icon: MdEmojiPeople,
   },
   {
     name: "Formas de Pago",
     description:
       "Descubre las diferentes formas de pago que aceptamos para facilitar tu transacción.",
-    href: "#",
+    href: "/es/informacion#formasdepago",
     icon: MdOutlinePayments,
   },
 ];
@@ -82,19 +82,19 @@ const compania = [
   {
     name: "Sobre Stellar Studio",
     description: "Conoce nuestra empresa, misión y valores.",
-    href: "#",
+    href: "/es/compania#sobrenosotros",
     icon: MdOutlineSchool,
   },
   {
     name: "Nuestra Tecnología",
     description: "Explora que utilizamos para ofrecerte soluciones de calidad.",
-    href: "#",
+    href: "/es/compania#tecnologia",
     icon: MdOutlineBiotech,
   },
   {
     name: "Contactanos",
     description: "Contáctanos y estaremos encantados de ayudarte.",
-    href: "#",
+    href: "/es/compania#contacto",
     icon: MdOutlineMessage,
   },
 ];
@@ -104,18 +104,9 @@ const ayuda = [
     name: "Atención al Cliente",
     description:
       "Nuestro equipo de atención al cliente está aquí para ayudarte en cualquier momento.",
-    href: "#",
+    href: "/es/ayuda",
     icon: MdHelpOutline,
   },
-];
-
-const navigation = [
-  { name: "Paginas Web", href: "/es/servicios/paginasweb" },
-  { name: "Correos Profecionales", href: "/es/servicios/correosprofecionales" },
-  { name: "Dominios", href: "/es/servicios/dominios" },
-  { name: "Caracteristicas", href: "#" },
-  { name: "Sobre Nosotros", href: "#" },
-  { name: "Contactanos", href: "#" },
 ];
 
 function NavBarEs() {
@@ -379,6 +370,7 @@ function NavBarEs() {
           </button>
         </div>
 
+        {/* DESKTOP */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <div className="flex flex-row gap-x-6">
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
