@@ -84,13 +84,13 @@ function FaqEs() {
                     ¿Ofrecen servicios de dominio y alojamiento web?
                   </p>
                   <p className="mt-3 text-base text-gray-300">
-                    "Sí, muchos proveedores de diseño web ofrecen servicios de
+                    Sí, muchos proveedores de diseño web ofrecen servicios de
                     registro de dominios y alojamiento web como parte de sus
                     paquetes de diseño. Estos servicios suelen incluir la
                     reserva y administración del nombre de dominio de tu sitio
                     web por ejemplo, tudominio.com y el alojamiento del sitio en
                     servidores web seguros y confiables para que esté accesible
-                    en línea en todo momento.";
+                    en línea en todo momento.
                   </p>
                 </div>
 

@@ -50,9 +50,9 @@ function TestimonialEs() {
               </div>
               <blockquote className="mt-7">
                 <p className="text-xl leading-relaxed text-white">
-                  "El equipo de esta empresa superó mis expectativas. Su
+                  El equipo de esta empresa superó mis expectativas. Su
                   profesionalismo y dedicación hicieron que el proceso fuera muy
-                  fluido. Estoy encantado con los resultados."
+                  fluido. Estoy encantado con los resultados.
                 </p>
               </blockquote>
 
@@ -108,9 +108,9 @@ function TestimonialEs() {
               </div>
               <blockquote className="mt-7">
                 <p className="text-xl leading-relaxed text-white">
-                  "¡Estoy impresionado con el trabajo realizado por este equipo!
+                  ¡Estoy impresionado con el trabajo realizado por este equipo!
                   Su enfoque profesional y atención a los detalles son
-                  excepcionales. Recomiendo encarecidamente sus servicios."
+                  excepcionales. Recomiendo encarecidamente sus servicios.
                 </p>
               </blockquote>
 
@@ -166,9 +166,9 @@ function TestimonialEs() {
               </div>
               <blockquote className="mt-7">
                 <p className="text-xl leading-relaxed text-white">
-                  "¡Increíble trabajo! Su atención al detalle y su enfoque
+                  ¡Increíble trabajo! Su atención al detalle y su enfoque
                   centrado en el cliente hicieron que trabajar con ellos fuera
-                  un placer. Estoy muy satisfecho con los resultados."
+                  un placer. Estoy muy satisfecho con los resultados.
                 </p>
               </blockquote>
 
@@ -224,9 +224,9 @@ function TestimonialEs() {
               </div>
               <blockquote className="mt-7">
                 <p className="text-xl leading-relaxed text-white">
-                  "La experiencia y el proceso de desarrollo fue fluido y transparente, lo que me
+                  La experiencia y el proceso de desarrollo fue fluido y transparente, lo que me
                   permitió estar informado en todo momento. ¡Sin duda alguna,
-                  los recomiendo ampliamente!"
+                  los recomiendo ampliamente!
                 </p>
               </blockquote>
 

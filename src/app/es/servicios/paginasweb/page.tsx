@@ -8,7 +8,7 @@ import FeaturesEs from "@/components/ServicesComponents/WebPagesComponents/Pagin
 import FaqEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/FaqEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 
-function page() {
+function Page() {
   const changePageTitle = () => {
     document.title = "Stellar Studio | Creá tu sitio web";
   };
@@ -36,4 +36,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

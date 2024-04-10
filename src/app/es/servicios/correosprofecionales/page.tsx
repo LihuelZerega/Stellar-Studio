@@ -10,7 +10,7 @@ import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 import { motion } from "framer-motion";
 import { MdClose } from "react-icons/md";
 
-function page() {
+function Page() {
   const changePageTitle = () => {
     document.title = "Stellar Studio | Impulsá tu imagen profecional";
   };
@@ -84,4 +84,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
