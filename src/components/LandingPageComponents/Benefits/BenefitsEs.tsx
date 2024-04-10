@@ -1,13 +1,11 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import CreativeDesings from "@/images/CreativeDesignMockUp.png";
 import WebPagesLandingMockup from "@/images/WebPagesLandingMockup.png";
 import DomainLandingMockup from "@/images/DomainLandingMockup.png";
-import ResponsiveDesings from "@/images/ResponsivenessMockup.png";
-import SeoOptimized from "@/images/SeoMockup.png";
 import {
   HiOutlineAtSymbol,
+  HiOutlineChip,
   HiOutlineCloud,
   HiOutlineDatabase,
   HiOutlineDesktopComputer,
@@ -16,6 +14,9 @@ import {
   HiOutlineLockClosed,
   HiOutlineMailOpen,
   HiOutlineMap,
+  HiOutlineRefresh,
+  HiOutlineSearchCircle,
+  HiOutlineShieldCheck,
   HiOutlineSparkles,
 } from "react-icons/hi";
 import { RiExternalLinkLine } from "react-icons/ri";
@@ -168,7 +169,7 @@ const BenefitsEs: React.FC = () => {
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md text-gray-100 font-light mt-4">
                 <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
-                  <HiOutlineSparkles className="text-[#a482fb] text-3xl lg:text-xl" />
+                  <HiOutlineChip  className="text-[#a482fb] text-3xl lg:text-xl" />
                   <h1 className="font-semibold text-xs md:text-md text-white">
                     Dominios Populares / Generacon con IA
                   </h1>
@@ -179,7 +180,7 @@ const BenefitsEs: React.FC = () => {
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
                 <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
-                  <HiOutlineSparkles className="text-[#a482fb] text-2xl lg:text-xl" />
+                  <HiOutlineShieldCheck  className="text-[#a482fb] text-2xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
                     Aseguramos tu privacidad
                   </h1>
@@ -190,7 +191,7 @@ const BenefitsEs: React.FC = () => {
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
                 <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
-                  <HiOutlineSparkles className="text-[#a482fb] text-xl lg:text-xl" />
+                  <HiOutlineSearchCircle   className="text-[#a482fb] text-xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
                     Disponibilidad
                   </h1>
@@ -201,7 +202,7 @@ const BenefitsEs: React.FC = () => {
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
                 <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
-                  <HiOutlineSparkles className="text-[#a482fb] text-xl lg:text-xl" />
+                  <HiOutlineRefresh className="text-[#a482fb] text-xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
                     Renovación
                   </h1>
