@@ -14,7 +14,7 @@ function FaqEs() {
         </div>
 
         <section className="py-10 sm:py-16 lg:py-12">
-          <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
+          <div className="max-w-7xl px-4 mx-auto sm:px-6 lg:px-8">
             <div className="flow-root">
               <div className="divide-y divide-gray--200 -my-9">
                 <div className="py-9">
