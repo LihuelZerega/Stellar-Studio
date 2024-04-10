@@ -6,6 +6,18 @@ import WebPagesLandingMockup from "@/images/WebPagesLandingMockup.png";
 import DomainLandingMockup from "@/images/DomainLandingMockup.png";
 import ResponsiveDesings from "@/images/ResponsivenessMockup.png";
 import SeoOptimized from "@/images/SeoMockup.png";
+import {
+  HiOutlineAtSymbol,
+  HiOutlineCloud,
+  HiOutlineDatabase,
+  HiOutlineDesktopComputer,
+  HiOutlineFingerPrint,
+  HiOutlineGlobeAlt,
+  HiOutlineLockClosed,
+  HiOutlineMailOpen,
+  HiOutlineMap,
+  HiOutlineSparkles,
+} from "react-icons/hi";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
@@ -50,7 +62,7 @@ const BenefitsEs: React.FC = () => {
         animate={controls1}
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className={`flex flex-col-reverse sm:flex-row-reverse items-center justify-between gap-6 lg:px-12 py-6 w-full`}
+        className={`flex flex-col-reverse sm:flex-row-reverse items-center justify-between lg:px-12 py-6 w-full`}
       >
         <div className="hidden sm:block justify-center w-full">
           <Image
@@ -61,27 +73,19 @@ const BenefitsEs: React.FC = () => {
           />
         </div>
         <div className="w-full">
-          <h1 className="font-bold text-5xl text-[#a482fb]">Paginas Web</h1>
-          <p className="text-sm sm:text-base text-white mt-6">
+          <div className="flex flex-row font-bold text-4xl lg:text-5xl space-x-2 items-center text-[#a482fb]">
+            <HiOutlineDesktopComputer />
+            <h1>Paginas Web</h1>
+          </div>
+          <p className="text-sm sm:text-base text-neutral-300 mt-6">
             Desarrolla tu presencia online con una página web profesional y
             moderna. Consigue más clientes y haz crecer tu negocio.
           </p>
           <div className="grid grid-cols-2 gap-2 xl:grid-cols-1 lg:gap-0">
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md text-gray-100 font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineSparkles className="text-[#a482fb] text-3xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
                     Diseño y desarrollo personalizados
                   </h1>
@@ -91,19 +95,8 @@ const BenefitsEs: React.FC = () => {
 
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineLockClosed className="text-[#a482fb] text-3xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
                     Seguridad y rendimiento
                   </h1>
@@ -113,19 +106,8 @@ const BenefitsEs: React.FC = () => {
 
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineMap className="text-[#a482fb] text-3xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
                     Estrategias de SEO y Posicionamiento
                   </h1>
@@ -135,42 +117,34 @@ const BenefitsEs: React.FC = () => {
 
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineFingerPrint className="text-[#a482fb] text-2xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
                     Innovación continua
                   </h1>
                 </div>
               </div>
             </div>
-
-            <Link href="es/servicios/paginasweb">
-              <div className="flex flex-row items-center justify-center sm:justify-start space-x-1 mt-4 font-semibold text-base md:text-lg text-white hover:text-[#a482fb] hover:scale-105 transition-all duration-300 cursor-pointer">
-                <h1>Ver planes</h1>
-                <RiExternalLinkLine />
-              </div>
-            </Link>
           </div>
+          <Link href="es/servicios/paginasweb">
+            <div className="flex flex-row items-center justify-center sm:justify-start space-x-1 mt-8 sm:mt-4 font-semibold text-base md:text-lg text-white hover:text-[#a482fb] hover:scale-105 transition-all duration-300 cursor-pointer">
+              <h1>Ver planes</h1>
+              <RiExternalLinkLine />
+            </div>
+          </Link>
         </div>
       </motion.section>
+
+      <div className="w-full max-w-xs border-b border-neutral-400">
+        <h1 className="text-transparent">g</h1>
+      </div>
 
       <motion.section
         ref={ref2}
         animate={controls2}
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className={`flex flex-col-reverse sm:flex-row items-center justify-between gap-6 lg:px-12 py-6 w-full`}
+        className={`flex flex-col-reverse sm:flex-row items-center justify-between lg:px-12 py-6 w-full`}
       >
         <div className="hidden sm:block justify-center w-full">
           <Image
@@ -180,8 +154,11 @@ const BenefitsEs: React.FC = () => {
             alt="DomainLandingMockup"
           />
         </div>
-        <div className="w-full h-96">
-          <h1 className="font-bold text-5xl text-[#a482fb]">Dominios</h1>
+        <div className="w-full sm:h-72">
+          <div className="flex flex-row font-bold text-4xl lg:text-5xl space-x-2 items-center text-[#a482fb]">
+            <HiOutlineGlobeAlt />
+            <h1>Dominios</h1>
+          </div>
           <p className="text-sm sm:text-base text-white mt-6">
             Consigue el nombre perfecto para tu página web y correo electrónico.
             Protege tu marca y aumenta tu visibilidad online.
@@ -190,21 +167,10 @@ const BenefitsEs: React.FC = () => {
           <div className="grid grid-cols-2 gap-2 xl:grid-cols-1 lg:gap-0">
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md text-gray-100 font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <h1 className="font-semibold text-sm md:text-md text-white">
-                    Diseño y desarrollo personalizados
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineSparkles className="text-[#a482fb] text-3xl lg:text-xl" />
+                  <h1 className="font-semibold text-xs md:text-md text-white">
+                    Dominios Populares / Generacon con IA
                   </h1>
                 </div>
               </div>
@@ -212,21 +178,10 @@ const BenefitsEs: React.FC = () => {
 
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineSparkles className="text-[#a482fb] text-2xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
-                    Seguridad y rendimiento
+                    Aseguramos tu privacidad
                   </h1>
                 </div>
               </div>
@@ -234,21 +189,10 @@ const BenefitsEs: React.FC = () => {
 
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineSparkles className="text-[#a482fb] text-xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
-                    Estrategias de SEO y Posicionamiento
+                    Disponibilidad
                   </h1>
                 </div>
               </div>
@@ -256,43 +200,35 @@ const BenefitsEs: React.FC = () => {
 
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineSparkles className="text-[#a482fb] text-xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
-                    Innovación continua
+                    Renovación
                   </h1>
                 </div>
               </div>
             </div>
-
-            <Link href="es/servicios/dominios">
-              <div className="flex flex-row items-center justify-center sm:justify-start space-x-1 mt-4 font-semibold text-base md:text-lg text-white hover:text-[#a482fb] hover:scale-105 transition-all duration-300 cursor-pointer">
-                <h1>Ver planes</h1>
-                <RiExternalLinkLine />
-              </div>
-            </Link>
           </div>
-          
+
+          <Link href="es/servicios/dominios">
+            <div className="flex flex-row items-center justify-center sm:justify-start space-x-1 mt-8 sm:mt-4 font-semibold text-base md:text-lg text-white hover:text-[#a482fb] hover:scale-105 transition-all duration-300 cursor-pointer">
+              <h1>Ver planes</h1>
+              <RiExternalLinkLine />
+            </div>
+          </Link>
         </div>
       </motion.section>
+
+      <div className="w-full max-w-xs border-b border-neutral-400">
+        <h1 className="text-transparent">g</h1>
+      </div>
 
       <motion.section
         ref={ref3}
         animate={controls3}
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className={`flex flex-col-reverse sm:flex-row-reverse items-center justify-between gap-6 lg:px-12 py-6 w-full`}
+        className={`flex flex-col-reverse sm:flex-row-reverse items-center justify-between lg:px-12 py-6 w-full`}
       >
         <div className="hidden sm:flex justify-center w-full">
           <Image
@@ -302,10 +238,11 @@ const BenefitsEs: React.FC = () => {
             alt="WebPagesLandingMockup"
           />
         </div>
-        <div className="w-full h-80">
-          <h1 className="font-bold text-5xl text-[#a482fb]">
-            Correo Profecional
-          </h1>
+        <div className="w-full">
+          <div className="flex flex-row font-bold text-4xl lg:text-5xl space-x-2 items-center text-[#a482fb]">
+            <HiOutlineMailOpen className="text-7xl" />
+            <h1>Correos Profecionales</h1>
+          </div>
           <p className="text-sm sm:text-base text-white mt-6">
             Da una imagen profesional a tu negocio con un correo electrónico
             personalizado. Mejora la comunicación con tus clientes y
@@ -315,21 +252,10 @@ const BenefitsEs: React.FC = () => {
           <div className="grid grid-cols-2 gap-2 xl:grid-cols-1 lg:gap-0">
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md text-gray-100 font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineDatabase className="text-[#a482fb] text-2xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
-                    Diseño y desarrollo personalizados
+                    Gran almacenamiento
                   </h1>
                 </div>
               </div>
@@ -337,21 +263,10 @@ const BenefitsEs: React.FC = () => {
 
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineAtSymbol className="text-[#a482fb] text-xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
-                    Seguridad y rendimiento
+                    Alias de email
                   </h1>
                 </div>
               </div>
@@ -359,21 +274,10 @@ const BenefitsEs: React.FC = () => {
 
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineLockClosed className="text-[#a482fb] text-3xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
-                    Estrategias de SEO y Posicionamiento
+                    Seguros, privados y sin anuncios
                   </h1>
                 </div>
               </div>
@@ -381,21 +285,10 @@ const BenefitsEs: React.FC = () => {
 
             <div className="max-w-md xl:max-w-2xl text-left">
               <div className="text-md font-light mt-4">
-                <div className="inline-flex xl:items-center justify-start space-x-2">
-                  <svg
-                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <div className="inline-flex xl:items-center justify-start space-x-1 lg:space-x-2">
+                  <HiOutlineCloud className="text-[#a482fb] text-3xl lg:text-xl" />
                   <h1 className="font-semibold text-sm md:text-md text-white">
-                    Innovación continua
+                    Infraestructura basada en la nube
                   </h1>
                 </div>
               </div>
@@ -403,7 +296,7 @@ const BenefitsEs: React.FC = () => {
           </div>
 
           <Link href="es/servicios/correosprofecionales">
-            <div className="flex flex-row items-center justify-center sm:justify-start space-x-1 mt-4 font-semibold text-base md:text-lg text-white hover:text-[#a482fb] hover:scale-105 transition-all duration-300 cursor-pointer">
+            <div className="flex flex-row items-center justify-center sm:justify-start space-x-1 mt-8 sm:mt-4 font-semibold text-base md:text-lg text-white hover:text-[#a482fb] hover:scale-105 transition-all duration-300 cursor-pointer">
               <h1>Ver planes</h1>
               <RiExternalLinkLine />
             </div>

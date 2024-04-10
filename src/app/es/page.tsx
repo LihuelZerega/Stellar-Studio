@@ -10,6 +10,7 @@ import FaqEs from "@/components/LandingPageComponents/Faqs/FaqEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 import StatsEs from "@/components/LandingPageComponents/Stats/StatsEs";
 import ChoosePlanEs from "@/components/LandingPageComponents/ChoosePlans/ChoosePlanEs";
+
 function Page() {
   const changePageTitle = () => {
     document.title =
@@ -36,7 +37,9 @@ function Page() {
       <div className="pt-16">
         <BenefitsEs />
       </div>
-      <div className="py-16">{/* <WorkProcessEs /> */}</div>
+      <div className="py-16">
+        <WorkProcessEs />
+      </div>
       <TestimonialEs />
       <div className="py-16">
         <FaqEs />
