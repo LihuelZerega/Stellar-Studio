@@ -16,8 +16,10 @@ import EEUUIcon from "@/images/Flags/estados-unidos.png";
 import UnitedKingdomIcon from "@/images/Flags/reino-unido.png";
 import EspanaIcon from "@/images/Flags/espana.png";
 import { motion } from "framer-motion";
+import LoadingPage from "@/ui/LoadingPage";
 
 const Home: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [language, setLanguage] = useState("");
 
   useEffect(() => {
@@ -30,271 +32,333 @@ const Home: React.FC = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 300);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+
   return (
-    <div
-      className="bg-cover bg-center bg-[#272526]"
-      style={{
-        backgroundImage:
-          'url("https://res.cloudinary.com/dszjgdktf/image/upload/v1712257547/Stellar%20Studio/BackgroundHomeImage_hod7wp.png")',
-      }}
-    >
-      <div className="bg-transparent min-h-screen flex flex-col justify-center items-center select-none">
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="mb-12 max-w-xs sm:max-w-lg"
+    <>
+      {isLoading ? (
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-[#272526] z-50">
+          <LoadingPage />
+        </div>
+      ) : (
+        <div
+          className="bg-cover bg-center bg-[#272526]"
+          style={{
+            backgroundImage:
+              'url("https://res.cloudinary.com/dszjgdktf/image/upload/v1712257547/Stellar%20Studio/BackgroundHomeImage_hod7wp.png")',
+          }}
         >
-          <Image
-            src={StellarStudioLogo}
-            width={600}
-            height={600}
-            alt="Stellar Studio Logo"
-          />
-        </motion.div>
+          <div className="bg-transparent min-h-screen flex flex-col justify-center items-center select-none">
+            <motion.div
+              initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="mb-12 max-w-xs sm:max-w-lg"
+            >
+              <Image
+                src={StellarStudioLogo}
+                width={600}
+                height={600}
+                alt="Stellar Studio Logo"
+              />
+            </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="text-lg md:text-xl font-bold text-white mb-8"
-        >
-          {language === "es"
-            ? "Seleccione su país"
-            : language === "fr"
-            ? "Choisissez votre pays"
-            : language === "de"
-            ? "Wählen Sie Ihr Land"
-            : language === "it"
-            ? "Scegli il tuo paese"
-            : language === "pt"
-            ? "Escolha o seu país"
-            : "Choose Your Country"}
-        </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="text-lg md:text-xl font-bold text-white mb-8"
+            >
+              {language === "es"
+                ? "Seleccione su país"
+                : language === "fr"
+                ? "Choisissez votre pays"
+                : language === "de"
+                ? "Wählen Sie Ihr Land"
+                : language === "it"
+                ? "Scegli il tuo paese"
+                : language === "pt"
+                ? "Escolha o seu país"
+                : "Choose Your Country"}
+            </motion.h1>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.1 }}
-        >
-          <section className="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-7">
-            <Link href={"/ar"} className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-pointer">
-              <div>
-                <Image
-                  src={ArgentinaIcon}
-                  width={25}
-                  height={25}
-                  alt="ArgentinaIcon"
-                />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-white">
-                  Argentina
-                </h1>
-              </div>
-            </Link>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1.1 }}
+            >
+              <section className="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-7">
+                <Link
+                  href={"/ar"}
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-pointer"
+                >
+                  <div>
+                    <Image
+                      src={ArgentinaIcon}
+                      width={25}
+                      height={25}
+                      alt="ArgentinaIcon"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-white">
+                      Argentina
+                    </h1>
+                  </div>
+                </Link>
 
-            <Link href={"/br"} className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-pointer">
-              <div>
-                <Image
-                  src={BrasilIcon}
-                  width={25}
-                  height={25}
-                  alt="BrasilIcon"
-                />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-white">Brasil</h1>
-              </div>
-            </Link>
+                <Link
+                  href={"/br"}
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-pointer"
+                >
+                  <div>
+                    <Image
+                      src={BrasilIcon}
+                      width={25}
+                      height={25}
+                      alt="BrasilIcon"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-white">
+                      Brasil
+                    </h1>
+                  </div>
+                </Link>
 
-            <Link href={"/es"} className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-pointer">
-              <div>
-                <Image
-                  src={EspanaIcon}
-                  width={25}
-                  height={25}
-                  alt="EspanaIcon"
-                />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-white">España</h1>
-              </div>
-            </Link>
+                <Link
+                  href={"/es"}
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-pointer"
+                >
+                  <div>
+                    <Image
+                      src={EspanaIcon}
+                      width={25}
+                      height={25}
+                      alt="EspanaIcon"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-white">
+                      España
+                    </h1>
+                  </div>
+                </Link>
 
-            <Link href={"/us"} className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-pointer">
-              <div>
-                <Image src={EEUUIcon} width={25} height={25} alt="EEUUIcon" />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-white">
-                  United States
-                </h1>
-              </div>
-            </Link>
-          </section>
+                <Link
+                  href={"/us"}
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-pointer"
+                >
+                  <div>
+                    <Image
+                      src={EEUUIcon}
+                      width={25}
+                      height={25}
+                      alt="EEUUIcon"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-white">
+                      United States
+                    </h1>
+                  </div>
+                </Link>
+              </section>
 
-          <hr className="border-neutral-800 my-6 mx-12 sm:mx-24" />
+              <hr className="border-neutral-800 my-6 mx-12 sm:mx-24" />
 
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="text-center text-lg md:text-xl font-bold text-white mb-6"
-          >
-            {language === "es"
-              ? "Próximamente..."
-              : language === "fr"
-              ? "À venir..."
-              : language === "de"
-              ? "Demnächst..."
-              : language === "it"
-              ? "Prossimamente..."
-              : language === "pt"
-              ? "Em breve..."
-              : "Coming soon..."}
-          </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1 }}
+                className="text-center text-lg md:text-xl font-bold text-white mb-6"
+              >
+                {language === "es"
+                  ? "Próximamente..."
+                  : language === "fr"
+                  ? "À venir..."
+                  : language === "de"
+                  ? "Demnächst..."
+                  : language === "it"
+                  ? "Prossimamente..."
+                  : language === "pt"
+                  ? "Em breve..."
+                  : "Coming soon..."}
+              </motion.h1>
 
-          <section className="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-7">
-            <Link href="/cl" className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed">
-              <div>
-                <Image
-                  src={ChileIcon}
-                  width={25}
-                  height={25}
-                  alt="ChileIcon"
-                  className="opacity-40"
-                />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-neutral-400">
-                  Chile
-                </h1>
-              </div>
-            </Link>
+              <section className="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-7">
+                <Link
+                  href="/cl"
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
+                >
+                  <div>
+                    <Image
+                      src={ChileIcon}
+                      width={25}
+                      height={25}
+                      alt="ChileIcon"
+                      className="opacity-40"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-neutral-400">
+                      Chile
+                    </h1>
+                  </div>
+                </Link>
 
-            <Link href="/co" className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed">
-              <div>
-                <Image
-                  src={ColombiaIcon}
-                  width={25}
-                  height={25}
-                  alt="ColombiaIcon"
-                  className="opacity-40"
-                />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-neutral-400">
-                  Colombia
-                </h1>
-              </div>
-            </Link>
+                <Link
+                  href="/co"
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
+                >
+                  <div>
+                    <Image
+                      src={ColombiaIcon}
+                      width={25}
+                      height={25}
+                      alt="ColombiaIcon"
+                      className="opacity-40"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-neutral-400">
+                      Colombia
+                    </h1>
+                  </div>
+                </Link>
 
-            <Link href="/de" className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed">
-              <div>
-                <Image
-                  src={AlemaniaIcon}
-                  width={25}
-                  height={25}
-                  alt="AlemaniaIcon"
-                  className="opacity-40"
-                />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-neutral-400">
-                  Deutschland
-                </h1>
-              </div>
-            </Link>
+                <Link
+                  href="/de"
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
+                >
+                  <div>
+                    <Image
+                      src={AlemaniaIcon}
+                      width={25}
+                      height={25}
+                      alt="AlemaniaIcon"
+                      className="opacity-40"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-neutral-400">
+                      Deutschland
+                    </h1>
+                  </div>
+                </Link>
 
-            <Link href="/fr" className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed">
-              <div>
-                <Image
-                  src={FranciaIcon}
-                  width={25}
-                  height={25}
-                  alt="FranciaIcon"
-                  className="opacity-40"
-                />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-neutral-400">
-                  France
-                </h1>
-              </div>
-            </Link>
+                <Link
+                  href="/fr"
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
+                >
+                  <div>
+                    <Image
+                      src={FranciaIcon}
+                      width={25}
+                      height={25}
+                      alt="FranciaIcon"
+                      className="opacity-40"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-neutral-400">
+                      France
+                    </h1>
+                  </div>
+                </Link>
 
-            <Link href="/it" className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed">
-              <div>
-                <Image
-                  src={ItaliaIcon}
-                  width={25}
-                  height={25}
-                  alt="ItaliaIcon"
-                  className="opacity-40"
-                />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-neutral-400">
-                  Italia
-                </h1>
-              </div>
-            </Link>
+                <Link
+                  href="/it"
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
+                >
+                  <div>
+                    <Image
+                      src={ItaliaIcon}
+                      width={25}
+                      height={25}
+                      alt="ItaliaIcon"
+                      className="opacity-40"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-neutral-400">
+                      Italia
+                    </h1>
+                  </div>
+                </Link>
 
-            <Link href="/mx" className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed">
-              <div>
-                <Image
-                  src={MexicoIcon}
-                  width={25}
-                  height={25}
-                  alt="MexicoIcon"
-                  className="opacity-40"
-                />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-neutral-400">
-                  Mexico
-                </h1>
-              </div>
-            </Link>
+                <Link
+                  href="/mx"
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
+                >
+                  <div>
+                    <Image
+                      src={MexicoIcon}
+                      width={25}
+                      height={25}
+                      alt="MexicoIcon"
+                      className="opacity-40"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-neutral-400">
+                      Mexico
+                    </h1>
+                  </div>
+                </Link>
 
-            <Link href="/uy" className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed">
-              <div>
-                <Image
-                  src={UruguayIcon}
-                  width={25}
-                  height={25}
-                  alt="UruguayIcon"
-                  className="opacity-40"
-                />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-neutral-400">
-                  Uruguay
-                </h1>
-              </div>
-            </Link>
+                <Link
+                  href="/uy"
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
+                >
+                  <div>
+                    <Image
+                      src={UruguayIcon}
+                      width={25}
+                      height={25}
+                      alt="UruguayIcon"
+                      className="opacity-40"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-neutral-400">
+                      Uruguay
+                    </h1>
+                  </div>
+                </Link>
 
-            <Link href="/uk" className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed">
-              <div>
-                <Image
-                  src={UnitedKingdomIcon}
-                  width={25}
-                  height={25}
-                  alt="UnitedKingdomIcon"
-                  className="opacity-40"
-                />
-              </div>
-              <div className="flex flex-col ml-2">
-                <h1 className="text-sm hover:font-medium text-neutral-400">
-                  United Kingdom
-                </h1>
-              </div>
-            </Link>
-          </section>
-        </motion.div>
-      </div>
-    </div>
+                <Link
+                  href="/uk"
+                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
+                >
+                  <div>
+                    <Image
+                      src={UnitedKingdomIcon}
+                      width={25}
+                      height={25}
+                      alt="UnitedKingdomIcon"
+                      className="opacity-40"
+                    />
+                  </div>
+                  <div className="flex flex-col ml-2">
+                    <h1 className="text-sm hover:font-medium text-neutral-400">
+                      United Kingdom
+                    </h1>
+                  </div>
+                </Link>
+              </section>
+            </motion.div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
