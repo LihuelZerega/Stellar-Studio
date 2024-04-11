@@ -2,6 +2,9 @@
 import React, { useEffect } from "react";
 import NavBarEs from "@/components/NavBars/NavBarEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
+import HeroSectionHelp from "@/components/HelpComponents/Es/HeroSectionHelp";
+import HelpSteps from "@/components/HelpComponents/Es/HelpSteps";
+import ContactCompania from "@/components/CompaniaComponents/Es/ContactCompania";
 
 function Page() {
   const changePageTitle = () => {
@@ -21,7 +24,9 @@ function Page() {
       }}
     >
       <NavBarEs />
-      <h1>Ayuda</h1>
+      <HeroSectionHelp />
+      <HelpSteps />
+      <ContactCompania />
       <FooterEs />
     </div>
   );

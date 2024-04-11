@@ -2,6 +2,10 @@
 import React, { useEffect } from "react";
 import NavBarEs from "@/components/NavBars/NavBarEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
+import HeroSectionCompania from "@/components/CompaniaComponents/Es/HeroSectionCompania";
+import AboutStellarStudio from "@/components/CompaniaComponents/Es/AboutStellarStudio";
+import ContactCompania from "@/components/CompaniaComponents/Es/ContactCompania";
+import TecnologyCompania from "@/components/CompaniaComponents/Es/TecnologyCompania";
 
 function Page() {
   const changePageTitle = () => {
@@ -21,10 +25,16 @@ function Page() {
       }}
     >
       <NavBarEs />
-      <h1>Compania</h1>
-      <h1 id="sobrenosotros">Sobre Stellar Studio</h1>
-      <h1 id="tecnologia">Nuesrta Tecnologia</h1>
-      <h1 id="contacto">Contactanos</h1>
+      <HeroSectionCompania />
+      <div id="sobrenosotros" className="bg-neutral-900 bg-opacity-30">
+        <AboutStellarStudio />
+      </div>
+      <h1 id="tecnologia">
+        <TecnologyCompania />
+      </h1>
+      <h1 id="contacto">
+        <ContactCompania />
+      </h1>
       <FooterEs />
     </div>
   );

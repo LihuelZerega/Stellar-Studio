@@ -27,14 +27,10 @@ export default function HeroSectionEs() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-center"
           >
-            <h1 className="text-[#a482fb]">Informacion</h1>
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl 2xl:text-6xl">
-              El mejor servicio <span className="text-[#a482fb]">calidad</span> - <span className="text-[#a482fb]">precio</span> de toda la web
+            <h1 className="text-[#a482fb]">Ayuda</h1>
+            <h1 className="text-5xl font-bold tracking-tight text-white sm:text-5xl 2xl:text-6xl">
+              Atencion al cliente
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-400">
-              Stellar Studio es el fruto de una visión audaz y una pasión por la
-              tecnología y la innovación.
-            </p>
             <div className="mt-6 flex items-center justify-center gap-x-6">
               <motion.div
                 animate={{ y: [0, 20, 0] }}

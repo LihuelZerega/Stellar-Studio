@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { RxDoubleArrowDown } from "react-icons/rx";
 
 export default function HeroSectionEs() {
+
   return (
     <div className="">
       <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -27,9 +28,9 @@ export default function HeroSectionEs() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-center"
           >
-            <h1 className="text-[#a482fb]">Informacion</h1>
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl 2xl:text-6xl">
-              El mejor servicio <span className="text-[#a482fb]">calidad</span> - <span className="text-[#a482fb]">precio</span> de toda la web
+            <h1 className="text-[#a482fb]">Compania</h1>
+            <h1 className="text-5xl font-bold tracking-tight text-white sm:text-5xl 2xl:text-6xl">
+              ¿Quienes somos?
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-400">
               Stellar Studio es el fruto de una visión audaz y una pasión por la
