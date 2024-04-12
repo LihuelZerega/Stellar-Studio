@@ -82,7 +82,7 @@ const compania = [
   {
     name: "Sobre Stellar Studio",
     description: "Conoce nuestra empresa, misión y valores.",
-    href: "/es/compania#sobrenosotros",
+    href: "/es/compania",
     icon: MdOutlineSchool,
   },
   {
