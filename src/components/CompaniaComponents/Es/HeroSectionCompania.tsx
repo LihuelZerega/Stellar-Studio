@@ -9,7 +9,7 @@ export default function HeroSectionEs() {
       <div className="absolute inset-0">
         <img
           className="object-cover w-full h-full"
-          src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712935668/Sin_t%C3%ADtulo-1_b63dss.png"
+          src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712935670/Grupo_2_jxjdw5.png"
           alt=""
         />
       </div>
