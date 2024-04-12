@@ -5,7 +5,7 @@ import { HeroHighlightDemo } from "@/ui/hero-highlight";
 function page() {
   return (
     <div>
-      <HeroHighlightDemo />
+      test
     </div>
   );
 }
