@@ -17,7 +17,7 @@ function PricesCradsEs() {
 
   return (
     <div>
-      <section className="pb-4">
+      <section className="mt-16 lg:mt-56 pb-4">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 text-left lg:max-w-full lg:grid-cols-3">
             {/* Card 1 */}

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { RxDoubleArrowDown } from "react-icons/rx";
 import Link from "next/link";
 
 export default function HeroSectionEs() {
@@ -19,17 +18,13 @@ export default function HeroSectionEs() {
         <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
           <div className="w-full lg:w-2/3 xl:w-1/2">
             <h1 className="text-[#a482fb] font-semibold">Ayuda</h1>
-            <p className="mt-6 tracking-tighter text-white">
+            <p className="mt-3 tracking-tighter text-white">
               <span className="font-sans font-bold text-4xl sm:text-5xl lg:text-6xl">
                 Atencion al cliente
               </span>
             </p>
-            <p className="mt-6 font-sans text-base font-normal leading-7 text-white text-opacity-70">
-              Stellar Studio es el fruto de una visión audaz y una pasión por la
-              tecnología y la innovación.
-            </p>
 
-            <div className="flex items-center mt-5 space-x-3 sm:space-x-4">
+            <div className="flex items-center mt-8 space-x-3 sm:space-x-4">
               <Link href="#contactoayuda">
                 <motion.button
                   whileTap={{ scale: 0.5 }}
