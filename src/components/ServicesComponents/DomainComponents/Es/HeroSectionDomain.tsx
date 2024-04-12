@@ -54,7 +54,105 @@ function HeroSectionDomain() {
 
   return (
     <>
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <section>
+        <div className="relative py-44 2xl:py-64">
+          <div className="absolute inset-0">
+            <img
+              className="object-cover object-right w-full h-full lg:object-center mt-12"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712955380/Sin_t%C3%ADtulo-222_tvt3no.png"
+              alt=""
+            />
+          </div>
+
+          <div className="absolute inset-0 bg-rtansparent bg-opacity-40"></div>
+
+          <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div className="max-w-lg mx-auto text-center xl:max-w-3xl">
+              <h1 className="text-3xl font-bold text-white sm:text-4xl xl:text-5xl">
+                ¡Asegura tu identidad en línea!
+              </h1>
+              <div className="mt-6 flex items-center justify-center gap-x-6">
+                <div className="flex w-full flex-col">
+                  <Tabs
+                    aria-label="Options"
+                    className="flex flex-row items-center justify-center"
+                    radius="sm"
+                  >
+                    <Tab key="Encontrá un Dominio" title="Encontrá un Dominio">
+                      <section className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 sm:space-x-4 w-full">
+                        <div className="flex flex-row items-center justify-start space-x-3 bg-white h-12 px-3 rounded-xl w-full">
+                          <FiSearch className="text-2xl font-bold text-[#a482fb]" />
+                          <input
+                            className="flex flex-row items-center w-full focus:outline-white rounded-md text-gray-500"
+                            placeholder={`Busca tu dominio ideal. Ej: ${
+                              typewriterText ?? ""
+                            }`}
+                          />
+                        </div>
+                        <div>
+                          <motion.button
+                            whileTap={{ scale: 0.95 }}
+                            whileHover={{ scale: 1.05 }}
+                            className="rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+                          >
+                            Buscar
+                          </motion.button>
+                        </div>
+                      </section>
+                    </Tab>
+
+                    <Tab
+                      key="Generá un dominio con IA"
+                      title="Generá un dominio con IA"
+                    >
+                      <section className="flex flex-col items-center justify-center w-full">
+                        <div className="flex flex-row items-start pt-4 justify-start space-x-3 bg-white h-24 px-3 rounded-xl w-full">
+                          <PiMagicWand className="text-2xl text-[#a482fb]" />
+                          <textarea
+                            className="flex flex-row items-start w-full focus:outline-white rounded-md text-gray-500"
+                            placeholder={`Dale una breve descripción de tu proyecto a la IA.\nEj: ${
+                              typewriterTextIA ?? ""
+                            }`}
+                            style={{ resize: "none" }}
+                          />
+                          <hr />
+                        </div>
+                        <div className="w-full mt-4">
+                          <motion.button
+                            whileTap={{ scale: 0.95 }}
+                            whileHover={{ scale: 1.05 }}
+                            className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+                          >
+                            Generar
+                          </motion.button>
+                        </div>
+                      </section>
+                    </Tab>
+                  </Tabs>
+                </div>
+              </div>
+
+              <div className="grid max-w-md grid-cols-2 mx-auto mt-8 md:mt-16 lg:mt-24 xl:mt-32 gap-x-6 grid-col-2">
+                <div>
+                  <p className="text-4xl font-bold text-white">38,942</p>
+                  <p className="mt-2 text-sm font-medium text-gray-300">
+                    Order Delivered
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-4xl font-bold text-white">14,344</p>
+                  <p className="mt-2 text-sm font-medium text-gray-300">
+                    Registered Customers
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -121,7 +219,7 @@ function HeroSectionDomain() {
                           placeholder={`Dale una breve descripción de tu proyecto a la IA.\nEj: ${
                             typewriterTextIA ?? ""
                           }`}
-                          style={{ resize: 'none' }}
+                          style={{ resize: "none" }}
                         />
                         <hr />
                       </div>
@@ -154,7 +252,7 @@ function HeroSectionDomain() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

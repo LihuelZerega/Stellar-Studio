@@ -13,7 +13,6 @@ import { MdClose } from "react-icons/md";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
-
   const [maintenanceMode, setMaintenanceMode] = useState(true);
 
   const changePageTitle = () => {
