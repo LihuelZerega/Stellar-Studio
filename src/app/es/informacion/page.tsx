@@ -5,6 +5,9 @@ import NavBarEs from "@/components/NavBars/NavBarEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 import HeroSectionInformationEs from "@/components/InformacionComponents/Es/HeroSectionInformationEs";
 import WebServices from "@/components/InformacionComponents/Es/WebServices";
+import Payments from "@/components/InformacionComponents/Es/Payments";
+import Testimonials from "@/components/InformacionComponents/Es/Testimonials";
+import Faq from "@/components/InformacionComponents/Es/Faq";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,10 +44,18 @@ function Page() {
         >
           <NavBarEs />
           <HeroSectionInformationEs />
-          <WebServices />
-          <h1 id="precios">Precios</h1>
-          <h1 id="opiniones">Opiniones</h1>
-          <h1 id="formasdepago">Formas de Pago</h1>
+          <div id="precios" className="text-transparent">
+            <WebServices />
+          </div>
+          <div id="formasdepago" className="text-transparent">
+            <Payments />
+          </div>
+          <div id="opinionesformasdepago" className="text-transparent">
+            <Testimonials />
+          </div>
+          <div>
+            <Faq />
+          </div>
           <FooterEs />
         </div>
       )}

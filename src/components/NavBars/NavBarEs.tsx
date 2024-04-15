@@ -66,7 +66,7 @@ const informacion = [
     name: "Opiniones",
     description:
       "Lee las opiniones y experiencias para conocer más sobre nuestro servicio y calidad.",
-    href: "/es/informacion#opiniones",
+    href: "/es/informacion#opinionesformasdepago",
     icon: MdEmojiPeople,
   },
   {

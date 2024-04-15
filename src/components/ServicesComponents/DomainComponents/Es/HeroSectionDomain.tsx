@@ -58,7 +58,7 @@ function HeroSectionDomain() {
         <div className="relative py-44 2xl:py-64">
           <div className="absolute inset-0">
             <img
-              className="object-cover object-right w-full h-full lg:object-center mt-12"
+              className="object-cover object-right w-full h-full lg:object-center mt-12 opacity-40 sm:opacity-60"
               src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712955380/Sin_t%C3%ADtulo-222_tvt3no.png"
               alt=""
             />
@@ -68,7 +68,7 @@ function HeroSectionDomain() {
 
           <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div className="max-w-lg mx-auto text-center xl:max-w-3xl">
-              <h1 className="text-3xl font-bold text-white sm:text-4xl xl:text-5xl">
+              <h1 className="text-3xl font-bold text-white sm:text-4xl xl:text-5xl mb-12">
                 ¡Asegura tu identidad en línea!
               </h1>
               <div className="mt-6 flex items-center justify-center gap-x-6">
@@ -79,8 +79,8 @@ function HeroSectionDomain() {
                     radius="sm"
                   >
                     <Tab key="Encontrá un Dominio" title="Encontrá un Dominio">
-                      <section className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 sm:space-x-4 w-full">
-                        <div className="flex flex-row items-center justify-start space-x-3 bg-white h-12 px-3 rounded-xl w-full">
+                      <section className="flex flex-col items-center justify-center space-y-4 w-full ">
+                        <div className="flex flex-row items-center justify-start space-x-3 bg-white h-12 px-3 rounded-xl w-full max-w-2xl">
                           <FiSearch className="text-2xl font-bold text-[#a482fb]" />
                           <input
                             className="flex flex-row items-center w-full focus:outline-white rounded-md text-gray-500"
@@ -89,11 +89,11 @@ function HeroSectionDomain() {
                             }`}
                           />
                         </div>
-                        <div>
+                        <div className="w-full">
                           <motion.button
                             whileTap={{ scale: 0.95 }}
                             whileHover={{ scale: 1.05 }}
-                            className="rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+                            className="w-full max-w-2xl rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
                           >
                             Buscar
                           </motion.button>
@@ -136,14 +136,14 @@ function HeroSectionDomain() {
                 <div>
                   <p className="text-4xl font-bold text-white">38,942</p>
                   <p className="mt-2 text-sm font-medium text-gray-300">
-                    Order Delivered
+                    Dominios buscados
                   </p>
                 </div>
 
                 <div>
                   <p className="text-4xl font-bold text-white">14,344</p>
                   <p className="mt-2 text-sm font-medium text-gray-300">
-                    Registered Customers
+                    Generados con IA
                   </p>
                 </div>
               </div>

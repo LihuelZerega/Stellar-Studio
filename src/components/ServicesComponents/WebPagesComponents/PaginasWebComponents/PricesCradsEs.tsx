@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Chip } from "@nextui-org/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -1754,8 +1755,8 @@ function PricesCradsEs() {
                         <div className="mb-3">
                           <h1 className="text-lg font-semibold">Pago Único</h1>
                           <p className="text-sm font-light text-gray-300">
-                            El pago por nuestros servicios es único y se realiza
-                            de forma anticipada.
+                            El pago por nuestros servicios de desarrollo web es
+                            unico.
                           </p>
                         </div>
                         <div className="mb-3">
@@ -1774,10 +1775,9 @@ function PricesCradsEs() {
                             Pago del Saldo Restante
                           </h1>
                           <p className="text-sm font-light text-gray-300">
-                            El saldo restante del pago se deberá abonar antes de
-                            la entrega final del producto contratado. La entrega
-                            del producto finalizado se realizará una vez
-                            recibido el pago completo.
+                            El saldo restante del pago se deberá abonar una vez
+                            que el producto contratado este entregado y
+                            finalizado.
                           </p>
                         </div>
                         <div className="mb-1">
@@ -1786,10 +1786,15 @@ function PricesCradsEs() {
                           </h1>
                           <p className="text-sm font-light text-gray-300">
                             Aceptamos pagos mediante transferencia bancaria,
-                            tarjeta de crédito, PayPal, entre otros. Los
-                            detalles específicos para realizar el pago se
-                            proporcionarán al momento de la contratación de
-                            nuestros servicios.
+                            Mercado Pago, PayPal, entre otros. Los detalles
+                            específicos para realizar el pago se proporcionarán
+                            al momento de la contratación de nuestros servicios.
+                            <Link
+                              href="/es/informacion#opinionesformasdepago"
+                              className="text-[#a482fb] hover:text-[#775fb6] ml-1"
+                            >
+                              Ver mas Metodos de Pago.
+                            </Link>
                           </p>
                         </div>
                         <p className="text-sm font-light text-gray-300">
@@ -1798,6 +1803,12 @@ function PricesCradsEs() {
                           de servicio contratado. Para más detalles o preguntas
                           relacionadas con los términos de pago, no dudes en
                           ponerte en contacto con nuestro equipo.
+                          <Link
+                            href="/es/informacion#opinionesformasdepago"
+                            className="text-[#a482fb] hover:text-[#775fb6] ml-1"
+                          >
+                            Ver mas Informacion.
+                          </Link>
                         </p>
                       </ModalBody>
                     </>
