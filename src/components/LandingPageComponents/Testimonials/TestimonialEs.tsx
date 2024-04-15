@@ -57,7 +57,7 @@ function TestimonialEs() {
               </blockquote>
 
               <div className="w-auto h-8 mx-auto mt-6 md:mt-10">
-                <h1 className="text-3xl font-bold text-[#717171]">
+                <h1 className="text-xl font-bold text-[#717171]">
                   Propietario de Nexus Marketing
                 </h1>
               </div>
@@ -115,7 +115,7 @@ function TestimonialEs() {
               </blockquote>
 
               <div className="w-auto h-8 mx-auto mt-6 md:mt-10">
-                <h1 className="text-3xl font-bold text-[#717171]">
+                <h1 className="text-xl font-bold text-[#717171]">
                   CEO de Brightify Labs
                 </h1>
               </div>
@@ -173,7 +173,7 @@ function TestimonialEs() {
               </blockquote>
 
               <div className="w-auto h-8 mx-auto mt-6 md:mt-10">
-                <h1 className="text-3xl font-bold text-[#717171]">
+                <h1 className="text-xl font-bold text-[#717171]">
                   Director de Marketing en Innovatech Solutions
                 </h1>
               </div>
@@ -231,7 +231,7 @@ function TestimonialEs() {
               </blockquote>
 
               <div className="w-auto h-8 mx-auto mt-6 md:mt-10">
-                <h1 className="text-3xl font-bold text-[#717171]">
+                <h1 className="text-xl font-bold text-[#717171]">
                   Fundadora de Green Solutions
                 </h1>
               </div>

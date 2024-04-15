@@ -49,12 +49,12 @@ function Page() {
           {/* <HeroSectionEs /> */}
           <HeroParallaxEs />
           <StatsEs />
+          <div className="py-16">
+            <WorkProcessEs />
+          </div>
           {/* <ChoosePlanEs /> */}
           <div className="pt-16">
             <BenefitsEs />
-          </div>
-          <div className="py-16">
-            <WorkProcessEs />
           </div>
           <TestimonialEs />
           <div className="py-16">

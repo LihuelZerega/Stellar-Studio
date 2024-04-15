@@ -12,7 +12,6 @@ function WorkProcessEs() {
   const controls3 = useAnimation();
   const { ref: ref3, inView: inView3 } = useInView();
 
-  // Configuración de las animaciones
   const animationVariants = {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 20 },
@@ -28,14 +27,13 @@ function WorkProcessEs() {
             initial="hidden"
             variants={animationVariants}
             transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto text-center"
+            className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-3xl font-bold leading-tight text-[#a482fb] sm:text-4xl lg:text-5xl">
-              ¿Cómo funciona?
+              Rápido, estructurado y colaborativo proceso de trabajo.
             </h2>
             <p className="max-w-xl xl:max-w-3xl mx-auto mt-4 text-base leading-relaxed text-white">
-              Con nuestro proceso de trabajo estructurado y colaborativo,
-              garantizamos que su sitio web se convierta en una poderosa
+              Garantizamos que su sitio web se convierta en una poderosa
               herramienta para impulsar tu presencia online y el éxito de tu
               negocio.
             </p>
