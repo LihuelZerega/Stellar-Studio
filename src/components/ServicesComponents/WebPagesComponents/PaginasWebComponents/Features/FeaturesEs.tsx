@@ -1,189 +1,21 @@
 import React from "react";
-import { motion } from "framer-motion";
+import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import ExpandeTuNegocioMobileMockUp from "@/images/ExpandeTuNegocioMobileMockUp.png";
 import FastestWebMockup from "@/images/FastestWebMockup.png";
 import CloudSystem from "@/images/CloudSystem.png";
 import SoporteTecnicoMobileMockup from "@/images/SoporteTecnicoMobileMockup.png";
-import Link from "next/link";
+import Astronaut1 from "@/images/Astronauts/Astronaut1.png";
+import Astronaut4 from "@/images/Astronauts/Astronaut4.png";
+import Astronaut5 from "@/images/Astronauts/Astronaut5.png";
+import Astronaut6 from "@/images/Astronauts/Astronaut6.png";
+import Astronaut7 from "@/images/Astronauts/Astronaut7.png";
 
 function FeaturesEs() {
   return (
     <>
       <div className="px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-32">
-        {/* <section className="px-4 py-4 mx-auto max-w-7xl rounded-xl sm:px-6 lg:px-8 2xl:py-24">
-        <div className="px-4 mx-auto bg-[#a482fb] w-full sm:px-6 lg:px-8 2xl:rounded-xl">
-          <div className="py-10 sm:py-16 lg:py-24 2xl:pl-24">
-            <div className="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 lg:gap-x-8 2xl:gap-x-20">
-              <div className="lg:order-2 2xl:-mr-24">
-                <img
-                  className="w-full shadow-xl rounded-xl"
-                  src="https://cdn.rareblocks.xyz/collection/celebration/images/cta/6/dashboard-screenshot.png"
-                  alt=""
-                />
-              </div>
-
-              <div className="lg:order-1">
-                <h2 className="text-lg font-bold leading-tight text-white sm:text-2xl lg:text-3xl lg:leading-snug">
-                Automatiza tus interacciones y ahorra tiempo con nuestro ChatBot inteligente.
-                </h2>
-
-                <ul className="grid grid-cols-1 mt-4 sm:mt-10 sm:grid-cols-2 gap-x-10 xl:gap-x-16 gap-y-4 xl:gap-y-6">
-                  <li className="flex items-center">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-green-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span className="ml-3 font-medium text-white">
-                      {" "}
-                      120+ Coded Blocks{" "}
-                    </span>
-                  </li>
-
-                  <li className="flex items-center">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-green-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span className="ml-3 font-medium text-white">
-                      {" "}
-                      Free Icons Included{" "}
-                    </span>
-                  </li>
-
-                  <li className="flex items-center">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-green-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span className="ml-3 font-medium text-white">
-                      {" "}
-                      Made with TailwindCSS{" "}
-                    </span>
-                  </li>
-
-                  <li className="flex items-center">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-green-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span className="ml-3 font-medium text-white">
-                      {" "}
-                      Dark & Light Mode{" "}
-                    </span>
-                  </li>
-
-                  <li className="flex items-center">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-green-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span className="ml-3 font-medium text-white">
-                      {" "}
-                      Edit & Customize Easily{" "}
-                    </span>
-                  </li>
-
-                  <li className="flex items-center">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-green-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span className="ml-3 font-medium text-white">
-                      {" "}
-                      Get Free Support{" "}
-                    </span>
-                  </li>
-                </ul>
-
-                <div className="flex flex-col items-start mt-8 sm:space-x-4 sm:flex-row sm:items-center lg:mt-12">
-                  <a
-                    href="#"
-                    title=""
-                    className="inline-flex items-center justify-center px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:bg-blue-700"
-                    role="button"
-                  >
-                    <svg
-                      className="w-5 h-5 mr-2 -ml-1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                      />
-                    </svg>
-                    Download Now
-                  </a>
-
-                  <a
-                    href="#"
-                    title=""
-                    className="inline-flex items-center justify-center px-4 py-4 mt-5 text-base font-semibold text-white transition-all duration-200 bg-transparent border border-white rounded-md sm:mt-0 hover:bg-white hover:text-black"
-                    role="button"
-                  >
-                    {" "}
-                    Explore UI Blocks{" "}
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
         <section className="grid grid-cols-1 lg:grid-cols-2">
           <div>
             <div className="lg:max-w-md text-center lg:text-left">
@@ -311,10 +143,10 @@ function FeaturesEs() {
           <div>
             <div className="flex justify-center">
               <Image
-                src={ExpandeTuNegocioMobileMockUp}
+                src={Astronaut4}
                 width={2000}
                 height={2000}
-                alt="ExpandeTuNegocioMobileMockUp"
+                alt="Astronaut4"
               />
             </div>
           </div>
@@ -323,10 +155,10 @@ function FeaturesEs() {
         <section className="grid grid-cols-1 lg:grid-cols-2 my-12 sm:my-44">
           <div className="hidden lg:block">
             <Image
-              src={FastestWebMockup}
+              src={Astronaut6}
               width={2000}
               height={2000}
-              alt="FastestWebMockup"
+              alt="Astronaut6"
             />
           </div>
           <div>
@@ -393,12 +225,12 @@ function FeaturesEs() {
               </div>
             </div>
           </div>
-          <div className="block lg:hidden">
+          <div className="block lg:hidden mt-12">
             <Image
-              src={FastestWebMockup}
+              src={Astronaut6}
               width={2000}
               height={2000}
-              alt="FastestWebMockup"
+              alt="Astronaut6"
             />
           </div>
         </section>
@@ -530,10 +362,10 @@ function FeaturesEs() {
           <div>
             <div className="flex justify-center">
               <Image
-                src={CloudSystem}
+                src={Astronaut5}
                 width={2000}
                 height={2000}
-                alt="CloudSystem"
+                alt="Astronaut5"
               />
             </div>
           </div>
@@ -542,10 +374,10 @@ function FeaturesEs() {
         <section className="grid grid-cols-1 lg:grid-cols-2 my-12 sm:my-44">
           <div className="hidden lg:block">
             <Image
-              src={SoporteTecnicoMobileMockup}
+              src={Astronaut7}
               width={2000}
               height={2000}
-              alt="SoporteTecnicoMobileMockup"
+              alt="Astronaut7"
             />
           </div>
           <div>
@@ -590,21 +422,29 @@ function FeaturesEs() {
               </div>
             </div>
           </div>
-          <div className="block lg:hidden">
+          <div className="block lg:hidden mt-12">
             <Image
-              src={SoporteTecnicoMobileMockup}
+              src={Astronaut7}
               width={2000}
               height={2000}
-              alt="SoporteTecnicoMobileMockup"
+              alt="Astronaut7"
             />
           </div>
         </section>
       </div>
 
-      <section className="glass-container bg-opacity-5 backdrop-filter backdrop-blur-lg bg-[#a482fb] p-6 my-10 sm:my-16 lg:my-24 mx-auto py-10 sm:py-16 lg:py-24 relative isolate overflow-hidden px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24">
-        <div className="flex flex-col items-center justify-center px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <section className="p-6 my-10 sm:my-16 lg:my-24 mx-auto py-10 sm:py-16 lg:py-24 relative isolate overflow-hidden px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24">
+        <div className="absolute inset-0">
+          <img
+            className="object-cover object-right w-full h-full lg:object-center opacity-40 sm:opacity-60"
+            src="https://res.cloudinary.com/dszjgdktf/image/upload/v1713282278/CtaBackground_x0ywyw.png"
+            alt=""
+          />
+        </div>
+
+        <div className="relative flex flex-col items-center justify-center px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="flex flex-col items-center justify-center text-center">
-            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl mb-4">
+            <h2 className="text-3xl font-bold leading-light text-white sm:text-4xl lg:text-5xl mb-4">
               ¡Haz que tu presencia en línea despegue ahora!
             </h2>
             <div className="max-w-lg my-4 text-gray-200">
@@ -616,7 +456,7 @@ function FeaturesEs() {
           </div>
 
           <div className="my-6">
-            <Link href="#">
+            <Link href="/es/servicios/paginasweb#modelosweb">
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}
