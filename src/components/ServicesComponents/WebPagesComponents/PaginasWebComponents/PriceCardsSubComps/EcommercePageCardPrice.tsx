@@ -84,7 +84,7 @@ function EcommercePageCardPrice() {
                           <div className="flex flex-col items-left justify-between w-full border-l ml-2 pl-2">
                             <div className="flex flex-row items-center justify-between text-base font-semibold text-gray-800">
                               <h1>E-Commerce</h1>
-                              <h1>$119.00</h1>
+                              <h1>$349.00</h1>
                             </div>
 
                             <div className="flex flex-row items-center justify-between text-sm text-gray-800">
