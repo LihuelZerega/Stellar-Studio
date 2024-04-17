@@ -1,13 +1,67 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Astronaut1 from "@/images/Astronauts/Astronaut1.png";
+import Astronaut4 from "@/images/Astronauts/Astronaut4.png";
+import Astronaut5 from "@/images/Astronauts/Astronaut5.png";
+import Astronaut6 from "@/images/Astronauts/Astronaut6.png";
+import Astronaut7 from "@/images/Astronauts/Astronaut7.png";
 
 function Features() {
+  const [ref1, inView1] = useInView({ threshold: 0.2 });
+  const [ref2, inView2] = useInView({ threshold: 0.2 });
+  const [ref3, inView3] = useInView({ threshold: 0.2 });
+  const [ref4, inView4] = useInView({ threshold: 0.2 });
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
+  const controls3 = useAnimation();
+  const controls4 = useAnimation();
+
+  useEffect(() => {
+    if (inView1) {
+      controls1.start({ opacity: 1, y: 0 });
+    } else {
+      controls1.start({ opacity: 0, y: 20 });
+    }
+  }, [controls1, inView1]);
+
+  useEffect(() => {
+    if (inView2) {
+      controls2.start({ opacity: 1, y: 0 });
+    } else {
+      controls2.start({ opacity: 0, y: 20 });
+    }
+  }, [controls2, inView2]);
+
+  useEffect(() => {
+    if (inView3) {
+      controls3.start({ opacity: 1, y: 0 });
+    } else {
+      controls3.start({ opacity: 0, y: 20 });
+    }
+  }, [controls3, inView3]);
+
+  useEffect(() => {
+    if (inView4) {
+      controls4.start({ opacity: 1, y: 0 });
+    } else {
+      controls4.start({ opacity: 0, y: 20 });
+    }
+  }, [controls4, inView4]);
+
   return (
     <>
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 space-y-24 my-32">
-        <div className="flex flex-col md:flex-row">
+        <motion.div
+          ref={ref1}
+          animate={controls1}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row"
+        >
           <div className="w-full md:w-1/2">
             <h1 className="text-3xl font-bold text-[#a482fb]">
               Aseguramos tu privacidad
@@ -26,10 +80,37 @@ function Features() {
               personales con información genérica del sitio.
             </p>
           </div>
-          <div className="w-full md:w-1/2"></div>
-        </div>
+          <div className="flex justify-center w-full md:w-1/2">
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut4}
+                width={2000}
+                height={2000}
+                alt="Astronaut4"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
 
-        <div className="flex flex-col md:flex-row-reverse">
+        <motion.div
+          ref={ref2}
+          animate={controls2}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row-reverse"
+        >
           <div className="w-full md:w-1/2">
             <h1 className="text-3xl font-bold text-[#a482fb]">
               Disponibilidad
@@ -41,10 +122,37 @@ function Features() {
               registrar el dominio que elijas al instante.
             </p>
           </div>
-          <div className="w-full md:w-1/2"></div>
-        </div>
+          <div className="flex justify-center w-full md:w-1/2">
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut4}
+                width={2000}
+                height={2000}
+                alt="Astronaut4"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
 
-        <div className="flex flex-col md:flex-row">
+        <motion.div
+          ref={ref3}
+          animate={controls3}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row"
+        >
           <div className="w-full md:w-1/2">
             <h1 className="text-3xl font-bold text-[#a482fb]">Renovación</h1>
             <p className="text-left mt-6 text-lg leading-8 text-gray-300">
@@ -54,14 +162,43 @@ function Features() {
               línea.
             </p>
           </div>
-          <div className="w-full md:w-1/2"></div>
-        </div>
+          <div className="flex justify-center w-full md:w-1/2">
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut4}
+                width={2000}
+                height={2000}
+                alt="Astronaut4"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
 
-      <section className="glass-container bg-opacity-5 backdrop-filter backdrop-blur-lg bg-[#a482fb] p-6 my-10 sm:my-16 lg:my-24 mx-auto py-10 sm:py-16 lg:py-24 relative isolate overflow-hidden px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24">
-        <div className="flex flex-col items-center justify-center px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <section className="p-6 my-10 sm:my-16 lg:my-24 mx-auto py-10 sm:py-16 lg:py-24 relative isolate overflow-hidden px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24">
+        <div className="absolute inset-0">
+          <img
+            className="object-cover object-right w-full h-full lg:object-center opacity-40 sm:opacity-60"
+            src="https://res.cloudinary.com/dszjgdktf/image/upload/v1713286589/CtaBackground2_ro5hyi.png"
+            alt="Cta Background 2"
+          />
+        </div>
+
+        <div className="relative flex flex-col items-center justify-center px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="flex flex-col items-center justify-center text-center">
-            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl mb-4">
+            <h2 className="text-3xl font-bold leading-light text-white sm:text-4xl lg:text-5xl mb-4">
               ¡Descubre nuestros planes ahora y lleva tu proyecto digital al
               siguiente nivel!
             </h2>
@@ -76,7 +213,7 @@ function Features() {
           </div>
 
           <div className="my-6">
-            <Link href="#domains">
+            <Link href="/es/servicios/dominios#dominiospopulares">
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}

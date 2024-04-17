@@ -8,6 +8,7 @@ import ChatBotIAEs from "@/components/ServicesComponents/WebPagesComponents/Pagi
 import FeaturesEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/Features/FeaturesEs";
 import FaqEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/FaqEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
+import ReDesing from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/Features/ReDesing";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -48,6 +49,7 @@ function Page() {
             <PricesCradsEs />
           </div>
           <ChatBotIAEs />
+          <ReDesing />
           <div id="caracteristicasweb">
             <FeaturesEs />
           </div>

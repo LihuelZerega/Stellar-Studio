@@ -50,7 +50,9 @@ function Page() {
           }}
         >
           <NavBarEs />
-          <HeroSectionDomain />
+          <div id="registrardominio">
+            <HeroSectionDomain />
+          </div>
           <motion.div
             initial={{ opacity: 0, y: "50%" }}
             animate={{ opacity: 1, y: 0 }}
@@ -90,7 +92,7 @@ function Page() {
             </motion.div>
           </motion.div>
           <div className="lg:px-24 2xl:px-56">
-            <div id="domains">
+            <div id="dominiospopulares">
               <PopularDomains />
             </div>
             <Tips />

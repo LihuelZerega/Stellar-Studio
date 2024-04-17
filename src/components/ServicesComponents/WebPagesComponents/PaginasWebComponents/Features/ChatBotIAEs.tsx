@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function ChatBotIAEs() {
+  const [ref1, inView1] = useInView({ threshold: 0.2 });
+  const controls1 = useAnimation();
+
+  useEffect(() => {
+    if (inView1) {
+      controls1.start({ opacity: 1, y: 0 });
+    } else {
+      controls1.start({ opacity: 0, y: 20 });
+    }
+  }, [controls1, inView1]);
+
   return (
-    <div className="px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-32">
+    <motion.div
+      ref={ref1}
+      animate={controls1}
+      initial={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.6 }}
+      className="px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-16"
+    >
       <section className="glass-container bg-opacity-5 backdrop-filter backdrop-blur-lg bg-[#a482fb] shadow-lg p-6 border-2 rounded-2xl border-[#a482fb] my-10 sm:my-16 lg:my-24 mx-auto max-w-7xl">
         <div className="py-12 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="max-w-xl mx-auto text-center">
@@ -182,7 +201,7 @@ function ChatBotIAEs() {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }
 

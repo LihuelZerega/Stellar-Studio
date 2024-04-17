@@ -1,11 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import ExpandeTuNegocioMobileMockUp from "@/images/ExpandeTuNegocioMobileMockUp.png";
-import FastestWebMockup from "@/images/FastestWebMockup.png";
-import CloudSystem from "@/images/CloudSystem.png";
-import SoporteTecnicoMobileMockup from "@/images/SoporteTecnicoMobileMockup.png";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Astronaut1 from "@/images/Astronauts/Astronaut1.png";
 import Astronaut4 from "@/images/Astronauts/Astronaut4.png";
 import Astronaut5 from "@/images/Astronauts/Astronaut5.png";
@@ -13,14 +10,61 @@ import Astronaut6 from "@/images/Astronauts/Astronaut6.png";
 import Astronaut7 from "@/images/Astronauts/Astronaut7.png";
 
 function FeaturesEs() {
+  const [ref1, inView1] = useInView({ threshold: 0.2 });
+  const [ref2, inView2] = useInView({ threshold: 0.2 });
+  const [ref3, inView3] = useInView({ threshold: 0.2 });
+  const [ref4, inView4] = useInView({ threshold: 0.2 });
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
+  const controls3 = useAnimation();
+  const controls4 = useAnimation();
+
+  useEffect(() => {
+    if (inView1) {
+      controls1.start({ opacity: 1, y: 0 });
+    } else {
+      controls1.start({ opacity: 0, y: 20 });
+    }
+  }, [controls1, inView1]);
+
+  useEffect(() => {
+    if (inView2) {
+      controls2.start({ opacity: 1, y: 0 });
+    } else {
+      controls2.start({ opacity: 0, y: 20 });
+    }
+  }, [controls2, inView2]);
+
+  useEffect(() => {
+    if (inView3) {
+      controls3.start({ opacity: 1, y: 0 });
+    } else {
+      controls3.start({ opacity: 0, y: 20 });
+    }
+  }, [controls3, inView3]);
+
+  useEffect(() => {
+    if (inView4) {
+      controls4.start({ opacity: 1, y: 0 });
+    } else {
+      controls4.start({ opacity: 0, y: 20 });
+    }
+  }, [controls4, inView4]);
+
   return (
     <>
       <div className="px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-32">
-        <section className="grid grid-cols-1 lg:grid-cols-2">
+        <motion.section
+          ref={ref1}
+          animate={controls1}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 lg:grid-cols-2"
+        >
           <div>
             <div className="lg:max-w-md text-center lg:text-left">
               <h1 className="text-center lg:text-left font-extrabold text-3xl md:text-4xl xl:text-5xl text-[#a482fb]">
-                Expande tu negocio en la web
+                Expandí tu negocio en la web
               </h1>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-2 lg:grid-cols-1 lg:gap-0">
@@ -142,24 +186,58 @@ function FeaturesEs() {
 
           <div>
             <div className="flex justify-center">
-              <Image
-                src={Astronaut4}
-                width={2000}
-                height={2000}
-                alt="Astronaut4"
-              />
+              <motion.div
+                animate={{
+                  y: [-5, 5],
+                  scale: [1, 1.05, 1],
+                  rotate: [0, 2, 0],
+                }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut",
+                }}
+              >
+                <Image
+                  src={Astronaut4}
+                  width={2000}
+                  height={2000}
+                  alt="Astronaut4"
+                />
+              </motion.div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="grid grid-cols-1 lg:grid-cols-2 my-12 sm:my-44">
+        <motion.section
+          ref={ref2}
+          animate={controls2}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 lg:grid-cols-2 my-12 sm:my-44"
+        >
           <div className="hidden lg:block">
-            <Image
-              src={Astronaut6}
-              width={2000}
-              height={2000}
-              alt="Astronaut6"
-            />
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut6}
+                width={2000}
+                height={2000}
+                alt="Astronaut6"
+              />
+            </motion.div>
           </div>
           <div>
             <div className="lg:max-w-md text-center lg:text-left">
@@ -226,16 +304,36 @@ function FeaturesEs() {
             </div>
           </div>
           <div className="block lg:hidden mt-12">
-            <Image
-              src={Astronaut6}
-              width={2000}
-              height={2000}
-              alt="Astronaut6"
-            />
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut6}
+                width={2000}
+                height={2000}
+                alt="Astronaut6"
+              />
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="grid grid-cols-1 lg:grid-cols-2">
+        <motion.section
+          ref={ref3}
+          animate={controls3}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 lg:grid-cols-2"
+        >
           <div>
             <div className="lg:max-w-md text-center lg:text-left">
               <h1 className="text-center lg:text-left font-extrabold text-3xl md:text-4xl xl:text-5xl text-[#a482fb]">
@@ -361,24 +459,58 @@ function FeaturesEs() {
           </div>
           <div>
             <div className="flex justify-center">
-              <Image
-                src={Astronaut5}
-                width={2000}
-                height={2000}
-                alt="Astronaut5"
-              />
+              <motion.div
+                animate={{
+                  y: [-5, 5],
+                  scale: [1, 1.05, 1],
+                  rotate: [0, 2, 0],
+                }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut",
+                }}
+              >
+                <Image
+                  src={Astronaut5}
+                  width={2000}
+                  height={2000}
+                  alt="Astronaut5"
+                />
+              </motion.div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="grid grid-cols-1 lg:grid-cols-2 my-12 sm:my-44">
+        <motion.section
+          ref={ref4}
+          animate={controls4}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 lg:grid-cols-2 my-12 sm:my-44"
+        >
           <div className="hidden lg:block">
-            <Image
-              src={Astronaut7}
-              width={2000}
-              height={2000}
-              alt="Astronaut7"
-            />
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut7}
+                width={2000}
+                height={2000}
+                alt="Astronaut7"
+              />
+            </motion.div>
           </div>
           <div>
             <div className="lg:max-w-md text-center lg:text-left">
@@ -423,14 +555,28 @@ function FeaturesEs() {
             </div>
           </div>
           <div className="block lg:hidden mt-12">
-            <Image
-              src={Astronaut7}
-              width={2000}
-              height={2000}
-              alt="Astronaut7"
-            />
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut7}
+                width={2000}
+                height={2000}
+                alt="Astronaut7"
+              />
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
       </div>
 
       <section className="p-6 my-10 sm:my-16 lg:my-24 mx-auto py-10 sm:py-16 lg:py-24 relative isolate overflow-hidden px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24">
@@ -438,7 +584,7 @@ function FeaturesEs() {
           <img
             className="object-cover object-right w-full h-full lg:object-center opacity-40 sm:opacity-60"
             src="https://res.cloudinary.com/dszjgdktf/image/upload/v1713282278/CtaBackground_x0ywyw.png"
-            alt=""
+            alt="Cta Background"
           />
         </div>
 

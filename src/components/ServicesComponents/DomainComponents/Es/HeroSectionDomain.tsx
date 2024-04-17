@@ -69,7 +69,7 @@ function HeroSectionDomain() {
           <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div className="max-w-lg mx-auto text-center xl:max-w-3xl">
               <h1 className="text-3xl font-bold text-white sm:text-4xl xl:text-5xl mb-12">
-                ¡Asegura tu identidad en línea!
+                ¡Asegurá tu identidad en línea!
               </h1>
               <div className="mt-6 flex items-center justify-center gap-x-6">
                 <div className="flex w-full flex-col">

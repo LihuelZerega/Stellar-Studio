@@ -1,11 +1,14 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 function PopularDomains() {
   return (
     <section className="px-6">
-      <h1 className="text-center text-white my-12 font-bold text-4xl">Dominios populares</h1>
+      <h1 className="text-center text-white my-12 font-bold text-4xl">
+        Dominios populares
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-x-6">
         <div className="flex flex-col glass-container bg-opacity-5 backdrop-filter backdrop-blur-lg bg-[#a482fb] shadow-lg p-6 border-2 rounded-2xl border-[#a482fb] my-3 sm:my-4 lg:my-6 mx-auto w-full h-72">
           <div>
@@ -20,13 +23,15 @@ function PopularDomains() {
           </div>
 
           <div className="w-full mt-4">
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
-            >
-              Registrar
-            </motion.button>
+            <Link href="#registrardominio">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+              >
+                Registrar
+              </motion.button>
+            </Link>
           </div>
         </div>
 
@@ -43,13 +48,15 @@ function PopularDomains() {
           </div>
 
           <div className="w-full mt-4">
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
-            >
-              Registrar
-            </motion.button>
+            <Link href="#registrardominio">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+              >
+                Registrar
+              </motion.button>
+            </Link>
           </div>
         </div>
 
@@ -66,13 +73,15 @@ function PopularDomains() {
           </div>
 
           <div className="w-full mt-4">
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
-            >
-              Registrar
-            </motion.button>
+            <Link href="#registrardominio">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+              >
+                Registrar
+              </motion.button>
+            </Link>
           </div>
         </div>
 
@@ -89,13 +98,15 @@ function PopularDomains() {
           </div>
 
           <div className="w-full mt-4">
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
-            >
-              Registrar
-            </motion.button>
+            <Link href="#registrardominio">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+              >
+                Registrar
+              </motion.button>
+            </Link>
           </div>
         </div>
 
@@ -112,13 +123,15 @@ function PopularDomains() {
           </div>
 
           <div className="w-full mt-4">
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
-            >
-              Registrar
-            </motion.button>
+            <Link href="#registrardominio">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+              >
+                Registrar
+              </motion.button>
+            </Link>
           </div>
         </div>
 
@@ -135,13 +148,15 @@ function PopularDomains() {
           </div>
 
           <div className="w-full mt-4">
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
-            >
-              Registrar
-            </motion.button>
+            <Link href="#registrardominio">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+              >
+                Registrar
+              </motion.button>
+            </Link>
           </div>
         </div>
 
@@ -158,13 +173,15 @@ function PopularDomains() {
           </div>
 
           <div className="w-full mt-4">
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
-            >
-              Registrar
-            </motion.button>
+            <Link href="#registrardominio">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+              >
+                Registrar
+              </motion.button>
+            </Link>
           </div>
         </div>
 
@@ -181,13 +198,15 @@ function PopularDomains() {
           </div>
 
           <div className="w-full mt-4">
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
-            >
-              Registrar
-            </motion.button>
+            <Link href="#registrardominio">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                className="w-full rounded-xl bg-[#a482fb] px-4 h-12 text-sm font-semibold text-white shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+              >
+                Registrar
+              </motion.button>
+            </Link>
           </div>
         </div>
       </div>

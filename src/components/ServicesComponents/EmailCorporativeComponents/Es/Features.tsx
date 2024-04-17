@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
+import Astronaut4 from "@/images/Astronauts/Astronaut4.png";
 
 function Features() {
   return (
@@ -18,7 +20,28 @@ function Features() {
               mail empresarial.
             </p>
           </div>
-          <div className="w-full md:w-1/2"></div>
+          <div className="flex justify-center w-full md:w-1/2">
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut4}
+                width={2000}
+                height={2000}
+                alt="Astronaut4"
+              />
+            </motion.div>
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row-reverse">
@@ -33,7 +56,28 @@ function Features() {
               para prevenir ataques de spam, malware y phishing.
             </p>
           </div>
-          <div className="w-full md:w-1/2"></div>
+          <div className="flex justify-center w-full md:w-1/2">
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut4}
+                width={2000}
+                height={2000}
+                alt="Astronaut4"
+              />
+            </motion.div>
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row">
@@ -50,7 +94,28 @@ function Features() {
               mensajes hacia otras cuentas.
             </p>
           </div>
-          <div className="w-full md:w-1/2"></div>
+          <div className="flex justify-center w-full md:w-1/2">
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut4}
+                width={2000}
+                height={2000}
+                alt="Astronaut4"
+              />
+            </motion.div>
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row-reverse">
@@ -66,24 +131,30 @@ function Features() {
               Outlook.
             </p>
           </div>
-          <div className="w-full md:w-1/2"></div>
+          <div className="flex justify-center w-full md:w-1/2">
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut4}
+                width={2000}
+                height={2000}
+                alt="Astronaut4"
+              />
+            </motion.div>
+          </div>
         </div>
 
-        <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/2">
-            <h1 className="text-3xl font-bold text-[#a482fb]">
-              Configuración rápida y simple
-            </h1>
-            <p className="text-left mt-6 text-lg leading-8 text-gray-300">
-              Nuestro panel de control y la interfaz de correo corporativo
-              cuentan con un diseño intuitivo, de manera que cualquier persona
-              pueda usarlo fácilmente. Además, gracias a nuestra función de
-              configuración automática, podrás tener tu correo en varios
-              dispositivos.
-            </p>
-          </div>
-          <div className="w-full md:w-1/2"></div>
-        </div>
       </div>
       <section className="glass-container bg-opacity-5 backdrop-filter backdrop-blur-lg bg-[#a482fb] p-6 my-10 sm:my-16 lg:my-24 mx-auto py-10 sm:py-16 lg:py-24 relative isolate overflow-hidden px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24">
         <div className="flex flex-col items-center justify-center px-4 mx-auto sm:px-6 lg:px-8 max-w-8xl">
