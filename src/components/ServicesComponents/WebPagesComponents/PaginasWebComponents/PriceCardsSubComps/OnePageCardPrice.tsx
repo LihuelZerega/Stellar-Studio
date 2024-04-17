@@ -4,6 +4,8 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { FiTrash2 } from "react-icons/fi";
+import { MdOutlineWebAsset, MdAlternateEmail } from "react-icons/md";
+import { TbWorldWww } from "react-icons/tb";
 
 function OnePageCardPrice() {
   const [open, setOpen] = useState(false);
@@ -75,23 +77,82 @@ function OnePageCardPrice() {
 
                       <div className="relative mt-6 flex-1 px-4 sm:px-6">
                         <div className="flex flex-row bg-neutral-50 p-4 rounded-md shadow-sm">
-                          <div className="bg-white rounded-md h-12 w-12">h</div>
-                          <div className="flex flex-col items-center justify-between border-l ml-2 pl-2">
+                          <div className="bg-white rounded-md p-2">
+                            <MdOutlineWebAsset className="text-3xl text-[#a482fb]" />
+                          </div>
+
+                          <div className="flex flex-col items-left justify-between w-full border-l ml-2 pl-2">
                             <div className="flex flex-row items-center justify-between text-base font-semibold text-gray-800">
-                              <div>
-                                One Page
-                              </div>
-                              <div>
-                                $79
-                              </div>
+                              <h1>One Page</h1>
+                              <h1>$79.00</h1>
                             </div>
+
                             <div className="flex flex-row items-center justify-between text-sm text-gray-800">
+                              <h1 className="">Cantidad: 1</h1>
+                              <FiTrash2
+                                className="hover:text-red-500 cursor-pointer"
+                                onClick={() => setOpen(false)}
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr className="my-4" />
+
+                        <div className="flex flex-row items-center bg-neutral-50 p-4 rounded-md shadow-sm">
+                          <div className="bg-white rounded-md p-2">
+                            <TbWorldWww className="text-3xl text-[#a482fb]" />
+                          </div>
+
+                          <div className="flex flex-col items-left justify-between w-full border-l ml-2 pl-2">
+                            <div className="flex flex-row items-center justify-between text-base font-semibold text-gray-800">
                               <h1>
-                                Cantidad: 1
+                                Dominio{" "}
+                                <span className="text-xs text-gray-600">
+                                  (Anual)
+                                </span>
                               </h1>
-                              <div>
-                                <FiTrash2 />
+                              <h1>$15.99</h1>
+                            </div>
+
+                            <div className="flex flex-row items-center justify-between text-sm text-gray-800">
+                              <div className="flex flex-col">
+                                <h1 className="text-xs">Actual: .COM</h1>
+                                <h1 className="text-xs font-normal hover:text-[#a482fb] hover:font-medium cursor-pointer">
+                                  Elegir otro dominio
+                                </h1>
                               </div>
+                              <FiTrash2 className="hover:text-red-500 cursor-pointer" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr className="my-4" />
+
+                        <div className="flex flex-row items-center bg-neutral-50 p-4 rounded-md shadow-sm">
+                          <div className="bg-white rounded-md p-2">
+                            <MdAlternateEmail className="text-3xl text-[#a482fb]" />
+                          </div>
+
+                          <div className="flex flex-col items-left justify-between w-full border-l ml-2 pl-2">
+                            <div className="flex flex-row items-center justify-between text-base font-semibold text-gray-800">
+                              <h1>
+                                Correo Profecional{" "}
+                                <span className="text-xs text-gray-600">
+                                  (Mensual)
+                                </span>
+                              </h1>
+                              <h1>$8.00</h1>
+                            </div>
+
+                            <div className="flex flex-row items-center justify-between text-sm text-gray-800">
+                              <div className="flex flex-col">
+                                <h1 className="text-xs">Plan Emprendedor</h1>
+                                <h1 className="text-xs font-normal hover:text-[#a482fb] hover:font-medium cursor-pointer">
+                                  Elegir otro plan
+                                </h1>
+                              </div>
+                              <FiTrash2 className="hover:text-red-500 cursor-pointer" />
                             </div>
                           </div>
                         </div>
@@ -99,14 +160,14 @@ function OnePageCardPrice() {
 
                       <hr />
 
-                      <section className="flex flex-col mt-3">
-                        <div className="ml-4 sm:mx-6">
+                      <section className="flex flex-col mt-3 mx-6">
+                        <div className="">
                           <div className="flex flex-row items-center justify-between">
                             <h1 className="text-base font-medium text-neutral-500">
                               Subtotal
                             </h1>
                             <h1 className="text-base font-medium text-neutral-500">
-                              $79{" "}
+                              $102.99{" "}
                             </h1>
                           </div>
                           <div className="flex flex-row items-center justify-between mt-3">
@@ -114,15 +175,18 @@ function OnePageCardPrice() {
                               Total
                             </h1>
                             <h1 className="text-base font-semibold text-neutral-700">
-                              $79{" "}
+                              $102.99{" "}
                             </h1>
                           </div>
                         </div>
                         <div className="flex flex-col">
-                          <button className="w-full max-w-sm mx-auto items-center justify-center py-4 ml-4 sm:ml-6 mt-5 text-sm rounded-md font-semibold text-white transition-all bg-[#a482fb] shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]">
+                          <button className="w-full items-center justify-center py-4 mt-5 text-sm rounded-md font-semibold text-white transition-all bg-[#a482fb] shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]">
                             Comprar
                           </button>
-                          <button className="w-full max-w-sm mx-auto items-center justify-center py-4 ml-4 sm:ml-6 mt-3 text-sm rounded-md font-semibold text-[#a482fb] transition-all border-2 border-[#a482fb] shadow-sm hover:bg-neutral-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]">
+                          <button
+                            className="w-full items-center justify-center py-4 mt-3 text-sm rounded-md font-semibold text-[#a482fb] transition-all border-2 border-[#a482fb] shadow-sm hover:bg-neutral-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+                            onClick={() => setOpen(false)}
+                          >
                             Continuar Comprando
                           </button>
                         </div>
