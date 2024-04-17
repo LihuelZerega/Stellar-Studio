@@ -1,30 +1,31 @@
 import React from "react";
+import { BsPeople, BsPcDisplay, BsPersonGear, BsPersonPlus, BsPersonWorkspace } from "react-icons/bs";
 
 function AboutStellarStudio() {
   return (
     <>
       <div className="px-6 sm:px-12 lg:px-0 sm:max-w-3xl xl:max-w-6xl mx-auto">
         <section className="pt-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="flex flex-col">
             <div>
               <h1 className="text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#a482fb]">
                 Una pasión por la <br className="block lg:hidden" /> tecnología
                 y la innovación.{" "}
               </h1>
               <div>
-                <p className="mt-6 text-lg leading-8 text-gray-400">
+                <p className="mt-6 text-lg leading-8 text-gray-300">
                   Desde 2017 dedicados a crear desde simples aplicaciones web
                   hasta landing pages para clientes individuales, emprendedores
                   y pequeñas empresas que aún no han incursionado en el mundo
                   digital buscando impulsar sus negocios en línea.
                 </p>
-                <p className="mt-6 text-lg leading-8 text-gray-400">
+                <p className="mt-6 text-lg leading-8 text-gray-300">
                   Con esta visión en mente, nació Stellar Studio en 2024, con el
                   firme propósito de proporcionar una solución integral para
                   aquellos que buscan establecer su presencia en la web pero se
                   sienten abrumados por el proceso.
                 </p>
-                <p className="mt-6 text-lg leading-8 text-gray-400">
+                <p className="mt-6 text-lg leading-8 text-gray-300">
                   El objetivo de Stellar Studio es claro: simplificar el proceso
                   de adaptación al mundo tecnológico actual para aquellos que
                   están dando sus primeros pasos en línea. Nos esforzamos por
@@ -33,7 +34,7 @@ function AboutStellarStudio() {
                   mejor, mientras nosotros nos encargamos de guiarlos a través
                   de este viaje digital.
                 </p>
-                <p className="mt-6 text-lg leading-8 text-gray-400">
+                <p className="mt-6 text-lg leading-8 text-gray-300">
                   Nuestro compromiso va más allá de simplemente crear sitios
                   web; estamos aquí para ofrecer tranquilidad y confianza a
                   nuestros clientes mientras navegan por el complejo mundo de la
@@ -43,24 +44,18 @@ function AboutStellarStudio() {
                 </p>
               </div>
             </div>
-            <div className="hidden lg:block w-full text-transparent select-none">
-              asd
-            </div>
           </div>
         </section>
 
         <section className="pt-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="hidden lg:block w-full text-transparent select-none">
-              asd
-            </div>
+          <div className="flex flex-col">
             <div>
               <h1 className="text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#a482fb]">
-                El motor que impulsa <br className="hidden lg:block" /> el éxito
+                El motor que <br className="hidden lg:block" /> impulsa el éxito
                 de los clientes
               </h1>
               <div>
-                <p className="mt-6 text-lg leading-8 text-gray-400">
+                <p className="mt-6 text-lg leading-8 text-gray-300">
                   Nuestra misión es impulsar el éxito digital de emprendedores y
                   pequeñas empresas al proporcionar soluciones tecnológicas
                   innovadoras y accesibles. Nos comprometemos a ser el aliado
@@ -69,14 +64,14 @@ function AboutStellarStudio() {
                   creativo y estrategias digitales personalizadas con motores de
                   busqueda.
                 </p>
-                <p className="mt-6 text-lg leading-8 text-gray-400">
+                <p className="mt-6 text-lg leading-8 text-gray-300">
                   Nos esforzamos por democratizar el acceso a la tecnología y
                   eliminar las barreras que impiden que las empresas alcancen su
                   máximo potencial en línea. Creemos que cada empresa,
                   independientemente de su tamaño o presupuesto, merece tener
                   una presencia digital sólida y efectiva.
                 </p>
-                <p className="mt-6 text-lg leading-8 text-gray-400">
+                <p className="mt-6 text-lg leading-8 text-gray-300">
                   Con un enfoque centrado en el cliente, nos dedicamos a
                   comprender las necesidades únicas de cada cliente y a ofrecer
                   soluciones personalizadas que impulsen el crecimiento y la
@@ -91,49 +86,77 @@ function AboutStellarStudio() {
         </section>
 
         <section className="pt-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="flex flex-col">
             <div>
               <h1 className="text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#a482fb]">
-                Son más que <br className="block lg:hidden" /> simples palabras{" "}
+                Son más <br className="block lg:block" /> que simples palabras{" "}
               </h1>
-              <div>
-                <div className="mt-6 text-lg leading-8 text-gray-400">
-                  <h1 className="text-2xl text-[#a482fb]">Excelencia</h1>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+                <div className="mt-6 text-lg leading-8 text-gray-300">
+                  <h1 className="flex flex-row items-center text-2xl text-[#a482fb]">
+                    <span>
+                      <BsPersonWorkspace  className="mr-2" />
+                    </span>
+                    Excelencia
+                  </h1>
                   Nos esforzamos por alcanzar la excelencia en todo lo que
                   hacemos, desde el diseño hasta el desarrollo y más allá.
                   Buscamos la perfección en cada detalle para brindar resultados
                   excepcionales a nuestros clientes.
                 </div>
-                <div className="mt-6 text-lg leading-8 text-gray-400">
-                  <h1 className="text-2xl text-[#a482fb]">Innovación</h1>
+                <div className="mt-6 text-lg leading-8 text-gray-300">
+                  <h1 className="flex flex-row items-center text-2xl text-[#a482fb]">
+                    <span>
+                      <BsPcDisplay className="mr-2" />
+                    </span>
+                    Innovación
+                  </h1>
                   Abrazamos la innovación y buscamos constantemente nuevas
                   formas de abordar los desafíos. Estamos comprometidos con el
                   aprendizaje continuo y la exploración de nuevas tecnologías
                   para ofrecer soluciones creativas y vanguardistas.
                 </div>
-                <div className="mt-6 text-lg leading-8 text-gray-400">
-                  <h1 className="text-2xl text-[#a482fb]">Integridad</h1>
+                <div className="mt-6 text-lg leading-8 text-gray-300">
+                  <h1 className="flex flex-row items-center text-2xl text-[#a482fb]">
+                    <span>
+                      <BsPersonGear  className="mr-2" />
+                    </span>
+                    Integridad
+                  </h1>
                   Actuamos con integridad en todas nuestras interacciones,
                   manteniendo altos estándares éticos y profesionales. Nos
                   comprometemos a ser honestos, transparentes y justos en todas
                   nuestras relaciones comerciales.
                 </div>
-                <div className="mt-6 text-lg leading-8 text-gray-400">
-                  <h1 className="text-2xl text-[#a482fb]">Colaboración</h1>
+                <div className="mt-6 text-lg leading-8 text-gray-300">
+                  <h1 className="flex flex-row items-center text-2xl text-[#a482fb]">
+                    <span>
+                      <BsPeople  className="mr-2" />
+                    </span>
+                    Colaboración
+                  </h1>
                   Valoramos la colaboración y creemos en el poder del trabajo en
                   equipo. Trabajamos en estrecha colaboración con nuestros
                   clientes y colegas para lograr resultados sobresalientes y
                   superar los desafíos juntos.
                 </div>
-                <div className="mt-6 text-lg leading-8 text-gray-400">
-                  <h1 className="text-2xl text-[#a482fb]">Empatía</h1>
+                <div className="mt-6 text-lg leading-8 text-gray-300">
+                  <h1 className="flex flex-row items-center text-2xl text-[#a482fb]">
+                    <span>
+                      <BsPersonPlus  className="mr-2" />
+                    </span>
+                    Empatía
+                  </h1>
                   Nos preocupamos por las necesidades y preocupaciones de
                   nuestros clientes y colegas, y nos esforzamos por comprender
                   su perspectiva. Nos comprometemos a tratar a los demás con
                   respeto, empatía y compasión en todo momento.
                 </div>
-                <div className="mt-6 text-lg leading-8 text-gray-400">
-                  <h1 className="text-2xl text-[#a482fb]">
+                <div className="mt-6 text-lg leading-8 text-gray-300">
+                  <h1 className="flex flex-row items-center text-2xl text-[#a482fb]">
+                    <span>
+                      <BsPeople className="mr-2" />
+                    </span>
                     Compromiso con el cliente
                   </h1>
                   Ponemos las necesidades y objetivos de nuestros clientes en
@@ -143,9 +166,6 @@ function AboutStellarStudio() {
                   nuestros clientes.
                 </div>
               </div>
-            </div>
-            <div className="hidden lg:block w-full text-transparent select-none">
-              asd
             </div>
           </div>
         </section>
@@ -194,19 +214,26 @@ function AboutStellarStudio() {
       </div>
 
       <section className="glass-container bg-opacity-5 backdrop-filter backdrop-blur-lg bg-[#a482fb] p-6 my-10 sm:my-16 lg:my-24 mx-auto py-10 sm:py-16 lg:py-24 relative isolate overflow-hidden px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24">
-        <div className="px-6 sm:px-12 lg:px-0 sm:max-w-3xl xl:max-w-6xl mx-auto">
+        <div className="absolute inset-0">
+          <img
+            className="object-cover object-right w-full h-full lg:object-center opacity-40 sm:opacity-20"
+            src="https://res.cloudinary.com/dszjgdktf/image/upload/v1713356263/CtaBackground4_jercbc.png"
+            alt="Cta Background 4"
+          />
+        </div>
+        <div className="relative px-6 sm:px-12 lg:px-0 sm:max-w-3xl xl:max-w-6xl mx-auto">
           <div>
             <h1 className="text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#a482fb]">
               Nuestro Objetivo
             </h1>
             <div>
-              <p className="mt-6 text-lg leading-8 text-gray-400">
+              <p className="mt-6 text-lg leading-8 text-neutral-100">
                 Ser reconocidos como líderes en la industria tecnológica,
                 proporcionando soluciones innovadoras y personalizadas que
                 transformen la manera en que las empresas interactúan con sus
                 clientes en línea.
               </p>
-              <p className="mt-6 text-lg leading-8 text-gray-400">
+              <p className="mt-6 text-lg leading-8 text-neutral-100">
                 Nos esforzamos por ser pioneros en la adopción de tecnologías
                 emergentes y por anticiparnos a las necesidades futuras de
                 nuestros clientes. Visualizamos un futuro donde Stellar Studio
@@ -218,7 +245,7 @@ function AboutStellarStudio() {
                 herramientas y el conocimiento necesario para alcanzar el éxito
                 en un entorno cada vez más competitivo.
               </p>
-              <p className="mt-6 text-lg leading-8 text-gray-400">
+              <p className="mt-6 text-lg leading-8 text-neutral-100">
                 Además, aspiramos a crear un entorno de trabajo inclusivo y
                 colaborativo donde nuestro equipo pueda crecer profesionalmente
                 y desarrollar todo su potencial. Queremos ser reconocidos como

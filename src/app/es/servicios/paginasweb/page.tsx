@@ -48,8 +48,8 @@ function Page() {
           <div id="modelosweb">
             <PricesCradsEs />
           </div>
-          <ChatBotIAEs />
           <ReDesing />
+          <ChatBotIAEs />
           <div id="caracteristicasweb">
             <FeaturesEs />
           </div>

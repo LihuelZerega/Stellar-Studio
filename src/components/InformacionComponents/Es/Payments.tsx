@@ -1,11 +1,15 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
 import TetherLogo from "@/images/TetherLogo.png";
 import UsdcLogo from "@/images/UsdcLogo.png";
 import { IoWalletOutline } from "react-icons/io5";
 import { CiBank } from "react-icons/ci";
 import { SiMercadopago, SiPaypal, SiBinance, SiLetsencrypt } from "react-icons/si";
 import { FaBitcoin, FaEthereum } from "react-icons/fa";
+import Astronaut8 from "@/images/Astronauts/Astronaut8.png";
+import Astronaut9 from "@/images/Astronauts/Astronaut9.png";
 
 function Payments() {
   return (
@@ -133,8 +137,8 @@ function Payments() {
           </section>
         </div>
 
-        <div className="my-24">
-          <h1 className="text-center text-xl sm:text-5xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-[#a482fb] to-[#a482fb] py-8">
+        <div className="my-24 max-w-6xl">
+          <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-[#a482fb] to-[#a482fb] py-8">
             Garantizamos la seguridad <br /> de tus pagos{" "}
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 space-y-12 px-3 text-white">
@@ -181,11 +185,53 @@ function Payments() {
                 </div>
               </div>
             </div>
-            <div className="hidden lg:block">Imagen</div>
+            <div className="hidden lg:block px-20">
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut9}
+                width={800}
+                height={800}
+                alt="Astronaut9"
+              />
+            </motion.div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 space-y-12 px-3 mt-0 lg:mt-12 text-white">
-            <div className="hidden lg:block">Imagen</div>
+            <div className="hidden lg:block">
+            <motion.div
+              animate={{
+                y: [-5, 5],
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={Astronaut8}
+                width={2000}
+                height={2000}
+                alt="Astronaut8"
+              />
+            </motion.div>
+            </div>
             <div className="space-y-6">
               <div>
                 <h1 className="font-bold text-[#a482fb] text-2xl mb-2">

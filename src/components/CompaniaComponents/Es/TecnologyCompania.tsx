@@ -1,11 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import { FaReact, FaVuejs, FaNodeJs, FaAws, FaGithub, FaGitAlt, FaFigma, FaSketch,  } from "react-icons/fa";
+import { SiMongodb, SiPostgresql, SiGooglecloud, SiGoogleanalytics, SiGoogletagmanager } from "react-icons/si";
+
 
 function TecnologyCompania() {
   return (
     <div className="px-6 sm:px-12 lg:px-0 sm:max-w-3xl xl:max-w-6xl mx-auto">
       <section className="pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 xl:grid-cols-2">
           <div>
             <h1 className="text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#a482fb]">
               Tecnologia Desarrollada
@@ -45,36 +48,58 @@ function TecnologyCompania() {
             </div>
           </div>
           <div className="w-full">
-            <section className="grid grid-cols-2">
-              <div className="bg-red-300">
-                <h1>sa</h1>
+            <section className="grid grid-cols-3 gap-y-16 mt-6 lg:mt-16">
+              <div className="flex flex-col items-center justify-center">
+                <FaReact className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">React Js</h1>
               </div>
-              <div className="bg-red-300">
-                <h1>sa</h1>
+              <div className="flex flex-col items-center justify-center">
+                <FaVuejs className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">Vue Js</h1>
               </div>
-              <div className="bg-red-300">
-                <h1>sa</h1>
+              <div className="flex flex-col items-center justify-center">
+                <FaNodeJs className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">Node Js</h1>
               </div>
-              <div className="bg-red-300">
-                <h1>sa</h1>
+              <div className="flex flex-col items-center justify-center">
+                <SiMongodb className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">Mongo DB</h1>
               </div>
-              <div className="bg-red-300">
-                <h1>sa</h1>
+              <div className="flex flex-col items-center justify-center">
+                <SiPostgresql className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">PostgreSQL</h1>
               </div>
-              <div className="bg-red-300">
-                <h1>sa</h1>
+              <div className="flex flex-col items-center justify-center">
+                <FaAws className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">AWS</h1>
               </div>
-              <div className="bg-red-300">
-                <h1>sa</h1>
+              <div className="flex flex-col items-center justify-center">
+                <SiGooglecloud className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">Google Cloud</h1>
               </div>
-              <div className="bg-red-300">
-                <h1>sa</h1>
+              <div className="flex flex-col items-center justify-center">
+                <FaGithub className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">GitHub</h1>
               </div>
-              <div className="bg-red-300">
-                <h1>sa</h1>
+              <div className="flex flex-col items-center justify-center">
+                <FaGitAlt className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">Git</h1>
               </div>
-              <div className="bg-red-300">
-                <h1>sa</h1>
+              <div className="flex flex-col items-center justify-center">
+                <FaFigma className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">Figma</h1>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <FaSketch className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">Sketch</h1>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <SiGoogleanalytics className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">Google Analytics</h1>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <SiGoogletagmanager className="text-5xl text-[#a482fb]"/>
+                <h1 className="font-medium text-white mt-1">Google Tag Manager</h1>
               </div>
             </section>
           </div>
@@ -82,15 +107,12 @@ function TecnologyCompania() {
       </section>
 
       <section className="pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="hidden lg:block w-full text-transparent select-none">
-            asd
-          </div>
+        <div className="flex flex-col">
           <div>
             <h1 className="text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#a482fb]">
               Garantizamos calidad y eficiencia
             </h1>
-            <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
               <div className="mt-6 text-lg leading-8 text-gray-400">
                 <h1 className="text-2xl text-[#a482fb]">Desarrollo Ágil</h1>
                 Adoptamos una metodología ágil, como Scrum o Kanban, para
@@ -154,12 +176,12 @@ function TecnologyCompania() {
       </section>
 
       <section className="pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="flex flex-col">
           <div>
             <h1 className="text-center md:text-left text-4xl sm:text-5xl font-bold tracking-tight text-[#a482fb]">
               Seguridad y la protección de datos
             </h1>
-            <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
               <div className="mt-6 text-lg leading-8 text-gray-400">
                 <h1 className="text-2xl text-[#a482fb]">Cifrado de Datos</h1>
                 Utilizamos técnicas de cifrado robustas para proteger los datos
@@ -220,12 +242,8 @@ function TecnologyCompania() {
               </div>
             </div>
           </div>
-          <div className="hidden lg:block w-full text-transparent select-none">
-            asd
-          </div>
         </div>
       </section>
-
     </div>
   );
 }

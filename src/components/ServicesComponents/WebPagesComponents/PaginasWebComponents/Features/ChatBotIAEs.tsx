@@ -20,7 +20,7 @@ function ChatBotIAEs() {
       animate={controls1}
       initial={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.6 }}
-      className="px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-16"
+      className="px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mt-12"
     >
       <section className="glass-container bg-opacity-5 backdrop-filter backdrop-blur-lg bg-[#a482fb] shadow-lg p-6 border-2 rounded-2xl border-[#a482fb] my-10 sm:my-16 lg:my-24 mx-auto max-w-7xl">
         <div className="py-12 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">

@@ -154,25 +154,31 @@ function Features() {
             </motion.div>
           </div>
         </div>
-
       </div>
-      <section className="glass-container bg-opacity-5 backdrop-filter backdrop-blur-lg bg-[#a482fb] p-6 my-10 sm:my-16 lg:my-24 mx-auto py-10 sm:py-16 lg:py-24 relative isolate overflow-hidden px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24">
-        <div className="flex flex-col items-center justify-center px-4 mx-auto sm:px-6 lg:px-8 max-w-8xl">
+      <section className="p-6 my-10 sm:my-16 lg:my-24 mx-auto py-10 sm:py-16 lg:py-24 relative isolate overflow-hidden px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24">
+        <div className="absolute inset-0">
+          <img
+            className="object-cover object-right w-full h-full lg:object-center opacity-40 sm:opacity-60"
+            src="https://res.cloudinary.com/dszjgdktf/image/upload/v1713356264/CtaBackground3_gxiooy.png"
+            alt="Cta Background 3"
+          />
+        </div>
+
+        <div className="relative flex flex-col items-center justify-center px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="flex flex-col items-center justify-center text-center">
-            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl mb-4">
-              ¡Lleva tu comunicación empresarial al siguiente nivel!
+            <h2 className="text-3xl font-bold leading-light text-white sm:text-4xl lg:text-5xl mb-4">
+              ¡Llevá tu comunicación empresarial al siguiente nivel!
             </h2>
             <div className="max-w-lg my-4 text-gray-200">
               <p className="text-base font-medium">
-                Descubre nuestra gama de planes de correos electrónicos
-                profesionales y lleva tu comunicación empresarial al siguiente
-                nivel.
+                Descubrí nuestros planes de correos electrónicos profesionales y
+                llevá tu comunicación empresarial al siguiente nivel
               </p>
             </div>
           </div>
 
           <div className="my-6">
-            <Link href="#prices">
+            <Link href="/es/servicios/correosprofecionales#precioscorreos">
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }}
