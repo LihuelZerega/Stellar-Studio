@@ -3,13 +3,16 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Astronaut3 from "@/images/Astronauts/Astronaut3.png";
 import Astronaut4 from "@/images/Astronauts/Astronaut4.png";
+import Astronaut9 from "@/images/Astronauts/Astronaut9.png";
+import Astronaut12 from "@/images/Astronauts/Astronaut12.png";
 
 function Features() {
   return (
     <>
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 space-y-24">
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row items-start">
           <div className="w-full md:w-1/2">
             <h1 className="text-3xl font-bold text-[#a482fb]">
               Mail con dominio propio para tu negocio
@@ -22,6 +25,7 @@ function Features() {
           </div>
           <div className="flex justify-center w-full md:w-1/2">
             <motion.div
+              className="h-96 w-72"
               animate={{
                 y: [-5, 5],
                 scale: [1, 1.05, 1],
@@ -35,10 +39,10 @@ function Features() {
               }}
             >
               <Image
-                src={Astronaut4}
+                src={Astronaut9}
                 width={2000}
                 height={2000}
-                alt="Astronaut4"
+                alt="Astronaut9"
               />
             </motion.div>
           </div>
@@ -58,6 +62,7 @@ function Features() {
           </div>
           <div className="flex justify-center w-full md:w-1/2">
             <motion.div
+              className="h-96 w-96"
               animate={{
                 y: [-5, 5],
                 scale: [1, 1.05, 1],
@@ -71,10 +76,10 @@ function Features() {
               }}
             >
               <Image
-                src={Astronaut4}
+                src={Astronaut12}
                 width={2000}
                 height={2000}
-                alt="Astronaut4"
+                alt="Astronaut12"
               />
             </motion.div>
           </div>
@@ -96,6 +101,7 @@ function Features() {
           </div>
           <div className="flex justify-center w-full md:w-1/2">
             <motion.div
+              className="w-96"
               animate={{
                 y: [-5, 5],
                 scale: [1, 1.05, 1],
@@ -133,6 +139,7 @@ function Features() {
           </div>
           <div className="flex justify-center w-full md:w-1/2">
             <motion.div
+              className="h-96 w-72"
               animate={{
                 y: [-5, 5],
                 scale: [1, 1.05, 1],
@@ -146,10 +153,10 @@ function Features() {
               }}
             >
               <Image
-                src={Astronaut4}
+                src={Astronaut3}
                 width={2000}
                 height={2000}
-                alt="Astronaut4"
+                alt="Astronaut3"
               />
             </motion.div>
           </div>

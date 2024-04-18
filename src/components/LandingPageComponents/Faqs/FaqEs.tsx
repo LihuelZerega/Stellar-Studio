@@ -32,7 +32,6 @@ function FaqEs() {
 
         <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-12">
           <Accordion
-            variant="shadow"
             className="transition-all duration-200 cursor-pointer rounded-md text-white"
           >
             <AccordionItem
