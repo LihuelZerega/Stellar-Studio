@@ -236,7 +236,6 @@ const ProductItem: React.FC<ProductItemProps> = ({
     onOpen: onOpenDomain,
     onClose: onCloseDomain,
   } = useDisclosure();
-
   const {
     isOpen: isOpenEmail,
     onOpen: onOpenEmail,
@@ -416,7 +415,12 @@ const ProductItem: React.FC<ProductItemProps> = ({
         </ModalContent>
       </Modal>
 
-      <Modal isOpen={isOpenEmail} onClose={onCloseEmail} placement="center" size="3xl">
+      <Modal
+        isOpen={isOpenEmail}
+        onClose={onCloseEmail}
+        placement="center"
+        size="3xl"
+      >
         <ModalContent>
           <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
             Elige tu plan de Correo Profecional
