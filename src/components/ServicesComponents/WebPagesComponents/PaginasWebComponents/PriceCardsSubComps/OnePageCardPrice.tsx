@@ -27,21 +27,16 @@ interface OnePageCardPriceProps {
 
 const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
   const [onePagePrice, setOnePagePrice] = useState<number>(79.0);
-  const [domainPrice, setDomainPrice] = useState<number>(15.99);
-  const [emailPrice, setEmailPrice] = useState<number>(8.0);
+  const [domainPrice, setDomainPrice] = useState<number>(0.0);
+  const [emailPrice, setEmailPrice] = useState<number>(0.0);
 
   const [onePageQuantity, setOnePageQuantity] = useState<number>(1);
   const [domainQuantity, setDomainQuantity] = useState<number>(1);
   const [emailQuantity, setEmailQuantity] = useState<number>(1);
 
-  const [selectedDomain, setSelectedDomain] = useState<{
-    name: string;
-    price: number;
-  } | null>(null);
-
   const subtotal =
     onePagePrice * onePageQuantity +
-    (selectedDomain ? selectedDomain.price * domainQuantity : 0) +
+    (domainPrice ? domainPrice * domainQuantity : 0) +
     emailPrice * emailQuantity;
 
   const total = subtotal;
@@ -114,17 +109,21 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
                         quantity={onePageQuantity}
                         setQuantity={setOnePageQuantity}
                         setOpen={setOpen}
+                        setDomainPrice={setDomainPrice}
+                        setEmailPrice={setEmailPrice}
                       />
 
                       <ProductItem
                         icon={
-                          <MdAlternateEmail className="text-3xl text-[#a482fb]" />
+                          <TbWorldWww className="text-3xl text-[#a482fb]" />
                         }
-                        title="Dominio"
-                        price={emailPrice}
-                        quantity={emailQuantity}
-                        setQuantity={setEmailQuantity}
+                        title="Registrar Dominio"
+                        price={domainPrice}
+                        quantity={domainQuantity}
+                        setQuantity={setDomainQuantity}
                         setOpen={setOpen}
+                        setDomainPrice={setDomainPrice}
+                        setEmailPrice={setEmailPrice}
                       />
                       <ProductItem
                         icon={
@@ -135,6 +134,8 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
                         quantity={emailQuantity}
                         setQuantity={setEmailQuantity}
                         setOpen={setOpen}
+                        setDomainPrice={setDomainPrice}
+                        setEmailPrice={setEmailPrice}
                       />
                     </div>
 
@@ -189,11 +190,24 @@ interface ProductItemProps {
   quantity: number;
   setQuantity: React.Dispatch<React.SetStateAction<number>>;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setDomainPrice: React.Dispatch<React.SetStateAction<number>>;
+  setEmailPrice: React.Dispatch<React.SetStateAction<number>>;
 }
 
 interface Domain {
   name: string;
   price: number;
+}
+
+interface Email {
+  name: string;
+  price: number;
+  feature1: string;
+  feature2: string;
+  feature3: string;
+  feature4: string;
+  feature5: string;
+  feature6: string;
 }
 
 const ProductItem: React.FC<ProductItemProps> = ({
@@ -203,6 +217,8 @@ const ProductItem: React.FC<ProductItemProps> = ({
   quantity,
   setQuantity,
   setOpen,
+  setDomainPrice,
+  setEmailPrice,
 }) => {
   const handleAddQuantity = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
@@ -237,16 +253,53 @@ const ProductItem: React.FC<ProductItemProps> = ({
   };
 
   const domains: Domain[] = [
-    { name: ".com", price: 10.99 },
-    { name: ".net", price: 12.99 },
-    { name: ".org", price: 9.99 },
+    { name: ".COM", price: 15.99 },
+    { name: ".NET", price: 18.99 },
+    { name: ".ONLINE ", price: 34.99 },
+    { name: ".IO ", price: 49.99 },
+    { name: ".ICU ", price: 13.99 },
+    { name: ".XYZ ", price: 24.99 },
+    { name: ".PRO ", price: 9.99 },
+    { name: ".CLOUD ", price: 9.99 },
+  ];
+
+  const emails: Email[] = [
+    {
+      name: "Emprendedor",
+      price: 7.99,
+      feature1: "10 GB de almacenamiento en email",
+      feature2: "10 reglas de reenvío",
+      feature3: "Alias de email",
+      feature4: "Verificación antivirus",
+      feature5: "Antispam avanzado",
+      feature6: "Infraestructura basada en la nube",
+    },
+    {
+      name: "Corporativo",
+      price: 11.99,
+      feature1: "50 GB de almacenamiento en email",
+      feature2: "50 reglas de reenvío",
+      feature3: "Alias de email",
+      feature4: "Verificación antivirus",
+      feature5: "Antispam avanzado",
+      feature6: "Infraestructura basada en la nube",
+    },
   ];
 
   const [selectedDomain, setSelectedDomain] = useState<Domain | null>(null);
 
+  const [selectedEmail, setSelectedEmail] = useState<Email | null>(null);
+
   const handleSelectDomain = (domain: Domain) => {
     setSelectedDomain(domain);
+    setDomainPrice(domain.price);
     onCloseDomain();
+  };
+
+  const handleSelectEmail = (email: Email) => {
+    setSelectedEmail(email);
+    setEmailPrice(email.price);
+    onCloseEmail();
   };
 
   return (
@@ -262,8 +315,8 @@ const ProductItem: React.FC<ProductItemProps> = ({
           <div className="flex flex-row items-center justify-between text-base font-semibold text-gray-800">
             {selectedDomain ? (
               <>
-                <h1 className="">Dominio: {selectedDomain.name}</h1>
-                <h1 className="">${selectedDomain.price.toFixed(2)}</h1>
+                <h1 className="">Registrar Dominio</h1>
+                <h1 className="">${selectedDomain?.price.toFixed(2)}</h1>
               </>
             ) : (
               <>
@@ -275,17 +328,34 @@ const ProductItem: React.FC<ProductItemProps> = ({
 
           <div className="flex flex-row items-center justify-between text-sm text-gray-800">
             <div className="flex items-center">
-              {selectedDomain || title === "Dominio" ? (
+              {selectedDomain || title === "Registrar Dominio" ? (
                 <>
                   <button
                     className="hover:text-[#a482fb]"
                     onClick={handleChooseDomain}
                   >
-                    ${selectedDomain?.price.toFixed(2)}
+                    {selectedDomain?.name
+                      ? selectedDomain.name
+                      : "Elegir Dominio"}
                   </button>
                 </>
               ) : (
-                <h1>Cantidad: {quantity}</h1>
+                <>
+                  {selectedEmail || title === "Correo Profesional" ? (
+                    <>
+                      <button
+                        className="hover:text-[#a482fb]"
+                        onClick={handleChooseEmailPlan}
+                      >
+                        {selectedEmail?.name
+                          ? selectedEmail.name
+                          : "Elegir Email"}
+                      </button>
+                    </>
+                  ) : (
+                    <h1>Cantidad: {quantity}</h1>
+                  )}
+                </>
               )}
             </div>
 
@@ -318,20 +388,156 @@ const ProductItem: React.FC<ProductItemProps> = ({
 
       <Modal isOpen={isOpenDomain} onClose={onCloseDomain} placement="center">
         <ModalContent>
-          <ModalHeader className="flex flex-col gap-1">
-            Elige tu dominio
+          <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
+            Elige tu dominio para registrar
           </ModalHeader>
           <ModalBody>
-            <div className="flex flex-col gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 py-2 gap-4">
               {domains.map((domain, index) => (
                 <button
                   key={index}
-                  className={`text-base font-semibold p-2 hover:bg-gray-200 rounded-md ${
+                  className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
                     selectedDomain === domain ? "bg-gray-200" : ""
                   }`}
                   onClick={() => handleSelectDomain(domain)}
                 >
-                  {domain.name} - ${domain.price.toFixed(2)}
+                  <div className="text-left p-2 rounded-sm hover:bg-neutral-100">
+                    <h1 className="text-xl font-semibold text-[#a482fb]">
+                      {domain.name}
+                    </h1>
+                    <h1 className="text-base text-black">
+                      ${domain.price.toFixed(2)}
+                      <span>/año</span>
+                    </h1>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+
+      <Modal isOpen={isOpenEmail} onClose={onCloseEmail} placement="center" size="3xl">
+        <ModalContent>
+          <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
+            Elige tu plan de Correo Profecional
+          </ModalHeader>
+          <ModalBody>
+            <div className="grid grid-cols-1 sm:grid-cols-2 py-2 gap-4">
+              {emails.map((email, index) => (
+                <button
+                  key={index}
+                  className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
+                    selectedEmail === email ? "bg-gray-200" : ""
+                  }`}
+                  onClick={() => handleSelectEmail(email)}
+                >
+                  <section className="hover:bg-neutral-100">
+                    <div className="text-left p-2 rounded-sm">
+                      <h1 className="text-2xl font-semibold text-[#a482fb] pb-1">
+                        {email.name}
+                      </h1>
+                      <h1 className="text-xl md:text-2xl font-bold text-neutral-800">
+                        ${email.price.toFixed(2)}
+                        <span>/mes</span>
+                      </h1>
+                    </div>
+
+                    <hr className="mx-2" />
+
+                    <div className="text-left p-2 text-sm md:text-base space-y-2 py-2">
+                      <div className="flex flex-row items-center space-x-1">
+                        <svg
+                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <h1>{email.feature1}</h1>
+                      </div>
+                      <div className="flex flex-row items-center space-x-1">
+                        <svg
+                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <h1>{email.feature2}</h1>
+                      </div>
+                      <div className="flex flex-row items-center space-x-1">
+                        <svg
+                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <h1>{email.feature3}</h1>
+                      </div>
+                      <div className="flex flex-row items-center space-x-1">
+                        <svg
+                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <h1>{email.feature4}</h1>
+                      </div>
+                      <div className="flex flex-row items-center space-x-1">
+                        <svg
+                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <h1>{email.feature5}</h1>
+                      </div>
+                      <div className="flex flex-row items-center space-x-1">
+                        <svg
+                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <h1>{email.feature6}</h1>
+                      </div>
+                    </div>
+                  </section>
                 </button>
               ))}
             </div>

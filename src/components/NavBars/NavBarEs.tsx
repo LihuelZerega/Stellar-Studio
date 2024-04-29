@@ -41,7 +41,7 @@ const services = [
     icon: MdOutlineWebAsset,
   },
   {
-    name: "Correos Profecionales",
+    name: "Correos Profesionales",
     description: "Conseguí una imagen respetable y confiable",
     href: "/es/servicios/correosprofecionales",
     icon: MdAlternateEmail,
