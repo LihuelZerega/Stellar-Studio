@@ -228,10 +228,6 @@ const ProductItem: React.FC<ProductItemProps> = ({
     setQuantity((prevQuantity) => prevQuantity - 1);
   };
 
-  if (quantity === 0) {
-    return null;
-  }
-
   const {
     isOpen: isOpenDomain,
     onOpen: onOpenDomain,
@@ -308,242 +304,255 @@ const ProductItem: React.FC<ProductItemProps> = ({
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="flex flex-row bg-neutral-50 p-4 rounded-md shadow-sm mb-4">
-        <div className="bg-white rounded-md p-2">{icon}</div>
+      {quantity === 0 ? null : (
+        <>
+          <div className="flex flex-row bg-neutral-50 p-4 rounded-md shadow-sm mb-4">
+            <div className="bg-white rounded-md p-2">{icon}</div>
 
-        <div className="flex flex-col items-left justify-between w-full border-l ml-2 pl-2">
-          <div className="flex flex-row items-center justify-between text-base font-semibold text-gray-800">
-            {selectedDomain ? (
-              <>
-                <h1 className="">Registrar Dominio</h1>
-                <h1 className="">${selectedDomain?.price.toFixed(2)}</h1>
-              </>
-            ) : (
-              <>
-                <h1>{title}</h1>
-                <h1>${price.toFixed(2)}</h1>
-              </>
-            )}
-          </div>
+            <div className="flex flex-col items-left justify-between w-full border-l ml-2 pl-2">
+              <div className="flex flex-row items-center justify-between text-base font-semibold text-gray-800">
+                {selectedDomain ? (
+                  <>
+                    <h1 className="">Registrar Dominio</h1>
+                    <h1 className="">${selectedDomain?.price.toFixed(2)}</h1>
+                  </>
+                ) : (
+                  <>
+                    <h1>{title}</h1>
+                    <h1>${price.toFixed(2)}</h1>
+                  </>
+                )}
+              </div>
 
-          <div className="flex flex-row items-center justify-between text-sm text-gray-800">
-            <div className="flex items-center">
-              {selectedDomain || title === "Registrar Dominio" ? (
-                <>
-                  <button
-                    className="hover:text-[#a482fb]"
-                    onClick={handleChooseDomain}
-                  >
-                    {selectedDomain?.name
-                      ? selectedDomain.name
-                      : "Elegir Dominio"}
-                  </button>
-                </>
-              ) : (
-                <>
-                  {selectedEmail || title === "Correo Profesional" ? (
+              <div className="flex flex-row items-center justify-between text-sm text-gray-800">
+                <div className="flex items-center">
+                  {selectedDomain || title === "Registrar Dominio" ? (
                     <>
                       <button
                         className="hover:text-[#a482fb]"
-                        onClick={handleChooseEmailPlan}
+                        onClick={handleChooseDomain}
                       >
-                        {selectedEmail?.name
-                          ? selectedEmail.name
-                          : "Elegir Email"}
+                        {selectedDomain?.name
+                          ? selectedDomain.name
+                          : "Elegir Dominio"}
                       </button>
                     </>
                   ) : (
-                    <h1>Cantidad: {quantity}</h1>
+                    <>
+                      {selectedEmail || title === "Correo Profesional" ? (
+                        <>
+                          <button
+                            className="hover:text-[#a482fb]"
+                            onClick={handleChooseEmailPlan}
+                          >
+                            {selectedEmail?.name
+                              ? selectedEmail.name
+                              : "Elegir Email"}
+                          </button>
+                        </>
+                      ) : (
+                        <h1>Cantidad: {quantity}</h1>
+                      )}
+                    </>
                   )}
-                </>
-              )}
-            </div>
-
-            <div className="flex flex-row items-center space-x-2">
-              {title === "One Page" ? (
-                <div className="flex flex-row items-center space-x-2">
-                  <button
-                    className="hover:text-[#a482fb]"
-                    onClick={handleAddQuantity}
-                  >
-                    <FiChevronUp />
-                  </button>
-                  <FiTrash2
-                    className="hover:text-red-500 cursor-pointer"
-                    onClick={handleSubtractQuantity}
-                  />
                 </div>
-              ) : (
-                <>
-                  <FiTrash2
-                    className="hover:text-red-500 cursor-pointer"
-                    onClick={handleSubtractQuantity}
-                  />
-                </>
-              )}
+
+                <div className="flex flex-row items-center space-x-2">
+                  {title === "One Page" ? (
+                    <div className="flex flex-row items-center space-x-2">
+                      <button
+                        className="hover:text-[#a482fb]"
+                        onClick={handleAddQuantity}
+                      >
+                        <FiChevronUp />
+                      </button>
+                      <FiTrash2
+                        className="hover:text-red-500 cursor-pointer"
+                        onClick={handleSubtractQuantity}
+                      />
+                    </div>
+                  ) : (
+                    <>
+                      <FiTrash2
+                        className="hover:text-red-500 cursor-pointer"
+                        onClick={handleSubtractQuantity}
+                      />
+                    </>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <Modal isOpen={isOpenDomain} onClose={onCloseDomain} placement="center">
-        <ModalContent>
-          <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
-            Elige tu dominio para registrar
-          </ModalHeader>
-          <ModalBody>
-            <div className="grid grid-cols-2 sm:grid-cols-3 py-2 gap-4">
-              {domains.map((domain, index) => (
-                <button
-                  key={index}
-                  className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
-                    selectedDomain === domain ? "bg-gray-200" : ""
-                  }`}
-                  onClick={() => handleSelectDomain(domain)}
-                >
-                  <div className="text-left p-2 rounded-sm hover:bg-neutral-100">
-                    <h1 className="text-xl font-semibold text-[#a482fb]">
-                      {domain.name}
-                    </h1>
-                    <h1 className="text-base text-black">
-                      ${domain.price.toFixed(2)}
-                      <span>/año</span>
-                    </h1>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+          <Modal
+            isOpen={isOpenDomain}
+            onClose={onCloseDomain}
+            placement="center"
+          >
+            <ModalContent>
+              <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
+                Elige tu dominio para registrar
+              </ModalHeader>
+              <ModalBody>
+                <div className="grid grid-cols-2 sm:grid-cols-3 py-2 gap-4">
+                  {domains.map((domain, index) => (
+                    <button
+                      key={index}
+                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
+                        selectedDomain === domain ? "bg-gray-200" : ""
+                      }`}
+                      onClick={() => handleSelectDomain(domain)}
+                    >
+                      <div className="text-left p-2 rounded-sm hover:bg-neutral-100">
+                        <h1 className="text-xl font-semibold text-[#a482fb]">
+                          {domain.name}
+                        </h1>
+                        <h1 className="text-base text-black">
+                          ${domain.price.toFixed(2)}
+                          <span>/año</span>
+                        </h1>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </ModalBody>
+            </ModalContent>
+          </Modal>
 
-      <Modal isOpen={isOpenEmail} onClose={onCloseEmail} placement="center" size="3xl">
-        <ModalContent>
-          <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
-            Elige tu plan de Correo Profecional
-          </ModalHeader>
-          <ModalBody>
-            <div className="grid grid-cols-1 sm:grid-cols-2 py-2 gap-4">
-              {emails.map((email, index) => (
-                <button
-                  key={index}
-                  className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
-                    selectedEmail === email ? "bg-gray-200" : ""
-                  }`}
-                  onClick={() => handleSelectEmail(email)}
-                >
-                  <section className="hover:bg-neutral-100">
-                    <div className="text-left p-2 rounded-sm">
-                      <h1 className="text-2xl font-semibold text-[#a482fb] pb-1">
-                        {email.name}
-                      </h1>
-                      <h1 className="text-xl md:text-2xl font-bold text-neutral-800">
-                        ${email.price.toFixed(2)}
-                        <span>/mes</span>
-                      </h1>
-                    </div>
+          <Modal
+            isOpen={isOpenEmail}
+            onClose={onCloseEmail}
+            placement="center"
+            size="3xl"
+          >
+            <ModalContent>
+              <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
+                Elige tu plan de Correo Profecional
+              </ModalHeader>
+              <ModalBody>
+                <div className="grid grid-cols-1 sm:grid-cols-2 py-2 gap-4">
+                  {emails.map((email, index) => (
+                    <button
+                      key={index}
+                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
+                        selectedEmail === email ? "bg-gray-200" : ""
+                      }`}
+                      onClick={() => handleSelectEmail(email)}
+                    >
+                      <section className="hover:bg-neutral-100">
+                        <div className="text-left p-2 rounded-sm">
+                          <h1 className="text-2xl font-semibold text-[#a482fb] pb-1">
+                            {email.name}
+                          </h1>
+                          <h1 className="text-xl md:text-2xl font-bold text-neutral-800">
+                            ${email.price.toFixed(2)}
+                            <span>/mes</span>
+                          </h1>
+                        </div>
 
-                    <hr className="mx-2" />
+                        <hr className="mx-2" />
 
-                    <div className="text-left p-2 text-sm md:text-base space-y-2 py-2">
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature1}</h1>
-                      </div>
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature2}</h1>
-                      </div>
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature3}</h1>
-                      </div>
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature4}</h1>
-                      </div>
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature5}</h1>
-                      </div>
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature6}</h1>
-                      </div>
-                    </div>
-                  </section>
-                </button>
-              ))}
-            </div>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+                        <div className="text-left p-2 text-sm md:text-base space-y-2 py-2 text-neutral-700">
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature1}</h1>
+                          </div>
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature2}</h1>
+                          </div>
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature3}</h1>
+                          </div>
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature4}</h1>
+                          </div>
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature5}</h1>
+                          </div>
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature6}</h1>
+                          </div>
+                        </div>
+                      </section>
+                    </button>
+                  ))}
+                </div>
+              </ModalBody>
+            </ModalContent>
+          </Modal>
+        </>
+      )}
     </motion.div>
   );
 };
@@ -561,588 +570,585 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
       transition={{ duration: 0.6, delay: 0.3 }}
       className="overflow-hidden bg-transparent border-2 border-gray-200 rounded-2xl"
     >
-<div className="p-8 xl:px-12">
-          <div className="flex flex-row items-center justify-between">
-            <h1 className="text-xl font-semibold text-[#a482fb]">
-              Landing Page
-            </h1>
-            <Chip className="bg-[#a482fb] text-white">Mas Vendido</Chip>
-          </div>
+      <div className="p-8 xl:px-12">
+        <div className="flex flex-row items-center justify-between">
+          <h1 className="text-xl font-semibold text-[#a482fb]">Landing Page</h1>
+          <Chip className="bg-[#a482fb] text-white">Mas Vendido</Chip>
+        </div>
 
-          <div className="h-20">
-            <h1 className="text-sm mt-4 text-gray-500">
-              Ideal para quienes desean captar clientes potenciales interesados
-              en sus servicios y convertirlos en clientes.
-            </h1>
-          </div>
+        <div className="h-20">
+          <h1 className="text-sm mt-4 text-gray-500">
+            Ideal para quienes desean captar clientes potenciales interesados en
+            sus servicios y convertirlos en clientes.
+          </h1>
+        </div>
 
-          <div className="flex flex-row items-end justify-start">
-            <p className="text-5xl font-bold text-white mt-7">$119</p>
-            <p className="ml-2 mt-3 text-base text-gray-500">/Pago único</p>
-          </div>
+        <div className="flex flex-row items-end justify-start">
+          <p className="text-5xl font-bold text-white mt-7">$119</p>
+          <p className="ml-2 mt-3 text-base text-gray-500">/Pago único</p>
+        </div>
 
-          <motion.button
-            onClick={() => setOpen(true)}
-            whileTap={{ scale: 0.95 }}
-            whileHover={{ scale: 1.05 }}
-            className="w-full inline-flex items-center justify-center px-10 py-4 mt-5 text-lg rounded-md font-semibold text-[#a482fb] transition-all bg-white shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-100"
-          >
-            Comprar Ahora
-          </motion.button>
+        <motion.button
+          onClick={() => setOpen(true)}
+          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.05 }}
+          className="w-full inline-flex items-center justify-center px-10 py-4 mt-5 text-lg rounded-md font-semibold text-[#a482fb] transition-all bg-white shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-100"
+        >
+          Comprar Ahora
+        </motion.button>
 
-          <hr className="my-5" />
+        <hr className="my-5" />
 
-          <ul className="inline-flex flex-col items-start space-y-5 text-left my-2 h-80">
-            <li className="inline-flex items-center space-x-2">
-              <svg
-                className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span className="text-base font-medium text-gray-200">
-                {" "}
-                Diseño enfocado en la conversión{" "}
-              </span>
-            </li>
-
-            <li className="inline-flex items-center space-x-2">
-              <svg
-                className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span className="text-base font-medium text-gray-200">
-                {" "}
-                Llamado a la acción claro y destacado{" "}
-              </span>
-            </li>
-
-            <li className="inline-flex items-center space-x-2">
-              <svg
-                className="h-5 text-[#a482fb] flex-shrink-0w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span className="text-base font-medium text-gray-200">
-                {" "}
-                Formulario de contacto o registro visible{" "}
-              </span>
-            </li>
-
-            <li className="inline-flex items-center space-x-2">
-              <svg
-                className="h-5 text-[#a482fb] flex-shrink-0w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span className="text-base font-medium text-gray-200">
-                {" "}
-                Testimonios o reseñas de clientes{" "}
-              </span>
-            </li>
-
-            <li className="inline-flex items-center space-x-2">
-              <svg
-                className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span className="pb-0.5 text-base font-medium text-gray-200">
-                {" "}
-                Elementos visuales atractivos y relevantes{" "}
-              </span>
-            </li>
-          </ul>
-
-          <hr className="my-5" />
-
-          {showMoreFeatures && (
-            <>
-              <ul className="inline-flex flex-col items-start space-y-5 text-left my-2">
-                <span className="text-lg font-semibold text-[#a482fb]">
-                  {" "}
-                  Seguridad{" "}
-                </span>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Protección DDoS mejorada
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Firewall de aplicaciones web
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Proteccion de privacidad de datos (GDPR)
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Altos estándares de seguridad y disponibilidad (SOC 2)
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Altos estándares de gestión de la seguridad de la
-                      información (ISO 27001)
-                    </h1>
-                  </div>
-                </li>
-              </ul>
-
-              <hr className="my-5" />
-
-              <ul className="inline-flex flex-col items-start space-y-5 text-left my-2">
-                <span className="text-lg font-semibold text-[#a482fb]">
-                  {" "}
-                  Rendimiento{" "}
-                </span>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Distribucion en una red global de servidores de alto
-                      rendimiento y baja latencia
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Optimizacion automatica de imagenes
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Minificación y compresión de codigo
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Almacenamiento en Caché para usuarios regresantes
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Bases de datos de alto rendimiento y escalado automatico
-                    </h1>
-                  </div>
-                </li>
-              </ul>
-
-              <hr className="my-5" />
-
-              <ul className="inline-flex flex-col items-start space-y-5 text-left my-2">
-                <span className="text-lg font-semibold text-[#a482fb]">
-                  {" "}
-                  Estructura{" "}
-                  <span className="text-xs">(+2 paginas adicionales)</span>
-                </span>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Encabezado:
-                    </h1>
-                  </div>
-                  <div className="ml-6">
-                    <h1 className="text-sm font-light mb-2">
-                      Título impactante que capte la atención del visitante.
-                    </h1>
-                    <h1 className="text-sm font-light">
-                      Breve descripción del producto, servicio o oferta.
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Beneficios:
-                    </h1>
-                  </div>
-                  <div className="ml-6">
-                    <h1 className="text-sm font-light mb-2">
-                      Lista de beneficios clave de lo que se ofrece.
-                    </h1>
-                    <h1 className="text-sm font-light">
-                      Iconos o imágenes para destacar cada beneficio.
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Llamado a la acción (CTA):
-                    </h1>
-                  </div>
-                  <div className="ml-6">
-                    <h1 className="text-sm font-light mb-2">
-                      Botón prominente que invita a los visitantes a realizar
-                      una acción específica, como registrarse o comprar.
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Formulario de Registro o Contacto:
-                    </h1>
-                  </div>
-                  <div className="ml-6">
-                    <h1 className="text-sm font-light mb-2">
-                      Formulario integrado para que los visitantes proporcionen
-                      información de contacto.
-                    </h1>
-                    <h1 className="text-sm font-light">
-                      Campos simples y claros para maximizar la conversión.
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Testimonios:
-                    </h1>
-                  </div>
-                  <div className="ml-6">
-                    <h1 className="text-sm font-light mb-2">
-                      Sección con testimonios o reseñas de clientes satisfechos.
-                    </h1>
-                    <h1 className="text-sm font-light">
-                      Breves citas y nombres de clientes.
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Preguntas frecuentes (FAQ):
-                    </h1>
-                  </div>
-                  <div className="ml-6">
-                    <h1 className="text-sm font-light mb-2">
-                      Sección que responde a preguntas comunes sobre el producto
-                      o servicio.
-                    </h1>
-                    <h1 className="text-sm font-light">
-                      Preguntas y respuestas claramente organizadas.
-                    </h1>
-                  </div>
-                </li>
-
-                <li className="text-base font-medium text-gray-200 my-2">
-                  <div className="inline-flex items-center space-x-1">
-                    <svg
-                      className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <h1 className="text-base font-medium text-gray-200">
-                      Pie de página:
-                    </h1>
-                  </div>
-                  <div className="ml-6">
-                    <h1 className="text-sm font-light mb-2">
-                      Enlaces adicionales, información de copyright y redes
-                      sociales.
-                    </h1>
-                  </div>
-                </li>
-              </ul>
-              <div>
-                <h1 className="text-xs font-semibold text-gray-400 text-center my-2">
-                  (Todos los apartados de la estructura pueden ser
-                  personalizados)
-                </h1>
-              </div>
-              <hr className="my-5" />
-            </>
-          )}
-
-          <div
-            className="flex items-center justify-center cursor-pointer w-full"
-            onClick={() => setShowMoreFeatures(!showMoreFeatures)}
-          >
-            <h1 className="text-center text-lg lg:text-sm xl:text-lg font-semibold text-[#a482fb]">
-              {showMoreFeatures
-                ? "Ocultar características"
-                : "Ver todas las características"}
-            </h1>
-            <div>
-              <ChevronDownIcon
-                className={`h-7 w-7 flex-none text-[#a482fb] transform transition-transform ${
-                  showMoreFeatures ? "rotate-180" : ""
-                }`}
-                aria-hidden="true"
+        <ul className="inline-flex flex-col items-start space-y-5 text-left my-2 h-80">
+          <li className="inline-flex items-center space-x-2">
+            <svg
+              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
               />
+            </svg>
+            <span className="text-base font-medium text-gray-200">
+              {" "}
+              Diseño enfocado en la conversión{" "}
+            </span>
+          </li>
+
+          <li className="inline-flex items-center space-x-2">
+            <svg
+              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span className="text-base font-medium text-gray-200">
+              {" "}
+              Llamado a la acción claro y destacado{" "}
+            </span>
+          </li>
+
+          <li className="inline-flex items-center space-x-2">
+            <svg
+              className="h-5 text-[#a482fb] flex-shrink-0w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span className="text-base font-medium text-gray-200">
+              {" "}
+              Formulario de contacto o registro visible{" "}
+            </span>
+          </li>
+
+          <li className="inline-flex items-center space-x-2">
+            <svg
+              className="h-5 text-[#a482fb] flex-shrink-0w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span className="text-base font-medium text-gray-200">
+              {" "}
+              Testimonios o reseñas de clientes{" "}
+            </span>
+          </li>
+
+          <li className="inline-flex items-center space-x-2">
+            <svg
+              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span className="pb-0.5 text-base font-medium text-gray-200">
+              {" "}
+              Elementos visuales atractivos y relevantes{" "}
+            </span>
+          </li>
+        </ul>
+
+        <hr className="my-5" />
+
+        {showMoreFeatures && (
+          <>
+            <ul className="inline-flex flex-col items-start space-y-5 text-left my-2">
+              <span className="text-lg font-semibold text-[#a482fb]">
+                {" "}
+                Seguridad{" "}
+              </span>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Protección DDoS mejorada
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Firewall de aplicaciones web
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Proteccion de privacidad de datos (GDPR)
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Altos estándares de seguridad y disponibilidad (SOC 2)
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Altos estándares de gestión de la seguridad de la
+                    información (ISO 27001)
+                  </h1>
+                </div>
+              </li>
+            </ul>
+
+            <hr className="my-5" />
+
+            <ul className="inline-flex flex-col items-start space-y-5 text-left my-2">
+              <span className="text-lg font-semibold text-[#a482fb]">
+                {" "}
+                Rendimiento{" "}
+              </span>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Distribucion en una red global de servidores de alto
+                    rendimiento y baja latencia
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Optimizacion automatica de imagenes
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Minificación y compresión de codigo
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Almacenamiento en Caché para usuarios regresantes
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Bases de datos de alto rendimiento y escalado automatico
+                  </h1>
+                </div>
+              </li>
+            </ul>
+
+            <hr className="my-5" />
+
+            <ul className="inline-flex flex-col items-start space-y-5 text-left my-2">
+              <span className="text-lg font-semibold text-[#a482fb]">
+                {" "}
+                Estructura{" "}
+                <span className="text-xs">(+2 paginas adicionales)</span>
+              </span>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Encabezado:
+                  </h1>
+                </div>
+                <div className="ml-6">
+                  <h1 className="text-sm font-light mb-2">
+                    Título impactante que capte la atención del visitante.
+                  </h1>
+                  <h1 className="text-sm font-light">
+                    Breve descripción del producto, servicio o oferta.
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Beneficios:
+                  </h1>
+                </div>
+                <div className="ml-6">
+                  <h1 className="text-sm font-light mb-2">
+                    Lista de beneficios clave de lo que se ofrece.
+                  </h1>
+                  <h1 className="text-sm font-light">
+                    Iconos o imágenes para destacar cada beneficio.
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Llamado a la acción (CTA):
+                  </h1>
+                </div>
+                <div className="ml-6">
+                  <h1 className="text-sm font-light mb-2">
+                    Botón prominente que invita a los visitantes a realizar una
+                    acción específica, como registrarse o comprar.
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Formulario de Registro o Contacto:
+                  </h1>
+                </div>
+                <div className="ml-6">
+                  <h1 className="text-sm font-light mb-2">
+                    Formulario integrado para que los visitantes proporcionen
+                    información de contacto.
+                  </h1>
+                  <h1 className="text-sm font-light">
+                    Campos simples y claros para maximizar la conversión.
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Testimonios:
+                  </h1>
+                </div>
+                <div className="ml-6">
+                  <h1 className="text-sm font-light mb-2">
+                    Sección con testimonios o reseñas de clientes satisfechos.
+                  </h1>
+                  <h1 className="text-sm font-light">
+                    Breves citas y nombres de clientes.
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Preguntas frecuentes (FAQ):
+                  </h1>
+                </div>
+                <div className="ml-6">
+                  <h1 className="text-sm font-light mb-2">
+                    Sección que responde a preguntas comunes sobre el producto o
+                    servicio.
+                  </h1>
+                  <h1 className="text-sm font-light">
+                    Preguntas y respuestas claramente organizadas.
+                  </h1>
+                </div>
+              </li>
+
+              <li className="text-base font-medium text-gray-200 my-2">
+                <div className="inline-flex items-center space-x-1">
+                  <svg
+                    className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <h1 className="text-base font-medium text-gray-200">
+                    Pie de página:
+                  </h1>
+                </div>
+                <div className="ml-6">
+                  <h1 className="text-sm font-light mb-2">
+                    Enlaces adicionales, información de copyright y redes
+                    sociales.
+                  </h1>
+                </div>
+              </li>
+            </ul>
+            <div>
+              <h1 className="text-xs font-semibold text-gray-400 text-center my-2">
+                (Todos los apartados de la estructura pueden ser personalizados)
+              </h1>
             </div>
+            <hr className="my-5" />
+          </>
+        )}
+
+        <div
+          className="flex items-center justify-center cursor-pointer w-full"
+          onClick={() => setShowMoreFeatures(!showMoreFeatures)}
+        >
+          <h1 className="text-center text-lg lg:text-sm xl:text-lg font-semibold text-[#a482fb]">
+            {showMoreFeatures
+              ? "Ocultar características"
+              : "Ver todas las características"}
+          </h1>
+          <div>
+            <ChevronDownIcon
+              className={`h-7 w-7 flex-none text-[#a482fb] transform transition-transform ${
+                showMoreFeatures ? "rotate-180" : ""
+              }`}
+              aria-hidden="true"
+            />
           </div>
         </div>
+      </div>
     </motion.div>
   );
 };
