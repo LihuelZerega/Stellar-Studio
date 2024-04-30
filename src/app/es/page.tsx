@@ -49,9 +49,9 @@ function Page() {
           {/* <HeroSectionEs /> */}
           <HeroParallaxEs />
           <StatsEs />
-          <div className="py-16">
+          {/* <div className="py-16">
             <WorkProcessEs />
-          </div>
+          </div> */}
           {/* <ChoosePlanEs /> */}
           <div className="pt-16">
             <BenefitsEs />

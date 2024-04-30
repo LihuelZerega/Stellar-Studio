@@ -3,29 +3,12 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 function WorkProcessEs() {
-  const controls1 = useAnimation();
-  const { ref: ref1, inView: inView1 } = useInView();
-
-  const controls2 = useAnimation();
-  const { ref: ref2, inView: inView2 } = useInView();
-
-  const controls3 = useAnimation();
-  const { ref: ref3, inView: inView3 } = useInView();
-
-  const animationVariants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 20 },
-  };
-
   return (
     <div>
       <section className="py-10 sm:py-16 lg:py-24">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <motion.div
-            ref={ref1}
-            animate={inView1 ? "visible" : "hidden"}
             initial="hidden"
-            variants={animationVariants}
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
           >
@@ -51,10 +34,7 @@ function WorkProcessEs() {
             <div className="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
               {/* Paso 1 */}
               <motion.div
-                ref={ref1}
-                animate={inView1 ? "visible" : "hidden"}
                 initial="hidden"
-                variants={animationVariants}
                 transition={{ duration: 0.6 }}
               >
                 <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
@@ -74,10 +54,7 @@ function WorkProcessEs() {
 
               {/* Paso 2 */}
               <motion.div
-                ref={ref2}
-                animate={inView2 ? "visible" : "hidden"}
                 initial="hidden"
-                variants={animationVariants}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
@@ -97,10 +74,7 @@ function WorkProcessEs() {
 
               {/* Paso 3 */}
               <motion.div
-                ref={ref3}
-                animate={inView3 ? "visible" : "hidden"}
                 initial="hidden"
-                variants={animationVariants}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
