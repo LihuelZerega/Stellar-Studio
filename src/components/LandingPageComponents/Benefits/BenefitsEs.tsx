@@ -148,9 +148,9 @@ const BenefitsEs: React.FC = () => {
         </div>
       </motion.section>
 
-      <div className="w-full max-w-xs border-b border-neutral-400">
+      {/* <div className="w-full max-w-xs border-b border-neutral-400">
         <h1 className="text-transparent">g</h1>
-      </div>
+      </div> */}
 
       <motion.section
         ref={ref2}
@@ -240,9 +240,9 @@ const BenefitsEs: React.FC = () => {
         </div>
       </motion.section>
 
-      <div className="w-full max-w-xs border-b border-neutral-400">
+      {/* <div className="w-full max-w-xs border-b border-neutral-400">
         <h1 className="text-transparent">g</h1>
-      </div>
+      </div> */}
 
       <motion.section
         ref={ref3}
