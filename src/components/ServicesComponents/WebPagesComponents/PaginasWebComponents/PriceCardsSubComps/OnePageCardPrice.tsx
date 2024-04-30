@@ -33,6 +33,17 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
   const [domainQuantity, setDomainQuantity] = useState<number>(1);
   const [emailQuantity, setEmailQuantity] = useState<number>(1);
 
+  const {
+    isOpen: isOpenDomain,
+    onOpen: onOpenDomain,
+    onClose: onCloseDomain,
+  } = useDisclosure();
+  const {
+    isOpen: isOpenEmail,
+    onOpen: onOpenEmail,
+    onClose: onCloseEmail,
+  } = useDisclosure();
+
   const subtotal =
     onePagePrice * onePageQuantity +
     (domainPrice ? domainPrice * domainQuantity : 0) +
@@ -227,15 +238,12 @@ const ProductItem: React.FC<ProductItemProps> = ({
     setQuantity((prevQuantity) => prevQuantity - 1);
   };
 
-  if (quantity === 0) {
-    return null;
-  }
-
   const {
     isOpen: isOpenDomain,
     onOpen: onOpenDomain,
     onClose: onCloseDomain,
   } = useDisclosure();
+
   const {
     isOpen: isOpenEmail,
     onOpen: onOpenEmail,
@@ -306,247 +314,253 @@ const ProductItem: React.FC<ProductItemProps> = ({
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="flex flex-row bg-neutral-50 p-4 rounded-md shadow-sm mb-4">
-        <div className="bg-white rounded-md p-2">{icon}</div>
+      {quantity === 0 ? null : (
+        <>
+          <div className="flex flex-row bg-neutral-50 p-4 rounded-md shadow-sm mb-4">
+            <div className="bg-white rounded-md p-2">{icon}</div>
 
-        <div className="flex flex-col items-left justify-between w-full border-l ml-2 pl-2">
-          <div className="flex flex-row items-center justify-between text-base font-semibold text-gray-800">
-            {selectedDomain ? (
-              <>
-                <h1 className="">Registrar Dominio</h1>
-                <h1 className="">${selectedDomain?.price.toFixed(2)}</h1>
-              </>
-            ) : (
-              <>
-                <h1>{title}</h1>
-                <h1>${price.toFixed(2)}</h1>
-              </>
-            )}
-          </div>
+            <div className="flex flex-col items-left justify-between w-full border-l ml-2 pl-2">
+              <div className="flex flex-row items-center justify-between text-base font-semibold text-gray-800">
+                {selectedDomain ? (
+                  <>
+                    <h1 className="">Registrar Dominio</h1>
+                    <h1 className="">${selectedDomain?.price.toFixed(2)}</h1>
+                  </>
+                ) : (
+                  <>
+                    <h1>{title}</h1>
+                    <h1>${price.toFixed(2)}</h1>
+                  </>
+                )}
+              </div>
 
-          <div className="flex flex-row items-center justify-between text-sm text-gray-800">
-            <div className="flex items-center">
-              {selectedDomain || title === "Registrar Dominio" ? (
-                <>
-                  <button
-                    className="hover:text-[#a482fb]"
-                    onClick={handleChooseDomain}
-                  >
-                    {selectedDomain?.name
-                      ? selectedDomain.name
-                      : "Elegir Dominio"}
-                  </button>
-                </>
-              ) : (
-                <>
-                  {selectedEmail || title === "Correo Profesional" ? (
+              <div className="flex flex-row items-center justify-between text-sm text-gray-800">
+                <div className="flex items-center">
+                  {selectedDomain || title === "Registrar Dominio" ? (
                     <>
                       <button
                         className="hover:text-[#a482fb]"
-                        onClick={handleChooseEmailPlan}
+                        onClick={handleChooseDomain}
                       >
-                        {selectedEmail?.name
-                          ? selectedEmail.name
-                          : "Elegir Email"}
+                        {selectedDomain?.name
+                          ? selectedDomain.name
+                          : "Elegir Dominio"}
                       </button>
                     </>
                   ) : (
-                    <h1>Cantidad: {quantity}</h1>
+                    <>
+                      {selectedEmail || title === "Correo Profesional" ? (
+                        <>
+                          <button
+                            className="hover:text-[#a482fb]"
+                            onClick={handleChooseEmailPlan}
+                          >
+                            {selectedEmail?.name
+                              ? selectedEmail.name
+                              : "Elegir Email"}
+                          </button>
+                        </>
+                      ) : (
+                        <h1>Cantidad: {quantity}</h1>
+                      )}
+                    </>
                   )}
-                </>
-              )}
-            </div>
-
-            <div className="flex flex-row items-center space-x-2">
-              {title === "One Page" ? (
-                <div className="flex flex-row items-center space-x-2">
-                  <button
-                    className="hover:text-[#a482fb]"
-                    onClick={handleAddQuantity}
-                  >
-                    <FiChevronUp />
-                  </button>
-                  <FiTrash2
-                    className="hover:text-red-500 cursor-pointer"
-                    onClick={handleSubtractQuantity}
-                  />
                 </div>
-              ) : (
-                <>
-                  <FiTrash2
-                    className="hover:text-red-500 cursor-pointer"
-                    onClick={handleSubtractQuantity}
-                  />
-                </>
-              )}
+
+                <div className="flex flex-row items-center space-x-2">
+                  {title === "One Page" ? (
+                    <div className="flex flex-row items-center space-x-2">
+                      <button
+                        className="hover:text-[#a482fb]"
+                        onClick={handleAddQuantity}
+                      >
+                        <FiChevronUp />
+                      </button>
+                      <FiTrash2
+                        className="hover:text-red-500 cursor-pointer"
+                        onClick={handleSubtractQuantity}
+                      />
+                    </div>
+                  ) : (
+                    <>
+                      <FiTrash2
+                        className="hover:text-red-500 cursor-pointer"
+                        onClick={handleSubtractQuantity}
+                      />
+                    </>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+          <Modal
+            isOpen={isOpenDomain}
+            onClose={onCloseDomain}
+            placement="center"
+          >
+            <ModalContent>
+              <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
+                Elige tu dominio para registrar
+              </ModalHeader>
+              <ModalBody>
+                <div className="grid grid-cols-2 sm:grid-cols-3 py-2 gap-4">
+                  {domains.map((domain, index) => (
+                    <button
+                      key={index}
+                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
+                        selectedDomain === domain ? "bg-gray-200" : ""
+                      }`}
+                      onClick={() => handleSelectDomain(domain)}
+                    >
+                      <div className="text-left p-2 rounded-sm hover:bg-neutral-100">
+                        <h1 className="text-xl font-semibold text-[#a482fb]">
+                          {domain.name}
+                        </h1>
+                        <h1 className="text-base text-black">
+                          ${domain.price.toFixed(2)}
+                          <span>/año</span>
+                        </h1>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </ModalBody>
+            </ModalContent>
+          </Modal>
+          <Modal
+            isOpen={isOpenEmail}
+            onClose={onCloseEmail}
+            placement="center"
+            size="3xl"
+          >
+            <ModalContent>
+              <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
+                Elige tu plan de Correo Profecional
+              </ModalHeader>
+              <ModalBody>
+                <div className="grid grid-cols-1 sm:grid-cols-2 py-2 gap-4">
+                  {emails.map((email, index) => (
+                    <button
+                      key={index}
+                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
+                        selectedEmail === email ? "bg-gray-200" : ""
+                      }`}
+                      onClick={() => handleSelectEmail(email)}
+                    >
+                      <section className="hover:bg-neutral-100">
+                        <div className="text-left p-2 rounded-sm">
+                          <h1 className="text-2xl font-semibold text-[#a482fb] pb-1">
+                            {email.name}
+                          </h1>
+                          <h1 className="text-xl md:text-2xl font-bold text-neutral-800">
+                            ${email.price.toFixed(2)}
+                            <span>/mes</span>
+                          </h1>
+                        </div>
 
-      <Modal isOpen={isOpenDomain} onClose={onCloseDomain} placement="center">
-        <ModalContent>
-          <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
-            Elige tu dominio para registrar
-          </ModalHeader>
-          <ModalBody>
-            <div className="grid grid-cols-2 sm:grid-cols-3 py-2 gap-4">
-              {domains.map((domain, index) => (
-                <button
-                  key={index}
-                  className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
-                    selectedDomain === domain ? "bg-gray-200" : ""
-                  }`}
-                  onClick={() => handleSelectDomain(domain)}
-                >
-                  <div className="text-left p-2 rounded-sm hover:bg-neutral-100">
-                    <h1 className="text-xl font-semibold text-[#a482fb]">
-                      {domain.name}
-                    </h1>
-                    <h1 className="text-base text-black">
-                      ${domain.price.toFixed(2)}
-                      <span>/año</span>
-                    </h1>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+                        <hr className="mx-2" />
 
-      <Modal
-        isOpen={isOpenEmail}
-        onClose={onCloseEmail}
-        placement="center"
-        size="3xl"
-      >
-        <ModalContent>
-          <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
-            Elige tu plan de Correo Profecional
-          </ModalHeader>
-          <ModalBody>
-            <div className="grid grid-cols-1 sm:grid-cols-2 py-2 gap-4">
-              {emails.map((email, index) => (
-                <button
-                  key={index}
-                  className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
-                    selectedEmail === email ? "bg-gray-200" : ""
-                  }`}
-                  onClick={() => handleSelectEmail(email)}
-                >
-                  <section className="hover:bg-neutral-100">
-                    <div className="text-left p-2 rounded-sm">
-                      <h1 className="text-2xl font-semibold text-[#a482fb] pb-1">
-                        {email.name}
-                      </h1>
-                      <h1 className="text-xl md:text-2xl font-bold text-neutral-800">
-                        ${email.price.toFixed(2)}
-                        <span>/mes</span>
-                      </h1>
-                    </div>
-
-                    <hr className="mx-2" />
-
-                    <div className="text-left p-2 text-sm md:text-base space-y-2 py-2">
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature1}</h1>
-                      </div>
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature2}</h1>
-                      </div>
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature3}</h1>
-                      </div>
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature4}</h1>
-                      </div>
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature5}</h1>
-                      </div>
-                      <div className="flex flex-row items-center space-x-1">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <h1>{email.feature6}</h1>
-                      </div>
-                    </div>
-                  </section>
-                </button>
-              ))}
-            </div>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+                        <div className="text-left p-2 text-sm md:text-base space-y-2 py-2 text-neutral-700">
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature1}</h1>
+                          </div>
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature2}</h1>
+                          </div>
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature3}</h1>
+                          </div>
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature4}</h1>
+                          </div>
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature5}</h1>
+                          </div>
+                          <div className="flex flex-row items-center space-x-1">
+                            <svg
+                              className="flex-shrink-0 w-5 h-5 text-[#a482fb]"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                            <h1>{email.feature6}</h1>
+                          </div>
+                        </div>
+                      </section>
+                    </button>
+                  ))}
+                </div>
+              </ModalBody>
+            </ModalContent>
+          </Modal>
+        </>
+      )}
     </motion.div>
   );
 };
