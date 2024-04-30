@@ -228,10 +228,6 @@ const ProductItem: React.FC<ProductItemProps> = ({
     setQuantity((prevQuantity) => prevQuantity - 1);
   };
 
-  if (quantity === 0) {
-    return null;
-  }
-
   const {
     isOpen: isOpenDomain,
     onOpen: onOpenDomain,
