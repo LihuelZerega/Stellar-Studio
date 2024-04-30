@@ -69,7 +69,7 @@ const BenefitsEs: React.FC = () => {
         transition={{ duration: 0.6 }}
         className={`flex flex-col-reverse sm:flex-row-reverse items-center justify-between py-6 w-full px-6 sm:px-0 sm:pl-6 lg:pl-12`}
       >
-        <div className="justify-center w-full">
+        <div className="w-full lg:w-1/2 justify-center">
           <Image
             src={ExpandeTuNegocioWebMockup2Mobile}
             width={1000}
@@ -85,7 +85,7 @@ const BenefitsEs: React.FC = () => {
             className="hidden sm:block"
           />
         </div>
-        <div className="w-full max-w-md">
+        <div className="w-full lg:w-1/2 lg:pl-12">
           <div className="flex flex-row font-bold text-4xl lg:text-5xl space-x-2 items-center text-[#a482fb]">
             {/* <HiOutlineDesktopComputer /> */}
             <h1>Paginas Web</h1>
@@ -159,7 +159,7 @@ const BenefitsEs: React.FC = () => {
         transition={{ duration: 0.6 }}
         className={`flex flex-col-reverse sm:flex-row items-center justify-between w-full px-6 sm:px-0`}
       >
-        <div className="justify-center w-full">
+        <div className="justify-center w-full lg:w-1/2">
           <Image
             src={DomainLandingMockupMobile}
             width={1000}
@@ -175,7 +175,7 @@ const BenefitsEs: React.FC = () => {
             className="hidden sm:block"
           />
         </div>
-        <div className="w-full sm:h-72 sm:pl-6 lg:pl-12">
+        <div className="w-full lg:w-1/2 sm:h-72 sm:pl-6 lg:pl-12">
           <div className="flex flex-row font-bold text-4xl lg:text-5xl space-x-2 items-center text-[#a482fb]">
             {/* <HiOutlineGlobeAlt /> */}
             <h1>Dominios</h1>
@@ -251,7 +251,7 @@ const BenefitsEs: React.FC = () => {
         transition={{ duration: 0.6 }}
         className={`flex flex-col-reverse sm:flex-row-reverse items-center justify-between w-full px-6 sm:px-0 sm:pl-6 lg:pl-12`}
       >
-        <div className="justify-center w-full">
+        <div className="justify-center w-full lg:w-1/2">
           <Image
             src={CorreosProfecionalesLandingMobile}
             width={1000}
@@ -267,7 +267,7 @@ const BenefitsEs: React.FC = () => {
             className="hidden sm:block"
           />
         </div>
-        <div className="w-full sm:max-w-md">
+        <div className="w-full lg:w-1/2 lg:pl-12">
           <div className="flex flex-row font-bold text-4xl lg:text-5xl space-x-2 items-center text-[#a482fb]">
             {/* <HiOutlineMailOpen className="text-7xl" /> */}
             <h1>Correos Profesionales</h1>
