@@ -12,6 +12,14 @@ import StatsEs from "@/components/LandingPageComponents/Stats/StatsEs";
 import ChoosePlanEs from "@/components/LandingPageComponents/ChoosePlans/ChoosePlanEs";
 import LoadingPage from "@/ui/LoadingPage";
 
+import NavBar from "./home/NavBar";
+import Herosection from "./home/Herosection";
+import Brands from "./home/Brands";
+import Products from "./home/Products";
+import CallToAction from "./home/CallToAction";
+import Testimonials from "./home/Testimonials";
+import Section from "./home/Section";
+
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
   const changePageTitle = () => {
@@ -39,26 +47,30 @@ function Page() {
         </div>
       ) : (
         <div
-          className="bg-cover bg-center bg-[#272526]"
-          style={{
-            backgroundImage:
-              'url("https://res.cloudinary.com/dszjgdktf/image/upload/v1712257547/Stellar%20Studio/BackgroundHomeImage_hod7wp.png")',
-          }}
+          className="bg-cover bg-center bg-neutral-50"
+          // style={{
+          //   backgroundImage:
+          //     'url("https://res.cloudinary.com/dszjgdktf/image/upload/v1712257547/Stellar%20Studio/BackgroundHomeImage_hod7wp.png")',
+          // }}
         >
-          <NavBarEs />
-          {/* <HeroSectionEs /> */}
-          <HeroParallaxEs />
-          <StatsEs />
-          {/* <div className="py-16">
-            <WorkProcessEs />
-          </div> */}
-          {/* <ChoosePlanEs /> */}
-          <div className="pt-16">
+          <NavBar />
+          {/* <div>
+            <HeroParallaxEs />
+            <div className="pt-16">
             <BenefitsEs />
-          </div>
-          <TestimonialEs />
-          <div className="py-16">
+            </div>
+            <TestimonialEs />
+            <div className="py-16">
             <FaqEs />
+            </div>
+          </div> */}
+          <div>
+            <Herosection />
+            <StatsEs />
+            <Products />
+            <Section />
+            <Testimonials />
+            <CallToAction />
           </div>
           <FooterEs />
         </div>
