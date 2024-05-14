@@ -366,7 +366,7 @@ function NavBarEs() {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="text-white h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="text-neutral-800 h-6 w-6" aria-hidden="true" />
           </button>
         </div>
 

@@ -47,13 +47,13 @@ function Products() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-start justify-between space-x-12 pt-6 sm:pt-10 pb-12">
+        <div className="flex flex-col md:flex-row items-start justify-between md:space-x-12 pt-6 sm:pt-10 pb-12">
           <h1 className="text-3xl text-neutral-800 ">
             ¿Qué podemos construir en{" "}
             <span className="border-b-2 border-[#a482fb]">Stellar</span>{" "}
             <span className="border-b-2 border-[#a482fb]">Studio</span>?
           </h1>
-          <p className="text-xl text-neutral-500 pt-1">
+          <p className="text-xl text-neutral-500 pt-4 md:pt-1">
             Nuestros modelos estan diseñados para ser utilizados en cualquier
             tipo de negocio.
           </p>

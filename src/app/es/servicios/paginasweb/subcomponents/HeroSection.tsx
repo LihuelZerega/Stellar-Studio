@@ -151,12 +151,12 @@ function Herosection() {
         </div>
       </div>
       <div>
-        <h1 className="text-center my-4 text-[32px] leading-[44px] md:text-[56px] md:leading-[72px] text-neutral-800 animate-fadeInUp">
-          Destacá tu presencia en línea con tu Página Web
+        <h1 className="text-center my-4 text-[32px] leading-[44px] md:text-[56px] md:leading-[72px] text-neutral-800 ">
+          Destacá tu presencia en línea <br className="hidden lg:block"/> con tu Página Web
         </h1>
 
         <p
-          className="text-center last:mb-0 mb-0 text-xl text-neutral-500 animate-fadeInUp"
+          className="text-center last:mb-0 mb-0 text-xl text-neutral-500 "
           data-label-id="0"
         >
           Elija un modelo que incluya las mejores funciones para atraer a su{" "}
