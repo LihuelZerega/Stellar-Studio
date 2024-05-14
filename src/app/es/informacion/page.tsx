@@ -31,7 +31,7 @@ function Page() {
   return (
     <>
       {isLoading ? (
-        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-[#272526] z-50">
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-neutral-50 z-50">
           <LoadingPage />
         </div>
       ) : (

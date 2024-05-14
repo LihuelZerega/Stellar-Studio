@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function CallToAction() {
   return (
-    <div className="flex flex-col items-center justify-center bg-neutral-50">
+    <div className="flex flex-col items-center justify-center bg-neutral-50 px-6">
       <div className="bg-white shadow-sm p-2 w-fit rounded-lg mt-12">
         <svg
           xmlns="http://www.w3.org/2000/svg"
