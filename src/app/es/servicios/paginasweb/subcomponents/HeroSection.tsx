@@ -156,7 +156,7 @@ function Herosection() {
         </h1>
 
         <p
-          className="text-center last:mb-0 mb-0 text-xl text-neutral-500 "
+          className="text-center last:mb-0 mb-0 text-lg text-neutral-500 px-3"
           data-label-id="0"
         >
           Elija un modelo que incluya las mejores funciones para atraer a su{" "}
