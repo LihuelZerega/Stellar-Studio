@@ -3,7 +3,7 @@ import React from "react";
 function Herosection() {
   return (
     <div
-      className="flex flex-col mx-auto col-span-1 overflow-x-hidden relative w-full pt-56 pb-24 md:pt-44 md:pb-24 bg-neutral-50 2xl:pt-64 2xl:pb-56 animate-fadeIn"
+      className="flex flex-col mx-auto col-span-1 overflow-x-hidden relative w-full pt-36 pb-24 md:pt-44 md:pb-24 bg-neutral-50 2xl:pt-64 2xl:pb-56 animate-fadeIn"
       style={{
         backgroundImage:
           'url("https://res.cloudinary.com/dszjgdktf/image/upload/v1715609605/HeroBackground_cf4tpz.png")',
@@ -151,7 +151,7 @@ function Herosection() {
         </div>
       </div>
       <div>
-        <h1 className="text-center my-4 text-[32px] leading-[44px] md:text-[56px] md:leading-[72px] text-neutral-800 ">
+        <h1 className="text-center my-4 text-[50px] leading-[64px] md:text-[56px] md:leading-[72px] text-neutral-800 ">
           Destacá tu presencia en línea <br className="hidden lg:block"/> con tu Página Web
         </h1>
 

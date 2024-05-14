@@ -8,7 +8,7 @@ export function HoverBorderGradientDemo() {
       <HoverBorderGradient
         containerClassName="rounded-full"
         as="button"
-        className="dark:bg-black bg-white text-black dark:text-white flex items-center rounded-full space-x-2"
+        className="bg-white text-neutral-800  flex items-center rounded-full space-x-2"
       >
         <span>Stellar Studio 2.0</span>
       </HoverBorderGradient>
