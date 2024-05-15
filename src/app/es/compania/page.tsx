@@ -1,12 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import LoadingPage from "@/ui/LoadingPage";
-import NavBarEs from "@/components/NavBars/NavBarEs";
+import NavBar from "@/app/es/home/NavBar";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
-import HeroSectionCompania from "@/components/CompaniaComponents/Es/HeroSectionCompania";
+import HeroSection from "./subcomps/HeroSection";
 import AboutStellarStudio from "@/components/CompaniaComponents/Es/AboutStellarStudio";
 import ContactCompania from "@/components/CompaniaComponents/Es/ContactCompania";
 import TecnologyCompania from "@/components/CompaniaComponents/Es/TecnologyCompania";
+import History from "./subcomps/History";
+import Commitment from "./subcomps/Commitment";
+import OurObjetive from "./subcomps/OurObjetive";
+import Tecnology from "./subcomps/Tecnology";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,24 +37,20 @@ function Page() {
           <LoadingPage />
         </div>
       ) : (
-        <div
-          className="bg-cover bg-center bg-[#272526]"
-          style={{
-            backgroundImage:
-              'url("https://res.cloudinary.com/dszjgdktf/image/upload/v1712251098/Stellar%20Studio/BackgroundServicesImage_hpumui.png")',
-          }}
-        >
-          <NavBarEs />
-          <HeroSectionCompania />
+        <div className="bg-cover bg-center bg-neutral-50">
+          <NavBar />
+          <HeroSection />
           <div id="sobrenosotros" className="bg-neutral-900 bg-opacity-30">
-            <AboutStellarStudio />
+            <History />
           </div>
+          <Commitment />
+          <OurObjetive />
           <h1 id="tecnologia">
-            <TecnologyCompania />
+            <Tecnology />
           </h1>
-          <h1 id="contacto">
+          {/* <h1 id="contacto">
             <ContactCompania />
-          </h1>
+          </h1> */}
           <FooterEs />
         </div>
       )}
