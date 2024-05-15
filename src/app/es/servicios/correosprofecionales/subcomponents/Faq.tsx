@@ -18,7 +18,7 @@ function Faq() {
     "No es necesario. El WWW no forma parte del dominio. Si se agrega WWW delante de un dominio registrado, la dirección final será www.wwwejemplo.com, lo cual no es correcto. Por ello, no debe añadirse.";
 
   return (
-    <div className="border-t-1 border-neutral-200 py-12 lg:py-24 bg-neutral-50">
+    <div className="border-t-1 border-neutral-200 py-12 lg:py-24 bg-neutral-100">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-24">
         <section className="border-b-1 border-neutral-300 mb-3">
           <h2 className="flex flex-row items-center text-neutral-800 mb-3">

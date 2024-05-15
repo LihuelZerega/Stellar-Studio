@@ -61,7 +61,7 @@ export default function AlertService() {
                       <div className="mt-2">
                         <p className="text-sm text-gray-500">
                           Estamos realizando mejoras en nuestro servicio de
-                          compra de dominios. Estará disponible pronto. Disculpa
+                          compra de dominios. Estará disponible pronto. Disculpe
                           las molestias.
                         </p>
                       </div>

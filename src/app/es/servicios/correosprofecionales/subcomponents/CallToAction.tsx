@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function CallToAction() {
   return (
-    <div className="flex flex-col items-center justify-center border-t-1 border-neutral-200 bg-neutral-100 px-6">
+    <div className="flex flex-col items-center justify-center border-t-1 border-neutral-200 bg-neutral-50 px-6">
       <div className="bg-white shadow-sm p-2 w-fit rounded-lg mt-12">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -49,17 +49,16 @@ function CallToAction() {
       </div>
       <div className="text-center">
         <h1 className="text-neutral-800 font-bold text-2xl pt-3">
-          ¡Asegurá tu identidad en línea!
+          ¡Impulsá tu imagen ahora!
         </h1>
         <p className="py-2 text-neutral-600">
-          Explora nuestros planes de dominio y asegura tu presencia en línea de
-          manera rápida y sencilla. <br /> Desde nombres de dominio estándar
-          hasta extensiones especializadas.
+          Únase como muchas Pequeñas y Medianas empresas que <br /> han
+          mejoraron su imagen profesional.
         </p>
       </div>
-      <a href="#registrardominio">
+      <a href="#precioscorreos">
         <button className="bg-[#a482fb] hover:bg-[#9979eb] text-sm text-center my-4 py-2 px-3 rounded-md text-white">
-          ¡Asegurá ahora!
+          ¡Impulsá ahora!
         </button>
       </a>
       <div>

@@ -3,15 +3,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Chip } from "@nextui-org/react";
 
-function PricesCradsEs() {
+function PricesCrads() {
   return (
-    <div>
-      <section className="my-24 pb-4">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 text-left lg:max-w-full lg:grid-cols-2">
+    <div className="bg-neutral-50">
+      <section className="py-12 md:py-24 pb-4 border-t-1 border-neutral-200">
+        <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
+          <div className="grid max-w-md grid-cols-1 gap-24 mx-auto mt-8 text-left lg:max-w-full lg:grid-cols-2">
             {/* Card 1 */}
 
-            <div className="overflow-hidden bg-transparent border-2 border-gray-200 rounded-2xl">
+            <div className="overflow-hidden border-2 border-gray-200 bg-white rounded-2xl">
               <div className="p-8 xl:px-12">
                 <h1 className="text-xl font-semibold text-[#a482fb]">
                   Emprendedor
@@ -19,24 +19,29 @@ function PricesCradsEs() {
 
                 <div className="h-14">
                   <h1 className="text-base mt-4 text-gray-500">
-                  Una solución eficiente y accesible para tus necesidades de correo electrónico empresarial.
+                    Una solución eficiente y accesible para tus necesidades de
+                    correo electrónico empresarial.
                   </h1>
                 </div>
 
                 <div className="flex flex-row items-end justify-start">
-                  <p className="text-5xl font-bold text-white mt-7">$8</p>
+                  <p className="text-6xl font-bold text-neutral-700 mt-12">
+                    $8
+                  </p>
                   <p className="ml-2 mt-3 text-base text-gray-500">/Mes</p>
                 </div>
 
                 <motion.button
                   whileTap={{ scale: 0.95 }}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.01 }}
                   className="w-full inline-flex items-center justify-center px-10 py-4 mt-5 text-lg rounded-md font-semibold text-white transition-all bg-[#a482fb] shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
                 >
                   Comprar Ahora
                 </motion.button>
 
-                <hr className="my-5" />
+                <div className="text-transparent border-b-1 border-neutral-400 select-none my-5">
+                  s
+                </div>
 
                 <ul className="inline-flex flex-col items-start space-y-5 text-left my-6">
                   <li className="inline-flex items-center space-x-2">
@@ -52,7 +57,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="text-base font-medium text-gray-200">
+                    <span className="text-base font-medium text-gray-600">
                       {" "}
                       10 GB de almacenamiento en email{" "}
                     </span>
@@ -71,7 +76,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="text-base font-medium text-gray-200">
+                    <span className="text-base font-medium text-gray-600">
                       {" "}
                       10 reglas de reenvío{" "}
                     </span>
@@ -90,7 +95,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="text-base font-medium text-gray-200">
+                    <span className="text-base font-medium text-gray-600">
                       {" "}
                       Alias de email{" "}
                     </span>
@@ -109,7 +114,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="text-base font-medium text-gray-200">
+                    <span className="text-base font-medium text-gray-600">
                       {" "}
                       Verificación antivirus{" "}
                     </span>
@@ -128,7 +133,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="pb-0.5 text-base font-medium text-gray-200">
+                    <span className="pb-0.5 text-base font-medium text-gray-600">
                       {" "}
                       Antispam avanzado{" "}
                     </span>
@@ -147,7 +152,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="pb-0.5 text-base font-medium text-gray-200">
+                    <span className="pb-0.5 text-base font-medium text-gray-600">
                       {" "}
                       Infraestructura basada en la nube{" "}
                     </span>
@@ -157,7 +162,7 @@ function PricesCradsEs() {
             </div>
 
             {/* Card 2 */}
-            <div className="overflow-hidden bg-transparent border-2 border-[#a482fb] rounded-2xl">
+            <div className="overflow-hidden border-2 border-gray-200 bg-white rounded-2xl">
               <div className="p-8 xl:px-12">
                 <div className="flex flex-row items-center justify-between">
                   <h1 className="text-xl font-semibold text-[#a482fb]">
@@ -168,24 +173,29 @@ function PricesCradsEs() {
 
                 <div className="h-14">
                   <h1 className="text-base mt-4 text-gray-500">
-                  El favorito de nuestros clientes, todo lo que necesitas y más, con espacio más que suficiente para gestionar y características premium.
+                    Todo lo que necesitas y más, con espacio más que suficiente
+                    para gestionar y características premium.
                   </h1>
                 </div>
 
                 <div className="flex flex-row items-end justify-start">
-                  <p className="text-5xl font-bold text-white mt-7">$12</p>
+                  <p className="text-6xl font-bold text-neutral-700 mt-12">
+                    $12
+                  </p>
                   <p className="ml-2 mt-3 text-base text-gray-500">/Mes</p>
                 </div>
 
                 <motion.button
                   whileTap={{ scale: 0.95 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="w-full inline-flex items-center justify-center px-10 py-4 mt-5 text-lg rounded-md font-semibold text-[#a482fb] transition-all bg-white shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-100"
+                  whileHover={{ scale: 1.01 }}
+                  className="w-full inline-flex items-center justify-center px-10 py-4 mt-5 text-lg rounded-md font-semibold text-white transition-all bg-[#a482fb] shadow-sm hover:bg-[#b192ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
                 >
                   Comprar Ahora
                 </motion.button>
 
-                <hr className="my-5" />
+                <div className="text-transparent border-b-1 border-neutral-400 select-none my-5">
+                  s
+                </div>
 
                 <ul className="inline-flex flex-col items-start space-y-5 text-left my-6">
                   <li className="inline-flex items-center space-x-2">
@@ -201,7 +211,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="text-base font-medium text-gray-200">
+                    <span className="text-base font-medium text-gray-600">
                       {" "}
                       50 GB de almacenamiento en email{" "}
                     </span>
@@ -220,7 +230,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="text-base font-medium text-gray-200">
+                    <span className="text-base font-medium text-gray-600">
                       {" "}
                       50 reglas de reenvío{" "}
                     </span>
@@ -239,7 +249,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="text-base font-medium text-gray-200">
+                    <span className="text-base font-medium text-gray-600">
                       {" "}
                       Alias de email{" "}
                     </span>
@@ -258,7 +268,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="text-base font-medium text-gray-200">
+                    <span className="text-base font-medium text-gray-600">
                       {" "}
                       Verificación antivirus{" "}
                     </span>
@@ -277,7 +287,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="pb-0.5 text-base font-medium text-gray-200">
+                    <span className="pb-0.5 text-base font-medium text-gray-600">
                       {" "}
                       Antispam avanzado{" "}
                     </span>
@@ -296,7 +306,7 @@ function PricesCradsEs() {
                         clip-rule="evenodd"
                       />
                     </svg>
-                    <span className="pb-0.5 text-base font-medium text-gray-200">
+                    <span className="pb-0.5 text-base font-medium text-gray-600">
                       {" "}
                       Infraestructura basada en la nube{" "}
                     </span>
@@ -305,89 +315,10 @@ function PricesCradsEs() {
               </div>
             </div>
           </div>
-
-          {/* <div className="text-center my-6">
-            <h1
-              className="text-md font-semibold text-[#a482fb] cursor-pointer"
-              onClick={onOpen}
-            >
-              Terminos de Pago
-            </h1>
-
-            <div className="flex flex-col gap-2">
-              <Modal
-                isOpen={isOpen}
-                size="3xl"
-                placement="center"
-                onOpenChange={onOpenChange}
-                className="bg-[#272526] text-white"
-              >
-                <ModalContent>
-                  {(onClose) => (
-                    <>
-                      <ModalHeader className="flex flex-col gap-1 border-b text-xl text-[#a482fb]">
-                        Terminos de Pago
-                      </ModalHeader>
-                      <ModalBody>
-                        <div className="mb-3">
-                          <h1 className="text-lg font-semibold">Pago Único</h1>
-                          <p className="text-sm font-light text-gray-300">
-                            El pago por nuestros servicios es único y se realiza
-                            de forma anticipada.
-                          </p>
-                        </div>
-                        <div className="mb-3">
-                          <h1 className="text-lg font-semibold">
-                            Adelanto del 30%
-                          </h1>
-                          <p className="text-sm font-light text-gray-300">
-                            Para dar inicio al trabajo, se requiere un adelanto
-                            del 30% del costo total del producto contratado.
-                            Este adelanto se debe abonar antes de que comience
-                            el proceso de diseño y desarrollo.
-                          </p>
-                        </div>
-                        <div className="mb-3">
-                          <h1 className="text-lg font-semibold">
-                            Pago del Saldo Restante
-                          </h1>
-                          <p className="text-sm font-light text-gray-300">
-                            El saldo restante del pago se deberá abonar antes de
-                            la entrega final del producto contratado. La entrega
-                            del producto finalizado se realizará una vez
-                            recibido el pago completo.
-                          </p>
-                        </div>
-                        <div className="mb-1">
-                          <h1 className="text-lg font-semibold">
-                            Formas de Pago
-                          </h1>
-                          <p className="text-sm font-light text-gray-300">
-                            Aceptamos pagos mediante transferencia bancaria,
-                            tarjeta de crédito, PayPal, entre otros. Los
-                            detalles específicos para realizar el pago se
-                            proporcionarán al momento de la contratación de
-                            nuestros servicios.
-                          </p>
-                        </div>
-                        <p className="text-sm font-light text-gray-300">
-                          Por favor, ten en cuenta que los términos de pago
-                          están sujetos a cambios y pueden variar según el tipo
-                          de servicio contratado. Para más detalles o preguntas
-                          relacionadas con los términos de pago, no dudes en
-                          ponerte en contacto con nuestro equipo.
-                        </p>
-                      </ModalBody>
-                    </>
-                  )}
-                </ModalContent>
-              </Modal>
-            </div>
-          </div> */}
         </div>
       </section>
     </div>
   );
 }
 
-export default PricesCradsEs;
+export default PricesCrads;
