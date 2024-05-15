@@ -54,30 +54,6 @@ const services = [
   },
 ];
 
-const informacion = [
-  {
-    name: "Precios",
-    description:
-      "Consulta nuestros planes y modelos que mejor se adapten a tus necesidades.",
-    href: "/es/informacion#precios",
-    icon: MdAttachMoney,
-  },
-  {
-    name: "Opiniones",
-    description:
-      "Lee las opiniones y experiencias para conocer más sobre nuestro servicio y calidad.",
-    href: "/es/informacion#opinionesformasdepago",
-    icon: MdEmojiPeople,
-  },
-  {
-    name: "Formas de Pago",
-    description:
-      "Descubre las diferentes formas de pago que aceptamos para facilitar tu transacción.",
-    href: "/es/informacion#formasdepago",
-    icon: MdOutlinePayments,
-  },
-];
-
 const compania = [
   {
     name: "Sobre Stellar Studio",
@@ -392,61 +368,9 @@ function NavBarEs() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute -left-36 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                     <div className="p-4">
                       {services.map((item) => (
-                        <div
-                          key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-                        >
-                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                            <item.icon
-                              className="h-6 w-6 text-gray-600 group-hover:text-[#a482fb]"
-                              aria-hidden="true"
-                            />
-                          </div>
-                          <div className="flex-auto">
-                            <a
-                              href={item.href}
-                              className="block font-semibold text-gray-900"
-                            >
-                              {item.name}
-                              <span className="absolute inset-0" />
-                            </a>
-                            <p className="mt-1 text-gray-600">
-                              {item.description}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </Popover.Panel>
-                </Transition>
-              </Popover>
-            </Popover.Group>
-
-            <Popover.Group className="hidden lg:flex lg:gap-x-12">
-              <Popover className="relative">
-                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-neutral-800 focus:outline-none">
-                  Información
-                  <ChevronDownIcon
-                    className="h-5 w-5 flex-none text-gray-500"
-                    aria-hidden="true"
-                  />
-                </Popover.Button>
-
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-200"
-                  enterFrom="opacity-0 translate-y-1"
-                  enterTo="opacity-100 translate-y-0"
-                  leave="transition ease-in duration-150"
-                  leaveFrom="opacity-100 translate-y-0"
-                  leaveTo="opacity-0 translate-y-1"
-                >
-                  <Popover.Panel className="absolute -left-32 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                    <div className="p-4">
-                      {informacion.map((item) => (
                         <div
                           key={item.name}
                           className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
@@ -620,39 +544,6 @@ function NavBarEs() {
                 </h1>
                 <div>
                   {services.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-3 rounded-lg my-2 py-2 text-sm leading-6 hover:bg-gray-50"
-                    >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
-                          className="h-6 w-6 text-gray-600 group-hover:text-[#a482fb]"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <div className="flex-auto">
-                        <a
-                          href={item.href}
-                          className="block font-semibold text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
-                        <p className="mt-1 text-xs text-gray-600">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h1 className="text-xl font-semibold text-[#a482fb] border-t pt-2 mt-6 mb-2">
-                  Información
-                </h1>
-                <div>
-                  {informacion.map((item) => (
                     <div
                       key={item.name}
                       className="group relative flex items-center gap-x-3 rounded-lg my-2 py-2 text-sm leading-6 hover:bg-gray-50"
