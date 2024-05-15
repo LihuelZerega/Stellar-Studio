@@ -122,31 +122,6 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
                         setDomainPrice={setDomainPrice}
                         setEmailPrice={setEmailPrice}
                       />
-
-                      <ProductItem
-                        icon={
-                          <TbWorldWww className="text-3xl text-[#a482fb]" />
-                        }
-                        title="Registrar Dominio"
-                        price={domainPrice}
-                        quantity={domainQuantity}
-                        setQuantity={setDomainQuantity}
-                        setOpen={setOpen}
-                        setDomainPrice={setDomainPrice}
-                        setEmailPrice={setEmailPrice}
-                      />
-                      <ProductItem
-                        icon={
-                          <MdAlternateEmail className="text-3xl text-[#a482fb]" />
-                        }
-                        title="Correo Profesional"
-                        price={emailPrice}
-                        quantity={emailQuantity}
-                        setQuantity={setEmailQuantity}
-                        setOpen={setOpen}
-                        setDomainPrice={setDomainPrice}
-                        setEmailPrice={setEmailPrice}
-                      />
                     </div>
 
                     <hr />
@@ -171,9 +146,11 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
                         </div>
                       </div>
                       <div className="flex flex-col">
-                        <button className="w-full items-center justify-center py-4 mt-5 text-sm rounded-md font-semibold text-white transition-all bg-[#a482fb] shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]">
-                          Comprar
-                        </button>
+                        <a href="/es/servicios/paginasweb/checkout/onepage">
+                          <button className="w-full items-center justify-center py-4 mt-5 text-sm rounded-md font-semibold text-white transition-all bg-[#a482fb] shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]">
+                            Comprar
+                          </button>
+                        </a>
                         <button
                           className="w-full items-center justify-center py-4 mt-3 text-sm rounded-md font-semibold text-[#a482fb] transition-all border-2 border-[#a482fb] shadow-sm hover:bg-neutral-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
                           onClick={() => setOpen(false)}
