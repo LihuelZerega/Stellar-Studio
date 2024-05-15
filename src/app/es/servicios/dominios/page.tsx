@@ -6,13 +6,13 @@ import HeroSection from "@/app/es/servicios/dominios/subcomponents/HeroSection";
 import PopularDomains from "@/app/es/servicios/dominios/subcomponents/PopularDomains";
 import Tips from "@/components/ServicesComponents/DomainComponents/Es/Tips";
 import Features from "@/components/ServicesComponents/DomainComponents/Es/Features";
-import FaqEs from "@/components/ServicesComponents/DomainComponents/Es/FaqEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 import { motion } from "framer-motion";
 import { MdClose } from "react-icons/md";
 import AlertService from "./subcomponents/AlertService";
 import DomainTips from "./subcomponents/DomainTips";
 import CallToAction from "./subcomponents/CallToAction";
+import Faq from "./subcomponents/Faq";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -52,8 +52,8 @@ function Page() {
           <DomainTips />
           {/* <Tips /> */}
           {/* <Features /> */}
-          {/* <FaqEs /> */}
           <CallToAction />
+          <Faq />
           <FooterEs />
         </div>
       )}
