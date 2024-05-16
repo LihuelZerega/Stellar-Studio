@@ -564,7 +564,7 @@ const ShoppingCartWithState: React.FC = () => {
   );
 };
 
-function page() {
+function Page() {
   const [selectedMethod, setSelectedMethod] = useState<string | null>(null);
 
   const handleMethodClick = (method: string, index: number) => {
@@ -728,4 +728,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
