@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import LoadingPage from "@/ui/LoadingPage";
-import NavBarEs from "@/components/NavBars/NavBarEs";
+import NavBar from "../home/NavBar";
+import Herosection from "../ayuda/subcomps/HeroSection";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
-import HeroSectionHelp from "@/components/HelpComponents/Es/HeroSectionHelp";
 import HelpSteps from "@/components/HelpComponents/Es/HelpSteps";
-import ContactCompania from "@/components/CompaniaComponents/Es/ContactCompania";
+import ContactForm from "@/components/HelpComponents/Es/ContactForm";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,13 +39,13 @@ function Page() {
               'url("https://res.cloudinary.com/dszjgdktf/image/upload/v1712251098/Stellar%20Studio/BackgroundServicesImage_hpumui.png")',
           }}
         >
-          <NavBarEs />
-          <HeroSectionHelp />
+          <NavBar />
+          <Herosection />
           <div id="pasosayuda">
             <HelpSteps />
           </div>
           <div id="contactoayuda">
-            <ContactCompania />
+            <ContactForm />
           </div>
           <FooterEs />
         </div>

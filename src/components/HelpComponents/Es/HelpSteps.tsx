@@ -3,9 +3,9 @@ import React from "react";
 function HelpSteps() {
   return (
     <div>
-      <section className="py-16 lg:py-24">
+      <section className="border-t-1 border-neutral-200 py-12 lg:py-24 bg-neutral-100">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center">
+          {/* <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold leading-tight text-[#a482fb] sm:text-4xl lg:text-5xl">
               Comunicanos tu consulta, pregunta o problema.
             </h2>
@@ -14,9 +14,9 @@ function HelpSteps() {
               de manera oportuna, eficiente y con un alto nivel de servicio al
               cliente.
             </p>
-          </div>
+          </div> */}
 
-          <ul className="max-w-md mx-auto mt-16 space-y-12">
+          <ul className="max-w-md mx-auto space-y-12">
             <li className="relative flex items-start">
               <div
                 className="-ml-0.5 absolute mt-0.5 top-14 left-8 w-px border-l-4 border-dotted border-gray-300 h-full"
@@ -43,7 +43,7 @@ function HelpSteps() {
                 <h3 className="text-lg font-semibold text-[#a482fb]">
                   Recepción de consultas
                 </h3>
-                <p className="mt-4 text-sm text-gray-300">
+                <p className="mt-4 text-sm text-gray-600">
                   Las consultas pueden llegar a través de varios canales, como
                   teléfono, correo electrónico, chat en vivo o redes sociales.
                 </p>
@@ -76,7 +76,7 @@ function HelpSteps() {
                 <h3 className="text-lg font-semibold text-[#a482fb]">
                   Registro de la consulta
                 </h3>
-                <p className="mt-4 text-sm text-gray-300">
+                <p className="mt-4 text-sm text-gray-600">
                   Nuestro equipo de atención al cliente registra los detalles
                   relevantes y se asignan los recursos necesarios para abordar
                   la consulta del cliente.
@@ -105,7 +105,7 @@ function HelpSteps() {
                 <h3 className="text-lg font-semibold text-[#a482fb]">
                   Resolución de la consulta
                 </h3>
-                <p className="mt-4 text-base text-gray-300">
+                <p className="mt-4 text-base text-gray-600">
                   Una vez que se ha resuelto la consulta del cliente, nuestro
                   equipo realiza un seguimiento para asegurarse de que el
                   cliente esté satisfecho con la solución proporcionada.
