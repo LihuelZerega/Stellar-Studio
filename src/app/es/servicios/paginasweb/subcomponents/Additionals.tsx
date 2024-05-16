@@ -8,7 +8,7 @@ function Additionals() {
         <section className="flex flex-col items-center justify-center w-full text-center space-y-4 mb-12">
           <div
             data-sb-field-path=".0"
-            className="transition-all bg-neutral-200 border-1 border-neutral-300 text-black h-7 px-3 text-sm leading-5 rounded-full font-medium flex gap-3 items-center"
+            className="transition-all bg-[#a482fb] bg-opacity-60 border-1 border-neutral-300 text-white h-7 px-3 text-sm leading-5 rounded-full font-medium flex gap-3 items-center"
           >
             <span>Adicionales</span>
           </div>
@@ -28,7 +28,7 @@ function Additionals() {
           <div>
             <div className="object-cover w-full h-1/2 border-2 border-gray-200 bg-white rounded-2xl select-none">
               <Image
-                src="https://medusajs.com/_next/image/?url=%2Fimages%2Fcart-overview-1.png&w=1200&q=90"
+                src="https://res.cloudinary.com/dszjgdktf/image/upload/v1715867130/RedesingMockup_hdk2um.png"
                 width={1096}
                 height={480}
                 alt=""
@@ -46,7 +46,7 @@ function Additionals() {
           <div>
             <div className="object-cover w-full h-1/2 border-2 border-gray-200 bg-white rounded-2xl select-none">
               <Image
-                src="https://medusajs.com/_next/image/?url=%2Fimages%2Fcart-overview-1.png&w=1200&q=90"
+                src="https://res.cloudinary.com/dszjgdktf/image/upload/v1715869616/ChatBotMockup_rixlvn.png"
                 width={1096}
                 height={480}
                 alt=""
@@ -72,7 +72,7 @@ function Additionals() {
         <section className="my-12">
           <div className="w-full h-1/2 border-2 border-gray-200 bg-white rounded-2xl select-none">
             <Image
-              src="https://medusajs.com/_next/image/?url=%2Fimages%2Fcart-overview-3.png&w=3840&q=90"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1715870536/CartExperienseMockup_uuyc3w.png"
               width={2272}
               height={960}
               alt=""

@@ -158,7 +158,7 @@ function Herosection() {
       </div>
 
       <div className="w-[calc(100%+3rem)] md:w-[calc(100%+5.5rem)] flex md:justify-center md:px-9 overflow-hidden pt-8 pl-6 sm:pl-0 justify-start">
-        <div className="w-[1136px] h-[369px] md:h-auto shrink-0 sm:w-[800px] xl:w-[1136px] 2xl:w-[1280px] object-cover shadow-large p-0.5 rounded-2xl rounded-b-none overflow-hidden">
+        <div className="w-[1136px] h-[369px] md:h-auto shrink-0 sm:w-[800px] xl:w-[1136px] 2xl:w-[1280px] object-cover p-0.5 rounded-2xl rounded-b-none overflow-hidden">
           <img
             alt=""
             loading="lazy"
@@ -166,7 +166,7 @@ function Herosection() {
             height="1472"
             decoding="async"
             data-nimg="1"
-            src="https://medusajs.com/_next/image/?url=%2Fimages%2Fcustomer-module-hero.png&w=3840&q=100"
+            src="https://res.cloudinary.com/dszjgdktf/image/upload/v1715865670/HeroSectionEmailMockup_nku6u8.png"
           ></img>
         </div>
       </div>
