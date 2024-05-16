@@ -64,7 +64,7 @@ function CallToAction() {
       </a>
       <div>
         <Image
-          src="https://medusajs.com/_next/image/?url=%2Fimages%2Fupdatedstarter.png&w=3840&q=100"
+          src="https://res.cloudinary.com/dszjgdktf/image/upload/v1715864616/CallToActionMockup_kdonuf.png"
           width={1000}
           height={600}
           alt="home"
