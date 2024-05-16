@@ -67,7 +67,7 @@ function CallToAction() {
           width={1000}
           height={600}
           alt="home"
-          className="mt-8"
+          className="mt-8 rounded-t-lg border-1 border-neutral-200"
         />
       </div>
     </div>
