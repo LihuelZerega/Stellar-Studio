@@ -24,12 +24,9 @@ import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
 import LoadingPage from "@/ui/LoadingPage";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 
-interface ShoppingCartProps {
-  open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
+const API_URL = "http://localhost:8080/api/soldproducts";
 
-interface OnePageCardPriceProps {
+interface ShoppingCartProps {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -38,21 +35,9 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
   const [onePagePrice, setOnePagePrice] = useState<number>(79.0);
   const [domainPrice, setDomainPrice] = useState<number>(0.0);
   const [emailPrice, setEmailPrice] = useState<number>(0.0);
-
   const [onePageQuantity, setOnePageQuantity] = useState<number>(1);
   const [domainQuantity, setDomainQuantity] = useState<number>(1);
   const [emailQuantity, setEmailQuantity] = useState<number>(1);
-
-  const {
-    isOpen: isOpenDomain,
-    onOpen: onOpenDomain,
-    onClose: onCloseDomain,
-  } = useDisclosure();
-  const {
-    isOpen: isOpenEmail,
-    onOpen: onOpenEmail,
-    onClose: onCloseEmail,
-  } = useDisclosure();
 
   const subtotal =
     onePagePrice * onePageQuantity +
@@ -60,6 +45,46 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
     emailPrice * emailQuantity;
 
   const total = subtotal;
+
+  const handleOrderClick = async () => {
+    const orderData = {
+      name: (document.getElementById("name") as HTMLInputElement).value,
+      lastname: (document.getElementById("last-name") as HTMLInputElement)
+        .value,
+      email: (document.getElementById("email") as HTMLInputElement).value,
+      country: (document.getElementById("country-name") as HTMLInputElement)
+        .value,
+      company: (document.getElementById("company") as HTMLInputElement).value,
+      phonenumber: (document.getElementById("phone-number") as HTMLInputElement)
+        .value,
+      paymentMethod: "Mercadopago",
+      webpage: "One Page",
+      webpagePrice: onePagePrice,
+      domainPlan: "com",
+      domainPrice: domainPrice,
+      emailPlan: "Corporate",
+      emailPrice: emailPrice,
+    };
+
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(orderData),
+      });
+
+      if (response.ok) {
+        alert("¡Pedido realizado con éxito!");
+      } else {
+        alert("Error al realizar el pedido. Inténtalo de nuevo más tarde.");
+      }
+    } catch (error) {
+      console.error("Error al realizar el pedido:", error);
+      alert("Error al realizar el pedido. Inténtalo de nuevo más tarde.");
+    }
+  };
 
   return (
     <div className="flex flex-col">
@@ -120,8 +145,12 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
             </h1>
           </div>
         </div>
+
         <div className="flex flex-col">
-          <button className="w-full items-center justify-center py-4 mt-5 text-sm rounded-md font-semibold text-white transition-all bg-[#a482fb] shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]">
+          <button
+            onClick={handleOrderClick}
+            className="w-full items-center justify-center py-4 mt-5 text-sm rounded-md font-semibold text-white transition-all bg-[#a482fb] shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+          >
             Realizar pedido
           </button>
         </div>
@@ -616,26 +645,26 @@ function Page() {
             </Breadcrumbs>
           </div>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 mx-auto h-screen">
+          <div className="grid grid-cols-1 xl:grid-cols-2 mx-auto h-full">
             <section className="flex flex-col w-full px-4 mx-auto sm:px-6 lg:px-12">
               <div>
-                <strong className="text-lg text-neutral-800 mb-6">
+                <strong className="text-lg text-neutral-800">
                   Información contacto
                 </strong>
 
                 <div>
-                  <div className="flex flex-col md:flex-row md:items-center md:gap-x-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:gap-x-4">
                     <div>
                       <strong className="block text-sm font-medium leading-6 text-neutral-800 mb-1 mt-4">
                         Nombre
                       </strong>
                       <input
-                        type="name"
+                        type="text"
                         name="name"
                         id="name"
                         autoComplete="name"
                         aria-label="Name"
-                        className="block w-full rounded-md border-0 py-1.5 pl-2 pr-28 text-neutral-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 pl-2 pr-28 text-neutral-800 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
                       />
                     </div>
                     <div>
@@ -643,16 +672,46 @@ function Page() {
                         Apellido
                       </strong>
                       <input
-                        type="lastname"
+                        type="text"
                         name="lastname"
-                        id="lastname"
+                        id="last-name"
                         autoComplete="lastname"
                         aria-label="Lastname"
-                        className="block w-full rounded-md border-0 py-1.5 pl-2 pr-28 text-neutral-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 pl-2 pr-28 text-neutral-800 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
                       />
                     </div>
+                    <div>
+                      <strong className="block text-sm font-medium leading-6 text-neutral-800 mb-1 mt-4">
+                        País
+                      </strong>
+                      <div className="relative mt-0 rounded-md shadow-sm">
+                        <input
+                          type=""
+                          name=""
+                          id="country"
+                          className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
+                        />
+                        <div className="absolute inset-y-0 right-0 flex items-center w-full">
+                          <label htmlFor="country" className="sr-only">
+                            Country
+                          </label>
+                          <select
+                            id="country-name"
+                            name="country"
+                            autoComplete="country-name"
+                            aria-label="Country"
+                            className="h-full rounded-md border-0 bg-transparent py-0 pl-1 pr-7 xl:pr-14 2xl:pr-36 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-violet-400 sm:text-sm"
+                          >
+                            <option>Argentina</option>
+                            <option>Brasil</option>
+                            <option>España</option>
+                            <option>United States</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div>
+                  <div className="w-full">
                     <strong className="block text-sm font-medium leading-6 text-neutral-800 mb-1 mt-4">
                       Correo Electrónico
                     </strong>
@@ -662,8 +721,36 @@ function Page() {
                       id="email"
                       autoComplete="email"
                       aria-label="Email"
-                      className="block w-full rounded-md border-0 py-1.5 pl-2 pr-20 text-neutral-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 pl-2 pr-7 xl:pr-14 2xl:pr-36 text-neutral-800 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
                     />
+                  </div>
+                  <div className="flex flex-col md:flex-row items-center md:gap-x-4">
+                    <div className="w-full">
+                      <strong className="block text-sm font-medium leading-6 text-neutral-800 mb-1 mt-4">
+                        Número de telefóno
+                      </strong>
+                      <input
+                        type="tel"
+                        name="phonenumber"
+                        id="phone-number"
+                        autoComplete="tel"
+                        aria-label="Phonenumber"
+                        className="block w-full rounded-md border-0 py-1.5 pl-2 pr-20 text-neutral-800 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
+                      />
+                    </div>
+                    <div className="w-full">
+                      <strong className="block text-sm font-medium leading-6 text-neutral-800 mb-1 mt-4">
+                        Compañía
+                      </strong>
+                      <input
+                        type="text"
+                        name="company"
+                        id="company"
+                        autoComplete="company"
+                        aria-label="Company"
+                        className="block w-full rounded-md border-0 py-1.5 pl-2 pr-7 xl:pr-14 2xl:pr-36 text-neutral-800 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -715,6 +802,7 @@ function Page() {
                 </div>
               </div>
             </section>
+
             <section className="flex flex-col w-full pb-6 sm:pb-0 px-6 mx-auto">
               <div className="h-fit bg-white border-1 border-gray-200 rounded-xl p-0 sm:p-6">
                 <ShoppingCartWithState />
