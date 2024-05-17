@@ -216,13 +216,13 @@ export default function OrderDashboard() {
           )}
         </Disclosure>
 
-        <header className="bg-white shadow">
+        {/* <header className="bg-white shadow">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-neutral-800">
               Ordenes
             </h1>
           </div>
-        </header>
+        </header> */}
         <main className="bg-neutral-50 h-screen border-t-1 border-neutral-200">
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             <OrdersTable />

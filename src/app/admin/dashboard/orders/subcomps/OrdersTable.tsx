@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, Fragment, useRef, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 import {
   Table,
   TableHeader,
@@ -7,24 +8,28 @@ import {
   TableRow,
   TableCell,
   Input,
-  Button,
   DropdownTrigger,
   Dropdown,
   DropdownMenu,
   DropdownItem,
   Chip,
-  User,
   Pagination,
   Selection,
   ChipProps,
   SortDescriptor,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
 } from "@nextui-org/react";
-import { PlusIcon } from "./utils/PlusIcon";
 import { VerticalDotsIcon } from "./utils/VerticalDotsIcon";
 import { ChevronDownIcon } from "./utils/ChevronDownIcon";
 import { SearchIcon } from "./utils/SearchIcon";
-import { columns, users, statusOptions } from "./utils/data";
 import { capitalize } from "./utils/utils";
+import OrderNew from "./OrderNew";
 
 const statusColorMap: Record<string, ChipProps["color"]> = {
   active: "success",
@@ -32,11 +37,63 @@ const statusColorMap: Record<string, ChipProps["color"]> = {
   vacation: "warning",
 };
 
-const INITIAL_VISIBLE_COLUMNS = ["name", "role", "status", "actions"];
-
-type User = (typeof users)[0];
+const INITIAL_VISIBLE_COLUMNS = [
+  "id",
+  "name",
+  "lastname",
+  "company",
+  "paymentMethod",
+  "webpage",
+  "domainPlan",
+  "emailPlan",
+  "actions",
+];
 
 export default function App() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  type Order = (typeof orders)[0];
+  const [orders, setOrders] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchOrders = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/api/soldproducts");
+        const data = await response.json();
+        setOrders(data);
+      } catch (error) {
+        console.error("Error fetching orders:", error);
+      }
+    };
+
+    fetchOrders();
+  }, []);
+
+  const columns = [
+    { name: "N°", uid: "id", sortable: true },
+    { name: "NOMBRE", uid: "name", sortable: true },
+    { name: "APELLIDO", uid: "lastname", sortable: true },
+    { name: "PAIS", uid: "country", sortable: true },
+    { name: "EMAIL", uid: "email", sortable: true },
+    { name: "EMPRESA", uid: "company", sortable: true },
+    { name: "METODO DE PAGO", uid: "paymentMethod", sortable: true },
+    { name: "PAGINA WEB", uid: "webpage", sortable: true },
+    { name: "WEB PRECIO", uid: "webpagePrice", sortable: true },
+    { name: "DOMINIO PLAN", uid: "domainPlan", sortable: true },
+    { name: "DOMINIO PRECIO", uid: "domainPrice", sortable: true },
+    { name: "EMAIL PLAN", uid: "emailPlan", sortable: true },
+    { name: "EMAIL PRECIO", uid: "emailPrice", sortable: true },
+    { name: "TELEFONO", uid: "phonenumber", sortable: true },
+    { name: "FECHA", uid: "createdAt", sortable: true },
+    { name: "ACTIONS", uid: "actions" },
+  ];
+
+  const statusOptions = [
+    { name: "Active", uid: "active" },
+    { name: "Paused", uid: "paused" },
+    { name: "Vacation", uid: "vacation" },
+  ];
+
   const [filterValue, setFilterValue] = React.useState("");
   const [selectedKeys, setSelectedKeys] = React.useState<Selection>(
     new Set([])
@@ -45,7 +102,7 @@ export default function App() {
     new Set(INITIAL_VISIBLE_COLUMNS)
   );
   const [statusFilter, setStatusFilter] = React.useState<Selection>("all");
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [rowsPerPage, setRowsPerPage] = React.useState(15);
   const [sortDescriptor, setSortDescriptor] = React.useState<SortDescriptor>({
     column: "age",
     direction: "ascending",
@@ -64,24 +121,24 @@ export default function App() {
   }, [visibleColumns]);
 
   const filteredItems = React.useMemo(() => {
-    let filteredUsers = [...users];
+    let filteredOrders = [...orders];
 
     if (hasSearchFilter) {
-      filteredUsers = filteredUsers.filter((user) =>
-        user.name.toLowerCase().includes(filterValue.toLowerCase())
+      filteredOrders = filteredOrders.filter((orders) =>
+        orders.name.toLowerCase().includes(filterValue.toLowerCase())
       );
     }
     if (
       statusFilter !== "all" &&
       Array.from(statusFilter).length !== statusOptions.length
     ) {
-      filteredUsers = filteredUsers.filter((user) =>
-        Array.from(statusFilter).includes(user.status)
+      filteredOrders = filteredOrders.filter((orders) =>
+        Array.from(statusFilter).includes(orders.status)
       );
     }
 
-    return filteredUsers;
-  }, [users, filterValue, statusFilter]);
+    return filteredOrders;
+  }, [orders, filterValue, statusFilter]);
 
   const pages = Math.ceil(filteredItems.length / rowsPerPage);
 
@@ -93,35 +150,27 @@ export default function App() {
   }, [page, filteredItems, rowsPerPage]);
 
   const sortedItems = React.useMemo(() => {
-    return [...items].sort((a: User, b: User) => {
-      const first = a[sortDescriptor.column as keyof User] as number;
-      const second = b[sortDescriptor.column as keyof User] as number;
+    return [...items].sort((a: Order, b: Order) => {
+      const first = a[sortDescriptor.column as keyof Order] as number;
+      const second = b[sortDescriptor.column as keyof Order] as number;
       const cmp = first < second ? -1 : first > second ? 1 : 0;
 
       return sortDescriptor.direction === "descending" ? -cmp : cmp;
     });
   }, [sortDescriptor, items]);
 
-  const renderCell = React.useCallback((user: User, columnKey: React.Key) => {
-    const cellValue = user[columnKey as keyof User];
+  const renderCell = React.useCallback((order: Order, columnKey: React.Key) => {
+    const cellValue = order[columnKey as keyof Order];
 
     switch (columnKey) {
       case "name":
-        return (
-          <User
-            avatarProps={{ radius: "lg", src: user.avatar }}
-            description={user.email}
-            name={cellValue}
-          >
-            {user.email}
-          </User>
-        );
+        return <div>{order.name}</div>;
       case "role":
         return (
           <div className="flex flex-col">
             <p className="text-bold text-small capitalize">{cellValue}</p>
             <p className="text-bold text-tiny capitalize text-neutral-800">
-              {user.team}
+              {order.team}
             </p>
           </div>
         );
@@ -129,7 +178,7 @@ export default function App() {
         return (
           <Chip
             className="capitalize"
-            color={statusColorMap[user.status]}
+            color={statusColorMap[order.status]}
             size="sm"
             variant="flat"
           >
@@ -197,6 +246,7 @@ export default function App() {
                     <span>Editar</span>
                   </div>
                 </DropdownItem>
+
                 <DropdownItem className="text-neutral-800">
                   <div className="flex flex-row items-center space-x-1">
                     <svg
@@ -210,26 +260,26 @@ export default function App() {
                       <path
                         d="M19.5 5.5L18.8803 15.5251C18.7219 18.0864 18.6428 19.3671 18.0008 20.2879C17.6833 20.7431 17.2747 21.1273 16.8007 21.416C15.8421 22 14.559 22 11.9927 22C9.42312 22 8.1383 22 7.17905 21.4149C6.7048 21.1257 6.296 20.7408 5.97868 20.2848C5.33688 19.3626 5.25945 18.0801 5.10461 15.5152L4.5 5.5"
                         stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
                       />
                       <path
                         d="M3 5.5H21M16.0557 5.5L15.3731 4.09173C14.9196 3.15626 14.6928 2.68852 14.3017 2.39681C14.215 2.3321 14.1231 2.27454 14.027 2.2247C13.5939 2 13.0741 2 12.0345 2C10.9688 2 10.436 2 9.99568 2.23412C9.8981 2.28601 9.80498 2.3459 9.71729 2.41317C9.32164 2.7167 9.10063 3.20155 8.65861 4.17126L8.05292 5.5"
                         stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
                       />
                       <path
                         d="M9.5 16.5L9.5 10.5"
                         stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
                       />
                       <path
                         d="M14.5 16.5L14.5 10.5"
                         stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
                       />
                     </svg>
                     <span>Eliminar</span>
@@ -311,7 +361,10 @@ export default function App() {
                 onSelectionChange={setStatusFilter}
               >
                 {statusOptions.map((status) => (
-                  <DropdownItem key={status.uid} className="capitalize">
+                  <DropdownItem
+                    key={status.uid}
+                    className="capitalize text-neutral-500"
+                  >
                     {capitalize(status.name)}
                   </DropdownItem>
                 ))}
@@ -336,37 +389,22 @@ export default function App() {
                 onSelectionChange={setVisibleColumns}
               >
                 {columns.map((column) => (
-                  <DropdownItem key={column.uid} className="capitalize">
+                  <DropdownItem
+                    key={column.uid}
+                    className="capitalize text-neutral-500"
+                  >
                     {capitalize(column.name)}
                   </DropdownItem>
                 ))}
               </DropdownMenu>
             </Dropdown>
-            <button className="flex flex-row items-center bg-[#a482fb] hover:bg-violet-400 text-white px-3 py-1 rounded-md">
-              Agregar nueva
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="20"
-                height="20"
-                color="#ffffff"
-                fill="none"
-                className="ml-1"
-              >
-                <path
-                  d="M12 4V20M20 12H4"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
+
+            <OrderNew />
           </div>
         </div>
         <div className="flex justify-between items-center">
           <span className="text-default-400 text-small">
-            {users.length} Ordenes totales
+            {orders.length} Ordenes totales
           </span>
           <label className="flex items-center text-default-400 text-small">
             Filas por página:
@@ -388,7 +426,7 @@ export default function App() {
     visibleColumns,
     onSearchChange,
     onRowsPerPageChange,
-    users.length,
+    orders.length,
     hasSearchFilter,
   ]);
 
@@ -438,7 +476,8 @@ export default function App() {
       bottomContent={bottomContent}
       bottomContentPlacement="outside"
       classNames={{
-        wrapper: "max-h-[382px] border-1 border-neutral-300 rounded-lg",
+        wrapper:
+          "h-full border-1 border-neutral-300 rounded-lg text-neutral-800",
       }}
       selectedKeys={selectedKeys}
       selectionMode="multiple"
