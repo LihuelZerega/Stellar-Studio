@@ -29,7 +29,7 @@ interface PaymentMethod {
 
 const paymentMethods: PaymentMethod[] = [
   {
-    name: "Tarjeta de Crédito o Débito",
+    name: "Credit Card",
     icon: <CreditCardPosIcon />,
   },
   {
@@ -37,7 +37,7 @@ const paymentMethods: PaymentMethod[] = [
     icon: <MoneyReceiveFlow02Icon />,
   },
   {
-    name: "Transferencia Bancaria",
+    name: "Bank Transfer",
     icon: <BankIcon />,
   },
   {
@@ -45,11 +45,11 @@ const paymentMethods: PaymentMethod[] = [
     icon: <PaypalIcon />,
   },
   {
-    name: "Mercado Pago",
+    name: "Mercadopago",
     icon: <SiMercadopago />,
   },
   {
-    name: "Criptomonedas",
+    name: "Crypto",
     icon: <BitcoinEllipseIcon />,
   },
 ];
