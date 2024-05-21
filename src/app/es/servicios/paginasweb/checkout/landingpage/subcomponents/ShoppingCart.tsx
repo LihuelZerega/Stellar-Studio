@@ -41,8 +41,8 @@ function ShoppingCart() {
       company: contactInfo.company,
       phonenumber: contactInfo.phonenumber,
       paymentMethod,
-      webpage: "One Page",
-      webpagePrice: 79.99,
+      webpage: "Landing Page",
+      webpagePrice: 119.99,
       domainPlan: domainPlan || "",
       domainPrice: domainPrice || 0.0,
       emailPlan: emailPlan || "",
@@ -97,7 +97,7 @@ function ShoppingCart() {
             <Link href="/es/servicios/paginasweb">Paginas Web</Link>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Link href="/es/servicios/paginasweb">One Page</Link>
+            <Link href="/es/servicios/paginasweb">Landing Page</Link>
           </BreadcrumbItem>
           <BreadcrumbItem>Checkout</BreadcrumbItem>
         </Breadcrumbs>
