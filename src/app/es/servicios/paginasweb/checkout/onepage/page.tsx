@@ -50,7 +50,7 @@ function Page() {
         </div>
       ) : (
         <div className="bg-neutral-50">
-            <ShoppingCart />
+          <ShoppingCart />
           <FooterEs />
         </div>
       )}

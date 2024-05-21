@@ -65,8 +65,8 @@ function ShoppingCart() {
   };
 
   return (
-    <div>
-      <div className="px-6 lg:px-12 py-6 sm:py-8">
+    <div className="2xl:max-w-7xl 2xl:mx-auto">
+      <div className="px-6 lg:px-12 py-6 sm:py-8 2xl:max-w-7xl">
         <Breadcrumbs>
           <BreadcrumbItem>
             <Link href="/es/servicios/paginasweb">Servicios</Link>
@@ -92,8 +92,8 @@ function ShoppingCart() {
           <PaymentMethods setPaymentMethod={setPaymentMethod} />
         </section>
 
-        <section className="flex flex-col w-full pb-6 sm:pb-0 px-6 mx-auto">
-          <div className="h-fit bg-white border-1 border-gray-200 rounded-xl p-0 sm:p-6">
+        <section className="flex flex-col w-full pb-6 sm:pb-0 px-4 sm:px-6 mx-auto">
+          <div className="h-fit bg-white border-1 border-gray-200 rounded-xl p-4 sm:p-6">
             <ShoppingCartOrderSummary
               open={open}
               setOpen={setOpen}
