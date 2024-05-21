@@ -17,6 +17,12 @@ interface ShoppingCartOrderSummaryProps {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setSelectedDomain: React.Dispatch<React.SetStateAction<Domain | null>>;
   setSelectedEmail: React.Dispatch<React.SetStateAction<Email | null>>;
+  setDomainPlan: React.Dispatch<React.SetStateAction<string | null>>;
+  setEmailPlan: React.Dispatch<React.SetStateAction<string | null>>;
+  setDomainPrice: React.Dispatch<React.SetStateAction<number>>;
+  setEmailPrice: React.Dispatch<React.SetStateAction<number>>;
+  domainPrice: number;
+  emailPrice: number;
 }
 
 interface ProductItemProps {
@@ -26,7 +32,9 @@ interface ProductItemProps {
   quantity: number;
   setQuantity: React.Dispatch<React.SetStateAction<number>>;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setDomainPlan: React.Dispatch<React.SetStateAction<string | null>>;
   setDomainPrice: React.Dispatch<React.SetStateAction<number>>;
+  setEmailPlan: React.Dispatch<React.SetStateAction<string | null>>;
   setEmailPrice: React.Dispatch<React.SetStateAction<number>>;
 }
 
@@ -51,27 +59,33 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
   setOpen,
   setSelectedDomain,
   setSelectedEmail,
+  setDomainPlan,
+  setEmailPlan,
+  setDomainPrice,
+  setEmailPrice,
+  domainPrice,
+  emailPrice,
 }) => {
+  
   const [onePagePrice, setOnePagePrice] = useState<number>(79.99);
-  const [domainPrice, setDomainPrice] = useState<number>(0.0);
-  const [emailPrice, setEmailPrice] = useState<number>(0.0);
   const [onePageQuantity, setOnePageQuantity] = useState<number>(1);
   const [domainQuantity, setDomainQuantity] = useState<number>(1);
   const [emailQuantity, setEmailQuantity] = useState<number>(1);
-  const [selectedDomainInternal, setSelectedDomainInternal] =
-    useState<Domain | null>(null);
-  const [selectedEmailInternal, setSelectedEmailInternal] =
-    useState<Email | null>(null);
 
   useEffect(() => {
-    setSelectedDomain(selectedDomainInternal);
-    setSelectedEmail(selectedEmailInternal);
-  }, [
-    selectedDomainInternal,
-    selectedEmailInternal,
-    setSelectedDomain,
-    setSelectedEmail,
-  ]);
+    setSelectedDomain(null);
+    setSelectedEmail(null);
+    setDomainPlan(null);
+    setEmailPlan(null);
+  }, []);
+
+    useEffect(() => {
+      console.log("domainPrice actualizado:", domainPrice);
+    }, [domainPrice]);
+  
+    useEffect(() => {
+      console.log("emailPrice actualizado:", emailPrice);
+    }, [emailPrice]);
 
   const subtotal =
     onePagePrice * onePageQuantity +
@@ -91,12 +105,14 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
       <div className="relative mt-6 flex-1 ">
         <ProductItem
           icon={<MdOutlineWebAsset className="text-3xl text-[#a482fb]" />}
-          title="One Page"
+         title="One Page"
           price={onePagePrice}
           quantity={onePageQuantity}
           setQuantity={setOnePageQuantity}
           setOpen={setOpen}
+          setDomainPlan={setDomainPlan}
           setDomainPrice={setDomainPrice}
+          setEmailPlan={setEmailPlan}
           setEmailPrice={setEmailPrice}
         />
 
@@ -107,7 +123,9 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
           quantity={domainQuantity}
           setQuantity={setDomainQuantity}
           setOpen={setOpen}
+          setDomainPlan={setDomainPlan}
           setDomainPrice={setDomainPrice}
+          setEmailPlan={setEmailPlan}
           setEmailPrice={setEmailPrice}
         />
         <ProductItem
@@ -117,7 +135,9 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
           quantity={emailQuantity}
           setQuantity={setEmailQuantity}
           setOpen={setOpen}
+          setDomainPlan={setDomainPlan}
           setDomainPrice={setDomainPrice}
+          setEmailPlan={setEmailPlan}
           setEmailPrice={setEmailPrice}
         />
       </div>
@@ -153,9 +173,12 @@ const ProductItem: React.FC<ProductItemProps> = ({
   quantity,
   setQuantity,
   setOpen,
+  setDomainPlan,
   setDomainPrice,
+  setEmailPlan,
   setEmailPrice,
 }) => {
+
   const handleAddQuantity = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };
@@ -218,21 +241,23 @@ const ProductItem: React.FC<ProductItemProps> = ({
     },
   ];
 
-  const [selectedDomain, setSelectedDomainInternal] = useState<Domain | null>(
+  const [selectedDomain, setSelectedDomain] = useState<Domain | null>(
     null
   );
-  const [selectedEmail, setSelectedEmailInternal] = useState<Email | null>(
+  const [selectedEmail, setSelectedEmail] = useState<Email | null>(
     null
   );
 
   const handleSelectDomain = (domain: Domain) => {
-    setSelectedDomainInternal(domain);
+    setSelectedDomain(domain);
+    setDomainPlan(domain.name);
     setDomainPrice(domain.price);
     onCloseDomain();
   };
 
   const handleSelectEmail = (email: Email) => {
-    setSelectedEmailInternal(email);
+    setSelectedEmail(email);
+    setEmailPlan(email.name);
     setEmailPrice(email.price);
     onCloseEmail();
   };
@@ -423,20 +448,3 @@ const ProductItem: React.FC<ProductItemProps> = ({
     </div>
   );
 };
-
-// function OrderSummary() {
-//   const [open, setOpen] = useState(false);
-//   const [selectedDomain, setSelectedDomain] = useState<Domain | null>(null);
-//   const [selectedEmail, setSelectedEmail] = useState<Email | null>(null);
-
-//   return (
-//     <div>
-//       <ShoppingCartOrderSummary
-//         open={open}
-//         setOpen={setOpen}
-//         setSelectedDomain={setSelectedDomain}
-//         setSelectedEmail={setSelectedEmail}
-//       />
-//     </div>
-//   );
-// }

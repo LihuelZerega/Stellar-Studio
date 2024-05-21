@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
@@ -17,20 +18,30 @@ function ShoppingCart() {
     phonenumber: "",
   });
 
+  const [open, setOpen] = useState<boolean>(false);
   const [paymentMethod, setPaymentMethod] = useState<string | null>(null);
   const [selectedDomain, setSelectedDomain] = useState<Domain | null>(null);
   const [selectedEmail, setSelectedEmail] = useState<Email | null>(null);
+  const [domainPlan, setDomainPlan] = useState<string | null>(null);
+  const [emailPlan, setEmailPlan] = useState<string | null>(null);
+  const [domainPrice, setDomainPrice] = useState<number>(0.0);
+  const [emailPrice, setEmailPrice] = useState<number>(0.0);
 
   const handleOrderClick = async () => {
     const orderDetails = {
-      contactInfo,
+      name: contactInfo.name,
+      lastname: contactInfo.lastname,
+      email: contactInfo.email,
+      country: contactInfo.country,
+      company: contactInfo.company,
+      phonenumber: contactInfo.phonenumber,
       paymentMethod,
       webpage: "One Page",
       webpagePrice: 79.99,
-      domainPlan: selectedDomain?.name || "",
-      domainPrice: selectedDomain?.price || 0.0,
-      emailPlan: selectedEmail?.name || "",
-      emailPrice: selectedEmail?.price || 0.0,
+      domainPlan: domainPlan || "",
+      domainPrice: domainPrice || 0.0,
+      emailPlan: emailPlan || "",
+      emailPrice: emailPrice || 0.0,
     };
 
     try {
@@ -72,7 +83,7 @@ function ShoppingCart() {
 
       <div className="grid grid-cols-1 xl:grid-cols-2 mx-auto h-full">
         <section className="flex flex-col w-full px-4 mx-auto sm:px-6 lg:px-12">
-          <ContactInformation setContactInfo={setContactInfo} />
+          <ContactInformation updateContactInfo={setContactInfo} />
 
           <div className="text-transparent border-b-1 border-neutral-300 select-none my-2">
             Divider
@@ -84,12 +95,16 @@ function ShoppingCart() {
         <section className="flex flex-col w-full pb-6 sm:pb-0 px-6 mx-auto">
           <div className="h-fit bg-white border-1 border-gray-200 rounded-xl p-0 sm:p-6">
             <ShoppingCartOrderSummary
+              open={open}
+              setOpen={setOpen}
               setSelectedDomain={setSelectedDomain}
               setSelectedEmail={setSelectedEmail}
-              open={false}
-              setOpen={function (value: React.SetStateAction<boolean>): void {
-                throw new Error("Function not implemented.");
-              }}
+              setDomainPrice={setDomainPrice}
+              setEmailPrice={setEmailPrice}
+              setDomainPlan={setDomainPlan}
+              setEmailPlan={setEmailPlan}
+              domainPrice={domainPrice}
+              emailPrice={emailPrice}
             />
           </div>
           <div>

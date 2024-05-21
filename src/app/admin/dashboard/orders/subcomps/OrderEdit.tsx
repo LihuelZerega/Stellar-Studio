@@ -193,7 +193,6 @@ const OrderEdit: React.FC<OrderEditProps> = ({ order }) => {
       [name]: value,
     });
   };
-  
 
   const handleUpdate = () => {
     fetch(`http://localhost:8080/api/soldproducts/${order.id}`, {
@@ -455,10 +454,10 @@ const OrderEdit: React.FC<OrderEditProps> = ({ order }) => {
                         Precio Web
                       </strong>
                       <input
-                        type="text"
+                        type="number"
                         name="webpagePrice"
                         id="webpagePrice"
-                        placeholder={editedProduct.webpagePrice.toString()}
+                        placeholder={editedProduct?.webpagePrice?.toString() ?? ''}
                         onChange={handleInputChange}
                         className="block max-w-[120px] rounded-md border-0 py-1.5 pl-1 pr-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       />
@@ -469,10 +468,10 @@ const OrderEdit: React.FC<OrderEditProps> = ({ order }) => {
                         Precio Dominio
                       </strong>
                       <input
-                        type="text"
+                        type="number"
                         name="domainPrice"
                         id="domainPrice"
-                        placeholder={editedProduct.domainPrice.toString()}
+                        placeholder={editedProduct?.domainPrice?.toString() ?? ''}
                         onChange={handleInputChange}
                         className="block max-w-[120px] rounded-md border-0 py-1.5 pl-1 pr-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       />
@@ -482,10 +481,10 @@ const OrderEdit: React.FC<OrderEditProps> = ({ order }) => {
                         Precio Correo
                       </strong>
                       <input
-                        type="text"
+                        type="number"
                         name="emailPrice"
                         id="emailPrice"
-                        placeholder={editedProduct.emailPrice.toString()}
+                        placeholder={editedProduct?.emailPrice?.toString() ?? ''}
                         onChange={handleInputChange}
                         className="block max-w-[120px] rounded-md border-0 py-1.5 pl-1 pr-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       />

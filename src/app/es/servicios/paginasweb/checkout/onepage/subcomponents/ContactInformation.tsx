@@ -2,13 +2,26 @@
 import React from "react";
 
 interface ContactInformationProps {
-    setContactInfo: React.Dispatch<React.SetStateAction<any>>;
+  updateContactInfo: React.Dispatch<React.SetStateAction<ContactInfo>>;
 }
 
-const ContactInformation: React.FC<ContactInformationProps> = ({ setContactInfo }) => {
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+interface ContactInfo {
+  name: string;
+  lastname: string;
+  country: string;
+  email: string;
+  phonenumber: string;
+  company: string;
+}
+
+const ContactInformation: React.FC<ContactInformationProps> = ({
+  updateContactInfo,
+}) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
-    setContactInfo((prev: any) => ({
+    updateContactInfo((prev) => ({
       ...prev,
       [name]: value,
     }));
@@ -17,7 +30,6 @@ const ContactInformation: React.FC<ContactInformationProps> = ({ setContactInfo 
   return (
     <div>
       <strong className="text-lg text-neutral-800">Información contacto</strong>
-
       <div>
         <div className="flex flex-col md:flex-row md:items-center md:gap-x-4">
           <div>
@@ -90,14 +102,14 @@ const ContactInformation: React.FC<ContactInformationProps> = ({ setContactInfo 
             id="email"
             autoComplete="email"
             aria-label="Email"
-            className="block w-full rounded-md border-0 py-1.5 pl-2 pr-7 xl:pr-14 2xl:pr-36 text-neutral-800 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
+            className="block w-full rounded-md border-0 py-1.5 pl-2 pr-7 xl:pr-14 2xl:pr-36 text-neutral-800 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
             onChange={handleChange}
           />
         </div>
         <div className="flex flex-col md:flex-row items-center md:gap-x-4">
           <div className="w-full">
             <strong className="block text-sm font-medium leading-6 text-neutral-800 mb-1 mt-4">
-              Número de telefóno
+              Número de teléfono
             </strong>
             <input
               type="tel"
@@ -105,7 +117,7 @@ const ContactInformation: React.FC<ContactInformationProps> = ({ setContactInfo 
               id="phone-number"
               autoComplete="tel"
               aria-label="Phonenumber"
-              className="block w-full rounded-md border-0 py-1.5 pl-2 pr-20 text-neutral-800 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-1.5 pl-2 pr-20 text-neutral-800 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
               onChange={handleChange}
             />
           </div>
@@ -117,10 +129,9 @@ const ContactInformation: React.FC<ContactInformationProps> = ({ setContactInfo 
               type="text"
               name="company"
               id="company"
-              autoComplete="company"
+              autoComplete="organization"
               aria-label="Company"
-              className="block w-full rounded-md border-0 py-1.5 pl-2 pr-7 xl:pr-14 
-              2xl:pr-36 text-neutral-800 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
+              className="block w-full rounded-md border-0 py-1.5 pl-2 pr-7 xl:pr-14 2xl:pr-36 text-neutral-800 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-400 sm:text-sm sm:leading-6"
               onChange={handleChange}
             />
           </div>
@@ -128,6 +139,6 @@ const ContactInformation: React.FC<ContactInformationProps> = ({ setContactInfo 
       </div>
     </div>
   );
-}
+};
 
 export default ContactInformation;
