@@ -5,6 +5,8 @@ import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
 import ContactInformation from "./ContactInformation";
 import PaymentMethods from "./PaymentMethods";
 import ShoppingCartOrderSummary, { Domain, Email } from "./OrderSummary";
+import AlertSuccess from "./Alerts/AlertSuccess";
+import AlertDenied from "./Alerts/AlertDenied";
 
 const API_URL = "http://localhost:8080/api/soldproducts";
 
@@ -26,6 +28,9 @@ function ShoppingCart() {
   const [emailPlan, setEmailPlan] = useState<string | null>(null);
   const [domainPrice, setDomainPrice] = useState<number>(0.0);
   const [emailPrice, setEmailPrice] = useState<number>(0.0);
+  const [responseStatus, setResponseStatus] = useState<
+    "success" | "denied" | "timeout" | "error" | null
+  >(null);
 
   const handleOrderClick = async () => {
     const orderDetails = {
@@ -54,18 +59,35 @@ function ShoppingCart() {
       });
 
       if (response.ok) {
-        alert("¡Pedido realizado con éxito!");
+        setResponseStatus("success");
+      } else if (response.status >= 400 && response.status < 500) {
+        setResponseStatus("denied"); // Cliente cometió un error
+      } else if (response.status >= 500) {
+        setResponseStatus("denied"); // Error en el servidor
       } else {
-        alert("Error al realizar el pedido. Inténtalo de nuevo más tarde.");
+        setResponseStatus("error"); // Otros errores
       }
     } catch (error) {
       console.error("Error al realizar el pedido:", error);
-      alert("Error al realizar el pedido. Inténtalo de nuevo más tarde.");
+      setResponseStatus("denied");
     }
   };
 
   return (
     <div className="2xl:max-w-7xl 2xl:mx-auto">
+      <div>
+        {responseStatus === "success" && <AlertSuccess />}
+        {responseStatus === "denied" && <AlertDenied />}
+        {responseStatus === "timeout" && (
+          <div>
+            Error: Tiempo de espera agotado. Inténtalo de nuevo más tarde.
+          </div>
+        )}
+        {responseStatus === "error" && (
+          <div>Error: Ocurrió un problema. Inténtalo de nuevo más tarde.</div>
+        )}
+      </div>
+
       <div className="px-6 lg:px-12 py-6 sm:py-8 2xl:max-w-7xl">
         <Breadcrumbs>
           <BreadcrumbItem>
