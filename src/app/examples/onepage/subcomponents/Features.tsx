@@ -2,11 +2,12 @@ import React from "react";
 
 function Features() {
   return (
-    <div className="h-96 bg-white border-t-3 border-neutral-200">
+    <div className="bg-white border-t-3 border-neutral-200">
       <div className="mx-auto max-w-5xl 2xl:max-w-7xl py-12 md:py-16 xl:py-24">
         <section className="">
           <div className="grid grid-cols-1 gap-x-12 text-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-            <div>
+
+            <div className="mb-12 xl:mb-0">
               <div className="flex items-center justify-center mx-auto">
                 <svg
                   className="text-blue-100"
@@ -61,7 +62,7 @@ function Features() {
               </p>
             </div>
 
-            <div>
+            <div className="mb-12 xl:mb-0">
               <div className="flex items-center justify-center mx-auto">
                 <svg
                   className="text-orange-100"
@@ -108,7 +109,7 @@ function Features() {
               </p>
             </div>
 
-            <div>
+            <div className="mb-12 xl:mb-0">
               <div className="flex items-center justify-center mx-auto">
                 <svg
                   className="text-green-100"
@@ -178,7 +179,7 @@ function Features() {
               </p>
             </div>
 
-            <div>
+            <div className="mb-12 xl:mb-0">
               <div className="flex items-center justify-center mx-auto">
                 <svg
                   className="text-purple-100"
@@ -236,6 +237,7 @@ function Features() {
               Request loans easily for your student needs.
               </p>
             </div>
+
           </div>
         </section>
       </div>

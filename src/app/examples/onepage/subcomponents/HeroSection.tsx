@@ -130,7 +130,7 @@ function HeroSection() {
 
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-20">
             <div className="max-w-xl mx-auto text-center">
-              <h1 className="text-4xl font-bold sm:text-6xl">
+              <h1 className="text-4xl font-bold sm:text-6xl mt-12">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-white">
                   {" "}
                   Simplified credit cards for students{" "}

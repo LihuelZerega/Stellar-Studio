@@ -2,7 +2,7 @@ import React from "react";
 
 function Solutions() {
   return (
-    <div className="bg-neutral-100 border-t-1 border-neutral-200">
+    <div className="bg-neutral-100 border-t-1 border-neutral-200 px-3 md:px-0">
       <section className="py-10 bg-neutral-50 sm:py-16 lg:py-24">
         <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
@@ -85,7 +85,7 @@ function Solutions() {
                 />
 
                 <img
-                  className="absolute origin-bottom-right scale-75 rounded-md -bottom-24 -right-24"
+                  className="absolute origin-bottom-right scale-75 rounded-md -bottom-12 -right-12 lg:-bottom-24 lg:-right-24"
                   src="https://images.unsplash.com/photo-1649607492731-81e2247b83dc?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt=""
                 />
