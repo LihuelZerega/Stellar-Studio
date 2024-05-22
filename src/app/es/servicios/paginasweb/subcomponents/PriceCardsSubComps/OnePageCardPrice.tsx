@@ -12,7 +12,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { FiTrash2, FiChevronUp } from "react-icons/fi";
 import { MdOutlineWebAsset, MdAlternateEmail } from "react-icons/md";
-import { TbWorldWww } from "react-icons/tb";
+import OnepagesDemos from "../DemoModals/OnepagesDemos";
 
 interface ShoppingCartProps {
   open: boolean;
@@ -580,47 +580,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
           Comprar Ahora
         </motion.button>
 
-        <h3 className="flex flex-row space-x-2 items-center justify-center text-center text-lg mt-4">
-          <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="18"
-              height="18"
-              color="#a482fb"
-              fill="none"
-            >
-              <path
-                d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-                stroke="currentColor"
-                stroke-width="1.5"
-              />
-              <path
-                d="M2.5 9H21.5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M6.99981 6H7.00879"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10.9998 6H11.0088"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </span>
-          <span className="text-sm text-neutral-600 hover:text-neutral-700 hover:font-semibold cursor-pointer">
-            Ver demostracion
-          </span>
-        </h3>
+        <OnepagesDemos />
 
         <div className="text-transparent border-b-1 border-neutral-400 select-none mb-5">
           s
