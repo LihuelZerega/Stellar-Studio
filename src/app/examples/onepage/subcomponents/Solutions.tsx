@@ -29,7 +29,7 @@ function Solutions() {
               <p className="mt-4 text-base leading-relaxed text-neutral-600">
                 Manage and request loans with favorable and accessible
                 conditions. At Postcrats, we understand the financial needs of
-                students. That's why we offer loans at competitive rates, with
+                students. That s why we offer loans at competitive rates, with
                 flexible terms and a simple and fast application process.
                 Whether you need a loan to pay your tuition, buy books, or cover
                 other expenses, we are here to help you achieve your academic
