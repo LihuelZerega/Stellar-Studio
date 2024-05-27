@@ -20,6 +20,8 @@ import Products from "./home/Products";
 import CallToAction from "./home/CallToAction";
 import Testimonials from "./home/Testimonials";
 import Section from "./home/Section";
+import DividerGray from "./home/DividerGray";
+import DividerWhite from "./home/DividerWhite";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -69,7 +71,9 @@ function Page() {
             <NewHeroSection />
             <StatsEs />
             <Products />
+            <DividerGray />
             <Section />
+            <DividerWhite />
             <Testimonials />
             <CallToAction />
           </div>

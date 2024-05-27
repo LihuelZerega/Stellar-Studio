@@ -3,6 +3,7 @@ import { Fragment, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Dialog } from "@headlessui/react";
+import { usePathname } from "next/navigation";
 import StellarStudioLogo from "@/images/StellarStudioLogo.png";
 import StellarStudioLogoNegative from "@/images/StellarStudioLogoNegative.png";
 import ArgentinaIcon from "@/images/Flags/argentina.png";
@@ -23,9 +24,6 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
   MdOutlineWebAsset,
   MdAlternateEmail,
-  MdAttachMoney,
-  MdEmojiPeople,
-  MdOutlinePayments,
   MdHelpOutline,
   MdOutlineMessage,
   MdOutlineBiotech,
@@ -87,6 +85,22 @@ const ayuda = [
 
 function NavBarEs() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const logoSrc =
+    pathname === "/es" ||
+    pathname === "/ar" ||
+    pathname === "/us" ||
+    pathname === "/br"
+      ? StellarStudioLogo
+      : StellarStudioLogoNegative;
+  const textColorClass =
+    pathname === "/es" ||
+    pathname === "/ar" ||
+    pathname === "/us" ||
+    pathname === "/br"
+      ? "text-neutral-200"
+      : "text-neutral-800";
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -94,13 +108,12 @@ function NavBarEs() {
         className="flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
-
         {/* SELECT YOUR COUNTRY */}
         <div className="flex lg:flex-1">
           <a href="/es" className="-m-1.5 p-1.5">
             <span className="sr-only">Stellar Studio</span>
             <Image
-              src={StellarStudioLogoNegative}
+              src={logoSrc}
               width={200}
               height={200}
               alt="Stellar Studio Logo"
@@ -118,7 +131,7 @@ function NavBarEs() {
                     alt="EspanaIcon"
                   />
                   <ChevronDownIcon
-                    className="h-5 w-5 flex-none text-gray-500"
+                    className="h-5 w-5 flex-none text-neutral-500"
                     aria-hidden="true"
                   />
                 </Popover.Button>
@@ -132,7 +145,7 @@ function NavBarEs() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-48 md:-left-8 top-full z-10 mt-3 w-screen max-w-xs md:max-w-lg overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute -left-48 md:-left-8 top-full z-10 mt-3 w-screen max-w-xs md:max-w-lg overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-neutral-900/5">
                     <section className="p-4">
                       <h1 className="flex flex-col text-xl font-semibold mb-2 text-[#a482fb]">
                         Seleccioná tu País
@@ -338,11 +351,14 @@ function NavBarEs() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-neutral-700"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="text-neutral-800 h-6 w-6" aria-hidden="true" />
+            <Bars3Icon
+              className="text-neutral-800 h-6 w-6"
+              aria-hidden="true"
+            />
           </button>
         </div>
 
@@ -351,10 +367,12 @@ function NavBarEs() {
           <div className="flex flex-row gap-x-6">
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover className="relative">
-                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-neutral-800 focus:outline-none">
+                <Popover.Button
+                  className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}
+                >
                   Servicios
                   <ChevronDownIcon
-                    className="h-5 w-5 flex-none text-gray-500"
+                    className="h-5 w-5 flex-none text-neutral-500"
                     aria-hidden="true"
                   />
                 </Popover.Button>
@@ -368,28 +386,28 @@ function NavBarEs() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-36 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute -left-36 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-neutral-900/5">
                     <div className="p-4">
                       {services.map((item) => (
                         <div
                           key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-neutral-50"
                         >
-                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-neutral-50 group-hover:bg-white">
                             <item.icon
-                              className="h-6 w-6 text-gray-600 group-hover:text-[#a482fb]"
+                              className="h-6 w-6 text-neutral-600 group-hover:text-[#a482fb]"
                               aria-hidden="true"
                             />
                           </div>
                           <div className="flex-auto">
                             <a
                               href={item.href}
-                              className="block font-semibold text-gray-900"
+                              className="block font-semibold text-neutral-900"
                             >
                               {item.name}
                               <span className="absolute inset-0" />
                             </a>
-                            <p className="mt-1 text-gray-600">
+                            <p className="mt-1 text-neutral-600">
                               {item.description}
                             </p>
                           </div>
@@ -403,10 +421,10 @@ function NavBarEs() {
 
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover className="relative">
-                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-neutral-800 focus:outline-none">
+                <Popover.Button className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}>
                   Compañía
                   <ChevronDownIcon
-                    className="h-5 w-5 flex-none text-gray-500"
+                    className="h-5 w-5 flex-none text-neutral-500"
                     aria-hidden="true"
                   />
                 </Popover.Button>
@@ -420,28 +438,28 @@ function NavBarEs() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-64 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute -left-64 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-neutral-900/5">
                     <div className="p-4">
                       {compania.map((item) => (
                         <div
                           key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-neutral-50"
                         >
-                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-neutral-50 group-hover:bg-white">
                             <item.icon
-                              className="h-6 w-6 text-gray-600 group-hover:text-[#a482fb]"
+                              className="h-6 w-6 text-neutral-600 group-hover:text-[#a482fb]"
                               aria-hidden="true"
                             />
                           </div>
                           <div className="flex-auto">
                             <a
                               href={item.href}
-                              className="block font-semibold text-gray-900"
+                              className="block font-semibold text-neutral-900"
                             >
                               {item.name}
                               <span className="absolute inset-0" />
                             </a>
-                            <p className="mt-1 text-gray-600">
+                            <p className="mt-1 text-neutral-600">
                               {item.description}
                             </p>
                           </div>
@@ -455,10 +473,10 @@ function NavBarEs() {
 
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover className="relative">
-                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-neutral-800 focus:outline-none">
+                <Popover.Button className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}>
                   Ayuda
                   <ChevronDownIcon
-                    className="h-5 w-5 flex-none text-gray-500"
+                    className="h-5 w-5 flex-none text-neutral-500"
                     aria-hidden="true"
                   />
                 </Popover.Button>
@@ -472,28 +490,28 @@ function NavBarEs() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-96 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute -left-96 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-neutral-900/5">
                     <div className="p-4">
                       {ayuda.map((item) => (
                         <div
                           key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-neutral-50"
                         >
-                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-neutral-50 group-hover:bg-white">
                             <item.icon
-                              className="h-6 w-6 text-gray-600 group-hover:text-[#a482fb]"
+                              className="h-6 w-6 text-neutral-600 group-hover:text-[#a482fb]"
                               aria-hidden="true"
                             />
                           </div>
                           <div className="flex-auto">
                             <a
                               href={item.href}
-                              className="block font-semibold text-gray-900"
+                              className="block font-semibold text-neutral-900"
                             >
                               {item.name}
                               <span className="absolute inset-0" />
                             </a>
-                            <p className="mt-1 text-gray-600">
+                            <p className="mt-1 text-neutral-600">
                               {item.description}
                             </p>
                           </div>
@@ -515,7 +533,7 @@ function NavBarEs() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Stellar Studio</span>
@@ -528,7 +546,7 @@ function NavBarEs() {
             </a>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 text-neutral-700"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -546,23 +564,23 @@ function NavBarEs() {
                   {services.map((item) => (
                     <div
                       key={item.name}
-                      className="group relative flex items-center gap-x-3 rounded-lg my-2 py-2 text-sm leading-6 hover:bg-gray-50"
+                      className="group relative flex items-center gap-x-3 rounded-lg my-2 py-2 text-sm leading-6 hover:bg-neutral-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-neutral-50 group-hover:bg-white">
                         <item.icon
-                          className="h-6 w-6 text-gray-600 group-hover:text-[#a482fb]"
+                          className="h-6 w-6 text-neutral-600 group-hover:text-[#a482fb]"
                           aria-hidden="true"
                         />
                       </div>
                       <div className="flex-auto">
                         <a
                           href={item.href}
-                          className="block font-semibold text-gray-900"
+                          className="block font-semibold text-neutral-900"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-xs text-gray-600">
+                        <p className="mt-1 text-xs text-neutral-600">
                           {item.description}
                         </p>
                       </div>
@@ -579,23 +597,23 @@ function NavBarEs() {
                   {compania.map((item) => (
                     <div
                       key={item.name}
-                      className="group relative flex items-center gap-x-3 rounded-lg my-2 py-2 text-sm leading-6 hover:bg-gray-50"
+                      className="group relative flex items-center gap-x-3 rounded-lg my-2 py-2 text-sm leading-6 hover:bg-neutral-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-neutral-50 group-hover:bg-white">
                         <item.icon
-                          className="h-6 w-6 text-gray-600 group-hover:text-[#a482fb]"
+                          className="h-6 w-6 text-neutral-600 group-hover:text-[#a482fb]"
                           aria-hidden="true"
                         />
                       </div>
                       <div className="flex-auto">
                         <a
                           href={item.href}
-                          className="block font-semibold text-gray-900"
+                          className="block font-semibold text-neutral-900"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-xs text-gray-600">
+                        <p className="mt-1 text-xs text-neutral-600">
                           {item.description}
                         </p>
                       </div>
@@ -612,23 +630,23 @@ function NavBarEs() {
                   {ayuda.map((item) => (
                     <div
                       key={item.name}
-                      className="group relative flex items-center gap-x-3 rounded-lg my-2 py-2 text-sm leading-6 hover:bg-gray-50"
+                      className="group relative flex items-center gap-x-3 rounded-lg my-2 py-2 text-sm leading-6 hover:bg-neutral-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-neutral-50 group-hover:bg-white">
                         <item.icon
-                          className="h-6 w-6 text-gray-600 group-hover:text-[#a482fb]"
+                          className="h-6 w-6 text-neutral-600 group-hover:text-[#a482fb]"
                           aria-hidden="true"
                         />
                       </div>
                       <div className="flex-auto">
                         <a
                           href={item.href}
-                          className="block font-semibold text-gray-900"
+                          className="block font-semibold text-neutral-900"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-xs text-gray-600">
+                        <p className="mt-1 text-xs text-neutral-600">
                           {item.description}
                         </p>
                       </div>

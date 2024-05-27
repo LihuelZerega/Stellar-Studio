@@ -1,9 +1,9 @@
 import React from "react";
+import { AnimatedTooltipPreview } from "./AnimatedTooltip";
 
 function NewHeroSection() {
   return (
     <div className="h-[100vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      
       <div className="block xl:hidden">
         <img
           src="https://res.cloudinary.com/dszjgdktf/image/upload/v1716815849/Sin_t%C3%ADtulo-2_lqha04.jpg"
@@ -21,7 +21,7 @@ function NewHeroSection() {
 
       <div className="absolute inset-0 z-10 bottom-64 sm:bottom-96 lg:bottom-[600px] xl:bottom-0 xl:-left-[620px] 2xl:-left-[800px] flex flex-col justify-center items-center text-left gap-6">
         <div className="mx-auto max-w-lg lg:max-w-2xl xl:max-w-xl 2xl:max-w-2xl px-3 py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center xl:justify-start">
+          <div className="hidden sm:mb-4 sm:flex sm:justify-center xl:justify-start">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-200 ring-1 ring-neutral-200/10 hover:ring-neutral-200/20">
               Stellar Studio 2.0{" "}
               {/* <a href="#" className="font-semibold text-[#a482fb]">
