@@ -4,7 +4,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 function Products() {
   return (
-    <div className="py-16 px-6 md:px-12 lg:px-24 bg-neutral-100 border-t">
+    <div className="py-16 px-6 md:px-12 lg:px-24 bg-neutral-100 border-t border-neutral-200">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-row items-center justify-between border-b-1 border-neutral-300">
           <div className="flex flex-row items-center space-x-1 pb-2">
@@ -107,7 +107,7 @@ function Products() {
             />
           </div>
           <div className="p-3">
-            <h1 className="font-bold text-neutral-800">Ecommerce</h1>
+            <h1 className="font-bold text-neutral-800">E-commerce</h1>
             <p className="text-xs text-neutral-500">
               Creado para vender productos y ampliar su alcance, audiencia y
               profesionalismo.
@@ -160,7 +160,7 @@ function Products() {
             />
           </div>
           <div className="p-3">
-            <h1 className="font-bold text-neutral-800">Correo Profesional</h1>
+            <h1 className="font-bold text-neutral-800">Correo Profesionales</h1>
             <p className="text-xs text-neutral-500">
               Consegui una imagen confiable y respetable de tu marca.
             </p>

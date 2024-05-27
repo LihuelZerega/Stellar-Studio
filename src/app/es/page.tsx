@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import NavBarEs from "@/components/NavBars/NavBarEs";
 import HeroSectionEs from "@/components/LandingPageComponents/HeroSections/HeroSectionEs";
 import HeroParallaxEs from "@/components/LandingPageComponents/HeroSections/HeroParallaxEs";
+import NewHeroSection from "./home/NewHeroSection";
 import BenefitsEs from "@/components/LandingPageComponents/Benefits/BenefitsEs";
 import WorkProcessEs from "@/components/LandingPageComponents/WorksProcess/WorkProcessEs";
 import TestimonialEs from "@/components/LandingPageComponents/Testimonials/TestimonialEs";
@@ -65,7 +66,7 @@ function Page() {
             </div>
           </div> */}
           <div>
-            <Herosection />
+            <NewHeroSection />
             <StatsEs />
             <Products />
             <Section />

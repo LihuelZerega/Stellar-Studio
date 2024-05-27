@@ -38,7 +38,7 @@ export default function StatsEs() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-12">
+    <div className="mx-auto max-w-7xl pb-12">
       {/* <h2 className="text-center text-3xl font-bold leading-tight text-[#a482fb] sm:text-3xl">
             Contamos con la confiaza de mas de <br />
             200 clientes de rápido crecimiento
@@ -81,7 +81,7 @@ export default function StatsEs() {
         />
       </div>
 
-      <div className="hidden lg:block px-6 lg:px-8">
+      <div className="hidden lg:block mt-12">
         <div className="relative w-full mx-auto overflow-hidden">
           <Slider {...settingsDesktop}>
             {logos.map((image) => (
