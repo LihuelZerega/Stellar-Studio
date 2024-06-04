@@ -11,6 +11,7 @@ import Testimonials from "./home/Testimonials";
 import Section from "./home/Section";
 import DividerGray from "./home/DividerGray";
 import DividerWhite from "./home/DividerWhite";
+import ChatBotBubble from "./modules/Chatbotbubble";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +41,7 @@ function Page() {
       ) : (
         <div className="bg-cover bg-center bg-neutral-50">
           <NavBar />
+          <ChatBotBubble />
           <div>
             <NewHeroSection />
             <StatsEs />

@@ -61,10 +61,10 @@ function Products() {
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-        <div className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md transition-shadow duration-75">
+        <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md transition-shadow duration-75">
           <div>
             <Image
-              src="https://medusajs.com/_next/image/?url=%2Fimages%2Frecipe-cards-1.png&w=3840&q=90"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717516585/OnePageMockupPNG_jbwlkw.png"
               width={2160}
               height={960}
               alt=""
@@ -77,12 +77,12 @@ function Products() {
               captar clientes sin un sitio complejo.
             </p>
           </div>
-        </div>
+        </a>
 
-        <div className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
+        <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
           <div>
             <Image
-              src="https://medusajs.com/_next/image/?url=%2Fimages%2Frecipe-cards-1.png&w=3840&q=90"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717516356/LandingPageMockupPNG_lsblee.png"
               width={2160}
               height={960}
               alt=""
@@ -95,12 +95,12 @@ function Products() {
               servicios y convertirlos en clientes.
             </p>
           </div>
-        </div>
+        </a>
 
-        <div className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
+        <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
           <div>
             <Image
-              src="https://medusajs.com/_next/image/?url=%2Fimages%2Frecipe-cards-1.png&w=3840&q=90"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717516411/EcommerceMockupJPG_vmbiuk.jpg"
               width={2160}
               height={960}
               alt=""
@@ -113,12 +113,12 @@ function Products() {
               profesionalismo.
             </p>
           </div>
-        </div>
+        </a>
 
-        <div className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
+        <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
           <div>
             <Image
-              src="https://medusajs.com/_next/image/?url=%2Fimages%2Frecipe-cards-1.png&w=3840&q=90"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717517660/AmedidaMockup_unuzk2.png"
               width={2160}
               height={960}
               alt=""
@@ -131,12 +131,12 @@ function Products() {
               específicas de tu negocio.
             </p>
           </div>
-        </div>
+        </a>
 
-        <div className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
+        <a href="ar/servicios/dominios" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
           <div>
             <Image
-              src="https://medusajs.com/_next/image/?url=%2Fimages%2Frecipe-cards-1.png&w=3840&q=90"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717519297/DominiosMockip_rytfoc.png"
               width={2160}
               height={960}
               alt=""
@@ -148,12 +148,12 @@ function Products() {
               Deja que el mundo sepa que estas siempre online.
             </p>
           </div>
-        </div>
+        </a>
 
-        <div className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
+        <a href="ar/servicios/correosprofecionales" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
           <div>
             <Image
-              src="https://medusajs.com/_next/image/?url=%2Fimages%2Frecipe-cards-1.png&w=3840&q=90"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717518560/CorreosProfecionalesMockupPNG_gbz2zb.png"
               width={2160}
               height={960}
               alt=""
@@ -165,7 +165,7 @@ function Products() {
               Consegui una imagen confiable y respetable de tu marca.
             </p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );

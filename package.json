@@ -15,6 +15,8 @@
     "@medusajs/ui": "^3.0.0",
     "@nextui-org/react": "^2.2.10",
     "@tabler/icons-react": "^3.3.0",
+    "@typebot.io/js": "^0.2.85",
+    "@typebot.io/nextjs": "^0.2.85",
     "clsx": "^2.1.1",
     "framer-motion": "^11.1.9",
     "mini-svg-data-uri": "^1.4.4",

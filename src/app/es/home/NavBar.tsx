@@ -218,6 +218,21 @@ function NavBarEs() {
                           Proximamente...
                         </h1>
                         <div className="grid grid-cols-2 sm:grid-cols-3 py-4">
+                          <Link href="/br" className="cursor-not-allowed">
+                            <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
+                              <Image
+                                src={BrasilIcon}
+                                width={25}
+                                height={25}
+                                alt="BrasilIcon"
+                                className="opacity-40"
+                              />
+                              <div className="flex flex-col text-sm font-bold text-neutral-400 mx-2 leading-1">
+                                <p>Brasil</p>
+                              </div>
+                            </div>
+                          </Link>
+
                           <Link href="/cl" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
@@ -289,21 +304,6 @@ function NavBarEs() {
                               />
                               <div className="flex flex-col text-sm font-bold text-neutral-400 mx-2 leading-1">
                                 <p>Italia</p>
-                              </div>
-                            </div>
-                          </Link>
-
-                          <Link href="/mx" className="cursor-not-allowed">
-                            <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
-                              <Image
-                                src={MexicoIcon}
-                                width={25}
-                                height={25}
-                                alt="MexicoIcon"
-                                className="opacity-40"
-                              />
-                              <div className="flex flex-col text-sm font-bold text-neutral-400 mx-2 leading-1">
-                                <p>Mexico</p>
                               </div>
                             </div>
                           </Link>
@@ -421,7 +421,9 @@ function NavBarEs() {
 
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover className="relative">
-                <Popover.Button className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}>
+                <Popover.Button
+                  className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}
+                >
                   Compañía
                   <ChevronDownIcon
                     className="h-5 w-5 flex-none text-neutral-500"
@@ -473,7 +475,9 @@ function NavBarEs() {
 
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover className="relative">
-                <Popover.Button className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}>
+                <Popover.Button
+                  className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}
+                >
                   Ayuda
                   <ChevronDownIcon
                     className="h-5 w-5 flex-none text-neutral-500"

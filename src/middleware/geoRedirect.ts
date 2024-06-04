@@ -40,6 +40,7 @@ export async function geoRedirect(req: NextRequest) {
 export const config = {
   matcher: [
     '/',
+    '/examples/onepage',
     '/ar',
     '/es',
     '/mx',

@@ -56,7 +56,7 @@ function CallToAction() {
           necesidades para impulsar tu presencia online.
         </p>
       </div>
-      <button className="bg-[#a482fb] hover:bg-[#9979eb] text-sm text-center my-4 py-2 px-3 rounded-md text-white">¡Empezar ahora!</button>
+      <a href="#modelosweb" className="bg-[#a482fb] hover:bg-[#9979eb] text-sm text-center my-4 py-2 px-3 rounded-md text-white">¡Empezar ahora!</a>
       <div>
         <Image
           src="https://res.cloudinary.com/dszjgdktf/image/upload/v1715864616/CallToActionMockup_kdonuf.png"
