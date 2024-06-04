@@ -9,6 +9,12 @@ const countryMapping: { [key: string]: string } = {
 };
 
 export async function geoRedirect(req: NextRequest) {
+  const { pathname } = req.nextUrl;
+
+  if (pathname.startsWith('/_next') || pathname.startsWith('/static') || pathname.startsWith('/favicon.ico')) {
+    return NextResponse.next();
+  }
+
   try {
     const geo = await getGeolocation();
     const country = geo.country || 'US';
@@ -33,6 +39,22 @@ export async function geoRedirect(req: NextRequest) {
 
 export const config = {
   matcher: [
-    '/',         
+    '/',
+    '/ar',
+    '/es',
+    '/mx',
+    '/us',
+    '/ar/servicios/paginasweb',
+    '/ar/servicios/dominios',
+    '/ar/servicios/correosprofecionales',
+    '/es/servicios/paginasweb',
+    '/es/servicios/dominios',
+    '/es/servicios/correosprofecionales',
+    '/mx/servicios/paginasweb',
+    '/mx/servicios/dominios',
+    '/mx/servicios/correosprofecionales',
+    '/us/servicios/paginasweb',
+    '/us/servicios/dominios',
+    '/us/servicios/correosprofecionales',
   ],
 };
