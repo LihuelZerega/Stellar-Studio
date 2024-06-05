@@ -11,13 +11,14 @@ const countryMapping: { [key: string]: string } = {
 export async function geoRedirect(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  if (pathname.startsWith('/_next') || pathname.startsWith('/static') || pathname.startsWith('/favicon.ico') || pathname.startsWith('/examples/onepage') || pathname.startsWith('/admin/login') || pathname.startsWith('/admin/dashboard/orders' || pathname.startsWith('/admin/dashboard'))) {
+  if (pathname.startsWith('/_next') || pathname.startsWith('/static') || pathname.startsWith('/favicon.ico') || pathname.startsWith('/examples/onepage') || pathname.startsWith('/admin/login') || pathname.startsWith('/admin/dashboard/orders') || pathname.startsWith('/admin/dashboard')) {
     return NextResponse.next();
   }
 
   try {
     const geo = await getGeolocation();
-    const country = geo.country || 'US';
+    console.log('Fetched geolocation:', geo);
+    const country = geo.country_code2 || 'US';
     const destination = countryMapping[country];
 
     console.log('Detected Country:', country);
@@ -32,7 +33,7 @@ export async function geoRedirect(req: NextRequest) {
       return NextResponse.next();
     }
   } catch (error) {
-    console.error('Error in middleware:', error);
+    console.error('Error fetching geolocation:', error);
     return NextResponse.next();
   }
 }
