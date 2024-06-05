@@ -125,10 +125,10 @@ function NavBarEs() {
               <Popover className="relative">
                 <Popover.Button className="flex flex-row items-center ml-6 cursor-pointer focus:outline-none hover:scale-105 transition-all duration-300">
                   <Image
-                    src={EspanaIcon}
+                    src={EEUUIcon}
                     width={25}
                     height={25}
-                    alt="EspanaIcon"
+                    alt="EEUUIcon"
                   />
                   <ChevronDownIcon
                     className="h-5 w-5 flex-none text-neutral-500"
