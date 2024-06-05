@@ -1,5 +1,4 @@
 import React from "react";
-import { useDisclosure } from "@nextui-org/react";
 
 function EcommerceDemos() {
   return (

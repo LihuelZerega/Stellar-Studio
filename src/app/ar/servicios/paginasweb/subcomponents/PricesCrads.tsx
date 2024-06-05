@@ -48,7 +48,7 @@ function PricesCradsEs() {
                 size="3xl"
                 placement="center"
                 onOpenChange={onOpenChange}
-                className="bg-[#272526] text-white"
+                className="bg-neutral-100 text-neutral-800"
               >
                 <ModalContent>
                   {(onClose) => (
@@ -59,7 +59,7 @@ function PricesCradsEs() {
                       <ModalBody>
                         <div className="mb-3">
                           <h1 className="text-lg font-semibold">Pago Único</h1>
-                          <p className="text-sm font-light text-gray-300">
+                          <p className="text-sm font-light text-neutral-600">
                             El pago por nuestros servicios de desarrollo web es
                             unico.
                           </p>
@@ -68,7 +68,7 @@ function PricesCradsEs() {
                           <h1 className="text-lg font-semibold">
                             Adelanto del 30%
                           </h1>
-                          <p className="text-sm font-light text-gray-300">
+                          <p className="text-sm font-light text-neutral-600">
                             Para dar inicio al trabajo, se requiere un adelanto
                             del 30% del costo total del producto contratado.
                             Este adelanto se debe abonar antes de que comience
@@ -79,7 +79,7 @@ function PricesCradsEs() {
                           <h1 className="text-lg font-semibold">
                             Pago del Saldo Restante
                           </h1>
-                          <p className="text-sm font-light text-gray-300">
+                          <p className="text-sm font-light text-neutral-600">
                             El saldo restante del pago se deberá abonar una vez
                             que el producto contratado este entregado y
                             finalizado.
@@ -89,7 +89,7 @@ function PricesCradsEs() {
                           <h1 className="text-lg font-semibold">
                             Formas de Pago
                           </h1>
-                          <p className="text-sm font-light text-gray-300">
+                          <p className="text-sm font-light text-neutral-600">
                             Aceptamos pagos mediante transferencia bancaria,
                             Mercado Pago, PayPal, entre otros. Los detalles
                             específicos para realizar el pago se proporcionarán
@@ -102,7 +102,7 @@ function PricesCradsEs() {
                             </Link>
                           </p>
                         </div>
-                        <p className="text-sm font-light text-gray-300">
+                        <p className="text-sm font-light text-neutral-600">
                           Por favor, ten en cuenta que los términos de pago
                           están sujetos a cambios y pueden variar según el tipo
                           de servicio contratado. Para más detalles o preguntas

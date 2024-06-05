@@ -567,7 +567,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
         </div>
 
         <div className="flex flex-row items-end justify-start">
-          <p className="text-5xl font-bold text-neutral-700 mt-7">$79</p>
+          <p className="text-5xl font-bold text-neutral-700 mt-7">$79.000</p>
           <p className="ml-2 mt-3 text-base text-gray-500">/Pago único</p>
         </div>
 
@@ -579,6 +579,17 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
         >
           Comprar Ahora
         </motion.button>
+
+        <div className="text-center">
+          <h1 className="text-sm mt-4 text-gray-500">
+            Mantenimiento y soporte:
+          </h1>
+          <h1 className="text-sm text-gray-500">$8.000/mes</h1>
+        </div>
+        
+        <div className="text-transparent border-b-1 border-neutral-400 select-none mb-5">
+          s
+        </div>
 
         <OnepagesDemos />
 

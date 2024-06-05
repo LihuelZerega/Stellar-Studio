@@ -73,136 +73,48 @@ function OnepagesDemos() {
                 <span className="text-[#a482fb]">One Pages</span>
               </ModalHeader>
               <ModalBody>
-                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 my-4">
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
                   <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
+                    href="/examples/onepage"
+                    className="w-full h-64 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
                   >
                     <div className="w-full rounded-md">
                       <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
+                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717523908/PostcraftsDemo_yy63nv.png"
+                        alt="Postcrafts"
+                        width={400}
+                        height={400}
+                        className="rounded-md"
                       />
                     </div>
                     <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
+                      <h3 className="text-xs mt-3 font-semibold text-neutral-800">
+                        Postcrafts
                       </h3>
                       <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tarjetas de crédito simplificadas para estudiantes.
                       </p>
                     </div>
                   </a>
                   <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
+                    href="https://joincobalt.com/"
+                    className="w-full h-64 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
                   >
                     <div className="w-full rounded-md">
                       <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
+                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/1_tcatsr.png"
+                        alt="Cobalt"
+                        width={400}
+                        height={400}
+                        className="rounded-md"
                       />
                     </div>
                     <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
+                      <h3 className="text-xs mt-3 font-semibold text-neutral-800">
+                        Cobalt
                       </h3>
                       <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
-                  >
-                    <div className="w-full rounded-md">
-                      <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
-                      </h3>
-                      <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
-                  >
-                    <div className="w-full rounded-md">
-                      <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
-                      </h3>
-                      <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
-                  >
-                    <div className="w-full rounded-md">
-                      <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
-                      </h3>
-                      <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
-                  >
-                    <div className="w-full rounded-md">
-                      <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
-                      </h3>
-                      <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Libera el poder de las finanzas intuitivas
                       </p>
                     </div>
                   </a>

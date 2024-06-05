@@ -11,7 +11,7 @@ const countryMapping: { [key: string]: string } = {
 export async function geoRedirect(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  if (pathname.startsWith('/_next') || pathname.startsWith('/static') || pathname.startsWith('/favicon.ico')) {
+  if (pathname.startsWith('/_next') || pathname.startsWith('/static') || pathname.startsWith('/favicon.ico') || pathname.startsWith('/examples/onepage') || pathname.startsWith('/admin/login') || pathname.startsWith('/admin/dashboard/orders' || pathname.startsWith('/admin/dashboard'))) {
     return NextResponse.next();
   }
 
@@ -40,7 +40,6 @@ export async function geoRedirect(req: NextRequest) {
 export const config = {
   matcher: [
     '/',
-    '/examples/onepage',
     '/ar',
     '/es',
     '/mx',
