@@ -146,7 +146,7 @@ function NavBarEs() {
                   leaveTo="opacity-0 translate-y-1"
                 >
                   <Popover.Panel className="absolute -left-48 md:-left-8 top-full z-10 mt-3 w-screen max-w-xs md:max-w-lg overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-neutral-900/5">
-                    <section className="p-4">
+                  <section className="p-4">
                       <h1 className="flex flex-col text-xl font-semibold mb-2 text-[#a482fb]">
                         Seleccioná tu País
                       </h1>
@@ -164,20 +164,6 @@ function NavBarEs() {
                             />
                             <p className="text-sm font-bold text-neutral-900">
                               Argentina
-                            </p>
-                          </div>
-                        </Link>
-
-                        <Link href="/br">
-                          <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
-                            <Image
-                              src={BrasilIcon}
-                              width={25}
-                              height={25}
-                              alt="BrasilIcon}"
-                            />
-                            <p className="text-sm font-bold text-neutral-900">
-                              Brasil
                             </p>
                           </div>
                         </Link>
@@ -209,6 +195,20 @@ function NavBarEs() {
                             </p>
                           </div>
                         </Link>
+
+                        <Link href="/mx">
+                          <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
+                            <Image
+                              src={MexicoIcon}
+                              width={25}
+                              height={25}
+                              alt="MexicoIcon}"
+                            />
+                            <p className="text-sm font-bold text-neutral-900">
+                              Mexico
+                            </p>
+                          </div>
+                        </Link>
                       </div>
 
                       <hr />
@@ -218,6 +218,22 @@ function NavBarEs() {
                           Proximamente...
                         </h1>
                         <div className="grid grid-cols-2 sm:grid-cols-3 py-4">
+
+                        <Link href="/br" className="cursor-not-allowed">
+                            <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
+                              <Image
+                                src={BrasilIcon}
+                                width={25}
+                                height={25}
+                                alt="BrasilIcon"
+                                className="opacity-40"
+                              />
+                              <div className="flex flex-col text-sm font-bold text-neutral-400 mx-2 leading-1">
+                                <p>Brasil</p>
+                              </div>
+                            </div>
+                          </Link>
+                          
                           <Link href="/cl" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
@@ -289,21 +305,6 @@ function NavBarEs() {
                               />
                               <div className="flex flex-col text-sm font-bold text-neutral-400 mx-2 leading-1">
                                 <p>Italia</p>
-                              </div>
-                            </div>
-                          </Link>
-
-                          <Link href="/mx" className="cursor-not-allowed">
-                            <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
-                              <Image
-                                src={MexicoIcon}
-                                width={25}
-                                height={25}
-                                alt="MexicoIcon"
-                                className="opacity-40"
-                              />
-                              <div className="flex flex-col text-sm font-bold text-neutral-400 mx-2 leading-1">
-                                <p>Mexico</p>
                               </div>
                             </div>
                           </Link>

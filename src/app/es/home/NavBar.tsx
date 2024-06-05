@@ -168,20 +168,6 @@ function NavBarEs() {
                           </div>
                         </Link>
 
-                        <Link href="/br">
-                          <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
-                            <Image
-                              src={BrasilIcon}
-                              width={25}
-                              height={25}
-                              alt="BrasilIcon}"
-                            />
-                            <p className="text-sm font-bold text-neutral-900">
-                              Brasil
-                            </p>
-                          </div>
-                        </Link>
-
                         <Link href="/es" className="cursor-pointer">
                           <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                             <Image
@@ -206,6 +192,20 @@ function NavBarEs() {
                             />
                             <p className="text-sm font-bold text-neutral-900">
                               United States
+                            </p>
+                          </div>
+                        </Link>
+
+                        <Link href="/mx">
+                          <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
+                            <Image
+                              src={MexicoIcon}
+                              width={25}
+                              height={25}
+                              alt="MexicoIcon}"
+                            />
+                            <p className="text-sm font-bold text-neutral-900">
+                              Mexico
                             </p>
                           </div>
                         </Link>

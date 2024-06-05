@@ -1,9 +1,9 @@
-import { geoRedirect, config } from './middleware/geoRedirect';
+// import { geoRedirect, config } from './middleware/geoRedirect';
 
-export { geoRedirect as middleware, config };
+// export { geoRedirect as middleware, config };
 
-// function geoRedirect() {
-//     console.log('GeoRedirect middleware');
-// }
+function geoRedirect() {
+    console.log('GeoRedirect middleware');
+}
 
-// export default geoRedirect
+export default geoRedirect
