@@ -11,7 +11,15 @@ const countryMapping: { [key: string]: string } = {
 export async function geoRedirect(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  if (pathname.startsWith('/_next') || pathname.startsWith('/static') || pathname.startsWith('/favicon.ico') || pathname.startsWith('/examples/onepage') || pathname.startsWith('/admin/login') || pathname.startsWith('/admin/dashboard/orders') || pathname.startsWith('/admin/dashboard')) {
+  if (
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/static') ||
+    pathname.startsWith('/favicon.ico') ||
+    pathname.startsWith('/examples/onepage') ||
+    pathname.startsWith('/admin/login') ||
+    pathname.startsWith('/admin/dashboard/orders') ||
+    pathname.startsWith('/admin/dashboard')
+  ) {
     return NextResponse.next();
   }
 
@@ -24,7 +32,7 @@ export async function geoRedirect(req: NextRequest) {
     console.log('Detected Country:', country);
     console.log('Destination:', destination);
 
-    if (destination && !req.nextUrl.pathname.startsWith(destination)) {
+    if (destination && pathname !== destination) {
       console.log(`Redirecting ${req.nextUrl} to ${destination} for country ${country}`);
       const url = new URL(destination, req.nextUrl.origin);
       return NextResponse.redirect(url);
@@ -33,7 +41,7 @@ export async function geoRedirect(req: NextRequest) {
       return NextResponse.next();
     }
   } catch (error) {
-    console.error('Error fetching geolocation:', error);
+    console.error('Error in geoRedirect:', error);
     return NextResponse.next();
   }
 }
