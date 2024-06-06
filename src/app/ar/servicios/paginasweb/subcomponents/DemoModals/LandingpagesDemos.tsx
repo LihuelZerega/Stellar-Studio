@@ -65,7 +65,7 @@ function LandingpagesDemos() {
                   >
                     <div className="w-full rounded-md">
                       <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717524866/ReturnQueenDemo_neovgm.png"
+                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686985/ReturnQueenDemo_e7vsiv.png"
                         alt="ReturnQueen"
                         width={400}
                         height={400}
@@ -87,7 +87,7 @@ function LandingpagesDemos() {
                   >
                     <div className="w-full rounded-md">
                       <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717524871/OoshotDemo_zthz2j.png"
+                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686985/OoshotDemo_okoncs.png"
                         alt="Ooshot"
                         width={400}
                         height={400}

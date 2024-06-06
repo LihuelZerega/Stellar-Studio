@@ -64,7 +64,7 @@ function Products() {
         <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md transition-shadow duration-75">
           <div>
             <Image
-              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717516585/OnePageMockupPNG_jbwlkw.png"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686981/OnePageMockupPNG_jeuopu.png"
               width={2160}
               height={960}
               alt=""
@@ -82,7 +82,7 @@ function Products() {
         <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
           <div>
             <Image
-              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717516356/LandingPageMockupPNG_lsblee.png"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686980/LandingPageMockupPNG_rhkkzt.png"
               width={2160}
               height={960}
               alt=""
@@ -100,7 +100,7 @@ function Products() {
         <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
           <div>
             <Image
-              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717516411/EcommerceMockupJPG_vmbiuk.jpg"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686980/EcommerceMockupJPG_d4kasu.jpg"
               width={2160}
               height={960}
               alt=""
@@ -118,7 +118,7 @@ function Products() {
         <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
           <div>
             <Image
-              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717517660/AmedidaMockup_unuzk2.png"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686980/AmedidaMockup_pa0wzr.png"
               width={2160}
               height={960}
               alt=""
@@ -136,7 +136,7 @@ function Products() {
         <a href="ar/servicios/dominios" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
           <div>
             <Image
-              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717519297/DominiosMockip_rytfoc.png"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686981/DominiosMockip_s5ugyf.png"
               width={2160}
               height={960}
               alt=""
@@ -153,7 +153,7 @@ function Products() {
         <a href="ar/servicios/correosprofecionales" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
           <div>
             <Image
-              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717518560/CorreosProfecionalesMockupPNG_gbz2zb.png"
+              src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686981/CorreosProfecionalesMockupPNG_s4kg6p.png"
               width={2160}
               height={960}
               alt=""

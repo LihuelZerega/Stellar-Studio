@@ -80,7 +80,7 @@ function OnepagesDemos() {
                   >
                     <div className="w-full rounded-md">
                       <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717523908/PostcraftsDemo_yy63nv.png"
+                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686981/PostcraftsDemo_fsaxyp.png"
                         alt="Postcrafts"
                         width={400}
                         height={400}
