@@ -43,7 +43,7 @@ function Page() {
             className="flex flex-col mx-auto col-span-1 overflow-x-hidden relative w-full pt-36 md:pt-44 bg-neutral-50 2xl:pt-64"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/dszjgdktf/image/upload/v1715609605/HeroBackground_cf4tpz.png")',
+                'url("https://medusajs.com/_next/image/?url=%2Fimages%2Fhero-banner.png&w=3840&q=100")',
             }}
           >
             <div className="pb-24 md:pb-24">

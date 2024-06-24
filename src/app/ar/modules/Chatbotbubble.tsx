@@ -27,7 +27,7 @@ export default function ChatBotBubble() {
           button: {
             backgroundColor: "#a482fb",
             customIconSrc:
-              "https://res.cloudinary.com/dszjgdktf/image/upload/v1717159466/StellarStudioLogoMoonChatBotBubble_wbi06o.png",
+              "https://res.cloudinary.com/dys0jotat/image/upload/v1719242476/StellarStudioLogoMoonChatBotBubble_wc5rvp.png",
           },
           previewMessage: { backgroundColor: "#FFFFFF", textColor: "#272526" },
         }}

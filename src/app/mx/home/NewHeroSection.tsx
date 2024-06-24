@@ -1,19 +1,22 @@
+"use client";
 import React from "react";
-import { AnimatedTooltipPreview } from "./AnimatedTooltip";
+import Image from "next/image";
+import HomeHeroBgMobile from "@/images/HomeHeroBgMobile.jpg";
+import HomeHeroBgDeskctop from "@/images/HomeHeroBgDeskctop.jpg";
 
 function NewHeroSection() {
   return (
     <div className="h-[100vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
       <div className="block xl:hidden">
-        <img
-          src="https://res.cloudinary.com/dszjgdktf/image/upload/v1716815849/Sin_t%C3%ADtulo-2_lqha04.jpg"
+        <Image
+          src={HomeHeroBgMobile}
           alt=""
           className="w-full h-[100vh] object-cover"
         />
       </div>
       <div className="hidden xl:block">
-        <img
-          src="https://res.cloudinary.com/dszjgdktf/image/upload/v1716815471/Capa_3_lsbg9t.jpg"
+        <Image
+          src={HomeHeroBgDeskctop}
           alt=""
           className="w-full h-[100vh] object-cover"
         />

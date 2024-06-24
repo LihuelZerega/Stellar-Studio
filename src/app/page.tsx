@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import StellarStudioLogo from "@/images/StellarStudioLogo.png";
+import StellarStudioLogo from "@/images/StellarStudioLogoNegative.png";
 import ArgentinaIcon from "@/images/Flags/argentina.png";
 import BrasilIcon from "@/images/Flags/brasil.png";
 import ColombiaIcon from "@/images/Flags/colombia.png";
@@ -40,7 +40,6 @@ const Home: React.FC = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-
   return (
     <>
       {isLoading ? (
@@ -49,10 +48,12 @@ const Home: React.FC = () => {
         </div>
       ) : (
         <div
-          className="bg-cover bg-center bg-[#272526]"
+          className="mx-auto col-span-1 overflow-x-hidden relative w-full bg-cover bg-center animate-fadeIn"
           style={{
             backgroundImage:
-              'url("https://res.cloudinary.com/dszjgdktf/image/upload/v1712257547/Stellar%20Studio/BackgroundHomeImage_hod7wp.png")',
+              'url("https://medusajs.com/_next/image/?url=%2Fimages%2Fhero-banner.png&w=3840&q=100")',
+            backgroundPosition: "center",
+            backgroundSize: "cover",
           }}
         >
           <div className="bg-transparent min-h-screen flex flex-col justify-center items-center select-none">
@@ -74,7 +75,7 @@ const Home: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-lg md:text-xl font-bold text-white mb-8"
+              className="text-lg md:text-xl font-bold text-neutral-800 mb-8"
             >
               {language === "es"
                 ? "Seleccione su país"
@@ -108,7 +109,7 @@ const Home: React.FC = () => {
                     />
                   </div>
                   <div className="flex flex-col ml-2">
-                    <h1 className="text-sm hover:font-medium text-white">
+                    <h1 className="text-sm font-semibold hover:text-neutral-900 text-neutral-800">
                       Argentina
                     </h1>
                   </div>
@@ -127,7 +128,7 @@ const Home: React.FC = () => {
                     />
                   </div>
                   <div className="flex flex-col ml-2">
-                    <h1 className="text-sm hover:font-medium text-white">
+                    <h1 className="text-sm font-semibold hover:text-neutral-900 text-neutral-800">
                       Brasil
                     </h1>
                   </div>
@@ -146,7 +147,7 @@ const Home: React.FC = () => {
                     />
                   </div>
                   <div className="flex flex-col ml-2">
-                    <h1 className="text-sm hover:font-medium text-white">
+                    <h1 className="text-sm font-semibold hover:text-neutral-900 text-neutral-800">
                       España
                     </h1>
                   </div>
@@ -165,7 +166,7 @@ const Home: React.FC = () => {
                     />
                   </div>
                   <div className="flex flex-col ml-2">
-                    <h1 className="text-sm hover:font-medium text-white">
+                    <h1 className="text-sm font-semibold hover:text-neutral-900 text-neutral-800">
                       United States
                     </h1>
                   </div>
@@ -178,7 +179,7 @@ const Home: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1 }}
-                className="text-center text-lg md:text-xl font-bold text-white mb-6"
+                className="text-center text-lg md:text-xl font-bold text-neutral-800 mb-6"
               >
                 {language === "es"
                   ? "Próximamente..."

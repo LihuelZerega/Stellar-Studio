@@ -1,4 +1,9 @@
+"use client";
 import React from "react";
+import Image from "next/image";
+import DiseñoyDesarrolloImage from "@/images/DiseñoyDesarrolloImage.png";
+import DominiosPersonalizadosImage from "@/images/DominiosPersonalizadosImage.png";
+import CorreosProfecionalesImage from "@/images/CorreoProfecionalesLandingMobile.png";
 import {
   CloudArrowUpIcon,
   LockClosedIcon,
@@ -74,9 +79,9 @@ export default function Example() {
           </div>
         </div>
         <div className="-ml-64 sm:-ml-12 md:-ml-56 2xl:-ml-56 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img
+          <Image
             className="w-[48rem] max-w-none rounded-xl sm:w-[57rem]"
-            src="https://res.cloudinary.com/dszjgdktf/image/upload/v1715633998/Sin_t%C3%ADtulo-22_kengk5.png"
+            src={DiseñoyDesarrolloImage}
             alt=""
           />
         </div>
@@ -155,9 +160,9 @@ export default function Example() {
           </div>
         </div>
         <div className="-ml-40 xl:-ml-48 2xl:ml-16 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img
+          <Image
             className="w-[36rem] max-w-none rounded-xl sm:w-[57rem]"
-            src="https://res.cloudinary.com/dszjgdktf/image/upload/v1715634410/Sin_t%C3%ADtulo-23_dm7wph.png"
+            src={DominiosPersonalizadosImage}
             alt=""
           />
         </div>
@@ -233,9 +238,9 @@ export default function Example() {
           </div>
         </div>
         <div className="-ml-40 xl:-ml-48 2xl:ml-16 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img
-            className="w-[48rem] max-w-none rounded-xl bg-transparent sm:w-[57rem]"
-            src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712948022/illustrationEmails_l16njv.png"
+          <Image
+            className="w-[48rem] max-w-none rounded-xl bg-transparent sm:w-[48rem]"
+            src={CorreosProfecionalesImage}
             alt=""
           />
         </div>

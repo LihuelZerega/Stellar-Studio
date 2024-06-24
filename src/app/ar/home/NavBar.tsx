@@ -357,7 +357,7 @@ function NavBarEs() {
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon
-              className="text-neutral-200 h-6 w-6"
+              className={`${textColorClass} h-6 w-6`}
               aria-hidden="true"
             />
           </button>
