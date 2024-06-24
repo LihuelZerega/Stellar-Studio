@@ -9,6 +9,9 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import Image from "next/image";
+import ReturnQueenImage from "@/images/ReturnQueenDemo.webp";
+import OoshotImage from "@/images/OoshotDemo.webp";
+
 
 function LandingpagesDemos() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -65,7 +68,7 @@ function LandingpagesDemos() {
                   >
                     <div className="w-full rounded-md">
                       <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686985/ReturnQueenDemo_e7vsiv.png"
+                        src={ReturnQueenImage}
                         alt="ReturnQueen"
                         width={400}
                         height={400}
@@ -87,7 +90,7 @@ function LandingpagesDemos() {
                   >
                     <div className="w-full rounded-md">
                       <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686985/OoshotDemo_okoncs.png"
+                        src={OoshotImage}
                         alt="Ooshot"
                         width={400}
                         height={400}

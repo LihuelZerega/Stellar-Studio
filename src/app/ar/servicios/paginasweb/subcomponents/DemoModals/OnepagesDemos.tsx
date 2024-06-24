@@ -9,6 +9,8 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import Image from "next/image";
+import PostcraftImage from "@/images/PostcraftsDemo.webp";
+import CobaltImage from "@/images/CobaltDemo.webp";
 
 function OnepagesDemos() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -80,7 +82,7 @@ function OnepagesDemos() {
                   >
                     <div className="w-full rounded-md">
                       <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1717686981/PostcraftsDemo_fsaxyp.png"
+                        src={PostcraftImage}
                         alt="Postcrafts"
                         width={400}
                         height={400}
@@ -102,7 +104,7 @@ function OnepagesDemos() {
                   >
                     <div className="w-full rounded-md">
                       <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/1_tcatsr.png"
+                        src={CobaltImage}
                         alt="Cobalt"
                         width={400}
                         height={400}
