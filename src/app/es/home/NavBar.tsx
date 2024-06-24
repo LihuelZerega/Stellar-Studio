@@ -195,20 +195,6 @@ function NavBarEs() {
                             </p>
                           </div>
                         </Link>
-
-                        <Link href="/mx">
-                          <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
-                            <Image
-                              src={MexicoIcon}
-                              width={25}
-                              height={25}
-                              alt="MexicoIcon}"
-                            />
-                            <p className="text-sm font-bold text-neutral-900">
-                              Mexico
-                            </p>
-                          </div>
-                        </Link>
                       </div>
 
                       <hr />
@@ -218,7 +204,8 @@ function NavBarEs() {
                           Proximamente...
                         </h1>
                         <div className="grid grid-cols-2 sm:grid-cols-3 py-4">
-                          <Link href="/br" className="cursor-not-allowed">
+
+                        <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={BrasilIcon}
@@ -232,8 +219,8 @@ function NavBarEs() {
                               </div>
                             </div>
                           </Link>
-
-                          <Link href="/cl" className="cursor-not-allowed">
+                          
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={ChileIcon}
@@ -248,7 +235,22 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/co" className="cursor-not-allowed">
+                          <Link href="/">
+                          <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
+                            <Image
+                              src={MexicoIcon}
+                              width={25}
+                              height={25}
+                              alt="MexicoIcon"
+                              className="opacity-40"
+                            />
+                            <p className="text-sm font-bold text-neutral-400">
+                              Mexico
+                            </p>
+                          </div>
+                        </Link>
+
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={ColombiaIcon}
@@ -263,7 +265,7 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/de" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={AlemaniaIcon}
@@ -278,7 +280,7 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/fr" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={FranciaIcon}
@@ -293,7 +295,7 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/it" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={ItaliaIcon}
@@ -308,7 +310,7 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/ur" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={UruguayIcon}
@@ -323,7 +325,7 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/en" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={UnitedKingdom}
@@ -356,7 +358,7 @@ function NavBarEs() {
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon
-              className="text-neutral-800 h-6 w-6"
+              className={`${textColorClass} h-6 w-6`}
               aria-hidden="true"
             />
           </button>

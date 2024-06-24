@@ -110,7 +110,7 @@ function NavBarEs() {
       >
         {/* SELECT YOUR COUNTRY */}
         <div className="flex lg:flex-1">
-          <a href="/es" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Stellar Studio</span>
             <Image
               src={logoSrc}
@@ -125,10 +125,10 @@ function NavBarEs() {
               <Popover className="relative">
                 <Popover.Button className="flex flex-row items-center ml-6 cursor-pointer focus:outline-none hover:scale-105 transition-all duration-300">
                   <Image
-                    src={EEUUIcon}
+                    src={ArgentinaIcon}
                     width={25}
                     height={25}
-                    alt="EEUUIcon"
+                    alt="ArgentinaIcon"
                   />
                   <ChevronDownIcon
                     className="h-5 w-5 flex-none text-neutral-500"
@@ -146,7 +146,7 @@ function NavBarEs() {
                   leaveTo="opacity-0 translate-y-1"
                 >
                   <Popover.Panel className="absolute -left-48 md:-left-8 top-full z-10 mt-3 w-screen max-w-xs md:max-w-lg overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-neutral-900/5">
-                  <section className="p-4">
+                    <section className="p-4">
                       <h1 className="flex flex-col text-xl font-semibold mb-2 text-[#a482fb]">
                         Seleccioná tu País
                       </h1>
@@ -195,20 +195,6 @@ function NavBarEs() {
                             </p>
                           </div>
                         </Link>
-
-                        <Link href="/mx">
-                          <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
-                            <Image
-                              src={MexicoIcon}
-                              width={25}
-                              height={25}
-                              alt="MexicoIcon}"
-                            />
-                            <p className="text-sm font-bold text-neutral-900">
-                              Mexico
-                            </p>
-                          </div>
-                        </Link>
                       </div>
 
                       <hr />
@@ -219,7 +205,7 @@ function NavBarEs() {
                         </h1>
                         <div className="grid grid-cols-2 sm:grid-cols-3 py-4">
 
-                        <Link href="/br" className="cursor-not-allowed">
+                        <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={BrasilIcon}
@@ -234,7 +220,7 @@ function NavBarEs() {
                             </div>
                           </Link>
                           
-                          <Link href="/cl" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={ChileIcon}
@@ -249,7 +235,22 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/co" className="cursor-not-allowed">
+                          <Link href="/">
+                          <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
+                            <Image
+                              src={MexicoIcon}
+                              width={25}
+                              height={25}
+                              alt="MexicoIcon"
+                              className="opacity-40"
+                            />
+                            <p className="text-sm font-bold text-neutral-400">
+                              Mexico
+                            </p>
+                          </div>
+                        </Link>
+
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={ColombiaIcon}
@@ -264,7 +265,7 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/de" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={AlemaniaIcon}
@@ -279,7 +280,7 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/fr" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={FranciaIcon}
@@ -294,7 +295,7 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/it" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={ItaliaIcon}
@@ -309,7 +310,7 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/ur" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={UruguayIcon}
@@ -324,7 +325,7 @@ function NavBarEs() {
                             </div>
                           </Link>
 
-                          <Link href="/en" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={UnitedKingdom}
@@ -357,7 +358,7 @@ function NavBarEs() {
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon
-              className="text-neutral-800 h-6 w-6"
+              className={`${textColorClass} h-6 w-6`}
               aria-hidden="true"
             />
           </button>

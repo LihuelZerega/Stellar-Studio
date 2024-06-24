@@ -95,7 +95,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1.1 }}
             >
-              <section className="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-7">
+              <section className="grid grid-cols-2 md:grid-cols-3 mx-auto items-center gap-4">
                 <Link
                   href={"/ar"}
                   className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-pointer"
@@ -111,25 +111,6 @@ const Home: React.FC = () => {
                   <div className="flex flex-col ml-2">
                     <h1 className="text-sm font-semibold hover:text-neutral-900 text-neutral-800">
                       Argentina
-                    </h1>
-                  </div>
-                </Link>
-
-                <Link
-                  href={"/br"}
-                  className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-pointer"
-                >
-                  <div>
-                    <Image
-                      src={BrasilIcon}
-                      width={25}
-                      height={25}
-                      alt="BrasilIcon"
-                    />
-                  </div>
-                  <div className="flex flex-col ml-2">
-                    <h1 className="text-sm font-semibold hover:text-neutral-900 text-neutral-800">
-                      Brasil
                     </h1>
                   </div>
                 </Link>
@@ -196,7 +177,7 @@ const Home: React.FC = () => {
 
               <section className="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-7">
                 <Link
-                  href="/cl"
+                  href="/"
                   className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
                 >
                   <div>
@@ -216,7 +197,7 @@ const Home: React.FC = () => {
                 </Link>
 
                 <Link
-                  href="/co"
+                  href="/"
                   className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
                 >
                   <div>
@@ -236,7 +217,7 @@ const Home: React.FC = () => {
                 </Link>
 
                 <Link
-                  href="/de"
+                  href="/"
                   className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
                 >
                   <div>
@@ -256,7 +237,7 @@ const Home: React.FC = () => {
                 </Link>
 
                 <Link
-                  href="/fr"
+                  href="/"
                   className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
                 >
                   <div>
@@ -276,7 +257,7 @@ const Home: React.FC = () => {
                 </Link>
 
                 <Link
-                  href="/it"
+                  href="/"
                   className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
                 >
                   <div>
@@ -296,7 +277,7 @@ const Home: React.FC = () => {
                 </Link>
 
                 <Link
-                  href="/mx"
+                  href="/"
                   className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
                 >
                   <div>
@@ -316,7 +297,7 @@ const Home: React.FC = () => {
                 </Link>
 
                 <Link
-                  href="/uy"
+                  href="/"
                   className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
                 >
                   <div>
@@ -336,7 +317,7 @@ const Home: React.FC = () => {
                 </Link>
 
                 <Link
-                  href="/uk"
+                  href="/"
                   className="flex flex-row items-center hover:scale-105 transition-all duration-300 hover:opacity-80 cursor-not-allowed"
                 >
                   <div>
