@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Script from 'next/script'
 import Image from "next/image";
 import Link from "next/link";
 import StellarStudioLogo from "@/images/StellarStudioLogoNegative.png";
@@ -56,6 +57,7 @@ const Home: React.FC = () => {
             backgroundSize: "cover",
           }}
         >
+          <Script defer src="https://umami-production-a865.up.railway.app/script.js" data-website-id="2370577d-1691-4b05-ab3b-d749a29871c6" />
           <div className="bg-transparent min-h-screen flex flex-col justify-center items-center select-none">
             <motion.div
               initial={{ opacity: 0, y: -100 }}
