@@ -6,7 +6,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 function Testimonials() {
   return (
-    <div className="py-16 px-6 md:px-12 lg:px-24 border-t bg-neutral-100">
+    <div className="py-16 px-6 md:px-12 lg:px-24 border-t border-neutral-200 bg-neutral-100">
       <div className="flex flex-col items-center justify-between max-w-6xl mx-auto ">
         <div className="flex flex-row items-center space-x-1 pb-3 w-full border-b-1 border-neutral-300 mb-6">
           <svg
