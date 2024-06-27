@@ -1,6 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Container } from "@medusajs/ui";
+import RamosSoftClient from "@/images/RamosSoftClient.jpg";
+import TecnicFmfClient from "@/images/TecnicfmfClient.png";
+import CenterCarClient from "@/images/CenterCarClient.jpg";
 import { Chip } from "@nextui-org/react";
 import { BsArrowRightShort } from "react-icons/bs";
 
@@ -38,7 +42,7 @@ function Testimonials() {
           <div className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-2">
             <Link href="" className="bg-black cursor-pointer">
               <Image
-                src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160935/Stellar%20Studio/7_ba7hhd.png"
+                src={RamosSoftClient}
                 width={400}
                 height={300}
                 alt="testimonail"
@@ -50,18 +54,13 @@ function Testimonials() {
                 Ramos Soft Sillones
               </h1>
               <p className="font-light text-sm text-neutral-500 pr-4">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
-                unde tenetur nam est, ab porro nobis quo illum culpa ducimus
-                amet adipisci? Facilis aliquam fugiat dignissimos nostrum,
-                aliquid enim? Asperiores.
+                Ramos Soft Sillones es una empresa familiar con 25 años de experiencia en el sector de la venta de sillones. Trabajamos un E-commerce para su marca aumentando sus ventas en un 30%.
               </p>
-              <div className="flex flex-row items-center justify-between text-neutral-600 font-light hover:font-semibold hover:text-[#a482fb] pt-12">
-                <Link href="">
-                  <h1 className="flex flex-row items-center text-sm">
-                    Leer mas <BsArrowRightShort className="" />
-                  </h1>
-                </Link>
-                  <Chip size="sm">Ecommerce</Chip>
+              <div className="flex flex-row items-center justify-between pt-12">
+                <h1 className="flex flex-row items-center text-sm text-neutral-600 font-light hover:font-semibold hover:text-[#a482fb] cursor-pointer">
+                  Leer mas <BsArrowRightShort className="" />
+                </h1>
+                <Chip size="sm">E-commerce</Chip>
               </div>
             </div>
           </div>
@@ -69,7 +68,7 @@ function Testimonials() {
           <div className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-2">
             <Link href="" className="bg-black cursor-pointer">
               <Image
-                src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160939/Stellar%20Studio/6_pr1pjk.png"
+                src={CenterCarClient}
                 width={400}
                 height={300}
                 alt="testimonail"
@@ -81,18 +80,13 @@ function Testimonials() {
                 Center Car Automotores
               </h1>
               <p className="font-light text-sm text-neutral-500 pr-4">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
-                unde tenetur nam est, ab porro nobis quo illum culpa ducimus
-                amet adipisci? Facilis aliquam fugiat dignissimos nostrum,
-                aliquid enim? Asperiores.
+                Trabajamos con conjunto con Tomas de Center Car Automotores un E-commerce totalmente autogestionado y 2 pestañas adicionales para sus clientes vendan sus autos y trabajen con ellos.
               </p>
-              <div className="flex flex-row items-center justify-between text-neutral-600 font-light hover:font-semibold hover:text-[#a482fb] pt-12">
-                <Link href={""}>
-                  <h1 className="flex flex-row items-center text-sm">
-                    Leer mas <BsArrowRightShort className="" />
-                  </h1>
-                </Link>
-                  <Chip size="sm">Ecommerce</Chip>
+              <div className="flex flex-row items-center justify-between pt-12">
+                <h1 className="flex flex-row items-center text-sm text-neutral-600 font-light hover:font-semibold hover:text-[#a482fb] cursor-pointer">
+                  Leer mas <BsArrowRightShort className="" />
+                </h1>
+                <Chip size="sm">E-commerce</Chip>
               </div>
             </div>
           </div>
@@ -100,7 +94,7 @@ function Testimonials() {
           <div className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-2">
             <Link href="" className="bg-black cursor-pointer">
               <Image
-                src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160938/Stellar%20Studio/8_ixgmvi.png"
+                src={TecnicFmfClient}
                 width={400}
                 height={300}
                 alt="testimonail"
@@ -108,24 +102,22 @@ function Testimonials() {
               />
             </Link>
             <div className="px-1">
-              <h1 className="font-semibold text-lg py-2 text-neutral-800">El Rincon De Sara</h1>
+              <h1 className="font-semibold text-lg py-2 text-neutral-800">
+                TecnicFmf
+              </h1>
               <p className="font-light text-sm text-neutral-500 pr-4">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
-                unde tenetur nam est, ab porro nobis quo illum culpa ducimus
-                amet adipisci? Facilis aliquam fugiat dignissimos nostrum,
-                aliquid enim? Asperiores.
+                TecnicFmf nos contacto para que creemos su Landing Page ofreciendo sus servicios al publico trabajando en conjunto con una agencia de marketing digital, llevando el publico de las redes sociales a la web.
               </p>
-              <div className="flex flex-row items-center justify-between text-neutral-600 font-light hover:font-semibold hover:text-[#a482fb] pt-12">
+              <div className="flex flex-row items-center justify-between pt-12">
                 <Link href={""}>
-                  <h1 className="flex flex-row items-center text-sm">
+                  <h1 className="flex flex-row items-center text-sm text-neutral-600 font-light hover:font-semibold hover:text-[#a482fb] cursor-pointer">
                     Leer mas <BsArrowRightShort className="" />
                   </h1>
                 </Link>
-                  <Chip size="sm">Ecommerce</Chip>
+                <Chip size="sm">Landing Page</Chip>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
