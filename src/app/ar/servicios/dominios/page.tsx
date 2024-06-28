@@ -50,8 +50,6 @@ function Page() {
             <PopularDomains />
           </div>
           <DomainTips />
-          {/* <Tips /> */}
-          {/* <Features /> */}
           <CallToAction />
           <Faq />
           <FooterEs />

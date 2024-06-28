@@ -1,27 +1,58 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 function PopularDomains() {
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref4, inView4] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref5, inView5] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref6, inView6] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref7, inView7] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref8, inView8] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <div className="border-t-1 border-neutral-200 py-12 lg:py-24 bg-neutral-100">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        {/* <section className="flex flex-col items-center justify-center w-full text-center space-y-4 mb-12">
-          <div className="transition-all bg-neutral-200 border-1 border-neutral-300 text-black h-7 px-3 text-sm leading-5 rounded-full font-medium flex gap-3 items-center">
-            <span>Dominios Populares</span>
-          </div>
-          <div className="space-y-4">
-            <strong className="mb-4 text-[32px] leading-[44px] text-neutral-800">
-              Asegurá tu identidad en línea
-            </strong>
-            <p className="mb-0 text-neutral-600 md:max-w-3xl">
-              Elegi el dominio que se adecue a la identidad de tu marca. <br /> Nos
-              encargamos de todo el proceso de creación de tu nuevo dominio.
-            </p>
-          </div>
-        </section> */}
-
         <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-          <div className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3">
+          <motion.div
+            ref={ref1}
+            initial="hidden"
+            animate={inView1 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3"
+          >
             <Image
               src="https://assets.hostinger.com/images/domain-checker-2020/tlds-all/icon-com-f0ce55a39c.svg"
               width={158}
@@ -41,9 +72,15 @@ function PopularDomains() {
                 </button>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3">
+          <motion.div
+            ref={ref2}
+            initial="hidden"
+            animate={inView2 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3"
+          >
             <Image
               src="https://assets.hostinger.com/images/domain-checker-2020/tlds-all/icon-net-264487d754.svg"
               width={158}
@@ -63,9 +100,15 @@ function PopularDomains() {
                 </button>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3">
+          <motion.div
+            ref={ref3}
+            initial="hidden"
+            animate={inView3 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3"
+          >
             <Image
               src="https://assets.hostinger.com/images/domain-checker-2020/tlds-all/icon-online-222b01e9cc.svg"
               width={158}
@@ -85,9 +128,15 @@ function PopularDomains() {
                 </button>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3">
+          <motion.div
+            ref={ref4}
+            initial="hidden"
+            animate={inView4 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3"
+          >
             <Image
               src="https://assets.hostinger.com/images/domain-checker-2020/tlds-all/icon-io-98c7d4c690.svg"
               width={158}
@@ -107,9 +156,15 @@ function PopularDomains() {
                 </button>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3">
+          <motion.div
+            ref={ref5}
+            initial="hidden"
+            animate={inView5 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3"
+          >
             <Image
               src="https://assets.hostinger.com/images/domain-checker-2020/tlds-all/icon-icu-b7151fba15.svg"
               width={158}
@@ -129,9 +184,15 @@ function PopularDomains() {
                 </button>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3">
+          <motion.div
+            ref={ref6}
+            initial="hidden"
+            animate={inView6 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3"
+          >
             <Image
               src="https://assets.hostinger.com/images/domain-checker-2020/tlds-all/icon-xyz-f5ea4ca77e.svg"
               width={158}
@@ -151,9 +212,15 @@ function PopularDomains() {
                 </button>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3">
+          <motion.div
+            ref={ref7}
+            initial="hidden"
+            animate={inView7 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3"
+          >
             <Image
               src="https://assets.hostinger.com/images/domain-checker-2020/tlds-all/icon-pro.svg"
               width={158}
@@ -173,9 +240,15 @@ function PopularDomains() {
                 </button>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3">
+          <motion.div
+            ref={ref8}
+            initial="hidden"
+            animate={inView8 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="border-2 border-gray-200 bg-white rounded-2xl p-4 space-y-3"
+          >
             <Image
               src="https://assets.hostinger.com/images/domain-checker-2020/tlds-all/icon-cloud-54f394268c.svg"
               width={158}
@@ -195,7 +268,7 @@ function PopularDomains() {
                 </button>
               </a>
             </div>
-          </div>
+          </motion.div>
         </section>
       </div>
     </div>

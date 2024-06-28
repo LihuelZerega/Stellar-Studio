@@ -1,6 +1,38 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 function DomainTips() {
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref4, inView4] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref5, inView5] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref6, inView6] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <div className="border-t-1 border-neutral-200 py-12 lg:py-24 bg-neutral-50">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -16,7 +48,13 @@ function DomainTips() {
         </section>
 
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="mt-6 lg:mt-10">
+          <motion.div
+            ref={ref1}
+            initial="hidden"
+            animate={inView1 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="mt-6 lg:mt-10"
+          >
             <strong className="flex flex-row items-center text-neutral-800">
               <span>
                 <svg
@@ -50,9 +88,15 @@ function DomainTips() {
               Los nombres de dominio cortos son más fáciles de leer y memorizar.
               Crea el tuyo con solo 2-3 pasos.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="mt-6 lg:mt-10">
+          <motion.div
+            ref={ref2}
+            initial="hidden"
+            animate={inView2 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="mt-6 lg:mt-10"
+          >
             <strong className="flex flex-row items-center text-neutral-800">
               <span>
                 <svg
@@ -120,9 +164,15 @@ function DomainTips() {
               Evitá el uso de guiones, números y jerga en tu dominio. Mantenlo
               simple para facilitar su escritura y memorización.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="mt-6 lg:mt-10">
+          <motion.div
+            ref={ref3}
+            initial="hidden"
+            animate={inView3 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="mt-6 lg:mt-10"
+          >
             <strong className="flex flex-row items-center text-neutral-800">
               <span>
                 <svg
@@ -167,9 +217,15 @@ function DomainTips() {
               Antes de adquirir tu dominio, verifica que esté disponible y no
               esté registrado por otra entidad.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="mt-6 lg:mt-10">
+          <motion.div
+            ref={ref4}
+            initial="hidden"
+            animate={inView4 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="mt-6 lg:mt-10"
+          >
             <strong className="flex flex-row items-center text-neutral-800">
               <span>
                 <svg
@@ -203,9 +259,15 @@ function DomainTips() {
               visibilidad en los buscadores y aumentar el tráfico hacia tu sitio
               web.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="mt-6 lg:mt-10">
+          <motion.div
+            ref={ref5}
+            initial="hidden"
+            animate={inView5 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="mt-6 lg:mt-10"
+          >
             <strong className="flex flex-row items-center text-neutral-800">
               <span>
                 <svg
@@ -259,9 +321,15 @@ function DomainTips() {
               Piensa en utilizar extensiones de dominio específicas de tu país o
               región para fortalecer tu presencia local en línea.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="mt-6 lg:mt-10">
+          <motion.div
+            ref={ref6}
+            initial="hidden"
+            animate={inView6 ? "visible" : "hidden"}
+            variants={itemVariants}
+            className="mt-6 lg:mt-10"
+          >
             <strong className="flex flex-row items-center text-neutral-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -305,7 +373,7 @@ function DomainTips() {
               nuestra herramienta de búsqueda y registra tu dominio cuanto
               antes.
             </p>
-          </div>
+          </motion.div>
         </section>
       </div>
     </div>

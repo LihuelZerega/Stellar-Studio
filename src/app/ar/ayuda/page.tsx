@@ -6,6 +6,13 @@ import Herosection from "./subcomps/HeroSection";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 import HelpSteps from "@/app/ar/ayuda/subcomps/HelpSteps";
 import ContactForm from "@/app/ar/ayuda/subcomps/ContactForm";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,6 +32,15 @@ function Page() {
     return () => clearTimeout(timeout);
   }, []);
 
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <>
       {isLoading ? (
@@ -33,7 +49,7 @@ function Page() {
         </div>
       ) : (
         <div
-          className="bg-cover bg-center bg-[#272526]"
+          className="bg-cover bg-center bg-neutral-50"
           style={{
             backgroundImage:
               'url("https://res.cloudinary.com/dszjgdktf/image/upload/v1712251098/Stellar%20Studio/BackgroundServicesImage_hpumui.png")',
@@ -41,12 +57,24 @@ function Page() {
         >
           <NavBar />
           <Herosection />
-          <div id="pasosayuda">
+          <motion.div
+            ref={ref1}
+            initial="hidden"
+            animate={inView1 ? "visible" : "hidden"}
+            variants={itemVariants}
+            id="pasosayuda"
+          >
             <HelpSteps />
-          </div>
-          <div id="contactoayuda">
+          </motion.div>
+          <motion.div
+            ref={ref2}
+            initial="hidden"
+            animate={inView2 ? "visible" : "hidden"}
+            variants={itemVariants}
+            id="contactoayuda"
+          >
             <ContactForm />
-          </div>
+          </motion.div>
           <FooterEs />
         </div>
       )}

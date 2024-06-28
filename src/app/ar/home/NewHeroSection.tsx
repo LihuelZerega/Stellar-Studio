@@ -1,8 +1,19 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import HomeHeroBgMobile from "@/images/HomeHeroBgMobile.jpg";
 import HomeHeroBgDeskctop from "@/images/HomeHeroBgDeskctop.jpg";
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 1.5 } },
+};
+
+const slideIn = {
+  hidden: { x: -100, opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 1 } },
+};
 
 function NewHeroSection() {
   return (
@@ -22,8 +33,18 @@ function NewHeroSection() {
         />
       </div>
 
-      <div className="absolute inset-0 z-10 bottom-64 sm:bottom-96 lg:bottom-[600px] xl:bottom-0 xl:-left-[620px] 2xl:-left-[800px] flex flex-col justify-center items-center text-left gap-6">
-        <div className="mx-auto max-w-lg lg:max-w-2xl xl:max-w-2xl 2xl:max-w-2xl px-3 py-32 sm:py-48 lg:py-56">
+      <motion.div
+        className="absolute inset-0 z-10 bottom-64 sm:bottom-96 lg:bottom-[600px] xl:bottom-0 xl:-left-[620px] 2xl:-left-[800px] flex flex-col justify-center items-center text-left gap-6"
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+      >
+        <motion.div
+          className="mx-auto max-w-lg lg:max-w-2xl xl:max-w-2xl 2xl:max-w-2xl px-3 py-32 sm:py-48 lg:py-56"
+          initial="hidden"
+          animate="visible"
+          variants={slideIn}
+        >
           <div className="hidden sm:mb-4 sm:flex sm:justify-center xl:justify-start">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-200 ring-1 ring-neutral-200/10 hover:ring-neutral-200/20">
               Stellar Studio 2.0{" "}
@@ -52,8 +73,8 @@ function NewHeroSection() {
               </a>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

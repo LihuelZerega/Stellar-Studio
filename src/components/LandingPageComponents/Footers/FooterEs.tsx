@@ -13,10 +13,14 @@ function FooterEs() {
             <div className="col-span-2 md:col-span-4 xl:pr-8">
               <Image className="w-auto h-9" src={StellarStudioLogo} alt="" />
               <p className="text-base leading-relaxed text-gray-200 mt-7">
-                Proveemos un servicio de desarrollo de desarrollo web de alta
-                calidad con la mision de impulsar su crecimiento y presencia en
-                linea. Mejoramos constantemente la tecnologia de las mismas y
-                garantizamos que su sitio web cumpla con sus expectativas.
+                Proveemos un servicio de desarrollo web de alta calidad con la
+                mision de impulsar su crecimiento y presencia en linea.
+              </p>
+            </div>
+
+            <div className=" hidden lg:block lg:col-span-2">
+              <p className="text-base font-semibold text-transparent select-none">
+                Servicios
               </p>
             </div>
 
@@ -28,7 +32,7 @@ function FooterEs() {
               <ul className="mt-6 space-y-4">
                 <li>
                   <a
-                    href="#"
+                    href="/ar/servicios/paginasweb"
                     title=""
                     className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
                   >
@@ -39,7 +43,7 @@ function FooterEs() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/ar/servicios/paginasweb"
                     title=""
                     className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
                   >
@@ -50,7 +54,7 @@ function FooterEs() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/ar/servicios/paginasweb"
                     title=""
                     className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
                   >
@@ -61,7 +65,7 @@ function FooterEs() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/ar/servicios/paginasweb"
                     title=""
                     className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
                   >
@@ -72,7 +76,7 @@ function FooterEs() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/ar/servicios/dominios"
                     title=""
                     className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
                   >
@@ -83,7 +87,7 @@ function FooterEs() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/ar/servicios/correosprofecionales"
                     title=""
                     className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
                   >
@@ -100,7 +104,7 @@ function FooterEs() {
               <ul className="mt-6 space-y-5">
                 <li>
                   <a
-                    href="#"
+                    href="/ar/compania#sobrenosotros"
                     title=""
                     className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
                   >
@@ -111,7 +115,7 @@ function FooterEs() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/ar/compania#valores"
                     title=""
                     className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
                   >
@@ -122,29 +126,7 @@ function FooterEs() {
 
                 <li>
                   <a
-                    href="#"
-                    title=""
-                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
-                  >
-                    {" "}
-                    Historia{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
-                  >
-                    {" "}
-                    Equipo{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
+                    href="/ar/compania#tecnologia"
                     title=""
                     className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
                   >
@@ -155,7 +137,7 @@ function FooterEs() {
 
                 <li>
                   <a
-                    href="#"
+                    href="/ar/ayuda#contactoayuda"
                     title=""
                     className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
                   >
@@ -167,53 +149,12 @@ function FooterEs() {
             </div>
 
             <div className="lg:col-span-2">
-              <p className="text-base font-semibold text-[#a482fb]">
-                Informacion
-              </p>
-
-              <ul className="mt-6 space-y-5">
-                <li>
-                  <a
-                    href="/articulos/terminos-y-condiciones"
-                    title=""
-                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
-                  >
-                    {" "}
-                    Formas de Pago{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="/articulos/terminos-y-condiciones"
-                    title=""
-                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
-                  >
-                    {" "}
-                    Precios{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="/articulos/politica-de-privacidad"
-                    title=""
-                    className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
-                  >
-                    {" "}
-                    Opiniones{" "}
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="lg:col-span-2">
               <p className="text-base font-semibold text-[#a482fb]">Ayuda</p>
 
               <ul className="mt-6 space-y-5">
                 <li>
                   <a
-                    href="/whatsapp"
+                    href="/ar/ayuda#pasosayuda"
                     title=""
                     className="flex text-sm text-gray-100 transition-all duration-200 hover:text-gray-300 focus:text-gray-300"
                   >
@@ -235,7 +176,7 @@ function FooterEs() {
             <ul className="flex items-center mt-5 space-x-3 md:order-3 sm:mt-0">
               <li>
                 <a
-                  href="#"
+                  href="https://wa.me/message/6QMHEP7ZRVXFA1"
                   title=""
                   className="flex items-center justify-center text-gray-100 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#a482fb] hover:text-white focus:text-white hover:bg-[#a482fb] hover:border-[#a482fb] focus:border-[#a482fb]"
                 >
@@ -245,7 +186,7 @@ function FooterEs() {
 
               <li>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/stellarstudioweb/"
                   title=""
                   className="flex items-center justify-center text-gray-100 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#a482fb] hover:text-white focus:text-white hover:bg-[#a482fb] hover:border-[#a482fb] focus:border-[#a482fb]"
                 >
@@ -264,34 +205,7 @@ function FooterEs() {
 
               <li>
                 <a
-                  href="#"
-                  title=""
-                  className="flex items-center justify-center text-gray-100 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#a482fb] hover:text-white focus:text-white hover:bg-[#a482fb] hover:border-[#a482fb] focus:border-[#a482fb]"
-                >
-                  <FaXTwitter />
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  title=""
-                  className="flex items-center justify-center text-gray-100 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#a482fb] hover:text-white focus:text-white hover:bg-[#a482fb] hover:border-[#a482fb] focus:border-[#a482fb]"
-                >
-                  <svg
-                    className="w-4 h-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path>
-                  </svg>
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
+                  href="https://github.com/"
                   title=""
                   className="flex items-center justify-center text-gray-100 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#a482fb] hover:text-white focus:text-white hover:bg-[#a482fb] hover:border-[#a482fb] focus:border-[#a482fb]"
                 >

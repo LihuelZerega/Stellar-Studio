@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { BsArrowRightShort } from "react-icons/bs";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import OnepageMockup from "@/images/OnePageMockupPNG.webp";
 import LandingpageMockup from "@/images/LandingPageMockupPNG.webp";
 import EcommercepageMockup from "@/images/EcommerceMockupJPG.webp";
@@ -8,8 +10,17 @@ import AmedidaMockup from "@/images/AmedidaMockupPNG.webp";
 import DomainsMockup from "@/images/DominiosMockip.webp";
 import EmailsMockup from "@/images/CorreosProfecionalesMockupPNG.webp";
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 function Services() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <div className="py-16 px-6 md:px-12 lg:px-24 bg-neutral-100 border-t border-neutral-200">
       <div className="max-w-6xl mx-auto">
@@ -67,112 +78,37 @@ function Services() {
         </div>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-        <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md transition-shadow duration-75">
-          <div>
-            <Image
-              src={OnepageMockup}
-              width={2160}
-              height={960}
-              alt=""
-            />
-          </div>
-          <div className="p-3">
-            <h1 className="font-bold text-neutral-800">One Page</h1>
-            <p className="text-xs text-neutral-500">
-              Presencia en linea simple, promocion de producto o servicio,
-              captar clientes sin un sitio complejo.
-            </p>
-          </div>
-        </a>
-
-        <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
-          <div>
-            <Image
-              src="https://res.cloudinary.com/dys0jotat/image/upload/v1719498780/LandingPageMockupPNG_lif8py.webp"
-              width={2160}
-              height={960}
-              alt=""
-            />
-          </div>
-          <div className="p-3">
-            <h1 className="font-bold text-neutral-800">Landing Page</h1>
-            <p className="text-xs text-neutral-500">
-              Sitio para atraer clientes potenciales interesados en sus
-              servicios y convertirlos en clientes.
-            </p>
-          </div>
-        </a>
-
-        <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
-          <div>
-            <Image
-              src={EcommercepageMockup}
-              width={2160}
-              height={960}
-              alt=""
-            />
-          </div>
-          <div className="p-3">
-            <h1 className="font-bold text-neutral-800">E-commerce</h1>
-            <p className="text-xs text-neutral-500">
-              Creado para vender productos y ampliar su alcance, audiencia y
-              profesionalismo.
-            </p>
-          </div>
-        </a>
-
-        <a href="ar/servicios/paginasweb#modelosweb" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
-          <div>
-            <Image
-              src={AmedidaMockup}
-              width={2160}
-              height={960}
-              alt=""
-            />
-          </div>
-          <div className="p-3">
-            <h1 className="font-bold text-neutral-800">A medida</h1>
-            <p className="text-xs text-neutral-500">
-              Sitios únicos y personalizados que se adaptan a las necesidades
-              específicas de tu negocio.
-            </p>
-          </div>
-        </a>
-
-        <a href="ar/servicios/dominios" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
-          <div>
-            <Image
-              src={DomainsMockup}
-              width={2160}
-              height={960}
-              alt=""
-            />
-          </div>
-          <div className="p-3">
-            <h1 className="font-bold text-neutral-800">Dominios</h1>
-            <p className="text-xs text-neutral-500">
-              Deja que el mundo sepa que estas siempre online.
-            </p>
-          </div>
-        </a>
-
-        <a href="ar/servicios/correosprofecionales" className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md hover:transition-300">
-          <div>
-            <Image
-              src={EmailsMockup}
-              width={2160}
-              height={960}
-              alt=""
-            />
-          </div>
-          <div className="p-3">
-            <h1 className="font-bold text-neutral-800">Correos Profesionales</h1>
-            <p className="text-xs text-neutral-500">
-              Consegui una imagen confiable y respetable de tu marca.
-            </p>
-          </div>
-        </a>
+      <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        {[
+          { href: "ar/servicios/paginasweb#modelosweb", src: OnepageMockup, title: "One Page", description: "Presencia en linea simple, promocion de producto o servicio, captar clientes sin un sitio complejo." },
+          { href: "ar/servicios/paginasweb#modelosweb", src: LandingpageMockup, title: "Landing Page", description: "Sitio para atraer clientes potenciales interesados en sus servicios y convertirlos en clientes." },
+          { href: "ar/servicios/paginasweb#modelosweb", src: EcommercepageMockup, title: "E-commerce", description: "Creado para vender productos y ampliar su alcance, audiencia y profesionalismo." },
+          { href: "ar/servicios/paginasweb#modelosweb", src: AmedidaMockup, title: "A medida", description: "Sitios únicos y personalizados que se adaptan a las necesidades específicas de tu negocio." },
+          { href: "ar/servicios/dominios", src: DomainsMockup, title: "Dominios", description: "Deja que el mundo sepa que estas siempre online." },
+          { href: "ar/servicios/correosprofecionales", src: EmailsMockup, title: "Correos Profesionales", description: "Consegui una imagen confiable y respetable de tu marca." }
+        ].map((service, index) => (
+          <motion.a
+            key={index}
+            href={service.href}
+            className="bg-white rounded-xl border-neutral-300 border-1 shadow-sm p-1 cursor-pointer hover:shadow-md transition-shadow duration-75"
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={itemVariants}
+          >
+            <div>
+              <Image
+                src={service.src}
+                width={2160}
+                height={960}
+                alt=""
+              />
+            </div>
+            <div className="p-3">
+              <h1 className="font-bold text-neutral-800">{service.title}</h1>
+              <p className="text-xs text-neutral-500">{service.description}</p>
+            </div>
+          </motion.a>
+        ))}
       </div>
     </div>
   );
