@@ -66,8 +66,7 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
   domainPrice,
   emailPrice,
 }) => {
-  
-  const [LandingPagePrice, setLandingPagePrice] = useState<number>(119.99);
+  const [LandingPagePrice, setLandingPagePrice] = useState<number>(299.00);
   const [LandingPageQuantity, setLandingPageQuantity] = useState<number>(1);
   const [domainQuantity, setDomainQuantity] = useState<number>(1);
   const [emailQuantity, setEmailQuantity] = useState<number>(1);
@@ -79,13 +78,13 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
     setEmailPlan(null);
   }, []);
 
-    useEffect(() => {
-      console.log("domainPrice actualizado:", domainPrice);
-    }, [domainPrice]);
-  
-    useEffect(() => {
-      console.log("emailPrice actualizado:", emailPrice);
-    }, [emailPrice]);
+  useEffect(() => {
+    console.log("domainPrice actualizado:", domainPrice);
+  }, [domainPrice]);
+
+  useEffect(() => {
+    console.log("emailPrice actualizado:", emailPrice);
+  }, [emailPrice]);
 
   const subtotal =
     LandingPagePrice * LandingPageQuantity +
@@ -97,7 +96,7 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
   return (
     <div className="flex flex-col">
       <div className="">
-        <strong className="text-lg text-neutral-800">Resumen del pedido</strong>
+        <strong className="text-lg text-neutral-800">Order summary</strong>
       </div>
 
       <hr className="mt-4" />
@@ -105,7 +104,7 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
       <div className="relative mt-6 flex-1 ">
         <ProductItem
           icon={<MdOutlineWebAsset className="text-3xl text-[#a482fb]" />}
-         title="Landing Page"
+          title="Landing Page"
           price={LandingPagePrice}
           quantity={LandingPageQuantity}
           setQuantity={setLandingPageQuantity}
@@ -118,7 +117,7 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
 
         <ProductItem
           icon={<TbWorldWww className="text-3xl text-[#a482fb]" />}
-          title="Registrar Dominio"
+          title="Register Domain"
           price={domainPrice}
           quantity={domainQuantity}
           setQuantity={setDomainQuantity}
@@ -130,7 +129,7 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
         />
         <ProductItem
           icon={<MdAlternateEmail className="text-3xl text-[#a482fb]" />}
-          title="Correo Profesional"
+          title="Professional Mail"
           price={emailPrice}
           quantity={emailQuantity}
           setQuantity={setEmailQuantity}
@@ -178,7 +177,6 @@ const ProductItem: React.FC<ProductItemProps> = ({
   setEmailPlan,
   setEmailPrice,
 }) => {
-
   const handleAddQuantity = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };
@@ -222,31 +220,27 @@ const ProductItem: React.FC<ProductItemProps> = ({
     {
       name: "Entrepreneur",
       price: 7.99,
-      feature1: "10 GB de almacenamiento en email",
-      feature2: "10 reglas de reenvío",
-      feature3: "Alias de email",
-      feature4: "Verificación antivirus",
-      feature5: "Antispam avanzado",
-      feature6: "Infraestructura basada en la nube",
+      feature1: "10 GB email storage",
+      feature2: "10 forwarding rules",
+      feature3: "Email aliases",
+      feature4: "Antivirus check",
+      feature5: "Advanced anti-spam",
+      feature6: "Cloud-based infrastructure",
     },
     {
       name: "Corporate",
       price: 11.99,
-      feature1: "50 GB de almacenamiento en email",
-      feature2: "50 reglas de reenvío",
-      feature3: "Alias de email",
-      feature4: "Verificación antivirus",
-      feature5: "Antispam avanzado",
-      feature6: "Infraestructura basada en la nube",
+      feature1: "50 GB email storage",
+      feature2: "50 forwarding rules",
+      feature3: "Email aliases",
+      feature4: "Antivirus check",
+      feature5: "Advanced anti-spam",
+      feature6: "Cloud-based infrastructure",
     },
   ];
 
-  const [selectedDomain, setSelectedDomain] = useState<Domain | null>(
-    null
-  );
-  const [selectedEmail, setSelectedEmail] = useState<Email | null>(
-    null
-  );
+  const [selectedDomain, setSelectedDomain] = useState<Domain | null>(null);
+  const [selectedEmail, setSelectedEmail] = useState<Email | null>(null);
 
   const handleSelectDomain = (domain: Domain) => {
     setSelectedDomain(domain);
@@ -273,7 +267,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
               <div className="flex flex-row items-center justify-between text-base font-semibold text-gray-800">
                 {selectedDomain ? (
                   <>
-                    <h1 className="">Registrar Dominio</h1>
+                    <h1 className="">Register Domain</h1>
                     <h1 className="">${selectedDomain?.price.toFixed(2)}</h1>
                   </>
                 ) : (
@@ -286,7 +280,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
 
               <div className="flex flex-row items-center justify-between text-sm text-gray-800">
                 <div className="flex items-center">
-                  {selectedDomain || title === "Registrar Dominio" ? (
+                  {selectedDomain || title === "Register Domain" ? (
                     <>
                       <button
                         className="hover:text-[#a482fb]"
@@ -294,12 +288,12 @@ const ProductItem: React.FC<ProductItemProps> = ({
                       >
                         {selectedDomain?.name
                           ? selectedDomain.name
-                          : "Elegir Dominio"}
+                          : "Choose Domain"}
                       </button>
                     </>
                   ) : (
                     <>
-                      {selectedEmail || title === "Correo Profesional" ? (
+                      {selectedEmail || title === "Professional Mail" ? (
                         <>
                           <button
                             className="hover:text-[#a482fb]"
@@ -307,7 +301,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                           >
                             {selectedEmail?.name
                               ? selectedEmail.name
-                              : "Elegir Email"}
+                              : "Choose Email"}
                           </button>
                         </>
                       ) : (
@@ -350,7 +344,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
           >
             <ModalContent>
               <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
-                Elige tu dominio para registrar
+                Choose your domain to register
               </ModalHeader>
               <ModalBody>
                 <div className="grid grid-cols-2 sm:grid-cols-3 py-2 gap-4">
@@ -368,7 +362,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                         </h1>
                         <h1 className="text-base text-black">
                           ${domain.price.toFixed(2)}
-                          <span>/año</span>
+                          <span>/year</span>
                         </h1>
                       </div>
                     </button>
@@ -385,7 +379,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
           >
             <ModalContent>
               <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
-                Elige tu plan de Correo Profesional
+                Choose your Professional Mail plan
               </ModalHeader>
               <ModalBody>
                 <div className="grid grid-cols-1 sm:grid-cols-2 py-2 gap-4">
@@ -404,7 +398,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                           </h1>
                           <h1 className="text-xl md:text-2xl font-bold text-neutral-800">
                             ${email.price.toFixed(2)}
-                            <span>/mes</span>
+                            <span>/month</span>
                           </h1>
                         </div>
 

@@ -35,7 +35,7 @@ function Testimonials() {
               stroke-linejoin="round"
             />
           </svg>
-          <h1 className="text-sm font-light text-neutral-600">Clientes</h1>
+          <h1 className="text-sm font-light text-neutral-600">Clients</h1>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -54,11 +54,11 @@ function Testimonials() {
                 Ramos Soft Sillones
               </h1>
               <p className="font-light text-sm text-neutral-500 pr-4">
-                Ramos Soft Sillones es una empresa familiar con 25 años de experiencia en el sector de la venta de sillones. Trabajamos un E-commerce para su marca aumentando sus ventas en un 30%.
+              Ramos Soft Sillones is a family business with 25 years of experience in the armchair sales sector. We work on E-commerce for your brand, increasing your sales by 30%.
               </p>
               <div className="flex flex-row items-center justify-between pt-12">
                 <h1 className="flex flex-row items-center text-sm text-neutral-600 font-light hover:font-semibold hover:text-[#a482fb] cursor-pointer">
-                  Leer mas <BsArrowRightShort className="" />
+                  Read more <BsArrowRightShort className="" />
                 </h1>
                 <Chip size="sm">E-commerce</Chip>
               </div>
@@ -80,11 +80,11 @@ function Testimonials() {
                 Center Car Automotores
               </h1>
               <p className="font-light text-sm text-neutral-500 pr-4">
-                Trabajamos con conjunto con Tomas de Center Car Automotores un E-commerce totalmente autogestionado y 2 pestañas adicionales para sus clientes vendan sus autos y trabajen con ellos.
+              We work together with Tomas from Center Car Automotores, a fully self-managed E-commerce and 2 additional tabs for their clients to sell their cars and work with them.
               </p>
               <div className="flex flex-row items-center justify-between pt-12">
                 <h1 className="flex flex-row items-center text-sm text-neutral-600 font-light hover:font-semibold hover:text-[#a482fb] cursor-pointer">
-                  Leer mas <BsArrowRightShort className="" />
+                  Read more <BsArrowRightShort className="" />
                 </h1>
                 <Chip size="sm">E-commerce</Chip>
               </div>
@@ -106,12 +106,12 @@ function Testimonials() {
                 TecnicFmf
               </h1>
               <p className="font-light text-sm text-neutral-500 pr-4">
-                TecnicFmf nos contacto para que creemos su Landing Page ofreciendo sus servicios al publico trabajando en conjunto con una agencia de marketing digital, llevando el publico de las redes sociales a la web.
+              TecnicFmf contacted us to create their Landing Page offering their services to the public, working together with a digital marketing agency, taking the public from social networks to the web.
               </p>
               <div className="flex flex-row items-center justify-between pt-12">
                 <Link href={""}>
                   <h1 className="flex flex-row items-center text-sm text-neutral-600 font-light hover:font-semibold hover:text-[#a482fb] cursor-pointer">
-                    Leer mas <BsArrowRightShort className="" />
+                    Read more <BsArrowRightShort className="" />
                   </h1>
                 </Link>
                 <Chip size="sm">Landing Page</Chip>

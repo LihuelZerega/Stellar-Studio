@@ -7,64 +7,63 @@ function History() {
         <section className="flex flex-col items-start justify-start w-full space-y-4 mb-12">
           <div className="space-y-4">
             <strong className="mb-4 text-[32px] leading-[44px] text-neutral-800">
-              Una pasión por la tecnología y la innovación.
+              A passion for technology and innovation.
             </strong>
             <p className="mb-0 text-neutral-600">
-              Desde 2017 dedicados a crear desde simples aplicaciones web hasta
-              landing pages para clientes individuales, emprendedores y pequeñas
-              empresas que aún no han incursionado en el mundo digital buscando
-              impulsar sus negocios en línea.
+              Since 2017 dedicated to creating everything from simple web
+              applications to landing pages for individual clients,
+              entrepreneurs and small businesses companies that have not yet
+              ventured into the digital world looking for Boost your online
+              businesses.
             </p>
             <p className="mb-0 text-neutral-600">
-              Con esta visión en mente, nació Stellar Studio en 2024, con el
-              firme propósito de proporcionar una solución integral para
-              aquellos que buscan establecer su presencia en la web pero se
-              sienten abrumados por el proceso.
+              With this vision in mind, Stellar Studio was born in 2024, with
+              the firm purpose to provide a comprehensive solution for those
+              looking to establish their web presence but are They feel
+              overwhelmed by the process.
             </p>
             <p className="mb-0 text-neutral-600">
-              El objetivo de Stellar Studio es claro: simplificar el proceso de
-              adaptación al mundo tecnológico actual para aquellos que están
-              dando sus primeros pasos en línea. Nos esforzamos por ofrecer un
-              servicio integral que permita a los propietarios de pequeñas
-              empresas y emprendedores concentrarse en lo que hacen mejor,
-              mientras nosotros nos encargamos de guiarlos a través de este
-              viaje digital.
+              The goal of Stellar Studio is clear: simplify the process of
+              adaptation to the current technological world for those who are
+              taking your first steps online. We strive to offer a comprehensive
+              service that allows small business owners companies and
+              entrepreneurs focus on what they do best, while we take care of
+              guiding them through this digital journey.
             </p>
             <p className="mb-0 text-neutral-600">
-              Nuestro compromiso va más allá de simplemente crear sitios web;
-              estamos aquí para ofrecer tranquilidad y confianza a nuestros
-              clientes mientras navegan por el complejo mundo de la tecnología.
-              Con Stellar Studio a su lado, pueden estar seguros de que tienen
-              un equipo experimentado y apasionado que los respalda en cada paso
-              del camino.
+              Our commitment goes beyond simply creating websites; We are here
+              to offer peace of mind and confidence to our customers as they
+              navigate the complex world of technology. With Stellar Studio by
+              your side, you can be sure you have an experienced and passionate
+              team that supports you every step of the way of the road.
             </p>
           </div>
           <div className="space-y-4 pt-6">
             <strong className="mb-4 text-[32px] leading-[44px] text-neutral-800">
-              El motor que impulsa el éxito de los clientes
+              The engine that drives customer success
             </strong>
             <p className="mb-0 text-neutral-600">
-              Nuestra misión es impulsar el éxito digital de emprendedores y
-              pequeñas empresas al proporcionar soluciones tecnológicas
-              innovadoras y accesibles. Nos comprometemos a ser el aliado
-              confiable de nuestros clientes en su viaje hacia la excelencia en
-              línea, ofreciendo servicios de desarrollo web, diseño creativo y
-              estrategias digitales personalizadas con motores de busqueda.
+              Our mission is to promote the digital success of entrepreneurs and
+              small businesses by providing technology solutions innovative and
+              accessible. We are committed to being the ally trustworthiness of
+              our clients on their journey towards excellence in online,
+              offering web development services, creative design and
+              personalized digital strategies with search engines.
             </p>
             <p className="mb-0 text-neutral-600">
-              Nos esforzamos por democratizar el acceso a la tecnología y
-              eliminar las barreras que impiden que las empresas alcancen su
-              máximo potencial en línea. Creemos que cada empresa,
-              independientemente de su tamaño o presupuesto, merece tener una
-              presencia digital sólida y efectiva.
+              We strive to democratize access to technology and remove barriers
+              that prevent companies from achieving their maximum online
+              potential. We believe that every company, Regardless of your size
+              or budget, you deserve to have a solid and effective digital
+              presence.
             </p>
             <p className="mb-0 text-neutral-600">
-              Con un enfoque centrado en el cliente, nos dedicamos a comprender
-              las necesidades únicas de cada cliente y a ofrecer soluciones
-              personalizadas que impulsen el crecimiento y la visibilidad en
-              línea. Nuestro compromiso con la calidad, la creatividad y la
-              innovación impulsa todo lo que hacemos, y nos esforzamos por
-              superar las expectativas de nuestros clientes en cada proyecto.
+              With a customer-centric approach, we are dedicated to
+              understanding the unique needs of each client and to offer
+              solutions personalized solutions that drive growth and visibility
+              in line. Our commitment to quality, creativity and Innovation
+              drives everything we do, and we strive to exceed the expectations
+              of our clients in each project.
             </p>
           </div>
         </section>

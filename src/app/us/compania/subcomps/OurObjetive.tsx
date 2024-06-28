@@ -14,32 +14,30 @@ function OurObjetive() {
         <section className="flex flex-col items-start justify-start w-full space-y-4 mb-12">
           <div className="space-y-4">
             <strong className="mb-4 text-[32px] leading-[44px] text-neutral-800 border-b-2 border-[#a482fb]">
-              Nuestro Objetivo
+              Our objetive
             </strong>
             <p className="mb-0 text-neutral-600">
-              Ser reconocidos como líderes en la industria tecnológica,
-              proporcionando soluciones innovadoras y personalizadas que
-              transformen la manera en que las empresas interactúan con sus
-              clientes en línea.
+              Be recognized as leaders in the technology industry, providing
+              innovative and personalized solutions that transform the way
+              companies interact with their online clients.
             </p>
             <p className="mb-0 text-neutral-600">
-              Nos esforzamos por ser pioneros en la adopción de tecnologías
-              emergentes y por anticiparnos a las necesidades futuras de
-              nuestros clientes. Visualizamos un futuro donde Stellar Studio sea
-              sinónimo de excelencia en el diseño web, desarrollo de
-              aplicaciones y estrategias digitales. Queremos ser la primera
-              opción para las empresas que buscan expandir su presencia en línea
-              y aumentar su impacto en el mundo digital. Nos vemos como un socio
-              estratégico para nuestros clientes, brindándoles las herramientas
-              y el conocimiento necesario para alcanzar el éxito en un entorno
-              cada vez más competitivo.
+              We strive to be pioneers in the adoption of technologies emerging
+              and for anticipating the future needs of our clients. We envision
+              a future where Stellar Studio is synonymous with excellence in web
+              design, development of digital applications and strategies. We
+              want to be the first option for businesses looking to expand their
+              online presence and increase your impact in the digital world. We
+              see each other as a partner strategic for our clients, providing
+              them with the tools and the knowledge necessary to achieve success
+              in an environment increasingly competitive.
             </p>
             <p className="mb-0 text-neutral-600">
-              Además, aspiramos a crear un entorno de trabajo inclusivo y
-              colaborativo donde nuestro equipo pueda crecer profesionalmente y
-              desarrollar todo su potencial. Queremos ser reconocidos como
-              empleadores de elección, atrayendo y reteniendo a los mejores
-              talentos en la industria tecnológica.
+              Additionally, we aim to create an inclusive work environment and
+              collaborative where our team can grow professionally and develop
+              your full potential. We want to be recognized as employers of
+              choice, attracting and retaining the best talents in the
+              technology industry.
             </p>
           </div>
         </section>

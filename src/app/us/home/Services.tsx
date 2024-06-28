@@ -54,12 +54,12 @@ function Services() {
                 stroke-width="1.5"
               />
             </svg>
-            <h1 className="text-sm font-light text-neutral-600">Servicios</h1>
+            <h1 className="text-sm font-light text-neutral-600">Services</h1>
           </div>
 
           <div className="text-neutral-600 font-light hover:font-semibold hover:text-[#a482fb] cursor-pointer hidden sm:block">
             <h1 className="flex flex-row items-center text-sm">
-              Consulte nuestros productos y servicios{" "}
+              Consult our products and services{" "}
               <BsArrowRightShort className="" />
             </h1>
           </div>
@@ -67,25 +67,62 @@ function Services() {
 
         <div className="flex flex-col md:flex-row items-start justify-between md:space-x-12 pt-6 sm:pt-10 pb-12">
           <h1 className="text-3xl text-neutral-800 ">
-            ¿Qué podemos construir en{" "}
+            ¿What can we build in{" "}
             <span className="border-b-2 border-[#a482fb]">Stellar</span>{" "}
             <span className="border-b-2 border-[#a482fb]">Studio</span>?
           </h1>
           <p className="text-xl text-neutral-500 pt-4 md:pt-1">
-            Nuestros modelos estan diseñados para ser utilizados en cualquier
-            tipo de negocio.
+            Our models are designed to be used in any Business Type.
           </p>
         </div>
       </div>
-      
-      <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+
+      <div
+        ref={ref}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto"
+      >
         {[
-          { href: "ar/servicios/paginasweb#modelosweb", src: OnepageMockup, title: "One Page", description: "Presencia en linea simple, promocion de producto o servicio, captar clientes sin un sitio complejo." },
-          { href: "ar/servicios/paginasweb#modelosweb", src: LandingpageMockup, title: "Landing Page", description: "Sitio para atraer clientes potenciales interesados en sus servicios y convertirlos en clientes." },
-          { href: "ar/servicios/paginasweb#modelosweb", src: EcommercepageMockup, title: "E-commerce", description: "Creado para vender productos y ampliar su alcance, audiencia y profesionalismo." },
-          { href: "ar/servicios/paginasweb#modelosweb", src: AmedidaMockup, title: "A medida", description: "Sitios únicos y personalizados que se adaptan a las necesidades específicas de tu negocio." },
-          { href: "ar/servicios/dominios", src: DomainsMockup, title: "Dominios", description: "Deja que el mundo sepa que estas siempre online." },
-          { href: "ar/servicios/correosprofecionales", src: EmailsMockup, title: "Correos Profesionales", description: "Consegui una imagen confiable y respetable de tu marca." }
+          {
+            href: "ar/servicios/paginasweb#modelosweb",
+            src: OnepageMockup,
+            title: "One Page",
+            description:
+              "Simple online presence, product or service promotion, attract customers without a complex site.",
+          },
+          {
+            href: "ar/servicios/paginasweb#modelosweb",
+            src: LandingpageMockup,
+            title: "Landing Page",
+            description:
+              "Site to attract potential clients interested in your services and convert them into clients.",
+          },
+          {
+            href: "ar/servicios/paginasweb#modelosweb",
+            src: EcommercepageMockup,
+            title: "E-commerce",
+            description:
+              "Created to sell products and expand your reach, audience and professionalism.",
+          },
+          {
+            href: "ar/servicios/paginasweb#modelosweb",
+            src: AmedidaMockup,
+            title: "Tailor-made",
+            description:
+              "Unique and personalized sites that adapt to the specific needs of your business.",
+          },
+          {
+            href: "ar/servicios/dominios",
+            src: DomainsMockup,
+            title: "Domains",
+            description: "Let the world know that you are always online.",
+          },
+          {
+            href: "ar/servicios/correosprofecionales",
+            src: EmailsMockup,
+            title: "Professional Emails",
+            description:
+              "Get a reliable and respectable image of your brand.",
+          },
         ].map((service, index) => (
           <motion.a
             key={index}
@@ -96,12 +133,7 @@ function Services() {
             variants={itemVariants}
           >
             <div>
-              <Image
-                src={service.src}
-                width={2160}
-                height={960}
-                alt=""
-              />
+              <Image src={service.src} width={2160} height={960} alt="" />
             </div>
             <div className="p-3">
               <h1 className="font-bold text-neutral-800">{service.title}</h1>

@@ -567,7 +567,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
         </div>
 
         <div className="flex flex-row items-end justify-start">
-          <p className="text-5xl font-bold text-neutral-700 mt-7">€119.000</p>
+          <p className="text-5xl font-bold text-neutral-700 mt-7">€119</p>
           <p className="ml-2 mt-3 text-base text-gray-500">/Pago único</p>
         </div>
 

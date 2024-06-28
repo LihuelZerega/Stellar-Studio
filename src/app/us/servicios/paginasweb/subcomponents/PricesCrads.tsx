@@ -31,7 +31,10 @@ function PricesCradsEs() {
     <div className="bg-neutral-100">
       <section className="py-12 md:py-24 pb-4 border-t-1 border-neutral-200">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div ref={ref} className="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 text-left lg:max-w-full lg:grid-cols-3">
+          <div
+            ref={ref}
+            className="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 text-left lg:max-w-full lg:grid-cols-3"
+          >
             {/* Card 1 */}
             <motion.div
               initial="hidden"
@@ -74,7 +77,7 @@ function PricesCradsEs() {
               className="text-md font-semibold text-[#a482fb] cursor-pointer"
               onClick={onOpen}
             >
-              Terminos de Pago
+              Payment terms
             </h1>
 
             <div className="flex flex-col gap-2">
@@ -89,63 +92,64 @@ function PricesCradsEs() {
                   {(onClose) => (
                     <>
                       <ModalHeader className="flex flex-col gap-1 border-b text-xl text-[#a482fb]">
-                        Terminos de Pago
+                        Payment terms
                       </ModalHeader>
                       <ModalBody>
                         <div className="mb-3">
-                          <h1 className="text-lg font-semibold">Pago Único</h1>
+                          <h1 className="text-lg font-semibold">
+                            Single Payment
+                          </h1>
                           <p className="text-sm font-light text-neutral-600">
-                            El pago por nuestros servicios de desarrollo web es
-                            unico.
+                            Payment for our web development services is only.
+                          </p>
+                        </div>
+                        <div className="mb-3">
+                          <h1 className="text-lg font-semibold">30% advance</h1>
+                          <p className="text-sm font-light text-neutral-600">
+                            To start the work, an advance is required of 30% of
+                            the total cost of the contracted product. This
+                            advance must be paid before it begins the design and
+                            development process.
                           </p>
                         </div>
                         <div className="mb-3">
                           <h1 className="text-lg font-semibold">
-                            Adelanto del 30%
+                            Payment of Remaining Balance
                           </h1>
                           <p className="text-sm font-light text-neutral-600">
-                            Para dar inicio al trabajo, se requiere un adelanto
-                            del 30% del costo total del producto contratado.
-                            Este adelanto se debe abonar antes de que comience
-                            el proceso de diseño y desarrollo.
-                          </p>
-                        </div>
-                        <div className="mb-3">
-                          <h1 className="text-lg font-semibold">
-                            Pago del Saldo Restante
-                          </h1>
-                          <p className="text-sm font-light text-neutral-600">
-                            El saldo restante del pago se deberá abonar una vez
-                            que el producto contratado este entregado y
-                            finalizado.
+                            The remaining balance of the payment must be paid
+                            once that the contracted product is delivered and
+                            finalized.
                           </p>
                         </div>
                         <div className="mb-1">
-                          <h1 className="text-lg font-semibold">Formas de Pago</h1>
+                          <h1 className="text-lg font-semibold">
+                            Payment Methods
+                          </h1>
                           <p className="text-sm font-light text-neutral-600">
-                            Aceptamos pagos mediante transferencia bancaria,
-                            Mercado Pago, PayPal, entre otros. Los detalles
-                            específicos para realizar el pago se proporcionarán
-                            al momento de la contratación de nuestros servicios.
+                            We accept payments by bank transfer, Mercado Pago,
+                            PayPal, among others. The details specifics to make
+                            the payment will be provided at the time of
+                            contracting our services.
                             <Link
-                              href="/ar/informacion#opinionesformasdepago"
+                              href="/us/information#opinionesformasdepago"
                               className="text-[#a482fb] hover:text-[#775fb6] ml-1"
                             >
-                              Ver mas Metodos de Pago.
+                              See more Payment Methods.
                             </Link>
                           </p>
                         </div>
                         <p className="text-sm font-light text-neutral-600">
-                          Por favor, ten en cuenta que los términos de pago
-                          están sujetos a cambios y pueden variar según el tipo
-                          de servicio contratado. Para más detalles o preguntas
-                          relacionadas con los términos de pago, no dudes en
-                          ponerte en contacto con nuestro equipo.
+                          Please note that the payment terms are subject to
+                          change and may vary depending on the type of
+                          contracted service. For more details or questions
+                          related to payment terms, please feel free to Get in
+                          touch with our team.
                           <Link
-                            href="/ar/informacion#opinionesformasdepago"
+                            href="/us/information#opinionesformasdepago"
                             className="text-[#a482fb] hover:text-[#775fb6] ml-1"
                           >
-                            Ver mas Informacion.
+                            See more information.
                           </Link>
                         </p>
                       </ModalBody>

@@ -148,22 +148,22 @@ function Herosection() {
 
         <div>
           <h1 className="text-[#a482fb] text-lg md:text-xl mt-3 font-semibold tracking-wide uppercase select-none">
-            PAGINAS WEB
+            WEBSITES
           </h1>
         </div>
       </div>
       <div>
         <h1 className="text-center my-4 text-[50px] leading-[64px] md:text-[56px] md:leading-[72px] text-neutral-800 ">
-          Destacá tu presencia en línea <br className="hidden lg:block"/> con tu Página Web
+          Highlight your online presence <br className="hidden lg:block" /> with
+          your Website
         </h1>
 
         <p
           className="text-center last:mb-0 mb-0 text-lg text-neutral-500 px-3"
           data-label-id="0"
         >
-          Elija un modelo que incluya las mejores funciones para atraer a su{" "}
-          <br />
-          audiencia, generar lealtad en los clientes e impulsar las ventas.
+          Choose a model that includes the best features to attract your <br />
+          audience, generate customer loyalty and boost sales.
         </p>
       </div>
     </div>

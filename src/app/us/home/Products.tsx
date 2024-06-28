@@ -22,40 +22,40 @@ import { Accordion, AccordionItem } from "@nextui-org/accordion";
 
 function Products() {
   const ecommerce1 =
-    "El proceso de agregar productos al carrito y proceder al pago son simples e intuitivos, minimizando el número de clics necesarios. Implementamos medidas de seguridad robustas como SSL y proporciona diversas opciones de pago para adaptarse a las preferencias de los clientes.";
+    "The process of adding products to the cart and proceeding to checkout is simple and intuitive, minimizing the number of clicks needed. We implement robust security measures such as SSL and provide various payment options to suit customer preferences.";
   const ecommerce2 =
-    "Creamos un sistema de gestión de inventario que actualiza automáticamente las existencias a medida que se realicen ventas. Además, proporcionamos a los clientes y al equipo de administración acceso a un historial detallado de órdenes.";
+    "We create an inventory management system that automatically updates stock as sales are made. Additionally, we provide customers and the management team with access to a detailed order history.";
   const ecommerce3 =
-    "Adaptá tu tienda online a diferentes regiones ofreciendo contenido, precios y opciones de envío localizados. Vende a través de múltiples canales como marketplaces, redes sociales y tiendas físicas. Asegúrate de que la experiencia del cliente sea consistente y coordinada en todos los puntos de venta.";
+    "Adapt your online store to different regions by offering localized content, prices, and shipping options. Sell through multiple channels such as marketplaces, social media, and physical stores. Ensure that the customer experience is consistent and coordinated across all sales points.";
   const ecommerce4 =
-    "Presentá a tus clientes descripciones detalladas, imágenes de alta calidad y videos de tus productos. Además, implementamos un sistema para la venta y redención de tarjetas de regalo.";
+    "Present your customers with detailed descriptions, high-quality images, and videos of your products. Additionally, we implement a system for the sale and redemption of gift cards.";
 
   const landing1 =
-    "Propuesta de valor visible y clara desde el primer vistazo, explicando brevemente qué ofreces, cómo resolverás el problema del visitante y por qué deberían elegir tu oferta sobre otras.";
+    "Visible and clear value proposition from the first glance, briefly explaining what you offer, how you will solve the visitor's problem, and why they should choose your offer over others.";
   const landing2 =
-    "Creamos un diseño limpio y profesional que dirija la atención hacia la propuesta de valor y la llamada a la acción (CTA). Usamos imágenes y gráficos de alta calidad que refuercen tu mensaje y no sobrecargues la página con elementos innecesarios.";
+    "We create a clean and professional design that directs attention to the value proposition and the call to action (CTA). We use high-quality images and graphics that reinforce your message and do not overload the page with unnecessary elements.";
   const landing3 =
-    "Incluimos una o varias CTAs bien visibles y claramente definidos. Asegurándonos de que el texto sea convincente y que destaque en el diseño, guiando al usuario hacia la acción deseada, como registrarse, descargar un recurso, o hacer una compra.";
+    "We include one or several well-visible and clearly defined CTAs. Ensuring that the text is compelling and stands out in the design, guiding the user towards the desired action, such as signing up, downloading a resource, or making a purchase.";
   const landing4 =
-    "Opcionalmente añadimos testimonios, reseñas o logotipos de clientes destacados para generar confianza y credibilidad. Las pruebas sociales son fundamentales para convencer a los visitantes de que otros ya han encontrado valor en tu oferta.";
+    "Optionally, we add testimonials, reviews, or logos of prominent clients to generate trust and credibility. Social proof is essential to convince visitors that others have already found value in your offer.";
 
   const onepage1 =
-    "Presentamos un mensaje claro y directo, sin información superflua, con cada sección debe ser breve y enfocada en lo esencial.";
+    "We present a clear and direct message, without superfluous information, with each section being brief and focused on the essentials.";
   const onepage2 =
-    "Creamos un diseño limpio y profesional con un buen uso de espacios en blanco, tipografías legibles y colores coherentes con la identidad de la marca.";
+    "We create a clean and professional design with good use of white space, readable fonts, and colors consistent with the brand identity.";
   const onepage3 =
-    "Organizamos el contenido de manera lógica, con encabezados y subtítulos claros. Priorizamos la información más importante al inicio para captar la atención del visitante.";
+    "We organize the content logically, with clear headings and subheadings. We prioritize the most important information at the beginning to capture the visitor's attention.";
   const onepage4 =
-    "Incluimos botones o enlaces claros y visibles que guíen al usuario hacia la acción deseada, como comprar un producto, suscribirse a un boletín o contactar a la empresa.";
+    "We include clear and visible buttons or links that guide the user towards the desired action, such as buying a product, subscribing to a newsletter, or contacting the company.";
 
   const amedida1 =
-    "Comprendemos tus necesidades y objetivos. Realizamos un análisis detallado del público objetivo y la competencia. Definimos un plan de desarrollo que incluya el alcance del proyecto, los requisitos funcionales y no funcionales, y un cronograma detallado.";
+    "We understand your needs and objectives. We conduct a detailed analysis of the target audience and competition. We define a development plan that includes the project scope, functional and non-functional requirements, and a detailed timeline.";
   const amedida2 =
-    "Creamos un diseño único y adaptado a la identidad de la marca. Nos aseguramos de que el diseño sea responsivo, accesible y centrado en el usuario, proporcionando una experiencia de navegación intuitiva y agradable en todos los dispositivos.";
+    "We create a unique design adapted to the brand identity. We ensure that the design is responsive, accessible, and user-centered, providing an intuitive and pleasant browsing experience on all devices.";
   const amedida3 =
-    "Implementamos las funcionalidades utilizando tecnologías y prácticas de codificación modernas. Realizamos pruebas exhaustivas para garantizar que la página funcione correctamente en diferentes navegadores y dispositivos, y que cumpla con los estándares de seguridad y rendimiento.";
+    "We implement functionalities using modern coding technologies and practices. We conduct thorough testing to ensure the site works correctly across different browsers and devices and meets security and performance standards.";
   const amedida4 =
-    "Optimizamos el rendimiento del sitio para mejorar la velocidad de carga y la experiencia del usuario. Proporcionamos un plan de mantenimiento continuo que incluya actualizaciones de software, monitoreo de seguridad, y mejoras basadas en los comentarios de los usuarios y análisis de datos.";
+    "We optimize the site's performance to improve loading speed and user experience. We provide a continuous maintenance plan that includes software updates, security monitoring, and improvements based on user feedback and data analysis.";
 
   return (
     <Tabs defaultValue="1">
@@ -98,7 +98,7 @@ function Products() {
                   stroke-linejoin="round"
                 />
               </svg>
-              <h1 className="text-sm font-light text-neutral-600">Productos</h1>
+              <h1 className="text-sm font-light text-neutral-600">Products</h1>
             </div>
 
             <Tabs.List className="hidden lg:block pb-2">
@@ -112,7 +112,7 @@ function Products() {
                 One Page
               </Tabs.Trigger>
               <Tabs.Trigger value="4" className="text-xs md:text-sm">
-                A medida
+                Tailor-made
               </Tabs.Trigger>
             </Tabs.List>
           </div>
@@ -129,7 +129,7 @@ function Products() {
                 One Page
               </Tabs.Trigger>
               <Tabs.Trigger value="4" className="text-xs md:text-sm">
-                A medida
+                Tailor-made
               </Tabs.Trigger>
             </div>
             <div></div>
@@ -138,8 +138,8 @@ function Products() {
           <div className="flex flex-col md:flex-row items-start justify-between md:space-x-12 pt-6 sm:pt-10 pb-12">
             <div className="w-full md:w-1/2">
               <h1 className="text-3xl text-neutral-800 font-semibold">
-                En StellarStudio priorizamos la experiencia del usuario en cada
-                entrega, sin importar el tamaño de la empresa.
+                At StellarStudio we prioritize the user experience in each
+                delivery, regardless of the size of the company.
               </h1>
             </div>
             <div className="w-full md:w-1/2 mt-4 md:mt-0">
@@ -147,32 +147,32 @@ function Products() {
                 <Accordion variant="splitted">
                   <AccordionItem
                     key="1"
-                    aria-label="Carrito de compra y Pagos"
-                    title="Carrito de compra y Pagos"
+                    aria-label="Shopping Cart and Payments"
+                    title="Shopping Cart and Payments"
                     startContent={<ShoppingCart color="#a482fb" />}
                   >
                     {ecommerce1}
                   </AccordionItem>
                   <AccordionItem
                     key="2"
-                    aria-label="Inventario y Ordenes"
-                    title="Inventario y Ordenes"
+                    aria-label="Inventory and Orders"
+                    title="Inventory and Orders"
                     startContent={<FolderOpen color="#a482fb" />}
                   >
                     {ecommerce2}
                   </AccordionItem>
                   <AccordionItem
                     key="3"
-                    aria-label="Regiones y Canales de venta"
-                    title="Regiones y Canales de venta"
+                    aria-label="Regions and Sales Channels"
+                    title="Regions and Sales Channels"
                     startContent={<GlobeEurope color="#a482fb" />}
                   >
                     {ecommerce3}
                   </AccordionItem>
                   <AccordionItem
                     key="4"
-                    aria-label="Productos, Precios y Tarjetas de regalo"
-                    title="Productos, Precios y Tarjetas de regalo"
+                    aria-label="Products, Prices, and Gift Cards"
+                    title="Products, Prices, and Gift Cards"
                     startContent={<Gift color="#a482fb" />}
                   >
                     {ecommerce4}
@@ -183,32 +183,32 @@ function Products() {
                 <Accordion variant="splitted">
                   <AccordionItem
                     key="1"
-                    aria-label="Propuesta de Valor Clara y Atractiva"
-                    title="Propuesta de Valor Clara y Atractiva"
+                    aria-label="Clear and Attractive Value Proposition"
+                    title="Clear and Attractive Value Proposition"
                     startContent={<Puzzle color="#a482fb" />}
                   >
                     {landing1}
                   </AccordionItem>
                   <AccordionItem
                     key="2"
-                    aria-label="Diseño Enfocado y Atractivo"
-                    title="Diseño Enfocado y Atractivo"
+                    aria-label="Focused and Attractive Design"
+                    title="Focused and Attractive Design"
                     startContent={<Swatch color="#a482fb" />}
                   >
                     {landing2}
                   </AccordionItem>
                   <AccordionItem
                     key="3"
-                    aria-label="Llamados a la Acción Claros y Persuasivos"
-                    title="Llamados a la Acción Claros y Persuasivos"
+                    aria-label="Clear and Persuasive Calls to Action"
+                    title="Clear and Persuasive Calls to Action"
                     startContent={<RocketLaunch color="#a482fb" />}
                   >
                     {landing3}
                   </AccordionItem>
                   <AccordionItem
                     key="4"
-                    aria-label="Testimonios y Pruebas Sociales"
-                    title="Testimonios y Pruebas Sociales"
+                    aria-label="Testimonials and Social Proof"
+                    title="Testimonials and Social Proof"
                     startContent={<Newspaper color="#a482fb" />}
                   >
                     {landing4}
@@ -219,32 +219,32 @@ function Products() {
                 <Accordion variant="splitted">
                   <AccordionItem
                     key="1"
-                    aria-label="Claridad y Concisión"
-                    title="Claridad y Concisión"
+                    aria-label="Clarity and Conciseness"
+                    title="Clarity and Conciseness"
                     startContent={<Sparkles color="#a482fb" />}
                   >
                     {onepage1}
                   </AccordionItem>
                   <AccordionItem
                     key="2"
-                    aria-label="Diseño Visual Atractivo"
-                    title="Diseño Visual Atractivo"
+                    aria-label="Attractive Visual Design"
+                    title="Attractive Visual Design"
                     startContent={<Swatch color="#a482fb" />}
                   >
                     {onepage2}
                   </AccordionItem>
                   <AccordionItem
                     key="3"
-                    aria-label="Jerarquía de la Información"
-                    title="Jerarquía de la Información"
+                    aria-label="Information Hierarchy"
+                    title="Information Hierarchy"
                     startContent={<CircleStack color="#a482fb" />}
                   >
                     {onepage3}
                   </AccordionItem>
                   <AccordionItem
                     key="4"
-                    aria-label="Llamados a la Acción claves"
-                    title="Llamados a la Acción claves"
+                    aria-label="Key Calls to Action"
+                    title="Key Calls to Action"
                     startContent={<RocketLaunch color="#a482fb" />}
                   >
                     {onepage4}
@@ -255,38 +255,38 @@ function Products() {
                 <Accordion variant="splitted">
                   <AccordionItem
                     key="1"
-                    aria-label="Análisis y Planificación"
-                    title="Análisis y Planificación"
+                    aria-label="Analysis and Planning"
+                    title="Analysis and Planning"
                     startContent={<LightBulb color="#a482fb" />}
                   >
                     {amedida1}
                   </AccordionItem>
                   <AccordionItem
                     key="2"
-                    aria-label="Diseño Personalizado"
-                    title="Diseño Personalizado"
+                    aria-label="Customized Design"
+                    title="Customized Design"
                     startContent={<Star color="#a482fb" />}
                   >
                     {amedida2}
                   </AccordionItem>
                   <AccordionItem
                     key="3"
-                    aria-label="Desarrollo y Pruebas"
-                    title="Desarrollo y Pruebas"
+                    aria-label="Development and Testing"
+                    title="Development and Testing"
                     startContent={<CommandLine color="#a482fb" />}
                   >
                     {amedida3}
                   </AccordionItem>
                   <AccordionItem
                     key="4"
-                    aria-label="Optimización y Mantenimiento"
-                    title="Optimización y Mantenimiento"
+                    aria-label="Optimization and Maintenance"
+                    title="Optimization and Maintenance"
                     startContent={<CogSixTooth color="#a482fb" />}
                   >
                     {amedida4}
                   </AccordionItem>
                 </Accordion>
-              </Tabs.Content>{" "}
+              </Tabs.Content>
             </div>
           </div>
         </div>

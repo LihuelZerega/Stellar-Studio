@@ -34,7 +34,7 @@ function EcommerceDemos() {
             />
           </svg>
         </span>
-        <span className="text-sm">Ver demostracion</span>
+        <span className="text-sm">See demo</span>
       </a>
     </div>
   );

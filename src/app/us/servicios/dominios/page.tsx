@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import LoadingPage from "@/ui/LoadingPage";
-import NavBar from "@/app/ar/home/NavBar";
-import HeroSection from "@/app/ar/servicios/dominios/subcomponents/HeroSection";
-import PopularDomains from "@/app/ar/servicios/dominios/subcomponents/PopularDomains";
+import NavBar from "@/app/us/home/NavBar";
+import HeroSection from "@/app/us/servicios/dominios/subcomponents/HeroSection";
+import PopularDomains from "@/app/us/servicios/dominios/subcomponents/PopularDomains";
 import Tips from "@/components/ServicesComponents/DomainComponents/Es/Tips";
 import Features from "@/components/ServicesComponents/DomainComponents/Es/Features";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";

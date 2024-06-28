@@ -39,15 +39,14 @@ function Features() {
         <section className="flex flex-col items-start justify-start w-full space-y-4 mb-12">
           <div className="space-y-4">
             <strong className="mb-4 text-[32px] leading-[44px] text-neutral-800">
-              Servicio Personalizado y de Alto Rendimiento.
+              Personalized and High Performance Service.
             </strong>
             <p className="mb-0 text-neutral-600 md:max-w-4xl">
-              Ofrecemos soluciones a medida que se adaptan perfectamente a las
-              necesidades de tu negocio, asegurando la máxima seguridad y
-              rendimiento. Desde el diseño y desarrollo web hasta la protección
-              avanzada y el almacenamiento de alto rendimiento, nuestros
-              servicios garantizan una experiencia excepcional para ti y tus
-              usuarios.
+              We offer tailor-made solutions that perfectly adapt to the needs
+              of your business, ensuring maximum security and performance. From
+              web design and development to protection advanced and
+              high-performance storage, our services guarantee an exceptional
+              experience for you and your users.
             </p>
           </div>
         </section>
@@ -61,13 +60,13 @@ function Features() {
             className="mt-6 lg:mt-10"
           >
             <strong className="text-neutral-800">
-              Diseño y desarrollo personalizado
+              Custom design and development
             </strong>
             <p className="mt-2 text-neutral-500">
-              Creamos sitios web personalizados que se adaptan a las necesidades
-              específicas de tu negocio. Ya sea un sitio web informativo, una
-              tienda en línea o una aplicación web, diseñamos y desarrollamos
-              soluciones personalizadas que reflejan su marca y sus objetivos.
+              We create custom websites that adapt to your needs specific to
+              your business. Whether it is an informative website, a online
+              store or a web application, we design and develop customized
+              solutions that reflect your brand and your goals.
             </p>
           </motion.div>
 
@@ -79,14 +78,13 @@ function Features() {
             className="mt-6 lg:mt-10"
           >
             <strong className="text-neutral-800">
-              Seguridad y rendimiento
+              Security and performance
             </strong>
             <p className="mt-2 text-neutral-500">
-              Mantenemos su sitio web seguro con funciones de seguridad
-              avanzadas, como protección DDoS y escaneo de malware. Además,
-              garantizamos un alto rendimiento para que su sitio cargue
-              rápidamente y ofrezca una experiencia excepcional a sus
-              visitantes.
+              We keep your website safe with security features advanced
+              features, such as DDoS protection and malware scanning. Besides,
+              we guarantee high performance so your site loads quickly and
+              deliver an exceptional experience to your visitors.
             </p>
           </motion.div>
 
@@ -98,13 +96,12 @@ function Features() {
             className="mt-6 lg:mt-10"
           >
             <strong className="text-neutral-800">
-              Almacenamiento NVMe de alto rendimiento
+              High-performance NVMe storage
             </strong>
             <p className="mt-2 text-neutral-500">
-              Utilizamos unidades de estado sólido NVMe (Non-Volatile Memory
-              Express) de alto rendimiento para almacenar sus datos y archivos.
-              Esto garantiza tiempos de carga rápidos y una experiencia de
-              usuario ágil.
+              We use NVMe (Non-Volatile Memory) solid state drives Express) high
+              performance to store your data and files. This ensures fast
+              loading times and a smooth experience. agile user.
             </p>
           </motion.div>
 
@@ -115,12 +112,12 @@ function Features() {
             variants={itemVariants}
             className="mt-6 lg:mt-10"
           >
-            <strong className="text-neutral-800">Ancho de banda ilimitado</strong>
+            <strong className="text-neutral-800">Unlimited bandwidth</strong>
             <p className="mt-2 text-neutral-500">
-              Ofrecemos ancho de banda ilimitado para que su sitio web pueda
-              manejar cualquier cantidad de tráfico sin preocuparse por las
-              restricciones de datos. Esto es esencial para sitios web con picos
-              de tráfico o mucho contenido multimedia.
+              We offer unlimited bandwidth so your website can handle any amount
+              of traffic without worrying about the data restrictions. This is
+              essential for spiked websites of traffic or a lot of multimedia
+              content.
             </p>
           </motion.div>
 
@@ -131,13 +128,12 @@ function Features() {
             variants={itemVariants}
             className="mt-6 lg:mt-10"
           >
-            <strong className="text-neutral-800">Protección DDoS</strong>
+            <strong className="text-neutral-800">DDoS Protection</strong>
             <p className="mt-2 text-neutral-500">
-              Nuestra infraestructura de servidores cuenta con protección DDoS
-              estándar para detectar y mitigar ataques distribuidos de
-              denegación de servicio. Esto garantiza que su sitio web permanezca
-              en línea y accesible incluso en situaciones de mucho tráfico
-              malicioso.
+              Our server infrastructure has DDoS protection standard for
+              detecting and mitigating distributed attacks denial of service.
+              This ensures that your website remains online and accessible even
+              in high traffic situations malicious.
             </p>
           </motion.div>
 
@@ -149,13 +145,13 @@ function Features() {
             className="mt-6 lg:mt-10"
           >
             <strong className="text-neutral-800">
-              Firewall de aplicaciones web
+              Web Application Firewall
             </strong>
             <p className="mt-2 text-neutral-500">
-              Implementamos un firewall de aplicaciones web (WAF) que monitorea
-              y filtra el tráfico web entrante. Esto ayuda a bloquear amenazas
-              como inyecciones SQL, ataques de fuerza bruta y otros intentos de
-              explotar vulnerabilidades de seguridad en su sitio.
+              We implement a web application firewall (WAF) that monitors and
+              filters incoming web traffic. This helps block threats such as SQL
+              injections, brute force attacks, and other attempts to exploit
+              security vulnerabilities on your site.
             </p>
           </motion.div>
         </section>

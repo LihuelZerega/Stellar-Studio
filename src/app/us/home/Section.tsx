@@ -81,14 +81,14 @@ export default function Example() {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <p className="text-base font-semibold leading-7 text-[#a482fb]">
-                Paginas Web
+                Websites
               </p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Diseño y desarrollo web
+                Web design and development
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-                Desarrolla tu presencia online con una página web profesional y
-                moderna. Consigue más clientes y haz crecer tu negocio.
+                Develop your online presence with a professional website and
+                modern. Get more clients and grow your business.
               </p>
             </div>
           </div>
@@ -111,13 +111,13 @@ export default function Example() {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Diseño y desarrollo personalizados
+                      Custom design and development
                     </strong>{" "}
-                    Creamos sitios web personalizados que se adaptan a las
-                    necesidades específicas de tu negocio. Ya sea un sitio web
-                    informativo, una tienda en línea o una aplicación web,
-                    diseñamos y desarrollamos soluciones personalizadas que
-                    reflejan su marca y sus objetivos.
+                    We create custom websites that adapt to the specific needs
+                    of your business. Whether it's a website informative, an
+                    online store or a web application, We design and develop
+                    customized solutions that They reflect your brand and your
+                    goals.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -127,13 +127,13 @@ export default function Example() {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Seguridad y rendimiento
+                      Security and performance
                     </strong>{" "}
-                    Mantenemos su sitio web seguro con funciones de seguridad
-                    avanzadas, como protección DDoS y escaneo de malware.
-                    Además, garantizamos un alto rendimiento para que su sitio
-                    cargue rápidamente y ofrezca una experiencia excepcional a
-                    sus visitantes.
+                    We keep your website safe with security features advanced
+                    features, such as DDoS protection and malware scanning. In
+                    addition, we guarantee high performance so that your site
+                    charge quickly and deliver an exceptional experience to your
+                    visitors.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -143,12 +143,12 @@ export default function Example() {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Estrategias de SEO y Posicionamiento
+                      SEO and Positioning Strategies
                     </strong>{" "}
-                    Te ayudamos a desarrollar estrategias efectivas de marketing
-                    online para aumentar la visibilidad de tu negocio. A partir
-                    de SEO y posicionamiento web, le brindamos las herramientas
-                    para llegar a su público objetivo.
+                    We help you develop effective marketing strategies online to
+                    increase the visibility of your business. Starting of SEO
+                    and web positioning, we provide you with the tools to reach
+                    your target audience.
                   </span>
                 </li>
               </ul>
@@ -168,14 +168,14 @@ export default function Example() {
           <div className="lg:pl-4">
             <div className="w-full">
               <p className="text-base font-semibold leading-7 text-[#a482fb]">
-                Dominios
+                Domains
               </p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Dominios personalizados
+                Custom domains
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-                Consigue el nombre perfecto para tu página web y correo
-                electrónico. Protege tu marca y aumenta tu visibilidad online.
+                Get the perfect name for your website and email electronic.
+                Protect your brand and increase your online visibility.
               </p>
             </div>
           </div>
@@ -198,11 +198,11 @@ export default function Example() {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Dominios Populares / Generacon con IA
+                      Popular Domains / Generacon with AI
                     </strong>{" "}
-                    Asegurá tu presencia en línea de manera rápida y sencilla.
-                    Desde nombres de dominio estándar hasta extensiones
-                    especializadas, tenemos la solución perfecta.
+                    Secure your online presence quickly and easily. From
+                    standard domain names to extensions specialized, we have the
+                    perfect solution.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -212,11 +212,11 @@ export default function Example() {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Aseguramos tu privacidad
+                      We ensure your privacy
                     </strong>{" "}
-                    Protegé tus datos personales con Stellar Studio. Nuestro
-                    servicio de protección de privacidad de dominio es gratuito
-                    y mantendrá tu información personal oculta de los spammers.
+                    Protect your personal data with Stellar Studio. Our domain
+                    privacy protection service is free and will keep your
+                    personal information hidden from spammers.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -251,15 +251,15 @@ export default function Example() {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <p className="text-base font-semibold leading-7 text-[#a482fb]">
-                Correos
+                Emails
               </p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Correos Profesionales
+                Professional Emails
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-                Da una imagen profesional a tu negocio con un correo electrónico
-                personalizado. Mejora la comunicación con tus clientes y
-                colaboradores.
+                Give your business a professional image with an email
+                personalized. Improve communication with your clients and
+                collaborators.
               </p>
             </div>
           </div>
@@ -282,11 +282,11 @@ export default function Example() {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Gran almacenamiento
+                      Great storage
                     </strong>{" "}
-                    Si querés hacer crecer tu negocio, necesitás los recursos
-                    adecuados. Nuestros servicios de email gestionado ofrecen
-                    hasta 50 GB de almacenamiento
+                    If you want to grow your business, you need the resources
+                    suitable. Our managed email services offer up to 50 GB of
+                    storage
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -296,11 +296,11 @@ export default function Example() {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Alias de email
+                      Email aliases
                     </strong>{" "}
-                    Mejorá tu identidad online e impulsá tu email marketing,
-                    inspirando confianza y profesionalismo en tus clientes al
-                    usar un mail empresarial.
+                    Improve your online identity and boost your email marketing,
+                    inspiring confidence and professionalism in your clients by
+                    use a business email.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -310,11 +310,11 @@ export default function Example() {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Seguros, privados y sin anuncios
+                      Secure, private and without ads
                     </strong>{" "}
-                    Con los planes de correo electrónico corporativo obtenés
-                    medidas de seguridad superiores para proteger tus datos de
-                    terceros no autorizados.
+                    With corporate email plans you get Superior security
+                    measures to protect your data from unauthorized third
+                    parties.
                   </span>
                 </li>
               </ul>

@@ -51,22 +51,22 @@ function Herosection() {
 
           <div>
             <h1 className="text-[#a482fb] text-lg md:text-xl mt-3 font-semibold tracking-wide uppercase select-none">
-              COMPAÑÍA
+              COMPANY
             </h1>
           </div>
         </div>
         <div>
           <h1 className="text-center my-4 text-[50px] leading-[64px] md:text-[56px] md:leading-[72px] text-neutral-800 ">
-            Descubrí nuestra historia <br className="hidden lg:block" /> y
-            compromiso
+            I discovered our history <br className="hidden lg:block" /> and
+            commitment
           </h1>
 
           <p
             className="text-center last:mb-0 mb-0 text-lg text-neutral-500 px-3"
             data-label-id="0"
           >
-            Stellar Studio es el fruto de una visión audaz y una <br /> pasión
-            por la tecnología y la innovación.
+            Stellar Studio is the fruit of a bold vision and <br /> passion for
+            technology and innovation.
           </p>
         </div>
       </section>

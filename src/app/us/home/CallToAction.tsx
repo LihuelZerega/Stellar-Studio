@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import CallToActionMockup from  "@/images/CallToActionMockup.png";
+import CallToActionMockup from "@/images/CallToActionMockup.png";
 
 function CallToAction() {
   return (
@@ -50,14 +50,19 @@ function CallToAction() {
       </div>
       <div className="text-center">
         <h1 className="text-neutral-800 font-bold text-2xl pt-3">
-          ¡Haz que tu presencia en línea despegue ahora!
+          Get your online presence off the ground now!
         </h1>
         <p className="py-2 text-neutral-600">
-          Descubre nuestros modelos y elige el que mejor se adapte <br /> a tus
-          necesidades para impulsar tu presencia online.
+          Discover our models and choose the one that best suits <br /> your
+          needs to boost your online presence.
         </p>
       </div>
-      <a href="#modelosweb" className="bg-[#a482fb] hover:bg-[#9979eb] text-sm text-center my-4 py-2 px-3 rounded-md text-white">¡Empezar ahora!</a>
+      <a
+        href="#modelosweb"
+        className="bg-[#a482fb] hover:bg-[#9979eb] text-sm text-center my-4 py-2 px-3 rounded-md text-white"
+      >
+        Start now!
+      </a>
       <div>
         <Image
           src={CallToActionMockup}

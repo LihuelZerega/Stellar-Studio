@@ -33,52 +33,52 @@ import { TbWorldWww } from "react-icons/tb";
 
 const services = [
   {
-    name: "Paginas Web",
-    description: "Expandí tu negocio y presencia en la web",
-    href: "/ar/servicios/paginasweb",
+    name: "Websites",
+    description: "Expand your business and web presence.",
+    href: "/us/servicios/paginasweb",
     icon: MdOutlineWebAsset,
   },
   {
-    name: "Correos Profesionales",
-    description: "Conseguí una imagen respetable y confiable",
-    href: "/ar/servicios/correosprofecionales",
-    icon: MdAlternateEmail,
+    name: "Domains",
+    description: "Let the world know that you are always online.",
+    href: "/us/servicios/dominios",
+    icon: TbWorldWww,
   },
   {
-    name: "Dominios",
-    description: "Dejá que el mundo sepa que estás siempre online.",
-    href: "/ar/servicios/dominios",
-    icon: TbWorldWww,
+    name: "Professional Emails",
+    description: "I got a respectable and trustworthy image.",
+    href: "/us/servicios/correosprofecionales",
+    icon: MdAlternateEmail,
   },
 ];
 
 const compania = [
   {
-    name: "Sobre Stellar Studio",
-    description: "Conoce nuestra empresa, misión y valores.",
-    href: "/ar/compania",
+    name: "About Stellar Studio",
+    description: "Get to know our company, mission and values.",
+    href: "/us/compania",
     icon: MdOutlineSchool,
   },
   {
-    name: "Nuestra Tecnología",
-    description: "Explora que utilizamos para ofrecerte soluciones de calidad.",
-    href: "/ar/compania#tecnologia",
+    name: "Our Technology",
+    description: "Explore what we use to offer you quality solutions.",
+    href: "/us/compania#tecnologia",
     icon: MdOutlineBiotech,
   },
   {
-    name: "Contactanos",
-    description: "Contáctanos y estaremos encantados de ayudarte.",
-    href: "/ar/compania#contacto",
+    name: "Contact us",
+    description: "Contact us and we will be happy to help you.",
+    href: "/us/compania#contacto",
     icon: MdOutlineMessage,
   },
 ];
 
 const ayuda = [
   {
-    name: "Atención al Cliente",
+    name: "Customer Support",
     description:
-      "Nuestro equipo de atención al cliente está aquí para ayudarte en cualquier momento.",
-    href: "/ar/ayuda",
+      "Our customer service team is here to help you at any time.",
+    href: "/us/ayuda",
     icon: MdHelpOutline,
   },
 ];
@@ -124,12 +124,7 @@ function NavBarEs() {
             <Popover.Group className="flex lg:gap-x-12">
               <Popover className="relative">
                 <Popover.Button className="flex flex-row items-center ml-6 cursor-pointer focus:outline-none hover:scale-105 transition-all duration-300">
-                  <Image
-                    src={ArgentinaIcon}
-                    width={25}
-                    height={25}
-                    alt="ArgentinaIcon"
-                  />
+                  <Image src={EEUUIcon} width={25} height={25} alt="EEUUIcon" />
                   <ChevronDownIcon
                     className="h-5 w-5 flex-none text-neutral-500"
                     aria-hidden="true"
@@ -148,7 +143,7 @@ function NavBarEs() {
                   <Popover.Panel className="absolute -left-48 md:-left-8 top-full z-10 mt-3 w-screen max-w-xs md:max-w-lg overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-neutral-900/5">
                     <section className="p-4">
                       <h1 className="flex flex-col text-xl font-semibold mb-2 text-[#a482fb]">
-                        Seleccioná tu País
+                        Select your Country
                       </h1>
 
                       <hr />
@@ -201,11 +196,10 @@ function NavBarEs() {
 
                       <div>
                         <h1 className="mt-3 text-sm font-bold text-[#a482fb]">
-                          Proximamente...
+                          Soon...
                         </h1>
                         <div className="grid grid-cols-2 sm:grid-cols-3 py-4">
-
-                        <Link href="/" className="cursor-not-allowed">
+                          <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
                                 src={BrasilIcon}
@@ -219,7 +213,7 @@ function NavBarEs() {
                               </div>
                             </div>
                           </Link>
-                          
+
                           <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
                               <Image
@@ -236,19 +230,19 @@ function NavBarEs() {
                           </Link>
 
                           <Link href="/">
-                          <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
-                            <Image
-                              src={MexicoIcon}
-                              width={25}
-                              height={25}
-                              alt="MexicoIcon"
-                              className="opacity-40"
-                            />
-                            <p className="text-sm font-bold text-neutral-400">
-                              Mexico
-                            </p>
-                          </div>
-                        </Link>
+                            <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
+                              <Image
+                                src={MexicoIcon}
+                                width={25}
+                                height={25}
+                                alt="MexicoIcon"
+                                className="opacity-40"
+                              />
+                              <p className="text-sm font-bold text-neutral-400">
+                                Mexico
+                              </p>
+                            </div>
+                          </Link>
 
                           <Link href="/" className="cursor-not-allowed">
                             <div className="flex flex-row items-center hover:scale-105 transition-all duration-300 space-x-1 mb-4">
@@ -372,7 +366,7 @@ function NavBarEs() {
                 <Popover.Button
                   className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}
                 >
-                  Servicios
+                  Services
                   <ChevronDownIcon
                     className="h-5 w-5 flex-none text-neutral-500"
                     aria-hidden="true"
@@ -426,7 +420,7 @@ function NavBarEs() {
                 <Popover.Button
                   className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}
                 >
-                  Compañía
+                  Company
                   <ChevronDownIcon
                     className="h-5 w-5 flex-none text-neutral-500"
                     aria-hidden="true"
@@ -480,7 +474,7 @@ function NavBarEs() {
                 <Popover.Button
                   className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}
                 >
-                  Ayuda
+                  Help
                   <ChevronDownIcon
                     className="h-5 w-5 flex-none text-neutral-500"
                     aria-hidden="true"
@@ -564,7 +558,7 @@ function NavBarEs() {
             <div className="-my-6 ">
               <div>
                 <h1 className="text-xl font-semibold text-[#a482fb] border-t pt-2 mt-6 mb-2">
-                  Servicios
+                  Services
                 </h1>
                 <div>
                   {services.map((item) => (
@@ -597,7 +591,7 @@ function NavBarEs() {
 
               <div>
                 <h1 className="text-xl font-semibold text-[#a482fb] border-t pt-2 mt-6 mb-2">
-                  Compañia
+                  Company
                 </h1>
                 <div>
                   {compania.map((item) => (
@@ -630,7 +624,7 @@ function NavBarEs() {
 
               <div className="mb-12 sm:mb-0">
                 <h1 className="text-xl font-semibold text-[#a482fb] border-t pt-2 mt-6 mb-2">
-                  Ayuda
+                  Help
                 </h1>
                 <div>
                   {ayuda.map((item) => (

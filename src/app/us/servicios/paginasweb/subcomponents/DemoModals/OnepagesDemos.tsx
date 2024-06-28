@@ -57,7 +57,7 @@ function OnepagesDemos() {
             />
           </svg>
         </span>
-        <span className="text-sm">Ver demostracion</span>
+        <span className="text-sm">See demo</span>
       </h3>
       <Modal
         isOpen={isOpen}
@@ -71,8 +71,8 @@ function OnepagesDemos() {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-row gap-1 text-neutral-800 border-b-1 border border-neutral-200">
-                Demostraciones -{" "}
-                <span className="text-[#a482fb]">One Pages</span>
+                Demonstrations -{" "}
+                <span className="text-[#a482fb]">One ​Pages</span>
               </ModalHeader>
               <ModalBody>
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
@@ -94,7 +94,7 @@ function OnepagesDemos() {
                         Postcrafts
                       </h3>
                       <p className="text-xs text-neutral-600">
-                        Tarjetas de crédito simplificadas para estudiantes.
+                        Simplified credit cards for students.
                       </p>
                     </div>
                   </a>
@@ -116,7 +116,7 @@ function OnepagesDemos() {
                         Cobalt
                       </h3>
                       <p className="text-xs text-neutral-600">
-                        Libera el poder de las finanzas intuitivas
+                        Unleash the power of intuitive finance
                       </p>
                     </div>
                   </a>

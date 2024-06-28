@@ -3,16 +3,16 @@ import { Accordion, AccordionItem } from "@nextui-org/react";
 
 function Faq() {
   const Response2 =
-    "Proporciona una navegación suave dentro de la misma página con secciones desplazables que contienen información clave y un llamado a la acción prominente. Ideal para promocionar servicios y capturar clientes sin complicaciones.";
+    "Provides smooth navigation within the same page with scrollable sections containing key information and a prominent call to action. Ideal for promoting services and capturing clients without complications.";
 
   const Response3 =
-    "Ayuda a convertir clientes potenciales mediante un diseño enfocado en la conversión, con llamados a la acción claros, formularios de contacto visibles, testimonios de clientes y elementos visuales atractivos.";
+    "Helps convert leads through conversion-focused design, with clear calls to action, visible contact forms, customer testimonials, and engaging visuals.";
 
   const Response4 =
-    "Ofrece un catálogo de productos con categorías, carrito de compras y proceso de pago seguro, opciones de búsqueda avanzada, y gestión de inventario. Todo esto facilita la administración de una tienda virtual y amplia el alcance del negocio.";
+    "It offers a product catalog with categories, a shopping cart and secure payment process, advanced search options, and inventory management. All this makes it easier to manage a virtual store and expands the scope of the business.";
 
   const Response5 =
-    "Ofrecemos funciones de seguridad avanzadas como protección DDoS, firewall de aplicaciones web y escaneo de malware. Además, utilizan almacenamiento NVMe de alto rendimiento y proporcionan ancho de banda ilimitado para asegurar tiempos de carga rápidos y una experiencia de usuario ágil y segura.";
+    "We offer advanced security features such as DDoS protection, web application firewall, and malware scanning. Additionally, they use high-performance NVMe storage and provide unlimited bandwidth to ensure fast loading times and a fast, secure user experience.";
 
   return (
     <div className="border-t-1 border-neutral-200 py-12 lg:py-24 bg-neutral-100">
@@ -62,113 +62,111 @@ function Faq() {
         </section>
         <section className="grid gird-cols-1 md:grid-cols-2 mx-auto gap-x-8 mt-12">
           <div>
-            <h2 className="text-center sm:text-left mb-6 sm:mb-0 text-[24px] leading-[24px] sm:text-[24px] sm:leading-[32px] xl:text-[26px] xl:leading-[36px] text-neutral-800 ">
-              Preguntas frecuentes:
+            <h2 className="text-center sm:text-left mb-6 sm:mb-0 text-[24px] leading-[24px] sm:text-[24px] sm:leading-[32px] xl:text-[ 26px] xl:leading-[36px] text-neutral-800 ">
+              Frequent questions:
             </h2>
             <p className="text-center sm:text-left mb-6 sm:mb-0 text-neutral-600">
-              Encontrá respuesta a las dudas comunes sobre tu pagina web.
+              Find answers to common questions about your website.
             </p>
           </div>
           <div>
             <Accordion>
               <AccordionItem
                 key="1"
-                aria-label="¿En qué se diferencian los modelos de página web?"
-                title="¿En qué se diferencian los modelos de página web?"
+                aria-label="How are the web page models different?"
+                title="How are web page models different?"
               >
                 <p className="text-neutral-600">
                   <span className="font-semibold text-neutral-700 mr-1">
                     One Page:
                   </span>
-                  Ideal para una presencia en línea simple, promocionar
-                  servicios y capturar clientes sin necesidad de un sitio
-                  complejo. Incluye secciones desplazables y un formulario de
-                  contacto integrado.
+                  Ideal for a simple online presence, promote services and
+                  capture customers without the need for a site complex.
+                  Includes scrollable sections and a form integrated contact.
                 </p>
 
                 <p className="text-neutral-600 mt-2">
                   <span className="font-semibold text-neutral-700 mr-1">
                     Landing Page:
                   </span>
-                  Enfocada en la conversión, con llamados a la acción claros,
-                  testimonios y elementos visuales atractivos. Ideal para captar
-                  y convertir clientes potenciales.
+                  Focused on conversion, with clear calls to action,
+                  testimonials and attractive visual elements. Ideal for
+                  capturing and convert potential customers.
                 </p>
 
                 <p className="text-neutral-600 mt-2">
                   <span className="font-semibold text-neutral-700 mr-1">
                     E-Commerce:
                   </span>
-                  Diseñada para vender productos en línea, con catálogo de
-                  productos, carrito de compras, valoraciones y gestión de
-                  inventario.
+                  Designed to sell products online, with a catalog of products,
+                  shopping cart, reviews and management inventory.
                 </p>
                 <p className="text-neutral-600 mt-2">
                   <span className="font-semibold text-neutral-700 mr-1">
-                    Página Web a Medida:
+                    Custom Website:
                   </span>
-                  Personalizada según las necesidades del negocio, con opciones
-                  como portafolios, blogs, plataformas de aprendizaje y más.
+                  Customized to business needs, with options such as portfolios,
+                  blogs, learning platforms and more.
                 </p>
               </AccordionItem>
               <AccordionItem
                 key="2"
-                aria-label="¿Qué beneficios ofrece una página One Page para una presencia en línea simple?"
-                title="¿Qué beneficios ofrece una página One Page para una presencia en línea simple?"
+                aria-label="What benefits does a One Page offer for a simple online presence?"
+                title="What benefits does a One Page offer for a simple online presence?"
               >
                 <p className="text-neutral-600">{Response2}</p>
               </AccordionItem>
               <AccordionItem
                 key="3"
-                aria-label="¿Cómo ayuda una Landing Page a convertir clientes potenciales y qué elementos incluye?"
-                title="¿Cómo ayuda una Landing Page a convertir clientes potenciales y qué elementos incluye?"
+                aria-label="How does a Landing Page help convert potential customers and what elements does it include?"
+                title="How does a Landing Page help convert potential customers and what elements does it include?"
               >
                 <p className="text-neutral-600">{Response3}</p>
                 <ol className="text-neutral-600">
                   <li className="mt-2">
                     <span className="font-semibold text-neutral-700">
-                      Brevedad:
+                      Brevity:
                     </span>{" "}
-                    Idealmente, debe tener dos o tres palabras.
+                    Ideally, it should be two or three words.
                   </li>
                   <li className="mt-2">
                     <span className="font-semibold text-neutral-700">
-                      Simplicidad:
+                      Simplicity:
                     </span>{" "}
-                    Evita palabras largas o difíciles de deletrear.
+                    Avoid long or hard-to-spell words.
                   </li>
                   <li className="mt-2">
                     <span className="font-semibold text-neutral-700">
-                      Palabras clave:
+                      Keywords:
                     </span>{" "}
-                    Incluye una palabra clave de tu nicho, como por ejemplo,
-                    buenosairescafe.com.ar si vendes café en Buenos Aires.
+                    Include a keyword from your niche, such as
+                    buenosairescafe.com.ar if you sell coffee in Buenos Aires.
                   </li>
                   <li className="mt-2">
                     <span className="font-semibold text-neutral-700">
-                      Evita los números:
+                      Avoid numbers:
                     </span>{" "}
-                    Son difíciles de recordar y añaden complicación.
+                    They are difficult to remember and add complication.
                   </li>
                   <li className="mt-2">
                     <span className="font-semibold text-neutral-700">
-                      Nombre de marca:
+                      Brand Name:
                     </span>{" "}
-                    Usa el nombre de tu marca para maximizar el reconocimiento.
+                    Use your brand name to maximize recognition.
                   </li>
                 </ol>
               </AccordionItem>
               <AccordionItem
                 key="4"
-                aria-label="¿Qué ventajas y características ofrece la opción E-Commerce para vender productos en línea?"
-                title="¿Qué ventajas y características ofrece la opción E-Commerce para vender productos en línea?"
+                aria-label="What advantages and features does the E-Commerce option offer to sell products online?"
+                title="What advantages and features does the E-Commerce option offer to sell products online?"
               >
                 <p className="text-neutral-600">{Response4}</p>
               </AccordionItem>
               <AccordionItem
                 key="5"
-                aria-label="¿Qué servicios de seguridad y rendimiento ofrecen para mejorar la experiencia del usuario?"
-                title="¿Qué servicios de seguridad y rendimiento ofrecen para mejorar la experiencia del usuario?"
+                aria-label="What security and performance services do you offer to improve the user experience?"
+                title="What security and performance services do you offer to improve the user experience?"
               >
                 <p className="text-neutral-600">{Response5}</p>
               </AccordionItem>

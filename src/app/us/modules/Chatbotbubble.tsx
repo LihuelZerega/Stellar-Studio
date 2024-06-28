@@ -21,7 +21,7 @@ export default function ChatBotBubble() {
         previewMessage={{
           autoShowDelay: 1000,
           message:
-            "Pregúntame lo que necesites, estoy aquí para ayudarte. 🚀",
+            "Ask me whatever you need, I'm here to help you. 🚀",
         }}
         theme={{
           button: {

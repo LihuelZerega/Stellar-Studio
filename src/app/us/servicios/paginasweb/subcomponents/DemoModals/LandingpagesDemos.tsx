@@ -12,7 +12,6 @@ import Image from "next/image";
 import ReturnQueenImage from "@/images/ReturnQueenDemo.webp";
 import OoshotImage from "@/images/OoshotDemo.webp";
 
-
 function LandingpagesDemos() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -43,7 +42,7 @@ function LandingpagesDemos() {
             />
           </svg>
         </span>
-        <span className="text-sm">Ver demostracion</span>
+        <span className="text-sm">See demo</span>
       </h3>
       <Modal
         isOpen={isOpen}
@@ -57,7 +56,7 @@ function LandingpagesDemos() {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-row gap-1 text-neutral-800 border-b-1 border border-neutral-200">
-                Demostraciones -{" "}
+                Demonstrations -{" "}
                 <span className="text-[#a482fb]">Landing Pages</span>
               </ModalHeader>
               <ModalBody>
@@ -80,7 +79,7 @@ function LandingpagesDemos() {
                         ReturnQueen
                       </h3>
                       <p className="text-xs text-neutral-600">
-                        Devoluciones recogidas en tu puerta
+                        Returns collected at your door
                       </p>
                     </div>
                   </a>
@@ -102,7 +101,7 @@ function LandingpagesDemos() {
                         Ooshot
                       </h3>
                       <p className="text-xs text-neutral-600">
-                        Primer grupo de producción y creación desde 2015.
+                        First production and creation group since 2015.
                       </p>
                     </div>
                   </a>

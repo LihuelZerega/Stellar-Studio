@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import LoadingPage from "@/ui/LoadingPage";
-import NavBar from "@/app/ar/home/NavBar";
+import NavBar from "@/app/us/home/NavBar";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
-import HelpSteps from "@/app/ar/ayuda/subcomps/HelpSteps";
-import ContactForm from "@/app/ar/ayuda/subcomps/ContactForm";
+import HelpSteps from "@/app/us/ayuda/subcomps/HelpSteps";
+import ContactForm from "@/app/us/ayuda/subcomps/ContactForm";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,106 +49,101 @@ function Page() {
             <div className="pb-24 md:pb-24">
               <div>
                 <h2 className="text-center my-4 text-3xl md:text-5xl text-neutral-800 font-semibold">
-                  Términos y Condiciones <br /> de Uso
+                  Terms and Conditions <br /> of Use
                 </h2>
                 <p className=" text-center text-neutral-600">
-                  Última actualización el 2 de noviembre de 2023
+                  Last updated on November 2, 2023
                 </p>
               </div>
             </div>
           </div>
-          <section className="flex flex-col mx-auto col-span-1 overflow-x-hidden relative w-full py-16 md:py-28 bg-neutral-50 2xl:py-44 border-t-1 border-neutral-200">
+          <section className="flex flex-col mx-auto col-span-1 overflow-x-hidden relative w-full py-16 md:py-28 bg-neutral-50 2xl:py-44 border-t-1 border -neutral-200">
             <div className="flex flex-col max-w-2xl mx-auto space-y-12">
               <div>
                 <h4 className="text-neutral-800 font-semibold">
-                  Aceptación de los Términos:
+                  Acceptance of Terms:
                 </h4>
                 <p className="text-neutral-600">
-                  Al acceder o utilizar nuestros servicios, usted acepta estar
-                  legalmente vinculado por estos términos y condiciones. Si no
-                  está de acuerdo con alguno de los términos, no utilice
-                  nuestros servicios.
+                  By accessing or using our services, you agree to be legally
+                  bound by these terms and conditions. But agree to any of the
+                  terms, do not use our services.
                 </p>
               </div>
               <div>
                 <h4 className="text-neutral-800 font-semibold">
-                  Uso de los Servicios:
+                  Use of the Services:
                 </h4>
                 <p className="text-neutral-600">
-                  Nuestros servicios están destinados únicamente para uso
-                  personal y no comercial. Usted acepta utilizar nuestros
-                  servicios solo para fines legales y de conformidad con estos
-                  términos y condiciones, así como con todas las leyes y
-                  regulaciones aplicables.
+                  Our services are intended solely for use personal and
+                  non-commercial. You agree to use our services only for legal
+                  purposes and in accordance with these terms and conditions, as
+                  well as with all laws and applicable regulations.
                 </p>
               </div>
               <div>
                 <h4 className="text-neutral-800 font-semibold">
-                  Propiedad Intelectual:
+                  Intellectual property:
                 </h4>
                 <p className="text-neutral-600">
-                  Todos los derechos de propiedad intelectual relacionados con
-                  nuestros servicios y su contenido, incluidos, entre otros, los
-                  derechos de autor, marcas comerciales, nombres comerciales y
-                  patentes, son propiedad de nuestra empresa o de sus
-                  licenciantes.
+                  All intellectual property rights related to our services and
+                  their content, including, but not limited to, copyrights,
+                  trademarks, trade names and patents, are the property of our
+                  company or its licensors.
                 </p>
               </div>
               <div>
-                <h4 className="text-neutral-800 font-semibold">Privacidad:</h4>
+                <h4 className="text-neutral-800 font-semibold">Privacy:</h4>
                 <p className="text-neutral-600">
-                  Respetamos su privacidad y protegemos sus datos personales de
-                  acuerdo con nuestra política de privacidad. Al utilizar
-                  nuestros servicios, usted acepta el procesamiento de sus datos
-                  personales de acuerdo con dicha política.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-neutral-800 font-semibold">
-                  Contenido del Usuario:
-                </h4>
-                <p className="text-neutral-600">
-                  Usted es responsable de todo el contenido que publique o
-                  comparta a través de nuestros servicios. Usted garantiza que
-                  tiene todos los derechos necesarios para publicar dicho
-                  contenido y que no viola los derechos de terceros ni ninguna
-                  ley aplicable.
+                  We respect your privacy and protect your personal data from in
+                  accordance with our privacy policy. When using our services,
+                  you accept the processing of your data in accordance with said
+                  policy.
                 </p>
               </div>
               <div>
                 <h4 className="text-neutral-800 font-semibold">
-                  Modificaciones:
+                  User Content:
                 </h4>
                 <p className="text-neutral-600">
-                  Nos reservamos el derecho de modificar, suspender o
-                  discontinuar nuestros servicios en cualquier momento sin
-                  previo aviso. Además, nos reservamos el derecho de modificar
-                  estos términos y condiciones en cualquier momento. Las
-                  modificaciones entrarán en vigencia inmediatamente después de
-                  su publicación en este sitio web.
+                  You are responsible for all content you post or Share through
+                  our services. You guarantee that has all the necessary rights
+                  to publish said content and that it does not violate the
+                  rights of third parties or any applicable law.
                 </p>
               </div>
               <div>
                 <h4 className="text-neutral-800 font-semibold">
-                  Limitación de Responsabilidad:
+                  Modifications:
                 </h4>
                 <p className="text-neutral-600">
-                  En la medida máxima permitida por la ley aplicable, nuestra
-                  empresa y sus afiliados no serán responsables por ningún daño
-                  directo, indirecto, incidental, especial, consecuente o
-                  punitivo derivado del uso o la imposibilidad de utilizar
-                  nuestros servicios..
+                  We reserve the right to modify, suspend or discontinue our
+                  services at any time without prior notice. Furthermore, we
+                  reserve the right to modify these terms and conditions at any
+                  time. The Modifications will take effect immediately after its
+                  publication on this website.
                 </p>
               </div>
               <div>
                 <h4 className="text-neutral-800 font-semibold">
-                  Ley Aplicable:
+                  Limitation of Liability:
                 </h4>
                 <p className="text-neutral-600">
-                  Estos términos y condiciones se regirán e interpretarán de
-                  acuerdo con las leyes del país o jurisdicción donde opera
-                  nuestra empresa, sin tener en cuenta sus disposiciones sobre
-                  conflicto de leyes.
+                  To the maximum extent permitted by applicable law, our company
+                  and its affiliates will not be responsible for any damages
+                  direct, indirect, incidental, special, consequential or
+                  punitive resulting from the use or inability to use our
+                  services..
+                </p>
+              </div>
+              <div>
+                <h4 className="text-neutral-800 font-semibold">
+                  Applicable Law:
+                </h4>
+                <p className="text-neutral-600">
+                  These terms and conditions shall be governed by and construed
+                  in accordance in accordance with the laws of the country or
+                  jurisdiction where you operate our company, without taking
+                  into account its provisions on conflict of laws.
                 </p>
               </div>
             </div>

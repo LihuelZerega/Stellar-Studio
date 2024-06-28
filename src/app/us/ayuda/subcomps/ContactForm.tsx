@@ -189,7 +189,7 @@ export default function Example() {
             </div>
             <Switch.Label className="text-sm leading-6 text-gray-600">
               Al seleccionar esto, acepta nuestra{" "}
-              <a href="/ar/ayuda/terminosycondiciones" className="font-semibold text-[#a482fb] hover:text-violet-500">
+              <a href="/us/ayuda/terminosycondiciones" className="font-semibold text-[#a482fb] hover:text-violet-500">
                 política de privacidad
               </a>
               .

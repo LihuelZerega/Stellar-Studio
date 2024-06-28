@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import LoadingPage from "@/ui/LoadingPage";
-import NavBar from "@/app/ar/home/NavBar";
+import NavBar from "@/app/us/home/NavBar";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 import HeroSection from "./subcomps/HeroSection";
 import AboutStellarStudio from "@/components/CompaniaComponents/Es/AboutStellarStudio";

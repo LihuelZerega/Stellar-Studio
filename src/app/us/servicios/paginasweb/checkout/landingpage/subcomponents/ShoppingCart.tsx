@@ -5,8 +5,8 @@ import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
 import ContactInformation from "./ContactInformation";
 import PaymentMethods from "./PaymentMethods";
 import ShoppingCartOrderSummary, { Domain, Email } from "./OrderSummary";
-import AlertSuccess from "@/app/ar/servicios/paginasweb/checkout/Alerts/AlertSuccess";
-import AlertDenied from "@/app/ar/servicios/paginasweb/checkout/Alerts/AlertDenied";
+import AlertSuccess from "@/app/us/servicios/paginasweb/checkout/Alerts/AlertSuccess";
+import AlertDenied from "@/app/us/servicios/paginasweb/checkout/Alerts/AlertDenied";
 
 const API_URL = "http://localhost:8080/api/soldproducts";
 
@@ -42,7 +42,7 @@ function ShoppingCart() {
       phonenumber: contactInfo.phonenumber,
       paymentMethod,
       webpage: "Landing Page",
-      webpagePrice: 119.99,
+      webpagePrice: 299.00,
       domainPlan: domainPlan || "",
       domainPrice: domainPrice || 0.0,
       emailPlan: emailPlan || "",
@@ -79,25 +79,23 @@ function ShoppingCart() {
         {responseStatus === "success" && <AlertSuccess />}
         {responseStatus === "denied" && <AlertDenied />}
         {responseStatus === "timeout" && (
-          <div>
-            Error: Tiempo de espera agotado. Inténtalo de nuevo más tarde.
-          </div>
+          <div>Error: Timed out. Try again later.</div>
         )}
         {responseStatus === "error" && (
-          <div>Error: Ocurrió un problema. Inténtalo de nuevo más tarde.</div>
+          <div>Error: A problem occurred. Please try again later.</div>
         )}
       </div>
 
       <div className="px-6 lg:px-12 py-6 sm:py-8 2xl:max-w-7xl">
         <Breadcrumbs>
           <BreadcrumbItem>
-            <Link href="/ar/servicios/paginasweb">Servicios</Link>
+            <Link href="/us/servicios/paginasweb">Services</Link>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Link href="/ar/servicios/paginasweb">Paginas Web</Link>
+            <Link href="/us/servicios/paginasweb">Web Pages</Link>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Link href="/ar/servicios/paginasweb">Landing Page</Link>
+            <Link href="/us/servicios/paginasweb">Landing Page</Link>
           </BreadcrumbItem>
           <BreadcrumbItem>Checkout</BreadcrumbItem>
         </Breadcrumbs>
@@ -134,7 +132,7 @@ function ShoppingCart() {
               onClick={handleOrderClick}
               className="w-full items-center justify-center py-4 mt-5 text-sm rounded-md font-semibold text-white transition-all bg-[#a482fb] shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
             >
-              Realizar pedido
+              Make an order
             </button>
           </div>
         </section>

@@ -6,65 +6,62 @@ function Commitment() {
       <div className="px-4 mx-auto max-w-5xl sm:px-6 lg:px-8">
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="mt-6 lg:mt-10">
-            <strong className="text-neutral-800">Excelencia</strong>
+            <strong className="text-neutral-800">Excellence</strong>
             <p className="mt-2 text-neutral-500">
-              Nos esforzamos por alcanzar la excelencia en todo lo que hacemos,
-              desde el diseño hasta el desarrollo y más allá. Buscamos la
-              perfección en cada detalle para brindar resultados excepcionales a
-              nuestros clientes.
+              We strive for excellence in everything we do, from design to
+              development and beyond. We look for the perfection in every detail
+              to provide exceptional results to our clients.
             </p>
           </div>
 
           <div className="mt-6 lg:mt-10">
-            <strong className="text-neutral-800">Integridad</strong>
+            <strong className="text-neutral-800">Integrity</strong>
             <p className="mt-2 text-neutral-500">
-              Actuamos con integridad en todas nuestras interacciones,
-              manteniendo altos estándares éticos y profesionales. Nos
-              comprometemos a ser honestos, transparentes y justos en todas
-              nuestras relaciones comerciales.
+              We act with integrity in all our interactions, maintaining high
+              ethical and professional standards. Us We commit to being honest,
+              transparent and fair in all our business relationships.
             </p>
           </div>
 
           <div className="mt-6 lg:mt-10">
-            <strong className="text-neutral-800">Empatía</strong>
+            <strong className="text-neutral-800">Empathy</strong>
             <p className="mt-2 text-neutral-500">
-              Nos preocupamos por las necesidades y preocupaciones de nuestros
-              clientes y colegas, y nos esforzamos por comprender su
-              perspectiva. Nos comprometemos a tratar a los demás con respeto,
-              empatía y compasión en todo momento.
+              We care about the needs and concerns of our clients and
+              colleagues, and we strive to understand their perspective. We are
+              committed to treating others with respect, empathy and compassion
+              at all times.
             </p>
           </div>
 
           <div className="mt-6 lg:mt-10">
-            <strong className="text-neutral-800">Innovación</strong>
+            <strong className="text-neutral-800">Innovation</strong>
             <p className="mt-2 text-neutral-500">
-              Abrazamos la innovación y buscamos constantemente nuevas formas de
-              abordar los desafíos. Estamos comprometidos con el aprendizaje
-              continuo y la exploración de nuevas tecnologías para ofrecer
-              soluciones creativas y vanguardistas.
+              We embrace innovation and constantly seek new ways to address the
+              challenges. We are committed to learning continuous and the
+              exploration of new technologies to offer creative and avant-garde
+              solutions.
             </p>
           </div>
 
           <div className="mt-6 lg:mt-10">
-            <strong className="text-neutral-800">Colaboración</strong>
+            <strong className="text-neutral-800">Collaboration</strong>
             <p className="mt-2 text-neutral-500">
-              Valoramos la colaboración y creemos en el poder del trabajo en
-              equipo. Trabajamos en estrecha colaboración con nuestros clientes
-              y colegas para lograr resultados sobresalientes y superar los
-              desafíos juntos.
+              We value collaboration and believe in the power of working
+              together equipment. We work closely with our clients and
+              colleagues to achieve outstanding results and overcome challenges
+              together.
             </p>
           </div>
 
           <div className="mt-6 lg:mt-10">
             <strong className="text-neutral-800">
-              Compromiso con el cliente
+              Engagement with the client
             </strong>
             <p className="mt-2 text-neutral-500">
-              Ponemos las necesidades y objetivos de nuestros clientes en primer
-              lugar y nos esforzamos por superar sus expectativas en cada
-              proyecto. Estamos comprometidos a brindar un servicio excepcional
-              y a construir relaciones sólidas y duraderas con nuestros
-              clientes.
+              We put the needs and objectives of our clients first place and we
+              strive to exceed your expectations at every project. We are
+              committed to providing exceptional service and to build solid and
+              lasting relationships with our customers.
             </p>
           </div>
         </section>

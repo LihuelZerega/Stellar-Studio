@@ -24,42 +24,38 @@ function Tecnology() {
         <section className="flex flex-col items-start justify-start w-full space-y-4 mb-12">
           <div className="">
             <strong className="text-[32px] leading-[44px] text-neutral-800">
-              Tecnologia Desarrollada
+              Developed Technology
             </strong>
             <div className="flex flex-col md:flex-row mt-4">
               <div className="space-y-4 md:w-2/3">
                 <p className="mb-0 text-neutral-600">
-                  Nos enorgullece desarrollar tecnología de vanguardia que
-                  impulsa la innovación y transforma la manera en que las
-                  empresas interactúan con el mundo digital. Nuestra tecnología
-                  se basa en un enfoque centrado en el usuario y está diseñada
-                  para ofrecer experiencias digitales excepcionales que generen
-                  un impacto significativo en nuestros clientes y en sus
-                  audiencias.
+                  We are proud to develop cutting-edge technology that drives
+                  innovation and transforms the way Companies interact with the
+                  digital world. Our technology is based on a user-centered
+                  approach and is designed to deliver exceptional digital
+                  experiences that generate a significant impact on our clients
+                  and their hearings.
                 </p>
                 <p className="mb-0 text-neutral-600">
-                  Nuestras soluciones tecnológicas abarcan una amplia gama de
-                  áreas, desde el diseño web y el desarrollo de aplicaciones
-                  hasta la optimización de motores de búsqueda y la analítica de
-                  datos. Utilizamos las últimas herramientas y tecnologías en
-                  cada etapa del proceso de desarrollo para garantizar que
-                  nuestras soluciones sean ágiles, escalables y seguras.
+                  Our technological solutions cover a wide range of areas, from
+                  web design and application development to search engine
+                  optimization and analytics data. We use the latest tools and
+                  technologies in each stage of the development process to
+                  ensure that our solutions are agile, scalable and secure.
                 </p>
                 <p className="mb-0 text-neutral-600">
-                  La importancia de nuestra tecnología en la industria radica en
-                  su capacidad para ayudar a las empresas a adaptarse y
-                  prosperar en un entorno digital en constante evolución.
-                  Nuestros productos y servicios permiten a las empresas
-                  aprovechar al máximo las oportunidades en línea, alcanzar a
-                  nuevas audiencias y diferenciarse en un mercado cada vez más
-                  competitivo.
+                  The importance of our technology in the industry lies in its
+                  ability to help companies adapt and thrive in a constantly
+                  evolving digital environment. Our products and services allow
+                  companies Make the most of online opportunities, reach new
+                  audiences and differentiate themselves in an increasingly
+                  competitive.
                 </p>
                 <p className="mb-0 text-neutral-600">
-                  Además, nuestra tecnología se destaca por su enfoque en la
-                  accesibilidad, la usabilidad y la inclusión, lo que garantiza
-                  que nuestras soluciones sean accesibles para todos y brinden
-                  experiencias digitales excepcionales sin importar el
-                  dispositivo o la ubicación del usuario.
+                  Additionally, our technology stands out for its focus on
+                  accessibility, usability and inclusivity, ensuring that our
+                  solutions are accessible to everyone and provide exceptional
+                  digital experiences no matter the device or user location.
                 </p>
               </div>
               <div className="grid grid-cols-3 gap-y-16 mt-6 md:mt-0 md:w-1/3">

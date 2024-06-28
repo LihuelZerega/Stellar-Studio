@@ -13,55 +13,53 @@ import {
 const paymentMethods = [
   {
     name: "Credit Card",
-    nameDisplay: "Tarjeta de Crédito o Débito",
+    nameDisplay: "Credit or Debit Card",
     icon: <CreditCardPosIcon />,
-    description:
-      "Paga con tu tarjeta de crédito o débito de manera segura y rápida.",
-    additionalInfo:
-      "Aceptamos todas las principales tarjetas de crédito y débito.",
+    description: "Pay with your credit or debit card safely and quickly.",
+    additionalInfo: "We accept all major credit and debit cards.",
   },
   {
-    name: "Efectivo",
-    nameDisplay: "Efectivo",
+    name: "Cash",
+    nameDisplay: "Cash",
     icon: <MoneyReceiveFlow02Icon />,
-    description: "Paga en efectivo en nuestros puntos de venta.",
+    description: "Pay in cash at our points of sale.",
     additionalInfo:
-      "Visita nuestra tienda física para completar tu compra en efectivo.",
+      "Visit our physical store to complete your purchase in cash.",
   },
   {
     name: "Bank Transfer",
-    nameDisplay: "Transferencia Bancaria",
+    nameDisplay: "Bank Transfer",
     icon: <BankIcon />,
-    description: "Método seguro y directo para pagar desde tu cuenta bancaria.",
+    description: "Secure and direct method to pay from your bank account.",
     additionalInfo:
-      "Puedes transferir directamente desde tu banco con la máxima seguridad.",
+      "You can transfer directly from your bank with maximum security.",
   },
   {
     name: "PayPal",
     nameDisplay: "PayPal",
     icon: <PaypalIcon />,
     description:
-      "Valido solo para España, Alemania, Francia, Italia y Reino Unido.",
+      "Valid only for Spain, Germany, France, Italy and the United Kingdom.",
     additionalInfo:
-      "Con PayPal, puedes pagar de manera segura sin compartir tu información financiera.",
+      "With PayPal, you can pay securely without sharing your financial information.",
   },
   {
     name: "Mercadopago",
     nameDisplay: "Mercado Pago",
     icon: <SiMercadopago />,
     description:
-      "Valido solo para Argentina, Brasil, Chile, Peru, Colombia y Mexico.",
+      "Valid only for Argentina, Brazil, Chile, Peru, Colombia and Mexico.",
     additionalInfo:
-      "Disfruta de múltiples opciones de pago y financiamiento a través de Mercado Pago.",
+      "Enjoy multiple payment and financing options through Mercado Pago.",
   },
   {
     name: "Crypto",
-    nameDisplay: "Criptomonedas",
+    nameDisplay: "Cryptocurrencies",
     icon: <BitcoinEllipseIcon />,
     description:
-      "Paga utilizando criptomonedas para transacciones rápidas y seguras en todo el mundo.",
+      "Pay using cryptocurrencies for fast and secure transactions around the world.",
     additionalInfo:
-      "Aprovecha la seguridad y rapidez de las criptomonedas para tus pagos.",
+      "Take advantage of the security and speed of cryptocurrencies for your payments.",
   },
 ];
 
@@ -69,7 +67,9 @@ interface PaymentMethodsProps {
   setPaymentMethod: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-const PaymentMethods: React.FC<PaymentMethodsProps> = ({ setPaymentMethod }) => {
+const PaymentMethods: React.FC<PaymentMethodsProps> = ({
+  setPaymentMethod,
+}) => {
   const [selectedMethod, setSelectedMethod] = useState<string | null>(null);
 
   const handleMethodClick = (method: string, index: number) => {
@@ -82,7 +82,7 @@ const PaymentMethods: React.FC<PaymentMethodsProps> = ({ setPaymentMethod }) => 
 
   return (
     <div className="my-4">
-      <strong className="text-lg text-neutral-800">Método de pago</strong>
+      <strong className="text-lg text-neutral-800">Payment method</strong>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 select-none mt-4">
         {paymentMethods.map((method, index) => (
@@ -119,6 +119,6 @@ const PaymentMethods: React.FC<PaymentMethodsProps> = ({ setPaymentMethod }) => 
       </div>
     </div>
   );
-}
+};
 
 export default PaymentMethods;

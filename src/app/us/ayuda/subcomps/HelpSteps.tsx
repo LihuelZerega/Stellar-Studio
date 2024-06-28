@@ -5,17 +5,6 @@ function HelpSteps() {
     <div>
       <section className="border-t-1 border-neutral-200 py-12 lg:py-24 bg-neutral-100">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          {/* <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold leading-tight text-[#a482fb] sm:text-4xl lg:text-5xl">
-              Comunicanos tu consulta, pregunta o problema.
-            </h2>
-            <p className="max-w-lg mx-auto mt-4 text-sm leading-relaxed text-gray-300">
-              Garantizamos que todas las consultas de los clientes sean atendidas
-              de manera oportuna, eficiente y con un alto nivel de servicio al
-              cliente.
-            </p>
-          </div> */}
-
           <ul className="max-w-md mx-auto space-y-12">
             <li className="relative flex items-start">
               <div
@@ -41,11 +30,11 @@ function HelpSteps() {
               </div>
               <div className="ml-6">
                 <h3 className="text-lg font-semibold text-[#a482fb]">
-                  Recepción de consultas
+                  Reception of inquiries
                 </h3>
                 <p className="mt-4 text-sm text-gray-600">
-                  Las consultas pueden llegar a través de varios canales, como
-                  teléfono, correo electrónico, chat en vivo o redes sociales.
+                  Inquiries can come through various channels, such as phone,
+                  email, live chat or social networks.
                 </p>
               </div>
             </li>
@@ -74,12 +63,12 @@ function HelpSteps() {
               </div>
               <div className="ml-6">
                 <h3 className="text-lg font-semibold text-[#a482fb]">
-                  Registro de la consulta
+                  Consultation record
                 </h3>
                 <p className="mt-4 text-sm text-gray-600">
-                  Nuestro equipo de atención al cliente registra los detalles
-                  relevantes y se asignan los recursos necesarios para abordar
-                  la consulta del cliente.
+                  Our customer service team records the details relevant and the
+                  necessary resources are allocated to address the client's
+                  query.
                 </p>
               </div>
             </li>
@@ -103,12 +92,12 @@ function HelpSteps() {
               </div>
               <div className="ml-6">
                 <h3 className="text-lg font-semibold text-[#a482fb]">
-                  Resolución de la consulta
+                  Query resolution
                 </h3>
                 <p className="mt-4 text-base text-gray-600">
-                  Una vez que se ha resuelto la consulta del cliente, nuestro
-                  equipo realiza un seguimiento para asegurarse de que el
-                  cliente esté satisfecho con la solución proporcionada.
+                  Once the customer's query has been resolved, our team follows
+                  up to make sure the customer is satisfied with the solution
+                  provided.
                 </p>
               </div>
             </li>

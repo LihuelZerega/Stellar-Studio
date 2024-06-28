@@ -52,24 +52,24 @@ function NewHeroSection() {
           </div>
           <div className="text-center xl:text-left">
             <h1 className="text-5xl font-bold tracking-tight text-neutral-100 sm:text-5xl lg:text-6xl 2xl:text-7xl">
-              Impulsá tu presencia en línea hoy
+            Boost your online presence today
             </h1>
             <p className="px-3 sm:px-0 mt-6 text-sm md:text-base 2xl:text-xl leading-4 md:leading-8 text-neutral-200">
-              El camino hacia una presencia web espectacular comienza aquí.
-              Descubre nuestras soluciones listas para usar.
+            The path to a spectacular web presence starts here.
+            Discover our ready-to-use solutions.
             </p>
             <div className="mt-10 flex items-center justify-center xl:justify-start gap-x-6">
               <a
-                href="/ar/servicios/paginasweb"
+                href="/us/servicios/paginasweb"
                 className="rounded-md bg-[#a482fb] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#a482fb] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
               >
-                Comenzar ahora
+                Start now
               </a>
               <a
                 href="#"
                 className="text-sm font-semibold leading-6 text-neutral-200"
               >
-                Leer mas <span aria-hidden="true">→</span>
+                Read more <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>

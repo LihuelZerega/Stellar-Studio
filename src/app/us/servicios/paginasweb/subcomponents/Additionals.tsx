@@ -33,16 +33,16 @@ function Additionals() {
             data-sb-field-path=".0"
             className="transition-all bg-[#a482fb] border-1 border-neutral-300 text-white h-7 px-3 text-sm leading-5 rounded-full font-medium flex gap-3 items-center"
           >
-            <span>Adicionales</span>
+            <span>Additionals</span>
           </div>
           <div className="space-y-4">
             <strong className="mb-4 text-[32px] leading-[44px] text-neutral-800">
-              Cada sección es única, creamos tu web única.
+              Each section is unique, we create your unique website.
             </strong>
             <p className="mb-0 text-neutral-600 md:max-w-3xl">
-              Trabajamos en conjunto para crear una web que genere impacto. En
-              Stellar Studio nos encargamos de todo el proceso de creación de tu
-              nueva web.
+              We work together to create a website that generates impact. In
+              Stellar Studio we take care of the entire process of creating your
+              new website.
             </p>
           </div>
         </section>
@@ -55,19 +55,14 @@ function Additionals() {
             variants={itemVariants}
           >
             <div className="object-cover w-full h-1/2 border-2 border-gray-200 bg-white rounded-2xl select-none">
-              <Image
-                src={RedesingMockup}
-                width={1096}
-                height={480}
-                alt=""
-              />
+              <Image src={RedesingMockup} width={1096} height={480} alt="" />
             </div>
             <div className="text-black mt-6 lg:mt-10">
-              <strong>Actualice su antigua Página Web</strong>
+              <strong>Update your old Website</strong>
               <p className="mt-2 text-neutral-500">
-                Transformamos tu antigua página en una experiencia digital{" "}
-                <br />
-                impresionante que atraiga a tus clientes y destaque tu marca.
+                We transform your old page into a digital experience <br />
+                Impressive that attracts your customers and highlights your
+                brand.
               </p>
             </div>
           </motion.div>
@@ -78,21 +73,15 @@ function Additionals() {
             variants={itemVariants}
           >
             <div className="object-cover w-full h-1/2 border-2 border-gray-200 bg-white rounded-2xl select-none">
-              <Image
-                src={ChatBotMockup}
-                width={1096}
-                height={480}
-                alt=""
-              />
+              <Image src={ChatBotMockup} width={1096} height={480} alt="" />
             </div>
             <div className="text-black mt-6 lg:mt-10">
               <div className="flex flex-row items-center space-x-2">
-                <strong>ChatBot con Inteligencia Artificial </strong>
+                <strong>ChatBot with Artificial Intelligence </strong>
               </div>
               <p className="mt-2 text-neutral-500">
-                Ofrece respuestas rápidas y precisas a las preguntas frecuentes
-                de los usuarios en tiempo real, mejorando la experiencia del
-                cliente.
+                Provides fast and accurate answers to frequently asked questions
+                of users in real time, improving the user experience customer.
               </p>
             </div>
           </motion.div>
@@ -113,11 +102,11 @@ function Additionals() {
               />
             </div>
             <div className="text-black mt-6 lg:mt-10">
-              <strong>Creamos experiencias de pago únicas</strong>
+              <strong>We create unique payment experiences</strong>
               <p className="mt-2 text-neutral-500">
-                Flexibilidad para el vendedor de sus productos y el cliente.
-                Creamos flujos de pago de manera simple y dinámica para tu
-                negocio.
+                Flexibility for the seller of their products and the customer.
+                We create payment flows in a simple and dynamic way for your
+                business.
               </p>
             </div>
           </motion.div>

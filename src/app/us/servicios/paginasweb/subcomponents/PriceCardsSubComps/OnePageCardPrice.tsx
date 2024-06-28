@@ -25,7 +25,7 @@ interface OnePageCardPriceProps {
 }
 
 const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
-  const [onePagePrice, setOnePagePrice] = useState<number>(79.0);
+  const [onePagePrice, setOnePagePrice] = useState<number>(179.0);
   const [domainPrice, setDomainPrice] = useState<number>(0.0);
   const [emailPrice, setEmailPrice] = useState<number>(0.0);
 
@@ -103,7 +103,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
                   <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
                     <div className="px-4 sm:px-6">
                       <Dialog.Title className="text-xl font-semibold leading-6 text-gray-900">
-                        Carrito de Compra
+                        Shopping cart
                       </Dialog.Title>
                     </div>
 
@@ -146,16 +146,16 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
                         </div>
                       </div>
                       <div className="flex flex-col">
-                        <a href="/ar/servicios/paginasweb/checkout/onepage">
+                        <a href="/us/servicios/paginasweb/checkout/onepage">
                           <button className="w-full items-center justify-center py-4 mt-5 text-sm rounded-md font-semibold text-white transition-all bg-[#a482fb] shadow-sm hover:bg-[#8e62fc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]">
-                            Comprar
+                            Buy
                           </button>
                         </a>
                         <button
                           className="w-full items-center justify-center py-4 mt-3 text-sm rounded-md font-semibold text-[#a482fb] transition-all border-2 border-[#a482fb] shadow-sm hover:bg-neutral-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
                           onClick={() => setOpen(false)}
                         >
-                          Continuar Comprando
+                          Continue buying
                         </button>
                       </div>
                     </section>
@@ -248,24 +248,24 @@ const ProductItem: React.FC<ProductItemProps> = ({
 
   const emails: Email[] = [
     {
-      name: "Emprendedor",
+      name: "Entrepreneur",
       price: 7.99,
-      feature1: "10 GB de almacenamiento en email",
-      feature2: "10 reglas de reenvío",
-      feature3: "Alias de email",
-      feature4: "Verificación antivirus",
-      feature5: "Antispam avanzado",
-      feature6: "Infraestructura basada en la nube",
+      feature1: "10 GB email storage",
+      feature2: "10 forwarding rules",
+      feature3: "Email aliases",
+      feature4: "Antivirus check",
+      feature5: "Advanced anti-spam",
+      feature6: "Cloud-based infrastructure",
     },
     {
-      name: "Corporativo",
+      name: "Corporate",
       price: 11.99,
-      feature1: "50 GB de almacenamiento en email",
-      feature2: "50 reglas de reenvío",
-      feature3: "Alias de email",
-      feature4: "Verificación antivirus",
-      feature5: "Antispam avanzado",
-      feature6: "Infraestructura basada en la nube",
+      feature1: "50 GB email storage",
+      feature2: "50 forwarding rules",
+      feature3: "Email aliases",
+      feature4: "Antivirus check",
+      feature5: "Advanced anti-spam",
+      feature6: "Cloud-based infrastructure",
     },
   ];
 
@@ -300,7 +300,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
               <div className="flex flex-row items-center justify-between text-base font-semibold text-gray-800">
                 {selectedDomain ? (
                   <>
-                    <h1 className="">Registrar Dominio</h1>
+                    <h1 className="">Register Domain</h1>
                     <h1 className="">${selectedDomain?.price.toFixed(2)}</h1>
                   </>
                 ) : (
@@ -313,7 +313,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
 
               <div className="flex flex-row items-center justify-between text-sm text-gray-800">
                 <div className="flex items-center">
-                  {selectedDomain || title === "Registrar Dominio" ? (
+                  {selectedDomain || title === "Register Domain" ? (
                     <>
                       <button
                         className="hover:text-[#a482fb]"
@@ -321,7 +321,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                       >
                         {selectedDomain?.name
                           ? selectedDomain.name
-                          : "Elegir Dominio"}
+                          : "Choose Domain"}
                       </button>
                     </>
                   ) : (
@@ -334,11 +334,11 @@ const ProductItem: React.FC<ProductItemProps> = ({
                           >
                             {selectedEmail?.name
                               ? selectedEmail.name
-                              : "Elegir Email"}
+                              : "Choose Email"}
                           </button>
                         </>
                       ) : (
-                        <h1>Cantidad: {quantity}</h1>
+                        <h1>Amount: {quantity}</h1>
                       )}
                     </>
                   )}
@@ -377,7 +377,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
           >
             <ModalContent>
               <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
-                Elige tu dominio para registrar
+                Choose your domain to register
               </ModalHeader>
               <ModalBody>
                 <div className="grid grid-cols-2 sm:grid-cols-3 py-2 gap-4">
@@ -395,7 +395,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                         </h1>
                         <h1 className="text-base text-black">
                           ${domain.price.toFixed(2)}
-                          <span>/año</span>
+                          <span>/year</span>
                         </h1>
                       </div>
                     </button>
@@ -412,7 +412,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
           >
             <ModalContent>
               <ModalHeader className="flex flex-col font-bold text-[#a482fb] text-xl gap-1 border-b">
-                Elige tu plan de Correo Profecional
+                Choose your Professional Email plan
               </ModalHeader>
               <ModalBody>
                 <div className="grid grid-cols-1 sm:grid-cols-2 py-2 gap-4">
@@ -431,7 +431,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                           </h1>
                           <h1 className="text-xl md:text-2xl font-bold text-neutral-800">
                             ${email.price.toFixed(2)}
-                            <span>/mes</span>
+                            <span>/month</span>
                           </h1>
                         </div>
 
@@ -560,15 +560,14 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
 
         <div className="h-20">
           <h1 className="text-sm mt-4 text-gray-500">
-            Ideal para quienes desean tener una presencia en línea, promocionar
-            sus servicios y capturar clientes sin la necesidad de un sitio web
-            complejo.
+            Ideal for those who want to have an online presence, promote your
+            services and capture clients without the need for a website complex.
           </h1>
         </div>
 
         <div className="flex flex-row items-end justify-start">
-          <p className="text-5xl font-bold text-neutral-700 mt-7">$79.000</p>
-          <p className="ml-2 mt-3 text-base text-gray-500">/Pago único</p>
+          <p className="text-5xl font-bold text-neutral-700 mt-7">$179</p>
+          <p className="ml-2 mt-3 text-base text-gray-500">/One-time payment</p>
         </div>
 
         <motion.button
@@ -577,16 +576,16 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
           whileHover={{ scale: 1.01 }}
           className="w-full inline-flex items-center justify-center px-10 py-4 mt-5 text-lg rounded-md font-semibold text-neutral-600 transition-all border-2 border-[#a482fb] bg-white shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-100"
         >
-          Comprar Ahora
+          Buy now
         </motion.button>
 
         <div className="text-center">
           <h1 className="text-sm mt-4 text-gray-500">
-            Mantenimiento y soporte:
+            Maintenance and support:
           </h1>
-          <h1 className="text-sm text-gray-500">$8.000/mes</h1>
+          <h1 className="text-sm text-gray-500">$12/month</h1>
         </div>
-        
+
         <div className="text-transparent border-b-1 border-neutral-400 select-none mb-5">
           s
         </div>
@@ -613,7 +612,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
             </svg>
             <span className="text-base font-medium text-gray-600">
               {" "}
-              Diseño de página web de una sola página{" "}
+              Single Page Website Design{" "}
             </span>
           </li>
 
@@ -632,7 +631,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
             </svg>
             <span className="text-base font-medium text-gray-600">
               {" "}
-              Secciones desplazables con información clave{" "}
+              Scrollable sections with key information{" "}
             </span>
           </li>
 
@@ -651,7 +650,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
             </svg>
             <span className="text-base font-medium text-gray-600">
               {" "}
-              Llamado a la acción prominente{" "}
+              Prominent call to action{" "}
             </span>
           </li>
 
@@ -670,7 +669,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
             </svg>
             <span className="text-base font-medium text-gray-600">
               {" "}
-              Navegación suave dentro de la misma página{" "}
+              Smooth navigation within the same page{" "}
             </span>
           </li>
 
@@ -689,7 +688,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
             </svg>
             <span className="pb-0.5 text-base font-medium text-gray-600">
               {" "}
-              Formulario de contacto integrado{" "}
+              Integrated contact form{" "}
             </span>
           </li>
         </ul>
@@ -703,7 +702,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
             <ul className="inline-flex flex-col items-start space-y-5 text-left my-2">
               <span className="text-lg font-semibold text-[#a482fb]">
                 {" "}
-                Seguridad{" "}
+                Security{" "}
               </span>
 
               <li className="text-base font-medium text-gray-200 my-2">
@@ -721,7 +720,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Protección DDoS estándar
+                    Standard DDoS Protection
                   </h1>
                 </div>
               </li>
@@ -741,7 +740,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Firewall de aplicaciones web
+                    Web Application Firewall
                   </h1>
                 </div>
               </li>
@@ -761,7 +760,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Proteccion de privacidad de datos (GDPR)
+                    Data privacy protection (GDPR)
                   </h1>
                 </div>
               </li>
@@ -781,7 +780,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Altos estándares de seguridad y disponibilidad (SOC 2)
+                    High security and availability standards (SOC 2)
                   </h1>
                 </div>
               </li>
@@ -801,8 +800,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Altos estándares de gestión de la seguridad de la
-                    información (ISO 27001)
+                    High security management standards information (ISO 27001)
                   </h1>
                 </div>
               </li>
@@ -815,7 +813,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
             <ul className="inline-flex flex-col items-start space-y-5 text-left my-2">
               <span className="text-lg font-semibold text-[#a482fb]">
                 {" "}
-                Rendimiento{" "}
+                Performance{" "}
               </span>
 
               <li className="text-base font-medium text-gray-200 my-2">
@@ -833,8 +831,8 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Distribucion en una red global de servidores de alto
-                    rendimiento y baja latencia
+                    Distribution on a global network of high-performance servers
+                    performance and low latency
                   </h1>
                 </div>
               </li>
@@ -854,7 +852,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Optimizacion automatica de imagenes
+                    Automatic image optimization
                   </h1>
                 </div>
               </li>
@@ -874,7 +872,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Minificación y compresión de codigo
+                    Minification and code compression
                   </h1>
                 </div>
               </li>
@@ -894,7 +892,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Almacenamiento en Caché para usuarios regresantes
+                    Caching for returning users
                   </h1>
                 </div>
               </li>
@@ -914,7 +912,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Bases de datos de alto rendimiento y escalado automatico
+                    High-performance databases and automatic scaling
                   </h1>
                 </div>
               </li>
@@ -927,7 +925,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
             <ul className="inline-flex flex-col items-start space-y-5 text-left my-2">
               <span className="text-lg font-semibold text-[#a482fb]">
                 {" "}
-                Estructura{" "}
+                Structure{" "}
               </span>
 
               <li className="text-base font-medium text-gray-200 my-2">
@@ -945,16 +943,16 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Inicio:
+                    Start:
                   </h1>
                 </div>
                 <div className="ml-6">
                   <h1 className="text-sm font-light text-gray-500 mb-2">
-                    Encabezado con logo y menú de navegación.
+                    Header with logo and navigation menu.
                   </h1>
                   <h1 className="text-sm font-light text-gray-500">
-                    Introducción con información sobre la empresa y su
-                    propósito.
+                    Introduction with information about the company and its
+                    purpose.
                   </h1>
                 </div>
               </li>
@@ -974,16 +972,16 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Servicios:
+                    Services:
                   </h1>
                 </div>
                 <div className="ml-6">
                   <h1 className="text-sm font-light text-gray-500 mb-2">
-                    Sección que detalla los servicios ofrecidos.
+                    Section detailing the services offered.
                   </h1>
                   <h1 className="text-sm font-light text-gray-500">
-                    Breve descripción de cada servicio con iconos o imágenes
-                    representativas.
+                    Brief description of each service with icons or images
+                    representative.
                   </h1>
                 </div>
               </li>
@@ -1003,15 +1001,15 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Portafolio:
+                    Briefcase:
                   </h1>
                 </div>
                 <div className="ml-6">
                   <h1 className="text-sm font-light text-gray-500 mb-2">
-                    Sección que muestra ejemplos de trabajos realizados.
+                    Section showing examples of work carried out.
                   </h1>
                   <h1 className="text-sm font-light text-gray-500">
-                    Galería de imágenes o carrusel de proyectos.
+                    Image gallery or project carousel.
                   </h1>
                 </div>
               </li>
@@ -1031,15 +1029,15 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Testimonios:
+                    Testimonials:
                   </h1>
                 </div>
                 <div className="ml-6">
                   <h1 className="text-sm font-light text-gray-500 mb-2">
-                    Sección con testimonios de clientes satisfechos.
+                    Section with testimonials from satisfied customers.
                   </h1>
                   <h1 className="text-sm font-light text-gray-500">
-                    Breves reseñas y nombres de clientes.
+                    Brief reviews and customer names.
                   </h1>
                 </div>
               </li>
@@ -1059,16 +1057,16 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Contacto:
+                    Contact:
                   </h1>
                 </div>
                 <div className="ml-6">
                   <h1 className="text-sm font-light text-gray-500 mb-2">
-                    Formulario de contacto para consultas o solicitudes.
+                    Contact form for questions or requests.
                   </h1>
                   <h1 className="text-sm font-light text-gray-500">
-                    Información de contacto como dirección, teléfono y correo
-                    electrónico.
+                    Contact information such as address, telephone and email
+                    electronic.
                   </h1>
                 </div>
               </li>
@@ -1088,13 +1086,12 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                     />
                   </svg>
                   <h1 className="text-base font-medium text-gray-600">
-                    Pie de página:
+                    Footer:
                   </h1>
                 </div>
                 <div className="ml-6">
                   <h1 className="text-sm font-light text-gray-500 mb-2">
-                    Enlaces adicionales, información de copyright y redes
-                    sociales.
+                    Additional links, copyright information and networks social.
                   </h1>
                 </div>
               </li>
@@ -1102,7 +1099,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
 
             <div>
               <h1 className="text-xs font-semibold text-gray-400 text-center my-2">
-                (Todos los apartados de la estructura pueden ser personalizados)
+                (All sections of the structure can be customized)
               </h1>
             </div>
 
@@ -1117,9 +1114,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
           onClick={() => setShowMoreFeatures(!showMoreFeatures)}
         >
           <h1 className="text-center text-lg lg:text-sm xl:text-lg font-semibold text-[#a482fb]">
-            {showMoreFeatures
-              ? "Ocultar características"
-              : "Ver todas las características"}
+            {showMoreFeatures ? "Hide features" : "See all features"}
           </h1>
           <div>
             <ChevronDownIcon
