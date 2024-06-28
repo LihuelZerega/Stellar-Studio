@@ -42,7 +42,7 @@ function ShoppingCart() {
       phonenumber: contactInfo.phonenumber,
       paymentMethod,
       webpage: "One Page",
-      webpagePrice: 79.99,
+      webpagePrice: 119.00,
       domainPlan: domainPlan || "",
       domainPrice: domainPrice || 0.0,
       emailPlan: emailPlan || "",

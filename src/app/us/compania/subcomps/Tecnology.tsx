@@ -19,7 +19,7 @@ import {
 
 function Tecnology() {
   return (
-    <div className="border-t-1 border-neutral-200 py-12 lg:py-24 bg-neutral-100">
+    <div className="border-t-1 border-neutral-200 py-12 lg:py-24 bg-neutral-50">
       <div className="px-4 mx-auto max-w-5xl sm:px-6 lg:px-8">
         <section className="flex flex-col items-start justify-start w-full space-y-4 mb-12">
           <div className="">

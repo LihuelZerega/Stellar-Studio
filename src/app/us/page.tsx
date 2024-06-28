@@ -5,12 +5,14 @@ import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 import StatsEs from "@/components/LandingPageComponents/Stats/StatsEs";
 import LoadingPage from "@/ui/LoadingPage";
 import NavBar from "./home/NavBar";
-import Products from "./home/Products";
+import Services from "./home/Services";
 import CallToAction from "./home/CallToAction";
 import Testimonials from "./home/Testimonials";
 import Section from "./home/Section";
 import DividerGray from "./home/DividerGray";
 import DividerWhite from "./home/DividerWhite";
+import ChatBotBubble from "./modules/Chatbotbubble";
+import Products from "./home/Products";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,13 +42,15 @@ function Page() {
       ) : (
         <div className="bg-cover bg-center bg-neutral-50">
           <NavBar />
+          <ChatBotBubble />
           <div>
             <NewHeroSection />
             <StatsEs />
-            <Products />
+            <Services />
             <DividerGray />
             <Section />
             <DividerWhite />
+            <Products />
             <Testimonials />
             <CallToAction />
           </div>

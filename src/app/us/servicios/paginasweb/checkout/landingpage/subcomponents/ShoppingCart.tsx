@@ -5,8 +5,8 @@ import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
 import ContactInformation from "./ContactInformation";
 import PaymentMethods from "./PaymentMethods";
 import ShoppingCartOrderSummary, { Domain, Email } from "./OrderSummary";
-import AlertSuccess from "@/app/es/servicios/paginasweb/checkout/Alerts/AlertSuccess";
-import AlertDenied from "@/app/es/servicios/paginasweb/checkout/Alerts/AlertDenied";
+import AlertSuccess from "@/app/ar/servicios/paginasweb/checkout/Alerts/AlertSuccess";
+import AlertDenied from "@/app/ar/servicios/paginasweb/checkout/Alerts/AlertDenied";
 
 const API_URL = "http://localhost:8080/api/soldproducts";
 
@@ -91,13 +91,13 @@ function ShoppingCart() {
       <div className="px-6 lg:px-12 py-6 sm:py-8 2xl:max-w-7xl">
         <Breadcrumbs>
           <BreadcrumbItem>
-            <Link href="/es/servicios/paginasweb">Servicios</Link>
+            <Link href="/ar/servicios/paginasweb">Servicios</Link>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Link href="/es/servicios/paginasweb">Paginas Web</Link>
+            <Link href="/ar/servicios/paginasweb">Paginas Web</Link>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <Link href="/es/servicios/paginasweb">Landing Page</Link>
+            <Link href="/ar/servicios/paginasweb">Landing Page</Link>
           </BreadcrumbItem>
           <BreadcrumbItem>Checkout</BreadcrumbItem>
         </Breadcrumbs>

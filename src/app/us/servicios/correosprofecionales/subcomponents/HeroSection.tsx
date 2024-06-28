@@ -168,7 +168,7 @@ function Herosection() {
             height="1472"
             decoding="async"
             data-nimg="1"
-            src="https://res.cloudinary.com/dszjgdktf/image/upload/v1715865670/HeroSectionEmailMockup_nku6u8.png"
+            src="https://res.cloudinary.com/dys0jotat/image/upload/v1719256707/HeroSectionEmailMockup_hlr0ym.png"
           ></img>
         </div>
       </div>

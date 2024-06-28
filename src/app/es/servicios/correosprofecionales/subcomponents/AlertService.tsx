@@ -70,7 +70,7 @@ export default function AlertService() {
                 </div>
                 <div className="bg-neutral-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                   <a
-                    href="/es
+                    href="/
                     "
                   >
                     <button

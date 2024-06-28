@@ -25,7 +25,7 @@ interface OnePageCardPriceProps {
 }
 
 const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
-  const [onePagePrice, setOnePagePrice] = useState<number>(79.0);
+  const [onePagePrice, setOnePagePrice] = useState<number>(119.0);
   const [domainPrice, setDomainPrice] = useState<number>(0.0);
   const [emailPrice, setEmailPrice] = useState<number>(0.0);
 
@@ -133,7 +133,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
                             Subtotal
                           </h1>
                           <h1 className="text-base font-medium text-neutral-500">
-                            ${subtotal.toFixed(2)}{" "}
+                            €{subtotal.toFixed(2)}{" "}
                           </h1>
                         </div>
                         <div className="flex flex-row items-center justify-between mt-3">
@@ -141,7 +141,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ open, setOpen }) => {
                             Total
                           </h1>
                           <h1 className="text-lg font-semibold text-neutral-700">
-                            ${total.toFixed(2)}{" "}
+                            €{total.toFixed(2)}{" "}
                           </h1>
                         </div>
                       </div>
@@ -301,12 +301,12 @@ const ProductItem: React.FC<ProductItemProps> = ({
                 {selectedDomain ? (
                   <>
                     <h1 className="">Registrar Dominio</h1>
-                    <h1 className="">${selectedDomain?.price.toFixed(2)}</h1>
+                    <h1 className="">€{selectedDomain?.price.toFixed(2)}</h1>
                   </>
                 ) : (
                   <>
                     <h1>{title}</h1>
-                    <h1>${price.toFixed(2)}</h1>
+                    <h1>€{price.toFixed(2)}</h1>
                   </>
                 )}
               </div>
@@ -384,7 +384,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                   {domains.map((domain, index) => (
                     <button
                       key={index}
-                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
+                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md €{
                         selectedDomain === domain ? "bg-gray-200" : ""
                       }`}
                       onClick={() => handleSelectDomain(domain)}
@@ -394,7 +394,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                           {domain.name}
                         </h1>
                         <h1 className="text-base text-black">
-                          ${domain.price.toFixed(2)}
+                          €{domain.price.toFixed(2)}
                           <span>/año</span>
                         </h1>
                       </div>
@@ -419,7 +419,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                   {emails.map((email, index) => (
                     <button
                       key={index}
-                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
+                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md €{
                         selectedEmail === email ? "bg-gray-200" : ""
                       }`}
                       onClick={() => handleSelectEmail(email)}
@@ -430,7 +430,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                             {email.name}
                           </h1>
                           <h1 className="text-xl md:text-2xl font-bold text-neutral-800">
-                            ${email.price.toFixed(2)}
+                            €{email.price.toFixed(2)}
                             <span>/mes</span>
                           </h1>
                         </div>
@@ -567,7 +567,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
         </div>
 
         <div className="flex flex-row items-end justify-start">
-          <p className="text-5xl font-bold text-neutral-700 mt-7">$79</p>
+          <p className="text-5xl font-bold text-neutral-700 mt-7">€119.000</p>
           <p className="ml-2 mt-3 text-base text-gray-500">/Pago único</p>
         </div>
 
@@ -579,6 +579,17 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
         >
           Comprar Ahora
         </motion.button>
+
+        <div className="text-center">
+          <h1 className="text-sm mt-4 text-gray-500">
+            Mantenimiento y soporte:
+          </h1>
+          <h1 className="text-sm text-gray-500">€10/mes</h1>
+        </div>
+        
+        <div className="text-transparent border-b-1 border-neutral-400 select-none mb-5">
+          s
+        </div>
 
         <OnepagesDemos />
 
@@ -1112,7 +1123,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
           </h1>
           <div>
             <ChevronDownIcon
-              className={`h-7 w-7 flex-none text-[#a482fb] transform transition-transform ${
+              className={`h-7 w-7 flex-none text-[#a482fb] transform transition-transform €{
                 showMoreFeatures ? "rotate-180" : ""
               }`}
               aria-hidden="true"

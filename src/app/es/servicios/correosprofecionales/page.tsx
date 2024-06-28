@@ -2,17 +2,21 @@
 import React, { useEffect, useState } from "react";
 import LoadingPage from "@/ui/LoadingPage";
 import NavBar from "@/app/es/home/NavBar";
-import HeroSectionEmailCorporative from "@/components/ServicesComponents/EmailCorporativeComponents/Es/HeroSectionEmailCorporative";
-import StepsEmailCorporative from "@/components/ServicesComponents/EmailCorporativeComponents/Es/StepsEmailCorporative";
-import PricesCards from "@/components/ServicesComponents/EmailCorporativeComponents/Es/PricesCrads";
+import PricesCards from "./subcomponents/PricesCrads";
 import Features from "./subcomponents/Features";
-import FaqEs from "@/components/ServicesComponents/EmailCorporativeComponents/Es/FaqEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 import HeroSection from "./subcomponents/HeroSection";
 import AlertService from "./subcomponents/AlertService";
 import CallToAction from "./subcomponents/CallToAction";
 import Faq from "./subcomponents/Faq";
 import Steps from "./subcomponents/Steps";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +37,19 @@ function Page() {
     return () => clearTimeout(timeout);
   }, []);
 
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <>
       {isLoading ? (
@@ -40,17 +57,35 @@ function Page() {
           <LoadingPage />
         </div>
       ) : (
-        <div
-          className="bg-cover bg-center bg-neutral-50"
-        >
+        <div className="bg-cover bg-center bg-neutral-50">
           <NavBar />
           <HeroSection />
           <AlertService />
-          <Steps />
-          <div id="precioscorreos">
+          <motion.div
+            ref={ref1}
+            initial="hidden"
+            animate={inView1 ? "visible" : "hidden"}
+            variants={itemVariants}
+          >
+            <Steps />
+          </motion.div>
+          <motion.div
+            ref={ref2}
+            initial="hidden"
+            animate={inView2 ? "visible" : "hidden"}
+            variants={itemVariants}
+            id="precioscorreos"
+          >
             <PricesCards />
-          </div>
-          <Features />
+          </motion.div>
+          <motion.div
+            ref={ref3}
+            initial="hidden"
+            animate={inView3 ? "visible" : "hidden"}
+            variants={itemVariants}
+          >
+            <Features />
+          </motion.div>
           <CallToAction />
           <Faq />
           <FooterEs />

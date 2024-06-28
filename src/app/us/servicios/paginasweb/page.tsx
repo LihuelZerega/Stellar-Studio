@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import LoadingPage from "@/ui/LoadingPage";
-import NavBar from "@/app/es/home/NavBar";
-import HeroSection from "@/app/es/servicios/paginasweb/subcomponents/HeroSection";
-import PricesCrads from "@/app/es/servicios/paginasweb/subcomponents/PricesCrads";
+import NavBar from "@/app/ar/home/NavBar";
+import HeroSection from "@/app/ar/servicios/paginasweb/subcomponents/HeroSection";
+import PricesCrads from "@/app/ar/servicios/paginasweb/subcomponents/PricesCrads";
 import ChatBotIAEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/Features/ChatBotIAEs";
 import FeaturesEs from "@/components/ServicesComponents/WebPagesComponents/PaginasWebComponents/Features/FeaturesEs";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";

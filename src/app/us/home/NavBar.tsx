@@ -35,19 +35,19 @@ const services = [
   {
     name: "Paginas Web",
     description: "Expandí tu negocio y presencia en la web",
-    href: "/es/servicios/paginasweb",
+    href: "/ar/servicios/paginasweb",
     icon: MdOutlineWebAsset,
   },
   {
     name: "Correos Profesionales",
     description: "Conseguí una imagen respetable y confiable",
-    href: "/es/servicios/correosprofecionales",
+    href: "/ar/servicios/correosprofecionales",
     icon: MdAlternateEmail,
   },
   {
     name: "Dominios",
     description: "Dejá que el mundo sepa que estás siempre online.",
-    href: "/es/servicios/dominios",
+    href: "/ar/servicios/dominios",
     icon: TbWorldWww,
   },
 ];
@@ -56,19 +56,19 @@ const compania = [
   {
     name: "Sobre Stellar Studio",
     description: "Conoce nuestra empresa, misión y valores.",
-    href: "/es/compania",
+    href: "/ar/compania",
     icon: MdOutlineSchool,
   },
   {
     name: "Nuestra Tecnología",
     description: "Explora que utilizamos para ofrecerte soluciones de calidad.",
-    href: "/es/compania#tecnologia",
+    href: "/ar/compania#tecnologia",
     icon: MdOutlineBiotech,
   },
   {
     name: "Contactanos",
     description: "Contáctanos y estaremos encantados de ayudarte.",
-    href: "/es/compania#contacto",
+    href: "/ar/compania#contacto",
     icon: MdOutlineMessage,
   },
 ];
@@ -78,7 +78,7 @@ const ayuda = [
     name: "Atención al Cliente",
     description:
       "Nuestro equipo de atención al cliente está aquí para ayudarte en cualquier momento.",
-    href: "/es/ayuda",
+    href: "/ar/ayuda",
     icon: MdHelpOutline,
   },
 ];
@@ -110,7 +110,7 @@ function NavBarEs() {
       >
         {/* SELECT YOUR COUNTRY */}
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a href="/ar" className="-m-1.5 p-1.5">
             <span className="sr-only">Stellar Studio</span>
             <Image
               src={logoSrc}
@@ -423,7 +423,9 @@ function NavBarEs() {
 
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover className="relative">
-                <Popover.Button className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}>
+                <Popover.Button
+                  className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}
+                >
                   Compañía
                   <ChevronDownIcon
                     className="h-5 w-5 flex-none text-neutral-500"
@@ -475,7 +477,9 @@ function NavBarEs() {
 
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover className="relative">
-                <Popover.Button className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}>
+                <Popover.Button
+                  className={`flex items-center gap-x-1 text-sm font-semibold leading-6 ${textColorClass} focus:outline-none`}
+                >
                   Ayuda
                   <ChevronDownIcon
                     className="h-5 w-5 flex-none text-neutral-500"

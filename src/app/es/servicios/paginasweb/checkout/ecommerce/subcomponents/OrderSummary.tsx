@@ -67,7 +67,7 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
   emailPrice,
 }) => {
   
-  const [eCommercePrice, setECommercePrice] = useState<number>(349.99);
+  const [eCommercePrice, setECommercePrice] = useState<number>(1499.00);
   const [eCommerceQuantity, setECommerceQuantity] = useState<number>(1);
   const [domainQuantity, setDomainQuantity] = useState<number>(1);
   const [emailQuantity, setEmailQuantity] = useState<number>(1);
@@ -149,13 +149,13 @@ const ShoppingCartOrderSummary: React.FC<ShoppingCartOrderSummaryProps> = ({
           <div className="flex flex-row items-center justify-between">
             <h1 className="text-base font-medium text-neutral-500">Subtotal</h1>
             <h1 className="text-base font-medium text-neutral-500">
-              ${subtotal.toFixed(2)}{" "}
+              €{subtotal.toFixed(2)}{" "}
             </h1>
           </div>
           <div className="flex flex-row items-center justify-between mt-3">
             <h1 className="text-lg font-semibold text-neutral-700">Total</h1>
             <h1 className="text-lg font-semibold text-neutral-700">
-              ${total.toFixed(2)}{" "}
+              €{total.toFixed(2)}{" "}
             </h1>
           </div>
         </div>
@@ -274,12 +274,12 @@ const ProductItem: React.FC<ProductItemProps> = ({
                 {selectedDomain ? (
                   <>
                     <h1 className="">Registrar Dominio</h1>
-                    <h1 className="">${selectedDomain?.price.toFixed(2)}</h1>
+                    <h1 className="">€{selectedDomain?.price.toFixed(2)}</h1>
                   </>
                 ) : (
                   <>
                     <h1>{title}</h1>
-                    <h1>${price.toFixed(2)}</h1>
+                    <h1>€{price.toFixed(2)}</h1>
                   </>
                 )}
               </div>
@@ -357,7 +357,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                   {domains.map((domain, index) => (
                     <button
                       key={index}
-                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
+                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md €{
                         selectedDomain === domain ? "bg-gray-200" : ""
                       }`}
                       onClick={() => handleSelectDomain(domain)}
@@ -367,7 +367,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                           {domain.name}
                         </h1>
                         <h1 className="text-base text-black">
-                          ${domain.price.toFixed(2)}
+                          €{domain.price.toFixed(2)}
                           <span>/año</span>
                         </h1>
                       </div>
@@ -392,7 +392,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                   {emails.map((email, index) => (
                     <button
                       key={index}
-                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md ${
+                      className={`bg-neutral-50 border-2 border-[#a482fb] rounded-md €{
                         selectedEmail === email ? "bg-gray-200" : ""
                       }`}
                       onClick={() => handleSelectEmail(email)}
@@ -403,7 +403,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
                             {email.name}
                           </h1>
                           <h1 className="text-xl md:text-2xl font-bold text-neutral-800">
-                            ${email.price.toFixed(2)}
+                            €{email.price.toFixed(2)}
                             <span>/mes</span>
                           </h1>
                         </div>

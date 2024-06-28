@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import LoadingPage from "@/ui/LoadingPage";
-import NavBar from "@/app/es/home/NavBar";
+import NavBar from "@/app/ar/home/NavBar";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 import HelpSteps from "@/app/ar/ayuda/subcomps/HelpSteps";
 import ContactForm from "@/app/ar/ayuda/subcomps/ContactForm";

@@ -1,12 +1,23 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import HomeHeroBgMobile from "@/images/HomeHeroBgMobile.jpg";
 import HomeHeroBgDeskctop from "@/images/HomeHeroBgDeskctop.jpg";
 
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 1.5 } },
+};
+
+const slideIn = {
+  hidden: { x: -100, opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 1 } },
+};
+
 function NewHeroSection() {
   return (
-    <div className="h-[100vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
+    <div className="h-[100vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle bg-black">
       <div className="block xl:hidden">
         <Image
           src={HomeHeroBgMobile}
@@ -22,15 +33,21 @@ function NewHeroSection() {
         />
       </div>
 
-      <div className="absolute inset-0 z-10 bottom-64 sm:bottom-96 lg:bottom-[600px] xl:bottom-0 xl:-left-[620px] 2xl:-left-[800px] flex flex-col justify-center items-center text-left gap-6">
-        <div className="mx-auto max-w-lg lg:max-w-2xl xl:max-w-2xl 2xl:max-w-2xl px-3 py-32 sm:py-48 lg:py-56">
+      <motion.div
+        className="absolute inset-0 z-10 bottom-64 sm:bottom-96 lg:bottom-[600px] xl:bottom-0 xl:-left-[620px] 2xl:-left-[800px] flex flex-col justify-center items-center text-left gap-6"
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+      >
+        <motion.div
+          className="mx-auto max-w-lg lg:max-w-2xl xl:max-w-2xl 2xl:max-w-2xl px-3 py-32 sm:py-48 lg:py-56"
+          initial="hidden"
+          animate="visible"
+          variants={slideIn}
+        >
           <div className="hidden sm:mb-4 sm:flex sm:justify-center xl:justify-start">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-200 ring-1 ring-neutral-200/10 hover:ring-neutral-200/20">
               Stellar Studio 2.0{" "}
-              {/* <a href="#" className="font-semibold text-[#a482fb]">
-                <span className="absolute inset-0" aria-hidden="true" />
-                Leer mas <span aria-hidden="true">&rarr;</span>
-              </a> */}
             </div>
           </div>
           <div className="text-center xl:text-left">
@@ -43,7 +60,7 @@ function NewHeroSection() {
             </p>
             <div className="mt-10 flex items-center justify-center xl:justify-start gap-x-6">
               <a
-                href="/es/servicios/paginasweb"
+                href="/ar/servicios/paginasweb"
                 className="rounded-md bg-[#a482fb] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#a482fb] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
               >
                 Comenzar ahora
@@ -56,8 +73,8 @@ function NewHeroSection() {
               </a>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

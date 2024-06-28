@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import LoadingPage from "@/ui/LoadingPage";
 import NavBar from "@/app/es/home/NavBar";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
-import HelpSteps from "@/app/ar/ayuda/subcomps/HelpSteps";
-import ContactForm from "@/app/ar/ayuda/subcomps/ContactForm";
+import HelpSteps from "@/app/es/ayuda/subcomps/HelpSteps";
+import ContactForm from "@/app/es/ayuda/subcomps/ContactForm";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);

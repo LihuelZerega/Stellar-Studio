@@ -4,29 +4,38 @@ import Image from "next/image";
 import DiseñoyDesarrolloImage from "@/images/DiseñoyDesarrolloImage.png";
 import DominiosPersonalizadosImage from "@/images/DominiosPersonalizadosImage.png";
 import CorreosProfecionalesImage from "@/images/CorreoProfecionalesLandingMobile.png";
-import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from "@heroicons/react/20/solid";
+import { LockClosedIcon, ServerIcon } from "@heroicons/react/20/solid";
 import {
   HiOutlineAtSymbol,
   HiOutlineChip,
-  HiOutlineCloud,
   HiOutlineDatabase,
-  HiOutlineDesktopComputer,
-  HiOutlineFingerPrint,
-  HiOutlineGlobeAlt,
   HiOutlineLockClosed,
-  HiOutlineMailOpen,
-  HiOutlineMap,
-  HiOutlineRefresh,
   HiOutlineSearchCircle,
   HiOutlineShieldCheck,
   HiOutlineSparkles,
 } from "react-icons/hi";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 export default function Example() {
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <div className="relative isolate overflow-hidden bg-neutral-50 border-t px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
       <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -61,7 +70,13 @@ export default function Example() {
         </svg>
       </div>
 
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+      <motion.div
+        ref={ref1}
+        initial="hidden"
+        animate={inView1 ? "visible" : "hidden"}
+        variants={itemVariants}
+        className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10"
+      >
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
@@ -140,9 +155,15 @@ export default function Example() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10 py-24">
+      <motion.div
+        ref={ref2}
+        initial="hidden"
+        animate={inView2 ? "visible" : "hidden"}
+        variants={itemVariants}
+        className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10 py-24"
+      >
         <div className="lg:col-span-2 lg:col-start-2 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-1 lg:gap-x-8 lg:px-8 2xl:pr-56">
           <div className="lg:pl-4">
             <div className="w-full">
@@ -217,9 +238,15 @@ export default function Example() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+      <motion.div
+        ref={ref3}
+        initial="hidden"
+        animate={inView3 ? "visible" : "hidden"}
+        variants={itemVariants}
+        className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10"
+      >
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
@@ -294,7 +321,7 @@ export default function Example() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

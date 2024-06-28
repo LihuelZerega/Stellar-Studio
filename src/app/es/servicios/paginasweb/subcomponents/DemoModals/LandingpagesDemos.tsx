@@ -9,6 +9,9 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import Image from "next/image";
+import ReturnQueenImage from "@/images/ReturnQueenDemo.webp";
+import OoshotImage from "@/images/OoshotDemo.webp";
+
 
 function LandingpagesDemos() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -58,136 +61,48 @@ function LandingpagesDemos() {
                 <span className="text-[#a482fb]">Landing Pages</span>
               </ModalHeader>
               <ModalBody>
-                <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 my-4">
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
                   <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
+                    href="https://returnqueen.com/"
+                    className="w-full h-64 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
                   >
                     <div className="w-full rounded-md">
                       <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
+                        src={ReturnQueenImage}
+                        alt="ReturnQueen"
+                        width={400}
+                        height={400}
+                        className="rounded-md"
                       />
                     </div>
                     <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
+                      <h3 className="text-xs mt-3 font-semibold text-neutral-800">
+                        ReturnQueen
                       </h3>
                       <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Devoluciones recogidas en tu puerta
                       </p>
                     </div>
                   </a>
                   <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
+                    href="https://www.ooshot.com/"
+                    className="w-full h-64 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
                   >
                     <div className="w-full rounded-md">
                       <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
+                        src={OoshotImage}
+                        alt="Ooshot"
+                        width={400}
+                        height={400}
+                        className="rounded-md"
                       />
                     </div>
                     <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
+                      <h3 className="text-xs mt-3 font-semibold text-neutral-800">
+                        Ooshot
                       </h3>
                       <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
-                  >
-                    <div className="w-full rounded-md">
-                      <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
-                      </h3>
-                      <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
-                  >
-                    <div className="w-full rounded-md">
-                      <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
-                      </h3>
-                      <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
-                  >
-                    <div className="w-full rounded-md">
-                      <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
-                      </h3>
-                      <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    className="w-full h-48 rounded-md hover:shadow-sm border-1 border-neutral-200 p-1.5 cursor-pointer"
-                  >
-                    <div className="w-full rounded-md">
-                      <Image
-                        src="https://res.cloudinary.com/dszjgdktf/image/upload/v1712160934/Stellar%20Studio/3_bgk3yn.png"
-                        alt="demo"
-                        width={300}
-                        height={300}
-                        className="rounded-md h-28"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xs mt-1 font-semibold text-neutral-800">
-                        Title
-                      </h3>
-                      <p className="text-xs text-neutral-600">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Primer grupo de producción y creación desde 2015.
                       </p>
                     </div>
                   </a>
