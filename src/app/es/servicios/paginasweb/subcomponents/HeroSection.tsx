@@ -153,7 +153,7 @@ function Herosection() {
         </div>
       </div>
       <div>
-        <h1 className="text-center my-4 text-[36px] leading-[64px] md:text-[56px] md:leading-[72px] text-neutral-800">
+        <h1 className="text-center my-4 px-1 text-[36px] leading-[48px] md:text-[56px] md:leading-[72px] text-neutral-800">
           ¿Cuánto cuesta tener una <br className="hidden md:block" /> Página
           web?
         </h1>

@@ -51,10 +51,10 @@ function NewHeroSection() {
             </div>
           </div>
           <div className="text-center xl:text-left">
-            <h1 className="text-5xl font-bold tracking-tight text-neutral-100 sm:text-5xl lg:text-6xl 2xl:text-7xl">
+            <h1 className="text-5xl font-bold tracking-tight text-neutral-100 sm:text-5xl lg:text-6xl 2xl:text-7xl mt-24 sm:mt-0">
               Impulsá tu presencia en línea hoy
             </h1>
-            <p className="px-3 sm:px-0 mt-6 text-sm md:text-base 2xl:text-xl leading-4 md:leading-8 text-neutral-200">
+            <p className="px-3 sm:px-0 mt-6 text-base 2xl:text-xl leading-12 md:leading-8 text-neutral-200">
               El camino hacia una presencia web espectacular comienza aquí.
               Descubre nuestras soluciones listas para usar.
             </p>
