@@ -26,7 +26,7 @@ function Additionals() {
   });
 
   return (
-    <div className="border-t-1 border-neutral-200 py-12 lg:py-24">
+    <div className="border-t-1 border-neutral-200 py-12 lg:py-24 bg-neutral-100">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <section className="flex flex-col items-center justify-center w-full text-center space-y-4 mb-12">
           <div

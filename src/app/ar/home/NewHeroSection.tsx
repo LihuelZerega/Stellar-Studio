@@ -61,7 +61,7 @@ function NewHeroSection() {
             <div className="mt-10 flex items-center justify-center xl:justify-start gap-x-6">
               <a
                 href="/ar/servicios/paginasweb"
-                className="rounded-md bg-[#a482fb] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#a482fb] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+                className="rounded-md bg-[#a482fb] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#b496ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
               >
                 Comenzar ahora
               </a>

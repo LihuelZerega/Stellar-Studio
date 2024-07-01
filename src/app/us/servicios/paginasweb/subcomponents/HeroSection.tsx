@@ -153,17 +153,16 @@ function Herosection() {
         </div>
       </div>
       <div>
-        <h1 className="text-center my-4 text-[50px] leading-[64px] md:text-[56px] md:leading-[72px] text-neutral-800 ">
-          Highlight your online presence <br className="hidden lg:block" /> with
-          your Website
+        <h1 className="text-center my-4 text-[36px] leading-[64px] md:text-[56px] md:leading-[72px] text-neutral-800">
+          How much does it cost to have a <br className="hidden md:block" />{" "}
+          Website?
         </h1>
 
         <p
           className="text-center last:mb-0 mb-0 text-lg text-neutral-500 px-3"
           data-label-id="0"
         >
-          Choose a model that includes the best features to attract your <br />
-          audience, generate customer loyalty and boost sales.
+          Learn about the models available to boost your business
         </p>
       </div>
     </div>

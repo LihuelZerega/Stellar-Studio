@@ -12,6 +12,7 @@ import Additionals from "./subcomponents/Additionals";
 import CallToAction from "../../home/CallToAction";
 import Features from "./subcomponents/Features";
 import Faq from "./subcomponents/Faq";
+import WhyChooseUs from "./subcomponents/WhyChooseUs";
 
 function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -45,6 +46,7 @@ function Page() {
           <div id="modelosweb">
             <PricesCrads />
           </div>
+          <WhyChooseUs />
           <Additionals />
           <Features />
           <CallToAction />

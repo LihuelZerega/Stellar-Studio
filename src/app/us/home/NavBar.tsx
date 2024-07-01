@@ -360,7 +360,7 @@ function NavBarEs() {
 
         {/* DESKTOP */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <div className="flex flex-row gap-x-6">
+          <div className="flex flex-row items-center gap-x-6">
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover className="relative">
                 <Popover.Button
@@ -522,6 +522,12 @@ function NavBarEs() {
                 </Transition>
               </Popover>
             </Popover.Group>
+            <a
+              href="/us/servicios/paginasweb"
+              className="rounded-md bg-[#a482fb] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#b496ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a482fb]"
+            >
+              I want my website!
+            </a>
           </div>
         </div>
       </nav>
