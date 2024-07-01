@@ -67,7 +67,7 @@ function HelpSteps() {
                 </h3>
                 <p className="mt-4 text-sm text-gray-600">
                   Our customer service team records the details relevant and the
-                  necessary resources are allocated to address the client's
+                  necessary resources are allocated to address the clients
                   query.
                 </p>
               </div>
@@ -95,7 +95,7 @@ function HelpSteps() {
                   Query resolution
                 </h3>
                 <p className="mt-4 text-base text-gray-600">
-                  Once the customer's query has been resolved, our team follows
+                  Once the customers query has been resolved, our team follows
                   up to make sure the customer is satisfied with the solution
                   provided.
                 </p>

@@ -944,7 +944,7 @@ const OnePageCardPrice: React.FC<OnePageCardPriceProps> = ({
                 </div>
                 <div className="ml-6">
                   <h1 className="text-sm font-light text-gray-500 mb-2">
-                    Impressive title that captures the visitor's attention.
+                    Impressive title that captures the visitors attention.
                   </h1>
                   <h1 className="text-sm font-light text-gray-500">
                     Brief description of the product, service or offer.

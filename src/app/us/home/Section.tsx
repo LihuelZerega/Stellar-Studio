@@ -114,7 +114,7 @@ export default function Example() {
                       Custom design and development
                     </strong>{" "}
                     We create custom websites that adapt to the specific needs
-                    of your business. Whether it's a website informative, an
+                    of your business. Whether its a website informative, an
                     online store or a web application, We design and develop
                     customized solutions that They reflect your brand and your
                     goals.
