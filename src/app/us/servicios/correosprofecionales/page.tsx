@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import LoadingPage from "@/ui/LoadingPage";
 import NavBar from "@/app/us/home/NavBar";
-import PricesCards from "@/components/ServicesComponents/EmailCorporativeComponents/Es/PricesCrads";
+import PricesCards from "./subcomponents/PricesCrads";
 import Features from "./subcomponents/Features";
 import FooterEs from "@/components/LandingPageComponents/Footers/FooterEs";
 import HeroSection from "./subcomponents/HeroSection";
